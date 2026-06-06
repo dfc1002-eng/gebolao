@@ -3,38 +3,10 @@ import { User, Match, Prediction, Badge, UserBadge, RoundScore, Ranking, GameSta
 export const initialUsers: User[] = [
   {
     id: 'user-diego',
-    nome: 'Diego (Admin/GOAT)',
+    nome: 'Diogo Camargo (Admin/GOAT)',
     email: 'diocamargo1002@gmail.com',
     avatar_url: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80',
     isAdmin: true
-  },
-  {
-    id: 'user-chiquinho',
-    nome: 'Chiquinho Expert',
-    email: 'chiquinho@gebolao.com',
-    avatar_url: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&h=150&q=80',
-    isAdmin: false
-  },
-  {
-    id: 'user-fabio',
-    nome: 'Fábio "Quase Lá"',
-    email: 'fabio@gebolao.com',
-    avatar_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
-    isAdmin: false
-  },
-  {
-    id: 'user-geb',
-    nome: 'Geb "O Pé Frio"',
-    email: 'geb@gebolao.com',
-    avatar_url: 'https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=150&h=150&q=80',
-    isAdmin: false
-  },
-  {
-    id: 'user-dorminhoco',
-    nome: 'Soneca Geb Virgem',
-    email: 'soneca@gebolao.com',
-    avatar_url: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&h=150&q=80',
-    isAdmin: false
   }
 ];
 
@@ -91,330 +63,134 @@ export const initialBadges: Badge[] = [
 ];
 
 export const initialMatches: Match[] = [
-  // --- AMISTOSOS - R1 (Completed for instant action) ---
+  // --- GRUPO A (Completed) ---
   {
-    id: 'm-r1-1',
-    fase: 'Amistosos - R1',
-    time_casa: 'EUA',
-    time_fora: 'México',
-    bandeira_casa: '🇺🇸',
-    bandeira_fora: '🇲🇽',
+    id: 'wc2026-m1',
+    fase: 'Grupo A',
+    time_casa: 'México',
+    time_fora: 'África do Sul',
+    bandeira_casa: '🇲🇽',
+    bandeira_fora: '🇿🇦',
     data_hora: '2026-06-02T18:00:00Z',
     estadio: 'Estádio Azteca, Cidade do México',
     gols_casa: 2,
     gols_fora: 1,
     status: 'completed'
   },
+  // --- GRUPO B (Completed) ---
   {
-    id: 'm-r1-2',
-    fase: 'Amistosos - R1',
-    time_casa: 'Brasil',
-    time_fora: 'Croácia',
-    bandeira_casa: '🇧🇷',
-    bandeira_fora: '🇭🇷',
+    id: 'wc2026-m2',
+    fase: 'Grupo B',
+    time_casa: 'Canadá',
+    time_fora: 'França',
+    bandeira_casa: '🇨🇦',
+    bandeira_fora: '🇫🇷',
     data_hora: '2026-06-03T20:00:00Z',
-    estadio: 'MetLife Stadium, East Rutherford',
+    estadio: 'BC Place, Vancouver',
     gols_casa: 3,
     gols_fora: 1,
     status: 'completed'
   },
+  // --- GRUPO C (Completed) ---
   {
-    id: 'm-r1-3',
-    fase: 'Amistosos - R1',
-    time_casa: 'Argentina',
-    time_fora: 'França',
-    bandeira_casa: '🇦🇷',
-    bandeira_fora: '🇫🇷',
+    id: 'wc2026-m3',
+    fase: 'Grupo C',
+    time_casa: 'Estados Unidos',
+    time_fora: 'Espanha',
+    bandeira_casa: '🇺🇸',
+    bandeira_fora: '🇪🇸',
     data_hora: '2026-06-04T15:00:00Z',
-    estadio: 'SoFi Stadium, Los Angeles',
+    estadio: 'MetLife Stadium, East Rutherford',
     gols_casa: 2,
     gols_fora: 2,
     status: 'completed'
   },
+  // --- GRUPO D (Completed) ---
   {
-    id: 'm-r1-4',
-    fase: 'Amistosos - R1',
-    time_casa: 'Espanha',
+    id: 'wc2026-m4',
+    fase: 'Grupo D',
+    time_casa: 'Brasil',
     time_fora: 'Alemanha',
-    bandeira_casa: '🇪🇸',
+    bandeira_casa: '🇧🇷',
     bandeira_fora: '🇩🇪',
     data_hora: '2026-06-05T21:00:00Z',
-    estadio: 'Hard Rock Stadium, Miami',
+    estadio: 'SoFi Stadium, Los Angeles',
     gols_casa: 1,
     gols_fora: 1,
     status: 'completed'
   },
 
-  // --- AMISTOSOS - R2 (Completed for instant action) ---
+  // --- GRUPO E (Unplayed) ---
   {
-    id: 'm-r2-1',
-    fase: 'Amistosos - R2',
-    time_casa: 'Brasil',
-    time_fora: 'Argentina',
-    bandeira_casa: '🇧🇷',
-    bandeira_fora: '🇦🇷',
-    data_hora: '2026-06-07T20:00:00Z',
-    estadio: 'SoFi Stadium, Los Angeles',
-    gols_casa: 2,
-    gols_fora: 1,
-    status: 'completed'
+    id: 'wc2026-m5',
+    fase: 'Grupo E',
+    time_casa: 'Argentina',
+    time_fora: 'Itália',
+    bandeira_casa: '🇦🇷',
+    bandeira_fora: '🇮🇹',
+    data_hora: '2026-06-11T19:00:00Z',
+    estadio: 'Hard Rock Stadium, Miami',
+    gols_casa: null,
+    gols_fora: null,
+    status: 'unplayed'
   },
+  // --- GRUPO F (Unplayed) ---
   {
-    id: 'm-r2-2',
-    fase: 'Amistosos - R2',
-    time_casa: 'Alemanha',
-    time_fora: 'França',
-    bandeira_casa: '🇩🇪',
-    bandeira_fora: '🇫🇷',
-    data_hora: '2026-06-08T18:00:00Z',
-    estadio: 'MetLife Stadium, East Rutherford',
-    gols_casa: 0,
-    gols_fora: 2,
-    status: 'completed'
-  },
-  {
-    id: 'm-r2-3',
-    fase: 'Amistosos - R2',
-    time_casa: 'Canadá',
-    time_fora: 'EUA',
-    bandeira_casa: '🇨🇦',
-    bandeira_fora: '🇺🇸',
-    data_hora: '2026-06-09T21:00:00Z',
-    estadio: 'BMO Field, Toronto',
-    gols_casa: 1,
-    gols_fora: 3,
-    status: 'completed'
-  },
-  {
-    id: 'm-r2-4',
-    fase: 'Amistosos - R2',
+    id: 'wc2026-m6',
+    fase: 'Grupo F',
     time_casa: 'Portugal',
-    time_fora: 'Uruguai',
-    bandeira_casa: '🇵🇹',
-    bandeira_fora: '🇺🇾',
-    data_hora: '2026-06-10T15:00:00Z',
-    estadio: 'Hard Rock Stadium, Miami',
-    gols_casa: 1,
-    gols_fora: 1,
-    status: 'completed'
-  },
-
-  // --- COPA DO MUNDO 2026 (Unplayed real group stage matches) ---
-  {
-    id: 'm-r3-1',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'México',
-    time_fora: 'Equador',
-    bandeira_casa: '🇲🇽',
-    bandeira_fora: '🇪🇨',
-    data_hora: '2026-06-11T18:00:00Z',
-    estadio: 'Estádio Azteca, Cidade do México',
-    gols_casa: null,
-    gols_fora: null,
-    status: 'unplayed'
-  },
-  {
-    id: 'm-r3-2',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'Inglaterra',
-    time_fora: 'Camarões',
-    bandeira_casa: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
-    bandeira_fora: '🇨🇲',
-    data_hora: '2026-06-11T21:00:00Z',
-    estadio: 'Estádio Guadalajara, Zapopan',
-    gols_casa: null,
-    gols_fora: null,
-    status: 'unplayed'
-  },
-  {
-    id: 'm-r3-3',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'Canadá',
-    time_fora: 'Tunísia',
-    bandeira_casa: '🇨🇦',
-    bandeira_fora: '🇹🇳',
-    data_hora: '2026-06-12T15:00:00Z',
-    estadio: 'BMO Field, Toronto',
-    gols_casa: null,
-    gols_fora: null,
-    status: 'unplayed'
-  },
-  {
-    id: 'm-r3-4',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'França',
     time_fora: 'Japão',
-    bandeira_casa: '🇫🇷',
+    bandeira_casa: '🇵🇹',
     bandeira_fora: '🇯🇵',
-    data_hora: '2026-06-12T18:00:00Z',
-    estadio: 'BC Place, Vancouver',
+    data_hora: '2026-06-12T15:00:00Z',
+    estadio: 'Mercedes-Benz Stadium, Atlanta',
     gols_casa: null,
     gols_fora: null,
     status: 'unplayed'
   },
+  // --- GRUPO G (Unplayed) ---
   {
-    id: 'm-r3-5',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'EUA',
-    time_fora: 'Paraguai',
-    bandeira_casa: '🇺🇸',
-    bandeira_fora: '🇵🇾',
-    data_hora: '2026-06-12T20:00:00Z',
-    estadio: 'SoFi Stadium, Los Angeles',
-    gols_casa: null,
-    gols_fora: null,
-    status: 'unplayed'
-  },
-  {
-    id: 'm-r3-6',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'Espanha',
-    time_fora: 'Nigéria',
-    bandeira_casa: '🇪🇸',
-    bandeira_fora: '🇳🇬',
-    data_hora: '2026-06-12T22:30:00Z',
-    estadio: 'MetLife Stadium, East Rutherford',
-    gols_casa: null,
-    gols_fora: null,
-    status: 'unplayed'
-  },
-  {
-    id: 'm-r3-7',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'Brasil',
-    time_fora: 'Coreia do Sul',
-    bandeira_casa: '🇧🇷',
-    bandeira_fora: '🇰🇷',
-    data_hora: '2026-06-13T15:00:00Z',
-    estadio: 'MetLife Stadium, East Rutherford',
-    gols_casa: null,
-    gols_fora: null,
-    status: 'unplayed'
-  },
-  {
-    id: 'm-r3-8',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'Alemanha',
+    id: 'wc2026-m7',
+    fase: 'Grupo G',
+    time_casa: 'Bélgica',
     time_fora: 'Marrocos',
-    bandeira_casa: '🇩🇪',
+    bandeira_casa: '🇧🇪',
     bandeira_fora: '🇲🇦',
     data_hora: '2026-06-13T18:00:00Z',
-    estadio: 'SoFi Stadium, Los Angeles',
-    gols_casa: null,
-    gols_fora: null,
-    status: 'unplayed'
-  },
-  {
-    id: 'm-r3-9',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'Argentina',
-    time_fora: 'Costa Rica',
-    bandeira_casa: '🇦🇷',
-    bandeira_fora: '🇨🇷',
-    data_hora: '2026-06-14T19:00:00Z',
-    estadio: 'Hard Rock Stadium, Miami',
-    gols_casa: null,
-    gols_fora: null,
-    status: 'unplayed'
-  },
-  {
-    id: 'm-r3-10',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'Itália',
-    time_fora: 'Senegal',
-    bandeira_casa: '🇮🇹',
-    bandeira_fora: '🇸🇳',
-    data_hora: '2026-06-14T22:00:00Z',
-    estadio: 'Mercedes-Benz Stadium, Atlanta',
-    gols_casa: null,
-    gols_fora: null,
-    status: 'unplayed'
-  },
-  {
-    id: 'm-r3-11',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'Portugal',
-    time_fora: 'Egito',
-    bandeira_casa: '🇵🇹',
-    bandeira_fora: '🇪🇬',
-    data_hora: '2026-06-15T15:00:00Z',
-    estadio: 'Mercedes-Benz Stadium, Atlanta',
-    gols_casa: null,
-    gols_fora: null,
-    status: 'unplayed'
-  },
-  {
-    id: 'm-r3-12',
-    fase: 'Copa do Mundo 2026',
-    time_casa: 'Dinamarca',
-    time_fora: 'Colômbia',
-    bandeira_casa: '🇩🇰',
-    bandeira_fora: '🇨🇴',
-    data_hora: '2026-06-15T18:00:00Z',
     estadio: 'Gillette Stadium, Boston',
+    gols_casa: null,
+    gols_fora: null,
+    status: 'unplayed'
+  },
+  // --- GRUPO H (Unplayed) ---
+  {
+    id: 'wc2026-m8',
+    fase: 'Grupo H',
+    time_casa: 'Holanda',
+    time_fora: 'Uruguai',
+    bandeira_casa: '🇳🇱',
+    bandeira_fora: '🇺🇾',
+    data_hora: '2026-06-14T20:00:00Z',
+    estadio: 'NRG Stadium, Houston',
     gols_casa: null,
     gols_fora: null,
     status: 'unplayed'
   }
 ];
 
-// Preseeded predictions for our users to create instant interesting points & badges in Rodada 1 & Rodada 2!
+// Preseeded predictions for our users to create instant interesting points & badges in Grupo A-D!
 export const initialPredictions: Prediction[] = [
-  // --- CHIQUINHO EXPERT (Extremely good guesser) ---
-  // Rodada 1
-  { id: 'p-c-r1-1', user_id: 'user-chiquinho', match_id: 'm-r1-1', gols_casa: 2, gols_fora: 1, created_at: '2026-06-10T12:00:00Z' }, // Exact Match: 10 pts
-  { id: 'p-c-r1-2', user_id: 'user-chiquinho', match_id: 'm-r1-2', gols_casa: 3, gols_fora: 1, created_at: '2026-06-10T12:05:00Z' }, // Exact Match: 10 pts
-  { id: 'p-c-r1-3', user_id: 'user-chiquinho', match_id: 'm-r1-3', gols_casa: 2, gols_fora: 2, created_at: '2026-06-10T12:10:00Z' }, // Exact Match: 10 pts
-  { id: 'p-c-r1-4', user_id: 'user-chiquinho', match_id: 'm-r1-4', gols_casa: 1, gols_fora: 1, created_at: '2026-06-10T12:15:00Z' }, // Exact Match: 10 pts
-  // Rodada 2
-  { id: 'p-c-r2-1', user_id: 'user-chiquinho', match_id: 'm-r2-1', gols_casa: 2, gols_fora: 1, created_at: '2026-06-15T12:20:00Z' }, // Exact Match: 10 pts
-  { id: 'p-c-r2-2', user_id: 'user-chiquinho', match_id: 'm-r2-2', gols_casa: 0, gols_fora: 2, created_at: '2026-06-15T12:21:00Z' }, // Exact Match: 10 pts
-  { id: 'p-c-r2-3', user_id: 'user-chiquinho', match_id: 'm-r2-3', gols_casa: 1, gols_fora: 2, created_at: '2026-06-15T12:22:00Z' }, // Correct outcome (winner EUA): 5 pts
-  { id: 'p-c-r2-4', user_id: 'user-chiquinho', match_id: 'm-r2-4', gols_casa: 2, gols_fora: 2, created_at: '2026-06-15T12:23:00Z' }, // Correct outcome (draw): 5 pts
-
-  // --- DIEGO (ADMIN) (Very competitive) ---
-  // Rodada 1
-  { id: 'p-d-r1-1', user_id: 'user-diego', match_id: 'm-r1-1', gols_casa: 1, gols_fora: 0, created_at: '2026-06-10T14:00:00Z' }, // Correct outcome: 5 pts
-  { id: 'p-d-r1-2', user_id: 'user-diego', match_id: 'm-r1-2', gols_casa: 3, gols_fora: 1, created_at: '2026-06-10T14:05:00Z' }, // Exact Match: 10 pts
-  { id: 'p-d-r1-3', user_id: 'user-diego', match_id: 'm-r1-3', gols_casa: 2, gols_fora: 1, created_at: '2026-06-10T14:10:00Z' }, // Incorrect outcome, check gols Francia (2): 2 pts
-  { id: 'p-d-r1-4', user_id: 'user-diego', match_id: 'm-r1-4', gols_casa: 1, gols_fora: 1, created_at: '2026-06-10T14:15:00Z' }, // Exact Match: 10 pts
-  // Rodada 2
-  { id: 'p-d-r2-1', user_id: 'user-diego', match_id: 'm-r2-1', gols_casa: 2, gols_fora: 1, created_at: '2026-06-15T14:20:00Z' }, // Exact Match: 10 pts
-  { id: 'p-d-r2-2', user_id: 'user-diego', match_id: 'm-r2-2', gols_casa: 1, gols_fora: 2, created_at: '2026-06-15T14:21:00Z' }, // Correct outcome, correct opponent goals (2): 5 pts
-  { id: 'p-d-r2-3', user_id: 'user-diego', match_id: 'm-r2-3', gols_casa: 1, gols_fora: 3, created_at: '2026-06-15T14:22:00Z' }, // Exact Match: 10 pts
-  { id: 'p-d-r2-4', user_id: 'user-diego', match_id: 'm-r2-4', gols_casa: 0, gols_fora: 0, created_at: '2026-06-15T14:23:00Z' }, // Correct outcome (draw): 5 pts
-
-  // --- FABIO "QUASE LA" (Misses scores by exactly 1 goal) ---
-  // Rodada 1
-  { id: 'p-f-r1-1', user_id: 'user-fabio', match_id: 'm-r1-1', gols_casa: 2, gols_fora: 0, created_at: '2026-06-10T13:00:00Z' }, // Missed exact by 1 goal (gols fora: predicted 0, actual 1). Correct outcome: 5 pts
-  { id: 'p-f-r1-2', user_id: 'user-fabio', match_id: 'm-r1-2', gols_casa: 2, gols_fora: 1, created_at: '2026-06-10T13:05:00Z' }, // Missed exact by 1 goal (gols casa: predicted 2, actual 3). Correct outcome: 5 pts
-  { id: 'p-f-r1-3', user_id: 'user-fabio', match_id: 'm-r1-3', gols_casa: 2, gols_fora: 1, created_at: '2026-06-10T13:10:00Z' }, // Missed draw by 1 goal. Got gols_casa correct (2). Wrong outcome: 2 pts
-  { id: 'p-f-r1-4', user_id: 'user-fabio', match_id: 'm-r1-4', gols_casa: 2, gols_fora: 1, created_at: '2026-06-10T13:15:00Z' }, // Missed draw by 1 goal. Got gols_fora correct (1). Wrong outcome: 2 pts
-  // Rodada 2
-  { id: 'p-f-r2-1', user_id: 'user-fabio', match_id: 'm-r2-1', gols_casa: 2, gols_fora: 0, created_at: '2026-06-15T13:20:00Z' }, // Missed exact by 1 goal. Correct outcome: 5 pts
-  { id: 'p-f-r2-2', user_id: 'user-fabio', match_id: 'm-r2-2', gols_casa: 0, gols_fora: 1, created_at: '2026-06-15T13:21:00Z' }, // Missed exact by 1 goal. Correct outcome: 5 pts
-  { id: 'p-f-r2-3', user_id: 'user-fabio', match_id: 'm-r2-3', gols_casa: 2, gols_fora: 3, created_at: '2026-06-15T13:22:00Z' }, // Missed exact by 1 goal (gols_casa correct 1vs2? No correct winner EUA, correct goals fora 3: 5 pts)
-  { id: 'p-f-r2-4', user_id: 'user-fabio', match_id: 'm-r2-4', gols_casa: 1, gols_fora: 0, created_at: '2026-06-15T13:23:00Z' }, // Missed draw by 1 goal. Correct goals casa (1). Wrong outcome: 2 pts
-
-  // --- GEB O PE FRIO (Terrible predictions) ---
-  // Rodada 1
-  { id: 'p-g-r1-1', user_id: 'user-geb', match_id: 'm-r1-1', gols_casa: 0, gols_fora: 3, created_at: '2026-06-10T15:00:00Z' }, // Mispredicted entirely: 0 pts
-  { id: 'p-g-r1-2', user_id: 'user-geb', match_id: 'm-r1-2', gols_casa: 0, gols_fora: 2, created_at: '2026-06-10T15:05:00Z' }, // Mispredicted entirely: 0 pts
-  { id: 'p-g-r1-3', user_id: 'user-geb', match_id: 'm-r1-3', gols_casa: 3, gols_fora: 0, created_at: '2026-06-10T15:10:00Z' }, // Mispredicted entirely: 0 pts
-  { id: 'p-g-r1-4', user_id: 'user-geb', match_id: 'm-r1-4', gols_casa: 3, gols_fora: 0, created_at: '2026-06-10T15:15:00Z' }, // Mispredicted entirely: 0 pts
-  // Rodada 2
-  { id: 'p-g-r2-1', user_id: 'user-geb', match_id: 'm-r2-1', gols_casa: 0, gols_fora: 3, created_at: '2026-06-15T15:20:00Z' }, // Mispredicted entirely: 0 pts
-  { id: 'p-g-r2-2', user_id: 'user-geb', match_id: 'm-r2-2', gols_casa: 3, gols_fora: 0, created_at: '2026-06-15T15:21:00Z' }, // Mispredicted entirely: 0 pts
-  { id: 'p-g-r2-3', user_id: 'user-geb', match_id: 'm-r2-3', gols_casa: 0, gols_fora: 0, created_at: '2026-06-15T15:22:00Z' }, // Mispredicted outcome. Correct goals casa (nothing-actual is 1): 0 pts
-  { id: 'p-g-r2-4', user_id: 'user-geb', match_id: 'm-r2-4', gols_casa: 3, gols_fora: 0, created_at: '2026-06-15T15:23:00Z' }, // Mispredicted outcome. Correct goals count: 0 pts
-
-  // --- SON ECA GEB VIRGEM (Has some palpites in R1 but NONE in R2) ---
-  // Rodada 1
-  { id: 'p-s-r1-1', user_id: 'user-dorminhoco', match_id: 'm-r1-1', gols_casa: 1, gols_fora: 1, created_at: '2026-06-10T16:00:00Z' }, // Got goals of casa correct (1) but incorrect outcome: 2 pts
-  { id: 'p-s-r1-2', user_id: 'user-dorminhoco', match_id: 'm-r1-2', gols_casa: 2, gols_fora: 0, created_at: '2026-06-10T16:05:00Z' }, // Correct outcome: 5 pts
-  { id: 'p-s-r1-3', user_id: 'user-dorminhoco', match_id: 'm-r1-3', gols_casa: 1, gols_fora: 1, created_at: '2026-06-10T16:10:00Z' }, // Correct outcome (draw): 5 pts
-  { id: 'p-s-r1-4', user_id: 'user-dorminhoco', match_id: 'm-r1-4', gols_casa: 0, gols_fora: 0, created_at: '2026-06-10T16:15:00Z' }, // Correct outcome (draw): 5 pts
-  // Rodada 2: NONE! (Sleeps through, trigger "Geb Virgem" for Rodada 2)
+  // --- DIOGO (ADMIN) ---
+  // Completados
+  { id: 'p-d-r1-1', user_id: 'user-diego', match_id: 'wc2026-m1', gols_casa: 1, gols_fora: 0, created_at: '2026-06-10T14:00:00Z' },
+  { id: 'p-d-r1-2', user_id: 'user-diego', match_id: 'wc2026-m2', gols_casa: 3, gols_fora: 1, created_at: '2026-06-10T14:05:00Z' },
+  { id: 'p-d-r1-3', user_id: 'user-diego', match_id: 'wc2026-m3', gols_casa: 2, gols_fora: 1, created_at: '2026-06-10T14:10:00Z' },
+  { id: 'p-d-r1-4', user_id: 'user-diego', match_id: 'wc2026-m4', gols_casa: 1, gols_fora: 1, created_at: '2026-06-10T14:15:00Z' },
+  // Pendentes
+  { id: 'p-d-r2-1', user_id: 'user-diego', match_id: 'wc2026-m5', gols_casa: 2, gols_fora: 1, created_at: '2026-06-15T14:20:00Z' },
+  { id: 'p-d-r2-2', user_id: 'user-diego', match_id: 'wc2026-m6', gols_casa: 1, gols_fora: 2, created_at: '2026-06-15T14:21:00Z' },
+  { id: 'p-d-r2-3', user_id: 'user-diego', match_id: 'wc2026-m7', gols_casa: 1, gols_fora: 3, created_at: '2026-06-15T14:22:00Z' },
+  { id: 'p-d-r2-4', user_id: 'user-diego', match_id: 'wc2026-m8', gols_casa: 0, gols_fora: 0, created_at: '2026-06-15T14:23:00Z' }
 ];
 
 // Utility: Matches standard sweepstakes score calculation we discussed earlier!

@@ -5,6 +5,13 @@ import { createServer as createViteServer } from 'vite';
 import { fileURLToPath } from 'url';
 import https from 'https';
 import http from 'http';
+import dotenv from 'dotenv';
+
+// Importa a conexão cliente do Supabase
+import { supabase } from './supabase.js';
+
+// Carrega as variáveis de ambiente do arquivo .env
+dotenv.config();
 
 // Import initial data and calculation engine
 import {
@@ -14,7 +21,7 @@ import {
   initialBadges,
   computeAllStats
 } from './src/initialData.js';
-import { GameState, Prediction, Match, User } from './src/types.js';
+import { GameState, Prediction, Match, User, Badge, UserBadge, RoundScore } from './src/types.js';
 
 const app = express();
 const PORT = 3000;
@@ -22,52 +29,246 @@ const DB_FILE = path.join(process.cwd(), 'db.json');
 
 app.use(express.json());
 
+// Helper para popular dados iniciais no Supabase
+async function seedSupabase(): Promise<void> {
+  console.log('Iniciando carga de dados no Supabase...');
+  const { roundScores, userBadges } = computeAllStats(
+    initialUsers,
+    initialMatches,
+    initialPredictions
+  );
+
+  const initialState: GameState = {
+    users: initialUsers,
+    matches: initialMatches,
+    predictions: initialPredictions,
+    badges: initialBadges,
+    user_badges: userBadges,
+    round_scores: roundScores
+  };
+
+  await saveDBState(initialState);
+}
+
 // Load or initialize DB state
 async function getDBState(): Promise<GameState> {
   try {
-    const data = await fs.readFile(DB_FILE, 'utf-8');
-    const state = JSON.parse(data) as GameState;
-    // Check if we need to migrate the database state to the real World Cup 2026 matches
-    const hasOldMatches = state.matches.some(m => m.fase === 'Rodada 1' || m.fase === 'Rodada 2' || m.fase === 'Rodada 3');
-    if (hasOldMatches || state.matches.length < 10) {
-      console.log('Migrating existing database in db.json to the real World Cup 2026 match schedule...');
-      state.matches = initialMatches;
-      // Recompute stats
-      const { roundScores, rankings, userBadges } = computeAllStats(
-        state.users,
-        state.matches,
-        state.predictions
-      );
-      state.user_badges = userBadges;
-      state.round_scores = roundScores;
-      await saveDBState(state);
-    }
-    return state;
-  } catch (err) {
-    console.log('No db.json found or corrupt. Initializing with seeded data...');
-    // Initial compute
-    const { roundScores, rankings, userBadges } = computeAllStats(
-      initialUsers,
-      initialMatches,
-      initialPredictions
-    );
+    // 1. Buscar usuários
+    const { data: usersData, error: usersError } = await supabase.from('users').select('*');
+    if (usersError) throw usersError;
 
-    const newState: GameState = {
-      users: initialUsers,
-      matches: initialMatches,
-      predictions: initialPredictions,
-      badges: initialBadges,
-      user_badges: userBadges,
-      round_scores: roundScores
+    // 2. Buscar jogos
+    const { data: matchesData, error: matchesError } = await supabase.from('matches').select('*').order('data_hora', { ascending: true });
+    if (matchesError) throw matchesError;
+
+    // 3. Buscar palpites
+    const { data: predictionsData, error: predictionsError } = await supabase.from('predictions').select('*');
+    if (predictionsError) throw predictionsError;
+
+    // 4. Buscar medalhas
+    const { data: badgesData, error: badgesError } = await supabase.from('badges').select('*');
+    if (badgesError) throw badgesError;
+
+    // 5. Buscar medalhas de usuários
+    const { data: userBadgesData, error: userBadgesError } = await supabase.from('user_badges').select('*');
+    if (userBadgesError) throw userBadgesError;
+
+    // 6. Buscar scores de rodadas
+    const { data: roundScoresData, error: roundScoresError } = await supabase.from('round_scores').select('*');
+    if (roundScoresError) throw roundScoresError;
+
+    // Se o banco estiver vazio, popula com dados iniciais
+    if (!usersData || usersData.length === 0 || !matchesData || matchesData.length === 0) {
+      console.log('Banco de dados do Supabase vazio. Populando dados iniciais...');
+      await seedSupabase();
+      return getDBState();
+    }
+
+    const mappedUsers: User[] = usersData.map(u => ({
+      id: u.id,
+      nome: u.nome,
+      email: u.email,
+      avatar_url: u.avatar_url || '',
+      isAdmin: u.is_admin
+    }));
+
+    const mappedMatches: Match[] = matchesData.map(m => ({
+      id: m.id,
+      fase: m.fase,
+      time_casa: m.time_casa,
+      time_fora: m.time_fora,
+      bandeira_casa: m.bandeira_casa,
+      bandeira_fora: m.bandeira_fora,
+      data_hora: m.data_hora,
+      estadio: m.estadio,
+      gols_casa: m.gols_casa,
+      gols_fora: m.gols_fora,
+      status: m.status
+    }));
+
+    const mappedPredictions: Prediction[] = predictionsData.map(p => ({
+      id: p.id,
+      user_id: p.user_id,
+      match_id: p.match_id,
+      gols_casa: p.gols_casa,
+      gols_fora: p.gols_fora,
+      created_at: p.created_at
+    }));
+
+    const mappedBadges: Badge[] = badgesData.map(b => ({
+      id: b.id,
+      nome: b.nome,
+      descricao: b.descricao,
+      icone: b.icone,
+      tipo: b.tipo as any
+    }));
+
+    const mappedUserBadges: UserBadge[] = userBadgesData.map(ub => ({
+      id: ub.id,
+      user_id: ub.user_id,
+      badge_id: ub.badge_id,
+      rodada: ub.rodada
+    }));
+
+    const mappedRoundScores: RoundScore[] = roundScoresData.map(rs => ({
+      id: rs.id,
+      user_id: rs.user_id,
+      rodada: rs.rodada,
+      pontos: rs.pontos,
+      exato_qtd: rs.exato_qtd,
+      resultado_qtd: rs.resultado_qtd,
+      gols_um_time_qtd: rs.gols_um_time_qtd,
+      erros_qtd: rs.erros_qtd
+    }));
+
+    return {
+      users: mappedUsers,
+      matches: mappedMatches,
+      predictions: mappedPredictions,
+      badges: mappedBadges,
+      user_badges: mappedUserBadges,
+      round_scores: mappedRoundScores
     };
 
-    await saveDBState(newState);
-    return newState;
+  } catch (err: any) {
+    console.error('\x1b[31m%s\x1b[0m', 'ERRO AO CARREGAR ESTADO DO SUPABASE:');
+    console.error(err.message);
+    console.error('Certifique-se de configurar as tabelas no painel do Supabase com o script SQL fornecido no plano de implementação e preencher o arquivo .env!');
+    
+    // Retorna fallback local usando db.json caso o Supabase falhe ou falte configuração
+    try {
+      console.log('Tentando carregar dados locais de fallback (db.json)...');
+      const data = await fs.readFile(DB_FILE, 'utf-8');
+      const state = JSON.parse(data) as GameState;
+      return state;
+    } catch {
+      console.log('Nenhum db.json de fallback encontrado. Usando dados estáticos de seed temporariamente...');
+      const { roundScores, userBadges } = computeAllStats(initialUsers, initialMatches, initialPredictions);
+      return {
+        users: initialUsers,
+        matches: initialMatches,
+        predictions: initialPredictions,
+        badges: initialBadges,
+        user_badges: userBadges,
+        round_scores: roundScores
+      };
+    }
   }
 }
 
 async function saveDBState(state: GameState): Promise<void> {
-  await fs.writeFile(DB_FILE, JSON.stringify(state, null, 2), 'utf-8');
+  try {
+    // 1. Salvar usuários
+    const usersToUpsert = state.users.map(u => ({
+      id: u.id,
+      nome: u.nome,
+      email: u.email,
+      avatar_url: u.avatar_url,
+      is_admin: u.isAdmin || false
+    }));
+    const { error: usersError } = await supabase.from('users').upsert(usersToUpsert);
+    if (usersError) throw usersError;
+
+    // 2. Salvar jogos
+    const matchesToUpsert = state.matches.map(m => ({
+      id: m.id,
+      fase: m.fase,
+      time_casa: m.time_casa,
+      time_fora: m.time_fora,
+      bandeira_casa: m.bandeira_casa,
+      bandeira_fora: m.bandeira_fora,
+      data_hora: m.data_hora,
+      estadio: m.estadio,
+      gols_casa: m.gols_casa,
+      gols_fora: m.gols_fora,
+      status: m.status
+    }));
+    const { error: matchesError } = await supabase.from('matches').upsert(matchesToUpsert);
+    if (matchesError) throw matchesError;
+
+    // 3. Salvar palpites
+    const predictionsToUpsert = state.predictions.map(p => ({
+      id: p.id,
+      user_id: p.user_id,
+      match_id: p.match_id,
+      gols_casa: p.gols_casa,
+      gols_fora: p.gols_fora,
+      created_at: p.created_at
+    }));
+    const { error: predictionsError } = await supabase.from('predictions').upsert(predictionsToUpsert);
+    if (predictionsError) throw predictionsError;
+
+    // 4. Salvar medalhas
+    const badgesToUpsert = state.badges.map(b => ({
+      id: b.id,
+      nome: b.nome,
+      descricao: b.descricao,
+      icone: b.icone,
+      tipo: b.tipo
+    }));
+    const { error: badgesError } = await supabase.from('badges').upsert(badgesToUpsert);
+    if (badgesError) throw badgesError;
+
+    // 5. User badges - deletar e reinserir calculadas
+    await supabase.from('user_badges').delete().neq('id', 'placeholder');
+    if (state.user_badges.length > 0) {
+      const userBadgesToInsert = state.user_badges.map(ub => ({
+        id: ub.id,
+        user_id: ub.user_id,
+        badge_id: ub.badge_id,
+        rodada: ub.rodada
+      }));
+      const { error: userBadgesError } = await supabase.from('user_badges').insert(userBadgesToInsert);
+      if (userBadgesError) throw userBadgesError;
+    }
+
+    // 6. Round scores - deletar e reinserir calculadas
+    await supabase.from('round_scores').delete().neq('id', 'placeholder');
+    if (state.round_scores.length > 0) {
+      const roundScoresToInsert = state.round_scores.map(rs => ({
+        id: rs.id,
+        user_id: rs.user_id,
+        rodada: rs.rodada,
+        pontos: rs.pontos,
+        exato_qtd: rs.exato_qtd,
+        resultado_qtd: rs.resultado_qtd,
+        gols_um_time_qtd: rs.gols_um_time_qtd,
+        erros_qtd: rs.erros_qtd
+      }));
+      const { error: roundScoresError } = await supabase.from('round_scores').insert(roundScoresToInsert);
+      if (roundScoresError) throw roundScoresError;
+    }
+
+  } catch (err: any) {
+    console.error('Erro ao salvar no Supabase:', err.message);
+  }
+
+  // Mantém também cópia em arquivo local db.json por segurança (Fallback local funcional)
+  try {
+    await fs.writeFile(DB_FILE, JSON.stringify(state, null, 2), 'utf-8');
+  } catch (err) {
+    // ignorar
+  }
 }
 
 // REST API Endpoints
@@ -348,39 +549,54 @@ app.post('/api/match/import', async (req, res) => {
 // Helper for mapping flag emoji from team name
 function getCountryFlag(name: string): string {
   const norm = name?.trim().toLowerCase() || '';
-  if (norm.includes('brasil') || norm.includes('brazil')) return '🇧🇷';
-  if (norm.includes('croacia') || norm.includes('croatia')) return '🇭🇷';
+  if (norm.includes('algeria') || norm.includes('argélia')) return '🇩🇿';
   if (norm.includes('argentina')) return '🇦🇷';
-  if (norm.includes('frança') || norm.includes('france')) return '🇫🇷';
-  if (norm.includes('espanha') || norm.includes('spain')) return '🇪🇸';
-  if (norm.includes('alemanha') || norm.includes('germany')) return '🇩🇪';
-  if (norm.includes('portugal')) return '🇵🇹';
-  if (norm.includes('uruguai') || norm.includes('uruguay')) return '🇺🇾';
-  if (norm.includes('estados unidos') || norm.includes('usa') || norm.includes('eua') || norm.includes('united states')) return '🇺🇸';
-  if (norm.includes('mexico') || norm.includes('méxico')) return '🇲🇽';
+  if (norm.includes('australia') || norm.includes('austrália')) return '🇦🇺';
+  if (norm.includes('austria') || norm.includes('áustria')) return '🇦🇹';
+  if (norm.includes('belgium') || norm.includes('bélgica')) return '🇧🇪';
+  if (norm.includes('bosnia') || norm.includes('bósnia')) return '🇧🇦';
+  if (norm.includes('brazil') || norm.includes('brasil')) return '🇧🇷';
   if (norm.includes('canada') || norm.includes('canadá')) return '🇨🇦';
-  if (norm.includes('italia') || norm.includes('italy')) return '🇮🇹';
-  if (norm.includes('inglaterra') || norm.includes('england')) return '🏴󠁧󠁢󠁥󠁮󠁧󠁿';
-  if (norm.includes('holanda') || norm.includes('netherlands')) return '🇳🇱';
-  if (norm.includes('belgica') || norm.includes('belgium')) return '🇧🇪';
-  if (norm.includes('marrocos') || norm.includes('morocco')) return '🇲🇦';
-  if (norm.includes('japao') || norm.includes('japan')) return '🇯🇵';
+  if (norm.includes('cape verde') || norm.includes('cabo verde')) return '🇨🇻';
+  if (norm.includes('colombia') || norm.includes('colômbia')) return '🇨🇴';
+  if (norm.includes('croatia') || norm.includes('croácia')) return '🇭🇷';
+  if (norm.includes('curaçao') || norm.includes('curacao')) return '🇨🇼';
+  if (norm.includes('czech') || norm.includes('tcheca')) return '🇨🇿';
+  if (norm.includes('congo')) return '🇨🇩';
+  if (norm.includes('ecuador') || norm.includes('equador')) return '🇪🇨';
+  if (norm.includes('egypt') || norm.includes('egito')) return '🇪🇬';
+  if (norm.includes('england') || norm.includes('inglaterra')) return '🏴󠁧󠁢󠁥󠁮󠁧󠁿';
+  if (norm.includes('france') || norm.includes('frança')) return '🇫🇷';
+  if (norm.includes('germany') || norm.includes('alemanha')) return '🇩🇪';
+  if (norm.includes('ghana') || norm.includes('gana')) return '🇬🇭';
+  if (norm.includes('haiti')) return '🇭🇹';
+  if (norm.includes('iran') || norm.includes('irã')) return '🇮🇷';
+  if (norm.includes('iraq') || norm.includes('iraque')) return '🇮🇶';
+  if (norm.includes('ivory coast') || norm.includes('costa do marfim')) return '🇨🇮';
+  if (norm.includes('japan') || norm.includes('japão')) return '🇯🇵';
+  if (norm.includes('jordan') || norm.includes('jordânia')) return '🇯🇴';
+  if (norm.includes('mexico') || norm.includes('méxico')) return '🇲🇽';
+  if (norm.includes('morocco') || norm.includes('marrocos')) return '🇲🇦';
+  if (norm.includes('netherlands') || norm.includes('holanda')) return '🇳🇱';
+  if (norm.includes('new zealand') || norm.includes('nova zelândia')) return '🇳🇿';
+  if (norm.includes('norway') || norm.includes('noruega')) return '🇳🇴';
+  if (norm.includes('panama') || norm.includes('panamá')) return '🇵🇦';
+  if (norm.includes('paraguay') || norm.includes('paraguai')) return '🇵🇾';
+  if (norm.includes('portugal')) return '🇵🇹';
+  if (norm.includes('qatar') || norm.includes('catar')) return '🇶🇦';
+  if (norm.includes('saudi') || norm.includes('arábia')) return '🇸🇦';
+  if (norm.includes('scotland') || norm.includes('escócia')) return '🏴󠁧󠁢󠁳󠁣󠁴󠁿';
   if (norm.includes('senegal')) return '🇸🇳';
-  if (norm.includes('equador') || norm.includes('ecuador')) return '🇪🇨';
-  if (norm.includes('catar') || norm.includes('qatar')) return '🇶🇦';
-  if (norm.includes('suiça') || norm.includes('switzerland')) return '🇨🇭';
-  if (norm.includes('camaroes') || norm.includes('cameroon')) return '🇨🇲';
-  if (norm.includes('coreia') || norm.includes('korea')) return '🇰🇷';
-  if (norm.includes('gana') || norm.includes('ghana')) return '🇬🇭';
-  if (norm.includes('servia') || norm.includes('serbia')) return '🇷🇸';
-  if (norm.includes('dinamarca') || norm.includes('denmark')) return '🇩🇰';
-  if (norm.includes('tunisia') || norm.includes('tunisia')) return '🇹🇳';
-  if (norm.includes('polonia') || norm.includes('poland')) return '🇵🇱';
-  if (norm.includes('aravia') || norm.includes('saudi')) return '🇸🇦';
-  if (norm.includes('australia') || norm.includes('australia')) return '🇦🇺';
-  if (norm.includes('gales') || norm.includes('wales')) return '🏴󠁧󠁢󠁷󠁬󠁳󠁿';
-  if (norm.includes('ira') || norm.includes('iran')) return '🇮🇷';
-  if (norm.includes('costa rica')) return '🇨🇷';
+  if (norm.includes('south africa') || norm.includes('áfrica do sul')) return '🇿🇦';
+  if (norm.includes('korea') || norm.includes('coreia')) return '🇰🇷';
+  if (norm.includes('spain') || norm.includes('espanha')) return '🇪🇸';
+  if (norm.includes('sweden') || norm.includes('suécia')) return '🇸🇪';
+  if (norm.includes('switzerland') || norm.includes('suíça')) return '🇨🇭';
+  if (norm.includes('tunisia') || norm.includes('tunísia')) return '🇹🇳';
+  if (norm.includes('turkey') || norm.includes('turquia')) return '🇹🇷';
+  if (norm.includes('united states') || norm.includes('eua') || norm.includes('usa') || norm.includes('estados unidos')) return '🇺🇸';
+  if (norm.includes('uruguay') || norm.includes('uruguai')) return '🇺🇾';
+  if (norm.includes('uzbekistan') || norm.includes('uzbequistão')) return '🇺🇿';
   return '⚽';
 }
 
@@ -571,28 +787,80 @@ app.post('/api/match/import-url', async (req, res) => {
 
     // Normalize
     const normalizedMatches = rawList.map((item: any, index: number) => {
-      const homeTeam = String(item.time_casa || item.home_team || item.homeTeam || item.home || item.team1 || item.team_casa || item.teamA || `Time A ${index + 1}`).trim();
-      const awayTeam = String(item.time_fora || item.away_team || item.awayTeam || item.away || item.team2 || item.team_fora || item.teamB || `Time B ${index + 1}`).trim();
+      const homeTeam = String(
+        item.time_casa ||
+        item.home_team ||
+        item.home_team_name_en ||
+        item.homeTeam ||
+        item.home ||
+        item.team1 ||
+        item.team_casa ||
+        item.teamA ||
+        `Time A ${index + 1}`
+      ).trim();
+
+      const awayTeam = String(
+        item.time_fora ||
+        item.away_team ||
+        item.away_team_name_en ||
+        item.awayTeam ||
+        item.away ||
+        item.team2 ||
+        item.team_fora ||
+        item.teamB ||
+        `Time B ${index + 1}`
+      ).trim();
       
-      const rawStage = item.fase || item.stage || item.group || item.round || item.phase || item.matchday || 'Fase de Grupos';
+      // Mapeamento de fase para suportar a API da Copa 2026
+      let rawStage = '';
+      if (item.type === 'group' && item.group) {
+        rawStage = `Grupo ${item.group}`;
+      } else if (item.type === 'r32') {
+        rawStage = 'Dezesseis-avos (32)';
+      } else if (item.type === 'r16') {
+        rawStage = 'Oitavas de Final';
+      } else if (item.type === 'qf') {
+        rawStage = 'Quartas de Final';
+      } else if (item.type === 'sf') {
+        rawStage = 'Semifinal';
+      } else if (item.type === 'third') {
+        rawStage = 'Decisão 3º Lugar';
+      } else if (item.type === 'final') {
+        rawStage = 'Grande Final';
+      } else {
+        rawStage = item.fase || item.stage || item.round || item.phase || (item.group ? `Grupo ${item.group}` : 'Fase de Grupos');
+      }
+
       let fase = String(rawStage).trim();
-      if (fase.toLowerCase() === 'group stage' || fase.toLowerCase().startsWith('group')) {
-        fase = fase.replace(/group/i, 'Grupo');
-      } else if (fase.toLowerCase().includes('round of 32')) {
-        fase = 'Dezesseis-avos (32)';
-      } else if (fase.toLowerCase().includes('round of 16')) {
-        fase = 'Oitavas de Final';
-      } else if (fase.toLowerCase().includes('quarter')) {
-        fase = 'Quartas de Final';
-      } else if (fase.toLowerCase().includes('semi')) {
-        fase = 'Semifinal';
-      } else if (fase.toLowerCase().includes('final')) {
-        fase = 'Grande Final';
+      if (
+        fase === 'Oitavas de Final' ||
+        fase === 'Quartas de Final' ||
+        fase === 'Dezesseis-avos (32)' ||
+        fase === 'Semifinal' ||
+        fase === 'Decisão 3º Lugar' ||
+        fase === 'Grande Final' ||
+        fase.startsWith('Grupo ')
+      ) {
+        // Já mapeado corretamente, não fazer nada
+      } else {
+        if (fase.toLowerCase() === 'group stage' || fase.toLowerCase().startsWith('group')) {
+          fase = fase.replace(/group/i, 'Grupo');
+        } else if (fase.toLowerCase().includes('round of 32')) {
+          fase = 'Dezesseis-avos (32)';
+        } else if (fase.toLowerCase().includes('round of 16')) {
+          fase = 'Oitavas de Final';
+        } else if (fase.toLowerCase().includes('quarter')) {
+          fase = 'Quartas de Final';
+        } else if (fase.toLowerCase().includes('semi')) {
+          fase = 'Semifinal';
+        } else if (fase.toLowerCase().includes('final')) {
+          fase = 'Grande Final';
+        }
       }
 
       let data_hora = new Date().toISOString();
       try {
-        const parsedDate = item.data_hora || item.date || item.kickoff || item.time || item.datetime || item.timestamp;
+        const parsedDate = item.data_hora || item.local_date || item.date || item.kickoff || item.time || item.datetime || item.timestamp;
         if (parsedDate) {
           const d = new Date(parsedDate);
           if (!isNaN(d.getTime())) {

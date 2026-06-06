@@ -43,7 +43,7 @@ export default function App() {
       setRankings(data.rankings || []);
       setLogoImage(data.logo_image || '');
 
-      // If no current user is loaded initially, auto-log in as preseeded Admin "Diego" so they can experience everything immediately
+      // If no current user is loaded initially, auto-log in as preseeded Admin "Diogo Camargo" so they can experience everything immediately
       if (!currentUser && data.users?.length > 0) {
         const adminUser = data.users.find((u: User) => u.isAdmin) || data.users[0];
         setCurrentUser(adminUser);
