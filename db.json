@@ -1,0 +1,880 @@
+{
+  "users": [
+    {
+      "id": "user-diego",
+      "nome": "Diego (Admin/GOAT)",
+      "email": "diocamargo1002@gmail.com",
+      "avatar_url": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": true
+    },
+    {
+      "id": "user-chiquinho",
+      "nome": "Chiquinho Expert",
+      "email": "chiquinho@gebolao.com",
+      "avatar_url": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false
+    },
+    {
+      "id": "user-fabio",
+      "nome": "Fábio \"Quase Lá\"",
+      "email": "fabio@gebolao.com",
+      "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false
+    },
+    {
+      "id": "user-geb",
+      "nome": "Geb \"O Pé Frio\"",
+      "email": "geb@gebolao.com",
+      "avatar_url": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false
+    },
+    {
+      "id": "user-dorminhoco",
+      "nome": "Soneca Geb Virgem",
+      "email": "soneca@gebolao.com",
+      "avatar_url": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false
+    }
+  ],
+  "matches": [
+    {
+      "id": "m-r1-1",
+      "fase": "Amistosos - R1",
+      "time_casa": "EUA",
+      "time_fora": "México",
+      "bandeira_casa": "🇺🇸",
+      "bandeira_fora": "🇲🇽",
+      "data_hora": "2026-06-02T18:00:00Z",
+      "estadio": "Estádio Azteca, Cidade do México",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "status": "completed"
+    },
+    {
+      "id": "m-r1-2",
+      "fase": "Amistosos - R1",
+      "time_casa": "Brasil",
+      "time_fora": "Croácia",
+      "bandeira_casa": "🇧🇷",
+      "bandeira_fora": "🇭🇷",
+      "data_hora": "2026-06-03T20:00:00Z",
+      "estadio": "MetLife Stadium, East Rutherford",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "status": "completed"
+    },
+    {
+      "id": "m-r1-3",
+      "fase": "Amistosos - R1",
+      "time_casa": "Argentina",
+      "time_fora": "França",
+      "bandeira_casa": "🇦🇷",
+      "bandeira_fora": "🇫🇷",
+      "data_hora": "2026-06-04T15:00:00Z",
+      "estadio": "SoFi Stadium, Los Angeles",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "status": "completed"
+    },
+    {
+      "id": "m-r1-4",
+      "fase": "Amistosos - R1",
+      "time_casa": "Espanha",
+      "time_fora": "Alemanha",
+      "bandeira_casa": "🇪🇸",
+      "bandeira_fora": "🇩🇪",
+      "data_hora": "2026-06-05T21:00:00Z",
+      "estadio": "Hard Rock Stadium, Miami",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "status": "completed"
+    },
+    {
+      "id": "m-r2-1",
+      "fase": "Amistosos - R2",
+      "time_casa": "Brasil",
+      "time_fora": "Argentina",
+      "bandeira_casa": "🇧🇷",
+      "bandeira_fora": "🇦🇷",
+      "data_hora": "2026-06-07T20:00:00Z",
+      "estadio": "SoFi Stadium, Los Angeles",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "status": "completed"
+    },
+    {
+      "id": "m-r2-2",
+      "fase": "Amistosos - R2",
+      "time_casa": "Alemanha",
+      "time_fora": "França",
+      "bandeira_casa": "🇩🇪",
+      "bandeira_fora": "🇫🇷",
+      "data_hora": "2026-06-08T18:00:00Z",
+      "estadio": "MetLife Stadium, East Rutherford",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "status": "completed"
+    },
+    {
+      "id": "m-r2-3",
+      "fase": "Amistosos - R2",
+      "time_casa": "Canadá",
+      "time_fora": "EUA",
+      "bandeira_casa": "🇨🇦",
+      "bandeira_fora": "🇺🇸",
+      "data_hora": "2026-06-09T21:00:00Z",
+      "estadio": "BMO Field, Toronto",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "status": "completed"
+    },
+    {
+      "id": "m-r2-4",
+      "fase": "Amistosos - R2",
+      "time_casa": "Portugal",
+      "time_fora": "Uruguai",
+      "bandeira_casa": "🇵🇹",
+      "bandeira_fora": "🇺🇾",
+      "data_hora": "2026-06-10T15:00:00Z",
+      "estadio": "Hard Rock Stadium, Miami",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "status": "completed"
+    },
+    {
+      "id": "m-r3-1",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "México",
+      "time_fora": "Equador",
+      "bandeira_casa": "🇲🇽",
+      "bandeira_fora": "🇪🇨",
+      "data_hora": "2026-06-11T18:00:00Z",
+      "estadio": "Estádio Azteca, Cidade do México",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-2",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "Inglaterra",
+      "time_fora": "Camarões",
+      "bandeira_casa": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "bandeira_fora": "🇨🇲",
+      "data_hora": "2026-06-11T21:00:00Z",
+      "estadio": "Estádio Guadalajara, Zapopan",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-3",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "Canadá",
+      "time_fora": "Tunísia",
+      "bandeira_casa": "🇨🇦",
+      "bandeira_fora": "🇹🇳",
+      "data_hora": "2026-06-12T15:00:00Z",
+      "estadio": "BMO Field, Toronto",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-4",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "França",
+      "time_fora": "Japão",
+      "bandeira_casa": "🇫🇷",
+      "bandeira_fora": "🇯🇵",
+      "data_hora": "2026-06-12T18:00:00Z",
+      "estadio": "BC Place, Vancouver",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-5",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "EUA",
+      "time_fora": "Paraguai",
+      "bandeira_casa": "🇺🇸",
+      "bandeira_fora": "🇵🇾",
+      "data_hora": "2026-06-12T20:00:00Z",
+      "estadio": "SoFi Stadium, Los Angeles",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-6",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "Espanha",
+      "time_fora": "Nigéria",
+      "bandeira_casa": "🇪🇸",
+      "bandeira_fora": "🇳🇬",
+      "data_hora": "2026-06-12T22:30:00Z",
+      "estadio": "MetLife Stadium, East Rutherford",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-7",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "Brasil",
+      "time_fora": "Coreia do Sul",
+      "bandeira_casa": "🇧🇷",
+      "bandeira_fora": "🇰🇷",
+      "data_hora": "2026-06-13T15:00:00Z",
+      "estadio": "MetLife Stadium, East Rutherford",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-8",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "Alemanha",
+      "time_fora": "Marrocos",
+      "bandeira_casa": "🇩🇪",
+      "bandeira_fora": "🇲🇦",
+      "data_hora": "2026-06-13T18:00:00Z",
+      "estadio": "SoFi Stadium, Los Angeles",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-9",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "Argentina",
+      "time_fora": "Costa Rica",
+      "bandeira_casa": "🇦🇷",
+      "bandeira_fora": "🇨🇷",
+      "data_hora": "2026-06-14T19:00:00Z",
+      "estadio": "Hard Rock Stadium, Miami",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-10",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "Itália",
+      "time_fora": "Senegal",
+      "bandeira_casa": "🇮🇹",
+      "bandeira_fora": "🇸🇳",
+      "data_hora": "2026-06-14T22:00:00Z",
+      "estadio": "Mercedes-Benz Stadium, Atlanta",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-11",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "Portugal",
+      "time_fora": "Egito",
+      "bandeira_casa": "🇵🇹",
+      "bandeira_fora": "🇪🇬",
+      "data_hora": "2026-06-15T15:00:00Z",
+      "estadio": "Mercedes-Benz Stadium, Atlanta",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-r3-12",
+      "fase": "Copa do Mundo 2026",
+      "time_casa": "Dinamarca",
+      "time_fora": "Colômbia",
+      "bandeira_casa": "🇩🇰",
+      "bandeira_fora": "🇨🇴",
+      "data_hora": "2026-06-15T18:00:00Z",
+      "estadio": "Gillette Stadium, Boston",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    }
+  ],
+  "predictions": [
+    {
+      "id": "p-c-r1-1",
+      "user_id": "user-chiquinho",
+      "match_id": "m-r1-1",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T12:00:00Z"
+    },
+    {
+      "id": "p-c-r1-2",
+      "user_id": "user-chiquinho",
+      "match_id": "m-r1-2",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T12:05:00Z"
+    },
+    {
+      "id": "p-c-r1-3",
+      "user_id": "user-chiquinho",
+      "match_id": "m-r1-3",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T12:10:00Z"
+    },
+    {
+      "id": "p-c-r1-4",
+      "user_id": "user-chiquinho",
+      "match_id": "m-r1-4",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T12:15:00Z"
+    },
+    {
+      "id": "p-c-r2-1",
+      "user_id": "user-chiquinho",
+      "match_id": "m-r2-1",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-15T12:20:00Z"
+    },
+    {
+      "id": "p-c-r2-2",
+      "user_id": "user-chiquinho",
+      "match_id": "m-r2-2",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-15T12:21:00Z"
+    },
+    {
+      "id": "p-c-r2-3",
+      "user_id": "user-chiquinho",
+      "match_id": "m-r2-3",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-15T12:22:00Z"
+    },
+    {
+      "id": "p-c-r2-4",
+      "user_id": "user-chiquinho",
+      "match_id": "m-r2-4",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-15T12:23:00Z"
+    },
+    {
+      "id": "p-d-r1-1",
+      "user_id": "user-diego",
+      "match_id": "m-r1-1",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T14:00:00Z"
+    },
+    {
+      "id": "p-d-r1-2",
+      "user_id": "user-diego",
+      "match_id": "m-r1-2",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T14:05:00Z"
+    },
+    {
+      "id": "p-d-r1-3",
+      "user_id": "user-diego",
+      "match_id": "m-r1-3",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T14:10:00Z"
+    },
+    {
+      "id": "p-d-r1-4",
+      "user_id": "user-diego",
+      "match_id": "m-r1-4",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T14:15:00Z"
+    },
+    {
+      "id": "p-d-r2-1",
+      "user_id": "user-diego",
+      "match_id": "m-r2-1",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-15T14:20:00Z"
+    },
+    {
+      "id": "p-d-r2-2",
+      "user_id": "user-diego",
+      "match_id": "m-r2-2",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-15T14:21:00Z"
+    },
+    {
+      "id": "p-d-r2-3",
+      "user_id": "user-diego",
+      "match_id": "m-r2-3",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-15T14:22:00Z"
+    },
+    {
+      "id": "p-d-r2-4",
+      "user_id": "user-diego",
+      "match_id": "m-r2-4",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T14:23:00Z"
+    },
+    {
+      "id": "p-f-r1-1",
+      "user_id": "user-fabio",
+      "match_id": "m-r1-1",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T13:00:00Z"
+    },
+    {
+      "id": "p-f-r1-2",
+      "user_id": "user-fabio",
+      "match_id": "m-r1-2",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T13:05:00Z"
+    },
+    {
+      "id": "p-f-r1-3",
+      "user_id": "user-fabio",
+      "match_id": "m-r1-3",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T13:10:00Z"
+    },
+    {
+      "id": "p-f-r1-4",
+      "user_id": "user-fabio",
+      "match_id": "m-r1-4",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T13:15:00Z"
+    },
+    {
+      "id": "p-f-r2-1",
+      "user_id": "user-fabio",
+      "match_id": "m-r2-1",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T13:20:00Z"
+    },
+    {
+      "id": "p-f-r2-2",
+      "user_id": "user-fabio",
+      "match_id": "m-r2-2",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-15T13:21:00Z"
+    },
+    {
+      "id": "p-f-r2-3",
+      "user_id": "user-fabio",
+      "match_id": "m-r2-3",
+      "gols_casa": 2,
+      "gols_fora": 3,
+      "created_at": "2026-06-15T13:22:00Z"
+    },
+    {
+      "id": "p-f-r2-4",
+      "user_id": "user-fabio",
+      "match_id": "m-r2-4",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T13:23:00Z"
+    },
+    {
+      "id": "p-g-r1-1",
+      "user_id": "user-geb",
+      "match_id": "m-r1-1",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-10T15:00:00Z"
+    },
+    {
+      "id": "p-g-r1-2",
+      "user_id": "user-geb",
+      "match_id": "m-r1-2",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T15:05:00Z"
+    },
+    {
+      "id": "p-g-r1-3",
+      "user_id": "user-geb",
+      "match_id": "m-r1-3",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T15:10:00Z"
+    },
+    {
+      "id": "p-g-r1-4",
+      "user_id": "user-geb",
+      "match_id": "m-r1-4",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T15:15:00Z"
+    },
+    {
+      "id": "p-g-r2-1",
+      "user_id": "user-geb",
+      "match_id": "m-r2-1",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-15T15:20:00Z"
+    },
+    {
+      "id": "p-g-r2-2",
+      "user_id": "user-geb",
+      "match_id": "m-r2-2",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T15:21:00Z"
+    },
+    {
+      "id": "p-g-r2-3",
+      "user_id": "user-geb",
+      "match_id": "m-r2-3",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T15:22:00Z"
+    },
+    {
+      "id": "p-g-r2-4",
+      "user_id": "user-geb",
+      "match_id": "m-r2-4",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T15:23:00Z"
+    },
+    {
+      "id": "p-s-r1-1",
+      "user_id": "user-dorminhoco",
+      "match_id": "m-r1-1",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T16:00:00Z"
+    },
+    {
+      "id": "p-s-r1-2",
+      "user_id": "user-dorminhoco",
+      "match_id": "m-r1-2",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T16:05:00Z"
+    },
+    {
+      "id": "p-s-r1-3",
+      "user_id": "user-dorminhoco",
+      "match_id": "m-r1-3",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T16:10:00Z"
+    },
+    {
+      "id": "p-s-r1-4",
+      "user_id": "user-dorminhoco",
+      "match_id": "m-r1-4",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T16:15:00Z"
+    }
+  ],
+  "badges": [
+    {
+      "id": "badge-chiquinho",
+      "nome": "Chiquinho, Sou Teu Fã",
+      "descricao": "Melhor participante da rodada (maior pontuação, desempate por mais exatos).",
+      "icone": "🏆",
+      "tipo": "chiquinho"
+    },
+    {
+      "id": "badge-fabio",
+      "nome": "Fábio Quase Lá",
+      "descricao": "O participante que mais bateu na trave (errou placares por apenas 1 gol).",
+      "icone": "🥈",
+      "tipo": "fabio"
+    },
+    {
+      "id": "badge-gebiada",
+      "nome": "Gebiada da Rodada",
+      "descricao": "Pior desempenho da rodada (menor pontuação com palpites feitos).",
+      "icone": "🤡",
+      "tipo": "gebiada"
+    },
+    {
+      "id": "badge-virgem",
+      "nome": "Geb Virgem",
+      "descricao": "Dormiu no ponto! Não realizou nenhum palpite na rodada.",
+      "icone": "😴",
+      "tipo": "virgem"
+    },
+    {
+      "id": "badge-aguia",
+      "nome": "O Amigo do Primo da Jana",
+      "descricao": "Lenda dos placares exatos! Maior número de acertos exatos na rodada.",
+      "icone": "🎯",
+      "tipo": "aguia"
+    },
+    {
+      "id": "badge-chamas",
+      "nome": "Em Chamas",
+      "descricao": "Consistência pura! Três rodadas consecutivas acima da média.",
+      "icone": "🔥",
+      "tipo": "chamas"
+    },
+    {
+      "id": "badge-goat",
+      "nome": "GOAT do Bolão",
+      "descricao": "Líder supremo na classificação geral acumulada!",
+      "icone": "🐐",
+      "tipo": "goat"
+    }
+  ],
+  "user_badges": [
+    {
+      "id": "ub-user-chiquinho-chiquinho-Amistosos---R1",
+      "user_id": "user-chiquinho",
+      "badge_id": "badge-chiquinho",
+      "rodada": "Amistosos - R1"
+    },
+    {
+      "id": "ub-user-chiquinho-aguia-Amistosos---R1",
+      "user_id": "user-chiquinho",
+      "badge_id": "badge-aguia",
+      "rodada": "Amistosos - R1"
+    },
+    {
+      "id": "ub-user-fabio-fabio-Amistosos---R1",
+      "user_id": "user-fabio",
+      "badge_id": "badge-fabio",
+      "rodada": "Amistosos - R1"
+    },
+    {
+      "id": "ub-user-dorminhoco-fabio-Amistosos---R1",
+      "user_id": "user-dorminhoco",
+      "badge_id": "badge-fabio",
+      "rodada": "Amistosos - R1"
+    },
+    {
+      "id": "ub-user-geb-gebiada-Amistosos---R1",
+      "user_id": "user-geb",
+      "badge_id": "badge-gebiada",
+      "rodada": "Amistosos - R1"
+    },
+    {
+      "id": "ub-user-dorminhoco-virgem-Amistosos---R2",
+      "user_id": "user-dorminhoco",
+      "badge_id": "badge-virgem",
+      "rodada": "Amistosos - R2"
+    },
+    {
+      "id": "ub-user-diego-chiquinho-Amistosos---R2",
+      "user_id": "user-diego",
+      "badge_id": "badge-chiquinho",
+      "rodada": "Amistosos - R2"
+    },
+    {
+      "id": "ub-user-diego-aguia-Amistosos---R2",
+      "user_id": "user-diego",
+      "badge_id": "badge-aguia",
+      "rodada": "Amistosos - R2"
+    },
+    {
+      "id": "ub-user-chiquinho-aguia-Amistosos---R2",
+      "user_id": "user-chiquinho",
+      "badge_id": "badge-aguia",
+      "rodada": "Amistosos - R2"
+    },
+    {
+      "id": "ub-user-fabio-fabio-Amistosos---R2",
+      "user_id": "user-fabio",
+      "badge_id": "badge-fabio",
+      "rodada": "Amistosos - R2"
+    },
+    {
+      "id": "ub-user-geb-gebiada-Amistosos---R2",
+      "user_id": "user-geb",
+      "badge_id": "badge-gebiada",
+      "rodada": "Amistosos - R2"
+    },
+    {
+      "id": "ub-user-chiquinho-goat-overall",
+      "user_id": "user-chiquinho",
+      "badge_id": "badge-goat",
+      "rodada": "Geral"
+    },
+    {
+      "id": "ub-user-diego-chamas-streak",
+      "user_id": "user-diego",
+      "badge_id": "badge-chamas",
+      "rodada": "Fase de Grupos"
+    },
+    {
+      "id": "ub-user-chiquinho-chamas-streak",
+      "user_id": "user-chiquinho",
+      "badge_id": "badge-chamas",
+      "rodada": "Fase de Grupos"
+    }
+  ],
+  "round_scores": [
+    {
+      "id": "score-user-diego-Amistosos---R1",
+      "user_id": "user-diego",
+      "rodada": "Amistosos - R1",
+      "pontos": 27,
+      "exato_qtd": 2,
+      "resultado_qtd": 1,
+      "gols_um_time_qtd": 1,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-chiquinho-Amistosos---R1",
+      "user_id": "user-chiquinho",
+      "rodada": "Amistosos - R1",
+      "pontos": 40,
+      "exato_qtd": 4,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-fabio-Amistosos---R1",
+      "user_id": "user-fabio",
+      "rodada": "Amistosos - R1",
+      "pontos": 14,
+      "exato_qtd": 0,
+      "resultado_qtd": 2,
+      "gols_um_time_qtd": 2,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-geb-Amistosos---R1",
+      "user_id": "user-geb",
+      "rodada": "Amistosos - R1",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 4
+    },
+    {
+      "id": "score-user-dorminhoco-Amistosos---R1",
+      "user_id": "user-dorminhoco",
+      "rodada": "Amistosos - R1",
+      "pontos": 17,
+      "exato_qtd": 0,
+      "resultado_qtd": 3,
+      "gols_um_time_qtd": 1,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-diego-Amistosos---R2",
+      "user_id": "user-diego",
+      "rodada": "Amistosos - R2",
+      "pontos": 30,
+      "exato_qtd": 2,
+      "resultado_qtd": 2,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-chiquinho-Amistosos---R2",
+      "user_id": "user-chiquinho",
+      "rodada": "Amistosos - R2",
+      "pontos": 30,
+      "exato_qtd": 2,
+      "resultado_qtd": 2,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-fabio-Amistosos---R2",
+      "user_id": "user-fabio",
+      "rodada": "Amistosos - R2",
+      "pontos": 17,
+      "exato_qtd": 0,
+      "resultado_qtd": 3,
+      "gols_um_time_qtd": 1,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-geb-Amistosos---R2",
+      "user_id": "user-geb",
+      "rodada": "Amistosos - R2",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 4
+    },
+    {
+      "id": "score-user-dorminhoco-Amistosos---R2",
+      "user_id": "user-dorminhoco",
+      "rodada": "Amistosos - R2",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 4
+    },
+    {
+      "id": "score-user-diego-Copa-do-Mundo-2026",
+      "user_id": "user-diego",
+      "rodada": "Copa do Mundo 2026",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-chiquinho-Copa-do-Mundo-2026",
+      "user_id": "user-chiquinho",
+      "rodada": "Copa do Mundo 2026",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-fabio-Copa-do-Mundo-2026",
+      "user_id": "user-fabio",
+      "rodada": "Copa do Mundo 2026",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-geb-Copa-do-Mundo-2026",
+      "user_id": "user-geb",
+      "rodada": "Copa do Mundo 2026",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-dorminhoco-Copa-do-Mundo-2026",
+      "user_id": "user-dorminhoco",
+      "rodada": "Copa do Mundo 2026",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    }
+  ]
+}

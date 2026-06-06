@@ -1,0 +1,6 @@
+{
+  "name": "GEBolão",
+  "description": "Bolão da Copa do Mundo de 2026 para grupos de amigos com sistema de pontuação, ranking, conquistas zoadas e hall da fama.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
