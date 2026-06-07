@@ -142,7 +142,7 @@ export function OnboardingModal({ isOpen, onClose, isLoggedIn, onJoinGroup }: On
                 <div className="bg-slate-950/30 border border-slate-850 p-2 rounded-xl flex items-center gap-2">
                   <span className="text-xl">🎯</span>
                   <div>
-                    <span className="font-bold text-slate-200 block leading-tight">Olho de Águia</span>
+                    <span className="font-bold text-slate-200 block leading-tight">O Amigo do Primo da Jana</span>
                     <span className="text-[9px] text-slate-400 block leading-none">Mais placares exatos</span>
                   </div>
                 </div>
