@@ -559,7 +559,7 @@ export function PredictionsView({
                       </span>
                     ) : (
                       <span className="text-orange-700 text-[9px] font-black flex items-center gap-1 bg-orange-100/50 px-2 py-0.5 rounded border border-orange-200 uppercase italic">
-                        <Lock size={9} /> Geb Virgem (+0)
+                        <Lock size={9} /> Geb, o virgem (+0)
                       </span>
                     )
                   ) : currentUser ? (

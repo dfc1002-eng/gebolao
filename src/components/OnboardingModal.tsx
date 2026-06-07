@@ -118,7 +118,7 @@ export function OnboardingModal({ isOpen, onClose, isLoggedIn, onJoinGroup }: On
                 <div className="bg-slate-950/30 border border-slate-850 p-2 rounded-xl flex items-center gap-2">
                   <span className="text-xl">🥈</span>
                   <div>
-                    <span className="font-bold text-slate-200 block leading-tight">Pai GEB</span>
+                    <span className="font-bold text-slate-200 block leading-tight">Pai Geb</span>
                     <span className="text-[9px] text-slate-400 block leading-none">Quem bateu na trave</span>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export function OnboardingModal({ isOpen, onClose, isLoggedIn, onJoinGroup }: On
                 <div className="bg-slate-950/30 border border-slate-850 p-2 rounded-xl flex items-center gap-2">
                   <span className="text-xl">😴</span>
                   <div>
-                    <span className="font-bold text-slate-200 block leading-tight">Geb Virgem</span>
+                    <span className="font-bold text-slate-200 block leading-tight">Geb, o virgem</span>
                     <span className="text-[9px] text-slate-400 block leading-none">Esqueceu de palpitar</span>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ export function OnboardingModal({ isOpen, onClose, isLoggedIn, onJoinGroup }: On
                 <div className="bg-slate-950/30 border border-slate-850 p-2 rounded-xl flex items-center gap-2">
                   <span className="text-xl">🐐</span>
                   <div>
-                    <span className="font-bold text-slate-200 block leading-tight">GOAT</span>
+                    <span className="font-bold text-slate-200 block leading-tight">GOAT: Geb, o chifrudo</span>
                     <span className="text-[9px] text-slate-400 block leading-none">Líder supremo geral</span>
                   </div>
                 </div>

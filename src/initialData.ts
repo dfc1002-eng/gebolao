@@ -20,7 +20,7 @@ export const initialBadges: Badge[] = [
   },
   {
     id: 'badge-fabio',
-    nome: 'Pai GEB',
+    nome: 'Pai Geb',
     descricao: 'O participante que mais bateu na trave (errou placares por apenas 1 gol).',
     icone: '🥈',
     tipo: 'fabio'
@@ -34,7 +34,7 @@ export const initialBadges: Badge[] = [
   },
   {
     id: 'badge-virgem',
-    nome: 'Geb Virgem',
+    nome: 'Geb, o virgem',
     descricao: 'Dormiu no ponto! Não realizou nenhum palpite na rodada.',
     icone: '😴',
     tipo: 'virgem'
@@ -55,7 +55,7 @@ export const initialBadges: Badge[] = [
   },
   {
     id: 'badge-goat',
-    nome: 'GOAT do Bolão',
+    nome: 'GOAT: Geb, o chifrudo',
     descricao: 'Líder supremo na classificação geral acumulada!',
     icone: '🐐',
     tipo: 'goat'
@@ -314,7 +314,7 @@ export function computeAllStats(
       return userPreds.length === 0;
     });
 
-    // Award "😴 Geb Virgem" to inactive users
+    // Award "😴 Geb, o virgem" to inactive users
     inactiveParticipants.forEach((score) => {
       userBadges.push({
         id: `ub-${score.user_id}-virgem-${rd.replace(/\s+/g, '-')}`,

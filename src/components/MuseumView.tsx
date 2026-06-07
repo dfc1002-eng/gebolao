@@ -94,7 +94,7 @@ export function MuseumView({
       .filter((item) => item.count > 0);
   };
 
-  // B. Count of times asleep (Geb Virgem)
+  // B. Count of times asleep (Geb, o virgem)
   const getAsleepCount = () => {
     const counts: { [uid: string]: number } = {};
     users.forEach((u) => (counts[u.id] = 0));
@@ -202,11 +202,11 @@ export function MuseumView({
               )}
             </div>
 
-            {/* Pai GEB */}
+            {/* Pai Geb */}
             <div className="bg-slate-50/75 border border-slate-200 p-5 rounded-2xl flex flex-col justify-between items-center text-center shadow-xs relative group hover:border-slate-350 transition duration-200">
               <span className="absolute top-2 left-2 text-[8px] uppercase font-black text-slate-600 bg-slate-200 px-1.5 py-0.5 rounded tracking-widest italic">QUASE LÁ</span>
               <div className="text-4xl mb-2 select-none">🥈</div>
-              <h3 className="font-extrabold text-slate-900 text-sm uppercase tracking-wide">Pai GEB</h3>
+              <h3 className="font-extrabold text-slate-900 text-sm uppercase tracking-wide">Pai Geb</h3>
               <p className="text-[10px] text-slate-500 leading-normal px-2 mb-4 font-medium">
                 Errou o placar por 1 gol, ou previu o vencedor correto acumulando o maior número de quase-erros.
               </p>
@@ -284,11 +284,11 @@ export function MuseumView({
               )}
             </div>
 
-            {/* Geb Virgem */}
+            {/* Geb, o virgem */}
             <div className="bg-purple-50/50 border border-purple-200 p-5 rounded-2xl flex flex-col justify-between items-center text-center shadow-xs relative group hover:border-purple-300 transition duration-200">
               <span className="absolute top-2 left-2 text-[8px] uppercase font-black text-purple-700 bg-purple-100 px-1.5 py-0.5 rounded tracking-widest italic shadow-3xs">COCHILO</span>
               <div className="text-4xl mb-2 select-none">😴</div>
-              <h3 className="font-extrabold text-slate-900 text-sm uppercase tracking-wide">Geb Virgem</h3>
+              <h3 className="font-extrabold text-slate-900 text-sm uppercase tracking-wide">Geb, o virgem</h3>
               <p className="text-[10px] text-slate-500 leading-normal px-2 mb-4 font-medium">
                 Dormiu no ponto! Não realizou nenhum palpite na rodada inteira. Aplicação automática no sufoco.
               </p>
@@ -459,12 +459,12 @@ export function MuseumView({
               </div>
             </div>
 
-            {/* Mais Geb Virgem (Sonecas que esqueceram de palpitar) */}
+            {/* Mais Geb, o virgem (Sonecas que esqueceram de palpitar) */}
             <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
               <div className="flex items-center gap-3.5 mb-4 border-b border-slate-100 pb-3">
                 <span className="text-3xl select-none">😴</span>
                 <div>
-                  <h3 className="font-black text-slate-900 text-xs uppercase tracking-tight italic">Campeões da Soneca (Geb Virgem)</h3>
+                  <h3 className="font-black text-slate-900 text-xs uppercase tracking-tight italic">Campeões da Soneca (Geb, o virgem)</h3>
                   <p className="text-[10px] text-slate-400 font-semibold">Quantas vezes dormiu e não colocou nenhum palpite</p>
                 </div>
               </div>
