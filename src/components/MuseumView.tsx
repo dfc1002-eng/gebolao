@@ -202,11 +202,11 @@ export function MuseumView({
               )}
             </div>
 
-            {/* Fábio Quase Lá */}
+            {/* Pai GEB */}
             <div className="bg-slate-50/75 border border-slate-200 p-5 rounded-2xl flex flex-col justify-between items-center text-center shadow-xs relative group hover:border-slate-350 transition duration-200">
               <span className="absolute top-2 left-2 text-[8px] uppercase font-black text-slate-600 bg-slate-200 px-1.5 py-0.5 rounded tracking-widest italic">QUASE LÁ</span>
               <div className="text-4xl mb-2 select-none">🥈</div>
-              <h3 className="font-extrabold text-slate-900 text-sm uppercase tracking-wide">Fábio Quase Lá</h3>
+              <h3 className="font-extrabold text-slate-900 text-sm uppercase tracking-wide">Pai GEB</h3>
               <p className="text-[10px] text-slate-500 leading-normal px-2 mb-4 font-medium">
                 Errou o placar por 1 gol, ou previu o vencedor correto acumulando o maior número de quase-erros.
               </p>

@@ -20,7 +20,7 @@ export const initialBadges: Badge[] = [
   },
   {
     id: 'badge-fabio',
-    nome: 'Fábio Quase Lá',
+    nome: 'Pai GEB',
     descricao: 'O participante que mais bateu na trave (errou placares por apenas 1 gol).',
     icone: '🥈',
     tipo: 'fabio'
