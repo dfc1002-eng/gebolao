@@ -115,11 +115,6 @@ export function Header({
                     className="w-full h-full object-cover rounded-lg"
                     referrerPolicy="no-referrer"
                   />
-                  {/* Comical overlay elements of clown nose on custom photo! */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center">
-                    {/* Big red clown nose */}
-                    <div className="w-3.5 h-3.5 bg-red-600 rounded-full border border-red-400 ring-2 ring-red-300 shadow-lg animate-pulse"></div>
-                  </div>
                 </div>
               ) : (
                 /* Default Caricature Illustration of Geb built visually */
@@ -196,7 +191,7 @@ export function Header({
             </div>
             <div className="hidden sm:block pl-1.5 border-l-2 border-green-500/50 mt-1">
               <h1 className="text-[10px] uppercase font-bold tracking-widest text-white leading-none">Copa do Mundo 2026</h1>
-              <p className="text-[9px] text-green-200 font-semibold mt-0.5">O Bolão Mais Comédia e Corneteiro do Grupo de Amigos</p>
+              <p className="text-[9px] text-green-200 font-semibold mt-0.5">Bolão Solariano</p>
             </div>
           </div>
 
