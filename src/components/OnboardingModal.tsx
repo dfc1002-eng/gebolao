@@ -168,7 +168,15 @@ export function OnboardingModal({ isOpen, onClose, isLoggedIn, onJoinGroup }: On
               <p className="text-slate-350 leading-relaxed font-medium px-4">
                 Seus palpites ficam **ocultos** dos outros participantes até o jogo começar! Assim, ninguém pode copiar a sua estratégia.
               </p>
-              <div className="text-[10px] text-slate-400 font-bold">
+              
+              <div className="bg-slate-950/40 border border-slate-850 rounded-xl p-2.5 text-left text-[10px] space-y-1 text-slate-350 mx-4">
+                <span className="font-bold text-amber-400 block uppercase tracking-wide">💡 Acesso em outro aparelho?</span>
+                <span className="block leading-snug">
+                  Não usamos senhas! Para entrar em outro celular ou PC, basta ir em <strong>"Unir-se ao Grupo"</strong> e preencher o seu nome e mesmo e-mail para recuperar todo o seu histórico.
+                </span>
+              </div>
+
+              <div className="text-[10px] text-slate-400 font-bold pt-1">
                 ⚠️ Os palpites trancam automaticamente no minuto em que o jogo começa. Não durma no ponto!
               </div>
             </div>
