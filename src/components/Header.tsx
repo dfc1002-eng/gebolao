@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { User, Ranking } from '../types';
-import { LogIn, UserPlus, ShieldAlert, Award, UserCheck, Flame, RotateCcw } from 'lucide-react';
+import { LogIn, UserPlus, ShieldAlert, Award, UserCheck, Flame, RotateCcw, HelpCircle } from 'lucide-react';
 
 interface HeaderProps {
   currentUser: User | null;
@@ -12,6 +12,9 @@ interface HeaderProps {
   isLoading: boolean;
   logoImage?: string;
   onUpdateLogo?: (newLogo: string) => Promise<void>;
+  forceOpenRegister?: boolean;
+  onClearForceOpenRegister?: () => void;
+  onOpenOnboarding?: () => void;
 }
 
 export function Header({
@@ -23,7 +26,10 @@ export function Header({
   onResetDB,
   isLoading,
   logoImage,
-  onUpdateLogo
+  onUpdateLogo,
+  forceOpenRegister,
+  onClearForceOpenRegister,
+  onOpenOnboarding
 }: HeaderProps) {
   const [showRegister, setShowRegister] = useState(false);
   const [newNome, setNewNome] = useState('');
@@ -32,6 +38,13 @@ export function Header({
 
   const [isSplat, setIsSplat] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+
+  useEffect(() => {
+    if (forceOpenRegister) {
+      setShowRegister(true);
+      if (onClearForceOpenRegister) onClearForceOpenRegister();
+    }
+  }, [forceOpenRegister, onClearForceOpenRegister]);
 
   const handleUploadLogoFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -224,6 +237,18 @@ export function Header({
               })}
             </select>
           </div>
+
+          {/* Help Button */}
+          {onOpenOnboarding && (
+            <button
+              onClick={onOpenOnboarding}
+              className="bg-green-800 hover:bg-green-600 text-green-100 border border-green-650 p-2 rounded-lg transition-all cursor-pointer flex items-center justify-center"
+              title="Como Funciona o Bolão"
+              id="btn-onboarding-ajuda"
+            >
+              <HelpCircle size={14} />
+            </button>
+          )}
 
           {/* Create User Button */}
           <button

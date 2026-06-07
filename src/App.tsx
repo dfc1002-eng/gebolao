@@ -5,6 +5,7 @@ import { RankingView } from './components/RankingView';
 import { PredictionsView } from './components/PredictionsView';
 import { MuseumView } from './components/MuseumView';
 import { AdminView } from './components/AdminView';
+import { OnboardingModal } from './components/OnboardingModal';
 import { Trophy, CalendarCheck, AlertTriangle, Users, Sliders, RefreshCw, BarChart2, Star } from 'lucide-react';
 
 export default function App() {
@@ -23,6 +24,8 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'ranking' | 'palpites' | 'museum' | 'admin'>('ranking');
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [forceOpenRegister, setForceOpenRegister] = useState(false);
 
   // Synchronize state from backend APIs
   const fetchState = async (silently = false) => {
@@ -60,9 +63,13 @@ export default function App() {
     }
   };
 
-  // On mount, run initial pull
+  // On mount, run initial pull and check onboarding
   useEffect(() => {
     fetchState();
+    const hasSeen = localStorage.getItem('gebolao_onboarding_seen');
+    if (!hasSeen) {
+      setShowOnboarding(true);
+    }
   }, []);
 
   // Post Prediction Score handler
@@ -225,7 +232,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col justify-between selection:bg-green-200 selection:text-green-950 font-sans">
-      {/* Dynamic Header Component */}
       <Header
         currentUser={currentUser}
         users={users}
@@ -235,6 +241,9 @@ export default function App() {
         onResetDB={handleResetDB}
         isLoading={isLoading}
         logoImage={logoImage || '/geb.png'}
+        forceOpenRegister={forceOpenRegister}
+        onClearForceOpenRegister={() => setForceOpenRegister(false)}
+        onOpenOnboarding={() => setShowOnboarding(true)}
         onUpdateLogo={async (newLogo: string) => {
           try {
             const res = await fetch('/api/logo/update', {
@@ -505,6 +514,18 @@ export default function App() {
           </p>
         </div>
       </footer>
+      {/* Onboarding Wizard Modal */}
+      <OnboardingModal
+        isOpen={showOnboarding}
+        onClose={() => {
+          localStorage.setItem('gebolao_onboarding_seen', 'true');
+          setShowOnboarding(false);
+        }}
+        isLoggedIn={!!currentUser}
+        onJoinGroup={() => {
+          setForceOpenRegister(true);
+        }}
+      />
     </div>
   );
 }
