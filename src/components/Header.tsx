@@ -235,15 +235,17 @@ export function Header({
             <span className="hidden sm:inline">Unir-se ao Grupo</span>
           </button>
 
-          {/* Quick Reset State Button */}
-          <button
-            onClick={() => setShowResetWarning(true)}
-            className="bg-green-800 hover:bg-green-600 text-green-100 border border-green-650 p-2 rounded-lg transition-all cursor-pointer"
-            title="Resetar Banco de Dados do Demo"
-            id="btn-redefinir-demo"
-          >
-            <RotateCcw size={14} />
-          </button>
+          {/* Quick Reset State Button (Admin Only) */}
+          {currentUser?.isAdmin && (
+            <button
+              onClick={() => setShowResetWarning(true)}
+              className="bg-green-800 hover:bg-green-600 text-green-100 border border-green-650 p-2 rounded-lg transition-all cursor-pointer"
+              title="Resetar Banco de Dados do Demo"
+              id="btn-redefinir-demo"
+            >
+              <RotateCcw size={14} />
+            </button>
+          )}
         </div>
       </div>
 
