@@ -5,7 +5,7 @@ export const initialUsers: User[] = [
     id: 'user-diego',
     nome: 'Diogo Camargo (Admin/GOAT)',
     email: 'diocamargo1002@gmail.com',
-    avatar_url: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80',
+    avatar_url: 'https://github.com/dfc1002-eng.png',
     isAdmin: true
   }
 ];

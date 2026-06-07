@@ -182,21 +182,6 @@ export function Header({
               )}
             </div>
 
-            {/* Custom file input gear button to change Geb photo */}
-            {onUpdateLogo && (
-              <label 
-                className="absolute -bottom-1 -right-1 bg-amber-400 hover:bg-amber-350 border-2 border-green-800 w-5 h-5 rounded-full flex items-center justify-center cursor-pointer shadow-md select-none transition-transform hover:scale-115 z-20" 
-                title="Mudar foto do Geb"
-              >
-                <input 
-                  type="file" 
-                  accept="image/*" 
-                  onChange={handleUploadLogoFile} 
-                  className="hidden" 
-                />
-                <span className="text-[9px]">📸</span>
-              </label>
-            )}
           </div>
 
           {/* Logo Brand / Text layout */}
