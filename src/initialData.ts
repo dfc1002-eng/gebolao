@@ -63,7 +63,7 @@ export const initialBadges: Badge[] = [
 ];
 
 export const initialMatches: Match[] = [
-  // --- GRUPO A (Completed) ---
+  // --- GRUPO A (Unplayed) ---
   {
     id: 'wc2026-m1',
     fase: 'Grupo A',
@@ -73,11 +73,11 @@ export const initialMatches: Match[] = [
     bandeira_fora: '🇿🇦',
     data_hora: '2026-06-02T18:00:00Z',
     estadio: 'Estádio Azteca, Cidade do México',
-    gols_casa: 2,
-    gols_fora: 1,
-    status: 'completed'
+    gols_casa: null,
+    gols_fora: null,
+    status: 'unplayed'
   },
-  // --- GRUPO B (Completed) ---
+  // --- GRUPO B (Unplayed) ---
   {
     id: 'wc2026-m2',
     fase: 'Grupo B',
@@ -87,11 +87,11 @@ export const initialMatches: Match[] = [
     bandeira_fora: '🇫🇷',
     data_hora: '2026-06-03T20:00:00Z',
     estadio: 'BC Place, Vancouver',
-    gols_casa: 3,
-    gols_fora: 1,
-    status: 'completed'
+    gols_casa: null,
+    gols_fora: null,
+    status: 'unplayed'
   },
-  // --- GRUPO C (Completed) ---
+  // --- GRUPO C (Unplayed) ---
   {
     id: 'wc2026-m3',
     fase: 'Grupo C',
@@ -101,11 +101,11 @@ export const initialMatches: Match[] = [
     bandeira_fora: '🇪🇸',
     data_hora: '2026-06-04T15:00:00Z',
     estadio: 'MetLife Stadium, East Rutherford',
-    gols_casa: 2,
-    gols_fora: 2,
-    status: 'completed'
+    gols_casa: null,
+    gols_fora: null,
+    status: 'unplayed'
   },
-  // --- GRUPO D (Completed) ---
+  // --- GRUPO D (Unplayed) ---
   {
     id: 'wc2026-m4',
     fase: 'Grupo D',
@@ -115,9 +115,9 @@ export const initialMatches: Match[] = [
     bandeira_fora: '🇩🇪',
     data_hora: '2026-06-05T21:00:00Z',
     estadio: 'SoFi Stadium, Los Angeles',
-    gols_casa: 1,
-    gols_fora: 1,
-    status: 'completed'
+    gols_casa: null,
+    gols_fora: null,
+    status: 'unplayed'
   },
 
   // --- GRUPO E (Unplayed) ---
@@ -179,19 +179,7 @@ export const initialMatches: Match[] = [
 ];
 
 // Preseeded predictions for our users to create instant interesting points & badges in Grupo A-D!
-export const initialPredictions: Prediction[] = [
-  // --- DIOGO (ADMIN) ---
-  // Completados
-  { id: 'p-d-r1-1', user_id: 'user-diego', match_id: 'wc2026-m1', gols_casa: 1, gols_fora: 0, created_at: '2026-06-10T14:00:00Z' },
-  { id: 'p-d-r1-2', user_id: 'user-diego', match_id: 'wc2026-m2', gols_casa: 3, gols_fora: 1, created_at: '2026-06-10T14:05:00Z' },
-  { id: 'p-d-r1-3', user_id: 'user-diego', match_id: 'wc2026-m3', gols_casa: 2, gols_fora: 1, created_at: '2026-06-10T14:10:00Z' },
-  { id: 'p-d-r1-4', user_id: 'user-diego', match_id: 'wc2026-m4', gols_casa: 1, gols_fora: 1, created_at: '2026-06-10T14:15:00Z' },
-  // Pendentes
-  { id: 'p-d-r2-1', user_id: 'user-diego', match_id: 'wc2026-m5', gols_casa: 2, gols_fora: 1, created_at: '2026-06-15T14:20:00Z' },
-  { id: 'p-d-r2-2', user_id: 'user-diego', match_id: 'wc2026-m6', gols_casa: 1, gols_fora: 2, created_at: '2026-06-15T14:21:00Z' },
-  { id: 'p-d-r2-3', user_id: 'user-diego', match_id: 'wc2026-m7', gols_casa: 1, gols_fora: 3, created_at: '2026-06-15T14:22:00Z' },
-  { id: 'p-d-r2-4', user_id: 'user-diego', match_id: 'wc2026-m8', gols_casa: 0, gols_fora: 0, created_at: '2026-06-15T14:23:00Z' }
-];
+export const initialPredictions: Prediction[] = [];
 
 // Utility: Matches standard sweepstakes score calculation we discussed earlier!
 export function calculatePredictionPoints(

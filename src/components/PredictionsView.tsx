@@ -82,12 +82,11 @@ export function PredictionsView({
     }) + ' (UTC)';
   };
 
-  // Check if a match has started relative to the current mock time (June 6, 2026)
+  // Check if a match has started relative to the current real time
   const isMatchLocked = (match: Match) => {
     if (match.status === 'completed') return true;
     const matchTime = new Date(match.data_hora);
-    const mockCurrentTime = new Date('2026-06-06T02:30:08Z'); // Use metadata simulated time
-    return matchTime < mockCurrentTime;
+    return matchTime < new Date();
   };
 
   // Calculate pending guesses for a specific phase
