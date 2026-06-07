@@ -492,6 +492,31 @@ app.post('/api/register', async (req, res) => {
   }
 });
 
+// Toggle admin status of a user
+app.post('/api/user/toggle-admin', async (req, res) => {
+  try {
+    const { user_id } = req.body;
+    if (!user_id) {
+      return res.status(400).json({ error: 'ID do usuário é obrigatório.' });
+    }
+
+    const state = await getDBState();
+    const userIndex = state.users.findIndex((u) => u.id === user_id);
+
+    if (userIndex === -1) {
+      return res.status(404).json({ error: 'Usuário não encontrado.' });
+    }
+
+    // Toggle isAdmin flag
+    state.users[userIndex].isAdmin = !state.users[userIndex].isAdmin;
+
+    await saveDBState(state);
+    res.json({ success: true, user: state.users[userIndex], state });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Import matches from an external list (Admin Manual Override)
 app.post('/api/match/import', async (req, res) => {
   try {

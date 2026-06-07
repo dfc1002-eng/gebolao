@@ -151,6 +151,28 @@ export default function App() {
     }
   };
 
+  // Toggle user admin permission
+  const handleToggleAdmin = async (userId: string) => {
+    setErrorMsg(null);
+    try {
+      const res = await fetch('/api/user/toggle-admin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: userId })
+      });
+
+      if (!res.ok) {
+        const errData = await res.json();
+        throw new Error(errData.error || 'Erro ao alterar permissão.');
+      }
+
+      await fetchState(true);
+    } catch (err: any) {
+      console.error(err);
+      alert('Falha ao alterar permissão de admin: ' + err.message);
+    }
+  };
+
   // Put bulk games in database
   const handleImportMatches = async (importedList: any[]) => {
     setErrorMsg(null);
@@ -360,6 +382,8 @@ export default function App() {
                     onImportMatches={handleImportMatches}
                     onResetDB={handleResetDB}
                     isLoading={isLoading}
+                    users={users}
+                    onToggleAdmin={handleToggleAdmin}
                     onRefreshState={async () => {
                       await fetchState(true);
                     }}

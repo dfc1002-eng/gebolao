@@ -11,6 +11,8 @@ interface AdminViewProps {
   onImportMatches: (matchesJSON: any[]) => Promise<void>;
   onResetDB: () => Promise<void>;
   isLoading: boolean;
+  users: User[];
+  onToggleAdmin: (userId: string) => Promise<void>;
   onRefreshState?: () => Promise<void>;
 }
 
@@ -23,6 +25,8 @@ export function AdminView({
   onImportMatches,
   onResetDB,
   isLoading,
+  users,
+  onToggleAdmin,
   onRefreshState
 }: AdminViewProps) {
   const [activeAdminTab, setActiveAdminTab] = useState<'jogos' | 'usuarios' | 'importar'>('jogos');
@@ -379,6 +383,42 @@ export function AdminView({
                 <span>Salvar Novo Competidor</span>
               </button>
             </form>
+
+            {/* List of existing users with Admin toggles */}
+            <div className="border-t border-slate-900 pt-6 mt-6 space-y-3">
+              <h4 className="font-bold text-xs text-slate-350 uppercase tracking-wider">Gerenciar Administradores</h4>
+              <p className="text-[10px] text-slate-500">Promova participantes confiáveis para ajudar na atualização dos placares oficiais do bolão.</p>
+              <div className="space-y-2 max-h-[300px] overflow-y-auto pr-1">
+                {users.map((u) => (
+                  <div key={u.id} className="bg-slate-900/40 border border-slate-850 px-4 py-2.5 rounded-xl flex items-center justify-between gap-3 text-xs">
+                    <div className="flex items-center gap-2.5">
+                      <img src={u.avatar_url} alt={u.nome} className="w-8 h-8 rounded-full object-cover border border-slate-800 bg-slate-900" />
+                      <div>
+                        <span className="font-bold text-white block">{u.nome}</span>
+                        <span className="text-[10px] text-slate-400 block font-mono">{u.email}</span>
+                      </div>
+                    </div>
+                    <div>
+                      {u.id === 'user-diego' ? (
+                        <span className="bg-emerald-500/10 text-emerald-450 border border-emerald-900/40 text-[9px] font-black uppercase tracking-wider px-2.5 py-1 rounded">Presidente (Dono)</span>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => onToggleAdmin(u.id)}
+                          className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-wider transition duration-150 cursor-pointer ${
+                            u.isAdmin
+                              ? 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-900/40'
+                              : 'bg-slate-800 hover:bg-slate-700 text-slate-350 border border-slate-700'
+                          }`}
+                        >
+                          {u.isAdmin ? '👑 Admin (Remover)' : 'Promover a Admin'}
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         )}
 
