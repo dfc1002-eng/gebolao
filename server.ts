@@ -24,7 +24,7 @@ import {
 import { GameState, Prediction, Match, User, Badge, UserBadge, RoundScore } from './src/types.js';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const DB_FILE = path.join(process.cwd(), 'db.json');
 
 app.use(express.json());
