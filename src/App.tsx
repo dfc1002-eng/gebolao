@@ -266,16 +266,16 @@ export default function App() {
 
             <button
               onClick={() => setActiveTab('palpites')}
-              className={`px-4 py-2.5 rounded-lg font-black uppercase italic tracking-wider flex items-center gap-1.5 transition duration-200 cursor-pointer ${
+              className={`px-4 py-2.5 rounded-lg font-black uppercase italic tracking-wider flex items-center gap-1.5 transition-all duration-200 cursor-pointer ${
                 activeTab === 'palpites'
-                  ? 'bg-green-700 text-white shadow'
-                  : 'text-slate-500 hover:text-slate-950 hover:bg-slate-200/60'
+                  ? 'bg-amber-400 text-green-950 shadow-md border border-amber-500 scale-[1.02]'
+                  : 'bg-amber-100/95 text-amber-950 border border-amber-350 shadow-xs animate-pulse-gold hover:bg-amber-200/90'
               }`}
             >
-              <CalendarCheck size={14} />
+              <CalendarCheck size={14} className={activeTab === 'palpites' ? 'text-green-950' : 'text-amber-800'} />
               <span>Dar Meus Palpites</span>
               {currentUser && getUnplayedMatchesCount() > 0 && (
-                <span className="ml-1 px-2 py-0.5 bg-amber-400 text-green-950 text-[10px] font-black rounded-lg animate-pulse">
+                <span className="ml-1 px-2 py-0.5 bg-red-600 text-white text-[10px] font-black rounded-lg animate-pulse">
                   {getUnplayedMatchesCount()}
                 </span>
               )}
