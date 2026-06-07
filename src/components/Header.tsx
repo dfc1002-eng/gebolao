@@ -221,31 +221,33 @@ export function Header({
 
         {/* User Stats & Switcher Area */}
         <div className="flex flex-wrap items-center gap-3 w-full md:w-auto justify-end">
-          {/* Quick Switch Select Dropdown */}
-          <div className="flex items-center gap-2 bg-green-850/80 border border-green-600/40 px-2.5 py-1.5 rounded-lg text-xs w-full sm:w-auto shadow-inner">
-            <label className="text-green-150 whitespace-nowrap flex items-center gap-1 font-bold text-green-100">
-              <UserCheck size={14} className="text-amber-300" />
-              <span>Simular Competidor:</span>
-            </label>
-            <select
-              value={currentUser?.id || ''}
-              onChange={(e) => {
-                const selected = users.find((u) => u.id === e.target.value);
-                onSelectUser(selected || null);
-              }}
-              className="bg-green-900 text-white border-none outline-none focus:ring-0 cursor-pointer max-w-[150px] font-black uppercase text-[11px] rounded px-1 h-6 py-0"
-            >
-              <option value="" className="bg-slate-900 text-slate-350">-- Visitante (Deslogado) --</option>
-              {users.map((u) => {
-                const rank = rankings.find((r) => r.user_id === u.id);
-                return (
-                  <option key={u.id} value={u.id} className="bg-slate-900 text-white">
-                    {u.nome} {rank ? `(${rank.pontos_totais} pts)` : ''} {u.isAdmin ? '👑' : ''}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
+          {/* Quick Switch Select Dropdown - ADMIN ONLY */}
+          {currentUser?.isAdmin && (
+            <div className="flex items-center gap-2 bg-green-850/80 border border-green-600/40 px-2.5 py-1.5 rounded-lg text-xs w-full sm:w-auto shadow-inner">
+              <label className="text-green-150 whitespace-nowrap flex items-center gap-1 font-bold text-green-100">
+                <UserCheck size={14} className="text-amber-300" />
+                <span>Simular Competidor:</span>
+              </label>
+              <select
+                value={currentUser?.id || ''}
+                onChange={(e) => {
+                  const selected = users.find((u) => u.id === e.target.value);
+                  onSelectUser(selected || null);
+                }}
+                className="bg-green-900 text-white border-none outline-none focus:ring-0 cursor-pointer max-w-[150px] font-black uppercase text-[11px] rounded px-1 h-6 py-0"
+              >
+                <option value="" className="bg-slate-900 text-slate-350">-- Visitante (Deslogado) --</option>
+                {users.map((u) => {
+                  const rank = rankings.find((r) => r.user_id === u.id);
+                  return (
+                    <option key={u.id} value={u.id} className="bg-slate-900 text-white">
+                      {u.nome} {rank ? `(${rank.pontos_totais} pts)` : ''} {u.isAdmin ? '👑' : ''}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+          )}
 
           {/* Help Button */}
           {onOpenOnboarding && (
@@ -259,15 +261,17 @@ export function Header({
             </button>
           )}
 
-          {/* Create User Button */}
-          <button
-            onClick={() => setShowRegister(true)}
-            className="bg-amber-400 hover:bg-amber-350 active:scale-95 text-green-950 font-black tracking-wider uppercase text-xs px-3.5 py-2 rounded-lg transition-all flex items-center gap-1 cursor-pointer shadow-sm"
-            id="btn-cadastrar-participante"
-          >
-            <UserPlus size={14} />
-            <span className="hidden sm:inline">Unir-se ao Grupo</span>
-          </button>
+          {/* Create User / Sign In Button - Show only when logged out */}
+          {!currentUser && (
+            <button
+              onClick={() => setShowRegister(true)}
+              className="bg-amber-400 hover:bg-amber-350 active:scale-95 text-green-950 font-black tracking-wider uppercase text-xs px-3.5 py-2 rounded-lg transition-all flex items-center gap-1 cursor-pointer shadow-sm"
+              id="btn-cadastrar-participante"
+            >
+              <UserPlus size={14} />
+              <span>Entrar / Cadastrar</span>
+            </button>
+          )}
 
           {/* Quick Reset State Button (Admin Only) */}
           {currentUser?.isAdmin && (
@@ -291,14 +295,22 @@ export function Header({
               <div className="w-9 h-9 rounded-full border-2 border-amber-400 flex items-center justify-center font-display font-black text-amber-500 bg-amber-50 shadow-sm uppercase text-xs select-none shrink-0">
                 {getInitials(currentUser.nome)}
               </div>
-              <div>
-                <span className="text-green-200 font-medium">Simulando competidor: </span>
+              <div className="flex items-center gap-2">
+                <span className="text-green-200 font-medium">
+                  {currentUser.isAdmin ? 'Simulando competidor: ' : 'Logado como: '}
+                </span>
                 <span className="font-extrabold text-amber-300 uppercase tracking-wide text-xs">{currentUser.nome}</span>
                 {currentUser.isAdmin && (
-                  <span className="ml-1.5 px-1.5 py-0.2 bg-amber-400 text-green-950 rounded font-display text-[9px] uppercase font-black">
+                  <span className="px-1.5 py-0.2 bg-amber-400 text-green-950 rounded font-display text-[9px] uppercase font-black">
                     Admin / Presidente
                   </span>
                 )}
+                <button
+                  onClick={() => onSelectUser(null)}
+                  className="ml-2 bg-red-600/20 hover:bg-red-500 text-red-100 border border-red-900/40 px-2 py-0.5 rounded text-[10px] uppercase font-black transition cursor-pointer"
+                >
+                  Sair
+                </button>
               </div>
             </div>
 

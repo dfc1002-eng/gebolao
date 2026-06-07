@@ -55,14 +55,28 @@ export default function App() {
       setRankings(data.rankings || []);
       setLogoImage(data.logo_image || '');
 
-      // If no current user is loaded initially, auto-log in as preseeded Admin "Diogo Camargo" so they can experience everything immediately
-      if (!currentUser && data.users?.length > 0) {
-        const adminUser = data.users.find((u: User) => u.isAdmin) || data.users[0];
-        setCurrentUser(adminUser);
+      // Resolve current user: try localStorage first, otherwise remain logged out
+      const storedUserId = localStorage.getItem('gebolao_current_user_id');
+      if (storedUserId) {
+        const matchedUser = data.users?.find((u: User) => u.id === storedUserId);
+        if (matchedUser) {
+          setCurrentUser(matchedUser);
+        } else {
+          // If stored user doesn't exist in DB anymore, clear it
+          localStorage.removeItem('gebolao_current_user_id');
+          setCurrentUser(null);
+        }
       } else if (currentUser) {
         // Re-sync current user details
-        const synced = data.users.find((u: User) => u.id === currentUser.id);
-        if (synced) setCurrentUser(synced);
+        const synced = data.users?.find((u: User) => u.id === currentUser.id);
+        if (synced) {
+          setCurrentUser(synced);
+          localStorage.setItem('gebolao_current_user_id', synced.id);
+        } else {
+          setCurrentUser(null);
+        }
+      } else {
+        setCurrentUser(null);
       }
     } catch (err: any) {
       console.error('Failed to parse backend session, rendering offline state.', err);
@@ -160,6 +174,9 @@ export default function App() {
 
       const data = await res.json();
       setCurrentUser(data.user); // Login custom user instantly
+      if (data.user) {
+        localStorage.setItem('gebolao_current_user_id', data.user.id);
+      }
       await fetchState(true);
     } catch (err: any) {
       console.error(err);
@@ -263,6 +280,11 @@ export default function App() {
   // Change user session on selector dropdown
   const handleSelectUser = (selected: User | null) => {
     setCurrentUser(selected);
+    if (selected) {
+      localStorage.setItem('gebolao_current_user_id', selected.id);
+    } else {
+      localStorage.removeItem('gebolao_current_user_id');
+    }
   };
 
   // Helper calculating personal metrics for currently logged user
