@@ -36,6 +36,15 @@ export function Header({
   const [newEmail, setNewEmail] = useState('');
   const [showResetWarning, setShowResetWarning] = useState(false);
 
+  const getInitials = (name: string) => {
+    if (!name) return '?';
+    const parts = name.split(/\s+/).filter(Boolean);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return parts[0].substring(0, 2).toUpperCase();
+  };
+
   const [isSplat, setIsSplat] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -279,12 +288,9 @@ export function Header({
         <div className="bg-green-900 border-t border-green-950/40 px-4 py-2.5 text-xs text-white">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div className="flex items-center gap-3">
-              <img
-                src={currentUser.avatar_url}
-                alt={currentUser.nome}
-                className="w-9 h-9 rounded-full border-2 border-amber-400 bg-white p-[1.5px] object-cover shadow-sm"
-                referrerPolicy="no-referrer"
-              />
+              <div className="w-9 h-9 rounded-full border-2 border-amber-400 flex items-center justify-center font-display font-black text-amber-500 bg-amber-50 shadow-sm uppercase text-xs select-none shrink-0">
+                {getInitials(currentUser.nome)}
+              </div>
               <div>
                 <span className="text-green-200 font-medium">Simulando competidor: </span>
                 <span className="font-extrabold text-amber-300 uppercase tracking-wide text-xs">{currentUser.nome}</span>

@@ -27,6 +27,15 @@ export function RankingView({
   // Helper: Retrieve user profile
   const getUser = (userId: string) => users.find((u) => u.id === userId);
 
+  const getInitials = (name: string) => {
+    if (!name) return '?';
+    const parts = name.split(/\s+/).filter(Boolean);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return parts[0].substring(0, 2).toUpperCase();
+  };
+
   // Helper: Get user active badges
   const getUserBadgesList = (userId: string) => {
     const uBadges = userBadges.filter((ub) => ub.user_id === userId);
@@ -74,12 +83,9 @@ export function RankingView({
             </div>
             <div className="mb-3 flex flex-col items-center">
               <div className="relative mb-2 mt-2">
-                <img
-                  src={getUser(rankings[1].user_id)?.avatar_url}
-                  alt="2nd place avatar"
-                  className="w-16 h-16 rounded-full border-2 border-slate-350 p-0.5 object-cover shadow-sm bg-white"
-                  referrerPolicy="no-referrer"
-                />
+                <div className="w-16 h-16 rounded-full border-2 border-slate-350 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-sm uppercase text-lg select-none">
+                  {getInitials(getUser(rankings[1].user_id)?.nome || '')}
+                </div>
                 <div className="absolute -bottom-1 -right-1 bg-slate-300 text-slate-800 p-1 rounded-full shadow border border-white">
                   <Medal size={16} />
                 </div>
@@ -118,12 +124,9 @@ export function RankingView({
             </div>
             <div className="mb-4 flex flex-col items-center">
               <div className="relative mb-2.5 mt-2">
-                <img
-                  src={getUser(rankings[0].user_id)?.avatar_url}
-                  alt="1st place avatar"
-                  className="w-20 h-20 rounded-full border-4 border-amber-400 p-0.5 object-cover shadow-md bg-white"
-                  referrerPolicy="no-referrer"
-                />
+                <div className="w-20 h-20 rounded-full border-4 border-amber-400 flex items-center justify-center font-display font-black text-amber-500 bg-amber-50 shadow-md uppercase text-2xl select-none">
+                  {getInitials(getUser(rankings[0].user_id)?.nome || '')}
+                </div>
                 <div className="absolute bottom-0 right-0 bg-amber-400 text-green-950 p-1.5 rounded-full shadow border border-white animate-bounce">
                   <Award size={18} />
                 </div>
@@ -165,12 +168,9 @@ export function RankingView({
             </div>
             <div className="mb-3 flex flex-col items-center">
               <div className="relative mb-2 mt-2">
-                <img
-                  src={getUser(rankings[2].user_id)?.avatar_url}
-                  alt="3rd place avatar"
-                  className="w-16 h-16 rounded-full border-2 border-amber-600 p-0.5 object-cover shadow-sm bg-white"
-                  referrerPolicy="no-referrer"
-                />
+                <div className="w-16 h-16 rounded-full border-2 border-amber-600 flex items-center justify-center font-display font-black text-amber-800 bg-amber-50 shadow-sm uppercase text-lg select-none">
+                  {getInitials(getUser(rankings[2].user_id)?.nome || '')}
+                </div>
                 <div className="absolute -bottom-1 -right-1 bg-amber-600 text-white p-1 rounded-full shadow border border-white">
                   <Medal size={16} />
                 </div>
@@ -266,13 +266,10 @@ export function RankingView({
                     {/* Participant Info */}
                     <td className="py-3.5 px-3">
                       <div className="flex items-center gap-2.5">
-                        <img
-                          src={user.avatar_url}
-                          alt={user.nome}
-                          className="w-8 h-8 rounded-full border border-slate-200 p-0.5 object-cover shadow-sm bg-white"
-                          referrerPolicy="no-referrer"
-                        />
-                        <div className="flex flex-col">
+                      <div className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-sm uppercase text-[10px] select-none shrink-0">
+                        {getInitials(user.nome)}
+                      </div>
+                      <div className="flex flex-col">
                           <span className="font-extrabold text-slate-900 group-hover:text-green-700 transition-colors uppercase italic tracking-wide text-xs">
                             {user.nome}
                           </span>
@@ -329,12 +326,9 @@ export function RankingView({
           <div className="bg-white border border-slate-300 p-6 rounded-2xl shadow-xl w-full max-w-md animate-in fade-in duration-200 text-slate-900">
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center gap-3">
-                <img
-                  src={focusedUser.avatar_url}
-                  alt={focusedUser.nome}
-                  className="w-12 h-12 rounded-full border-2 border-green-700 p-0.5 object-cover shadow-sm bg-white"
-                  referrerPolicy="no-referrer"
-                />
+                <div className="w-12 h-12 rounded-full border-2 border-green-700 flex items-center justify-center font-display font-black text-green-700 bg-green-50 shadow-sm uppercase text-base select-none shrink-0">
+                  {getInitials(focusedUser.nome)}
+                </div>
                 <div>
                   <h3 className="font-extrabold text-slate-950 text-sm uppercase italic tracking-wide">{focusedUser.nome}</h3>
                   <p className="text-[10px] text-slate-500 font-mono">{focusedUser.email}</p>

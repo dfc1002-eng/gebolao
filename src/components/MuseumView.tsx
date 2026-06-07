@@ -26,6 +26,15 @@ export function MuseumView({
   const getUser = (id: string) => users.find((u) => u.id === id);
   const getBadge = (badgeId: string) => badges.find((b) => b.id === badgeId);
 
+  const getInitials = (name: string) => {
+    if (!name) return '?';
+    const parts = name.split(/\s+/).filter(Boolean);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return parts[0].substring(0, 2).toUpperCase();
+  };
+
   // --- 1. DESTAQUES DA RODADA AUTOMATION ---
   // Returns user who received a specific badge type in a specific round
   const getUserByRoundBadge = (badgeType: string, roundName: string) => {
@@ -184,12 +193,9 @@ export function MuseumView({
               </p>
               {getUserByRoundBadge('chiquinho', selectedRound) ? (
                 <div className="flex flex-col items-center bg-white p-3 rounded-xl border border-amber-200 w-full animate-in fade-in duration-300 shadow-3xs">
-                  <img
-                    src={getUserByRoundBadge('chiquinho', selectedRound)?.avatar_url}
-                    alt="avatar"
-                    className="w-10 h-10 rounded-full border-2 border-amber-400 mb-1 shadow-3xs"
-                    referrerPolicy="no-referrer"
-                  />
+                  <div className="w-10 h-10 rounded-full border-2 border-amber-400 mb-1 shadow-3xs flex items-center justify-center font-display font-black text-amber-700 bg-amber-50 uppercase text-[11px] select-none">
+                    {getInitials(getUserByRoundBadge('chiquinho', selectedRound)?.nome || '')}
+                  </div>
                   <span className="font-extrabold text-xs text-amber-700 uppercase italic tracking-wide">{getUserByRoundBadge('chiquinho', selectedRound)?.nome}</span>
                   <span className="text-[10px] text-slate-500 mt-0.5 font-bold">
                     Pontos na rodada: {roundScores.find((s) => s.user_id === getUserByRoundBadge('chiquinho', selectedRound)?.id && s.rodada === selectedRound)?.pontos} pts
@@ -212,12 +218,9 @@ export function MuseumView({
               </p>
               {getUserByRoundBadge('fabio', selectedRound) ? (
                 <div className="flex flex-col items-center bg-white p-3 rounded-xl border border-slate-200 w-full shadow-3xs">
-                  <img
-                    src={getUserByRoundBadge('fabio', selectedRound)?.avatar_url}
-                    alt="avatar"
-                    className="w-10 h-10 rounded-full border-2 border-slate-400 mb-1 shadow-3xs"
-                    referrerPolicy="no-referrer"
-                  />
+                  <div className="w-10 h-10 rounded-full border-2 border-slate-400 mb-1 shadow-3xs flex items-center justify-center font-display font-black text-slate-700 bg-slate-50 uppercase text-[11px] select-none">
+                    {getInitials(getUserByRoundBadge('fabio', selectedRound)?.nome || '')}
+                  </div>
                   <span className="font-extrabold text-xs text-slate-800 uppercase italic tracking-wide">{getUserByRoundBadge('fabio', selectedRound)?.nome}</span>
                   <span className="text-[10px] text-slate-500 mt-0.5 font-bold">Mestre do "Quase-Gol"</span>
                 </div>
@@ -238,14 +241,11 @@ export function MuseumView({
               </p>
               {getUserByRoundBadge('aguia', selectedRound) ? (
                 <div className="flex flex-col items-center bg-white p-3 rounded-xl border border-green-200 w-full shadow-3xs">
-                  <img
-                    src={getUserByRoundBadge('aguia', selectedRound)?.avatar_url}
-                    alt="avatar"
-                    className="w-10 h-10 rounded-full border-2 border-green-600 mb-1 shadow-3xs"
-                    referrerPolicy="no-referrer"
-                  />
+                  <div className="w-10 h-10 rounded-full border-2 border-green-600 mb-1 shadow-3xs flex items-center justify-center font-display font-black text-green-700 bg-green-50 uppercase text-[11px] select-none">
+                    {getInitials(getUserByRoundBadge('aguia', selectedRound)?.nome || '')}
+                  </div>
                   <span className="font-extrabold text-xs text-green-700 uppercase italic tracking-wide">{getUserByRoundBadge('aguia', selectedRound)?.nome}</span>
-                  <span className="text-[10px] text-slate-505 text-slate-500 mt-0.5 font-semibold">
+                  <span className="text-[10px] text-slate-500 mt-0.5 font-semibold">
                     Exatos: {roundScores.find((s) => s.user_id === getUserByRoundBadge('aguia', selectedRound)?.id && s.rodada === selectedRound)?.exato_qtd} placares!
                   </span>
                 </div>
@@ -266,14 +266,11 @@ export function MuseumView({
               </p>
               {getUserByRoundBadge('gebiada', selectedRound) ? (
                 <div className="flex flex-col items-center bg-white p-3 rounded-xl border border-red-200 w-full shadow-3xs">
-                  <img
-                    src={getUserByRoundBadge('gebiada', selectedRound)?.avatar_url}
-                    alt="avatar"
-                    className="w-10 h-10 rounded-full border-2 border-red-400 mb-1 shadow-3xs"
-                    referrerPolicy="no-referrer"
-                  />
+                  <div className="w-10 h-10 rounded-full border-2 border-red-400 mb-1 shadow-3xs flex items-center justify-center font-display font-black text-red-700 bg-red-50 uppercase text-[11px] select-none">
+                    {getInitials(getUserByRoundBadge('gebiada', selectedRound)?.nome || '')}
+                  </div>
                   <span className="font-extrabold text-xs text-red-600 uppercase italic tracking-wide">{getUserByRoundBadge('gebiada', selectedRound)?.nome}</span>
-                  <span className="text-[10px] text-slate-505 text-slate-500 mt-0.5 font-semibold">
+                  <span className="text-[10px] text-slate-500 mt-0.5 font-semibold">
                     Mágicos {roundScores.find((s) => s.user_id === getUserByRoundBadge('gebiada', selectedRound)?.id && s.rodada === selectedRound)?.pontos} pts!
                   </span>
                 </div>
@@ -294,12 +291,9 @@ export function MuseumView({
               </p>
               {getUserByRoundBadge('virgem', selectedRound) ? (
                 <div className="flex flex-col items-center bg-white p-3 rounded-xl border border-purple-200 w-full shadow-3xs">
-                  <img
-                    src={getUserByRoundBadge('virgem', selectedRound)?.avatar_url}
-                    alt="avatar"
-                    className="w-10 h-10 rounded-full border-2 border-purple-500 mb-1 shadow-3xs"
-                    referrerPolicy="no-referrer"
-                  />
+                  <div className="w-10 h-10 rounded-full border-2 border-purple-500 mb-1 shadow-3xs flex items-center justify-center font-display font-black text-purple-700 bg-purple-50 uppercase text-[11px] select-none">
+                    {getInitials(getUserByRoundBadge('virgem', selectedRound)?.nome || '')}
+                  </div>
                   <span className="font-extrabold text-xs text-purple-600 uppercase italic tracking-wide">{getUserByRoundBadge('virgem', selectedRound)?.nome}</span>
                   <span className="text-[10px] text-slate-500 mt-0.5 font-semibold">Soneca profunda</span>
                 </div>
@@ -340,7 +334,9 @@ export function MuseumView({
                   <div key={item.user?.id} className="flex items-center justify-between bg-slate-50 border border-slate-150 p-2.5 rounded-lg shadow-3xs">
                     <div className="flex items-center gap-2.5">
                       <span className="text-xs text-amber-600 font-black italic">{idx + 1}º</span>
-                      <img src={item.user?.avatar_url} alt="avatar" className="w-7 h-7 rounded-full border border-slate-200 shadow-3xs object-cover" referrerPolicy="no-referrer" />
+                      <div className="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-3xs uppercase text-[9px] select-none shrink-0">
+                        {getInitials(item.user?.nome || '')}
+                      </div>
                       <span className="text-xs font-black text-slate-800 uppercase italic tracking-wide">{item.user?.nome}</span>
                     </div>
                     <span className="bg-amber-400 text-green-950 font-black text-[10px] px-2.5 py-0.5 rounded border border-amber-500 uppercase italic">
@@ -369,7 +365,9 @@ export function MuseumView({
                   <div key={item.user?.id} className="flex items-center justify-between bg-slate-50 border border-slate-150 p-2.5 rounded-lg shadow-3xs">
                     <div className="flex items-center gap-2.5">
                       <span className="text-xs text-green-700 font-black italic">{idx + 1}º</span>
-                      <img src={item.user?.avatar_url} alt="avatar" className="w-7 h-7 rounded-full border border-slate-200 shadow-3xs object-cover" referrerPolicy="no-referrer" />
+                      <div className="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-3xs uppercase text-[9px] select-none shrink-0">
+                        {getInitials(item.user?.nome || '')}
+                      </div>
                       <span className="text-xs font-black text-slate-800 uppercase italic tracking-wide">{item.user?.nome}</span>
                     </div>
                     <span className="bg-green-700 text-white font-black text-[10px] px-2.5 py-0.5 rounded uppercase italic">
@@ -398,7 +396,9 @@ export function MuseumView({
                   <div key={score.id} className="flex items-center justify-between bg-slate-50 border border-slate-150 p-2.5 rounded-lg shadow-3xs">
                     <div className="flex items-center gap-2.5">
                       <span className="text-xs text-orange-600 font-black italic">{idx + 1}º</span>
-                      <img src={getUser(score.user_id)?.avatar_url} alt="avatar" className="w-7 h-7 rounded-full border border-slate-200 shadow-3xs object-cover" referrerPolicy="no-referrer" />
+                      <div className="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-3xs uppercase text-[9px] select-none shrink-0">
+                        {getInitials(getUser(score.user_id)?.nome || '')}
+                      </div>
                       <div>
                         <h4 className="text-xs font-black text-slate-800 uppercase italic">{getUser(score.user_id)?.nome}</h4>
                         <span className="text-[9px] text-slate-400 font-extrabold uppercase tracking-tight block">{score.rodada}</span>
@@ -445,7 +445,9 @@ export function MuseumView({
                   <div key={item.user?.id} className="flex items-center justify-between bg-slate-50 border border-slate-200 p-2.5 rounded-lg shadow-3xs">
                     <div className="flex items-center gap-2.5">
                       <span className="text-xs text-red-505 text-red-500 font-black italic">#{idx + 1}</span>
-                      <img src={item.user?.avatar_url} alt="avatar" className="w-7 h-7 rounded-full border border-slate-200 shadow-3xs object-cover" referrerPolicy="no-referrer" />
+                      <div className="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-3xs uppercase text-[9px] select-none shrink-0">
+                        {getInitials(item.user?.nome || '')}
+                      </div>
                       <span className="text-xs font-black text-slate-800 uppercase italic tracking-wide">{item.user?.nome}</span>
                     </div>
                     <span className="bg-red-100 border border-red-200 text-red-600 font-mono font-bold text-[10px] px-2.5 py-0.5 rounded tracking-wide uppercase italic">
@@ -474,7 +476,9 @@ export function MuseumView({
                   <div key={item.user?.id} className="flex items-center justify-between bg-slate-50 border border-slate-200 p-2.5 rounded-lg shadow-3xs">
                     <div className="flex items-center gap-2.5">
                       <span className="text-xs text-slate-500 font-black italic">#{idx + 1}</span>
-                      <img src={item.user?.avatar_url} alt="avatar" className="w-7 h-7 rounded-full border border-slate-200 shadow-3xs object-cover" referrerPolicy="no-referrer" />
+                      <div className="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-3xs uppercase text-[9px] select-none shrink-0">
+                        {getInitials(item.user?.nome || '')}
+                      </div>
                       <span className="text-xs font-black text-slate-800 uppercase italic tracking-wide">{item.user?.nome}</span>
                     </div>
                     <span className="bg-slate-205 bg-slate-200 text-slate-600 border border-slate-300 font-bold text-[10px] px-2.5 py-0.5 rounded tracking-wide uppercase italic">

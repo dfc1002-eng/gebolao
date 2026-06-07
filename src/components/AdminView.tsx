@@ -33,6 +33,15 @@ export function AdminView({
 }: AdminViewProps) {
   const [activeAdminTab, setActiveAdminTab] = useState<'jogos' | 'usuarios' | 'importar'>('jogos');
 
+  const getInitials = (name: string) => {
+    if (!name) return '?';
+    const parts = name.split(/\s+/).filter(Boolean);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return parts[0].substring(0, 2).toUpperCase();
+  };
+
   // Local state for external URL Synchronization from kickoff clock
   const [syncUrl, setSyncUrl] = useState('https://worldcup26.ir/get/games');
   const [isSyncing, setIsSyncing] = useState(false);
@@ -394,7 +403,9 @@ export function AdminView({
                 {users.map((u) => (
                   <div key={u.id} className="bg-slate-900/40 border border-slate-850 px-4 py-2.5 rounded-xl flex items-center justify-between gap-3 text-xs">
                     <div className="flex items-center gap-2.5">
-                      <img src={u.avatar_url} alt={u.nome} className="w-8 h-8 rounded-full object-cover border border-slate-800 bg-slate-900" />
+                      <div className="w-8 h-8 rounded-full border border-slate-800 bg-slate-900 flex items-center justify-center font-display font-black text-slate-300 uppercase text-[10px] select-none shrink-0">
+                        {getInitials(u.nome)}
+                      </div>
                       <div>
                         <span className="font-bold text-white block">{u.nome}</span>
                         <span className="text-[10px] text-slate-400 block font-mono">{u.email}</span>

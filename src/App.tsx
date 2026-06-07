@@ -23,6 +23,15 @@ export default function App() {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [activeTab, setActiveTab] = useState<'ranking' | 'palpites' | 'museum' | 'admin'>('ranking');
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const getInitials = (name: string) => {
+    if (!name) return '?';
+    const parts = name.split(/\s+/).filter(Boolean);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return parts[0].substring(0, 2).toUpperCase();
+  };
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [forceOpenRegister, setForceOpenRegister] = useState(false);
@@ -448,12 +457,9 @@ export default function App() {
                 <span className="text-[10px] text-green-700 font-black uppercase tracking-widest block mb-3 italic">Desempenho Pessoal</span>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <img
-                      src={currentUser.avatar_url}
-                      alt={currentUser.nome}
-                      className="w-10 h-10 rounded-full border-2 border-green-700 p-0.5 object-cover shadow-sm bg-white"
-                      referrerPolicy="no-referrer"
-                    />
+                    <div className="w-10 h-10 rounded-full border-2 border-green-700 flex items-center justify-center font-display font-black text-green-700 bg-green-50 shadow-sm uppercase text-xs select-none shrink-0">
+                      {getInitials(currentUser.nome)}
+                    </div>
                     <div>
                       <h4 className="font-extrabold text-xs text-slate-900 uppercase tracking-wide italic">{currentUser.nome}</h4>
                       <p className="text-[10px] text-slate-400 font-mono">Participante Ativo</p>
