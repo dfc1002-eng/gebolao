@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { User, Match, Prediction } from '../types';
-import { Calendar, MapPin, Check, Save, Lock, AlertCircle, Trophy, Search, Filter, HelpCircle } from 'lucide-react';
+import { Calendar, MapPin, Check, Save, Lock, AlertCircle, Trophy, Search, Filter, HelpCircle, Users, ChevronDown, ChevronUp } from 'lucide-react';
 import { calculatePredictionPoints } from '../initialData';
 
 interface PredictionsViewProps {
   currentUser: User | null;
+  users: User[];
   matches: Match[];
   predictions: Prediction[];
   onSavePrediction: (matchId: string, golsCasa: number, golsFora: number) => Promise<void>;
@@ -42,6 +43,7 @@ const phaseOrder: { [key: string]: number } = {
 
 export function PredictionsView({
   currentUser,
+  users,
   matches,
   predictions,
   onSavePrediction,
@@ -58,6 +60,23 @@ export function PredictionsView({
   const [inputs, setInputs] = useState<{ [matchId: string]: { casa: string; fora: string } }>({});
   const [savingMatches, setSavingMatches] = useState<{ [matchId: string]: boolean }>({});
   const [feedback, setFeedback] = useState<{ [matchId: string]: { type: 'success' | 'error'; message: string } }>({});
+  const [expandedMatches, setExpandedMatches] = useState<{ [matchId: string]: boolean }>({});
+
+  const toggleExpandMatch = (matchId: string) => {
+    setExpandedMatches((prev) => ({
+      ...prev,
+      [matchId]: !prev[matchId]
+    }));
+  };
+
+  const getInitials = (name: string) => {
+    if (!name) return '?';
+    const parts = name.split(/\s+/).filter(Boolean);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+    return parts[0].substring(0, 2).toUpperCase();
+  };
 
   // 3. Categorize phases
   const groupPhases = [
@@ -614,6 +633,92 @@ export function PredictionsView({
                   ) : null}
                 </div>
               </div>
+
+              {/* Collapsible Predictions Drawer for Locked Matches */}
+              {isLocked && (
+                <div className="mt-4 border-t border-slate-100 pt-3.5">
+                  <button
+                    onClick={() => toggleExpandMatch(match.id)}
+                    className="w-full text-center py-2.5 px-3.5 bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-xl text-[10px] font-black uppercase italic tracking-wider text-green-700 hover:text-green-600 transition cursor-pointer flex items-center justify-center gap-1.5"
+                  >
+                    <Users size={12} className="text-green-700 animate-pulse" />
+                    <span>{expandedMatches[match.id] ? 'Esconder Palpites dos Amigos' : 'Ver Palpites dos Amigos'}</span>
+                    <span className="bg-green-100 text-green-800 px-2 py-0.2 rounded-full text-[9px] font-bold">
+                      {predictions.filter(p => p.match_id === match.id).length}
+                    </span>
+                    {expandedMatches[match.id] ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
+                  </button>
+
+                  {expandedMatches[match.id] && (
+                    <div className="mt-3.5 space-y-2 animate-in slide-in-from-top-2 duration-250">
+                      <div className="text-[9px] uppercase font-black tracking-wider text-slate-400 mb-1">
+                        Palpites do Grupo:
+                      </div>
+                      <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto pr-1">
+                        {users.map(u => {
+                          const pred = predictions.find(p => p.user_id === u.id && p.match_id === match.id);
+                          let pointsEarned = 0;
+                          let hasPoints = false;
+                          if (match.status === 'completed' && pred) {
+                            const evalResult = calculatePredictionPoints(
+                              pred.gols_casa,
+                              pred.gols_fora,
+                              match.gols_casa!,
+                              match.gols_fora!
+                            );
+                            pointsEarned = evalResult.points;
+                            hasPoints = true;
+                          }
+
+                          return (
+                            <div
+                              key={u.id}
+                              className={`flex justify-between items-center text-xs px-3 py-2 rounded-xl border transition-all ${
+                                u.id === currentUser?.id
+                                  ? 'bg-green-50 border-green-200 font-extrabold text-green-950'
+                                  : 'bg-slate-50 border-slate-150 text-slate-700'
+                              }`}
+                            >
+                              <div className="flex items-center gap-2 min-w-0">
+                                <span className="w-6 h-6 rounded-full bg-slate-200 text-slate-650 flex items-center justify-center font-display font-black text-[9px] uppercase shrink-0 border border-slate-350">
+                                  {getInitials(u.nome)}
+                                </span>
+                                <span className="truncate max-w-[130px] font-semibold">{u.nome} {u.isAdmin ? '👑' : ''}</span>
+                              </div>
+
+                              <div className="flex items-center gap-2">
+                                {pred ? (
+                                  <span className="font-mono font-extrabold text-slate-900 bg-slate-200/60 px-2 py-0.5 rounded text-[11px] border border-slate-300/40">
+                                    {pred.gols_casa} x {pred.gols_fora}
+                                  </span>
+                                ) : (
+                                  <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider italic">Sem palpite</span>
+                                )}
+
+                                {hasPoints && (
+                                  <span
+                                    className={`px-1.5 py-0.5 rounded-md font-black text-[9px] uppercase tracking-wider ${
+                                      pointsEarned === 10
+                                        ? 'bg-amber-400 text-green-950 shadow-xs ring-1 ring-amber-300'
+                                        : pointsEarned === 5
+                                        ? 'bg-green-700 text-white shadow-xs'
+                                        : pointsEarned === 2
+                                        ? 'bg-blue-600 text-white'
+                                        : 'bg-slate-200 text-slate-500'
+                                    }`}
+                                  >
+                                    +{pointsEarned} pts
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           );
         })}

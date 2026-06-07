@@ -431,6 +431,7 @@ export default function App() {
                 {activeTab === 'palpites' && (
                   <PredictionsView
                     currentUser={currentUser}
+                    users={users}
                     matches={matches}
                     predictions={predictions}
                     onSavePrediction={handleSavePrediction}
