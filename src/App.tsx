@@ -212,7 +212,7 @@ export default function App() {
         onRegisterUser={handleRegisterUser}
         onResetDB={handleResetDB}
         isLoading={isLoading}
-        logoImage={logoImage}
+        logoImage={logoImage || '/geb.png'}
         onUpdateLogo={async (newLogo: string) => {
           try {
             const res = await fetch('/api/logo/update', {
