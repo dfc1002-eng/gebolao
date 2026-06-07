@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { User, Match, Ranking } from '../types';
-import { Shield, Plus, Upload, Play, Check, AlertTriangle, RefreshCw, RefreshCw as ResetIcon } from 'lucide-react';
+import { Shield, Plus, Upload, Play, Check, AlertTriangle, RefreshCw, RefreshCw as ResetIcon, Trash2 } from 'lucide-react';
 
 interface AdminViewProps {
   currentUser: User | null;
@@ -13,6 +13,7 @@ interface AdminViewProps {
   isLoading: boolean;
   users: User[];
   onToggleAdmin: (userId: string) => Promise<void>;
+  onDeleteUser: (userId: string) => Promise<void>;
   onRefreshState?: () => Promise<void>;
 }
 
@@ -27,6 +28,7 @@ export function AdminView({
   isLoading,
   users,
   onToggleAdmin,
+  onDeleteUser,
   onRefreshState
 }: AdminViewProps) {
   const [activeAdminTab, setActiveAdminTab] = useState<'jogos' | 'usuarios' | 'importar'>('jogos');
@@ -398,21 +400,34 @@ export function AdminView({
                         <span className="text-[10px] text-slate-400 block font-mono">{u.email}</span>
                       </div>
                     </div>
-                    <div>
+                    <div className="flex items-center gap-1.5">
                       {u.id === 'user-diego' ? (
                         <span className="bg-emerald-500/10 text-emerald-450 border border-emerald-900/40 text-[9px] font-black uppercase tracking-wider px-2.5 py-1 rounded">Presidente (Dono)</span>
                       ) : (
-                        <button
-                          type="button"
-                          onClick={() => onToggleAdmin(u.id)}
-                          className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-wider transition duration-150 cursor-pointer ${
-                            u.isAdmin
-                              ? 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-900/40'
-                              : 'bg-slate-800 hover:bg-slate-700 text-slate-350 border border-slate-700'
-                          }`}
-                        >
-                          {u.isAdmin ? '👑 Admin (Remover)' : 'Promover a Admin'}
-                        </button>
+                        <>
+                          <button
+                            type="button"
+                            onClick={() => onToggleAdmin(u.id)}
+                            className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-wider transition duration-150 cursor-pointer ${
+                              u.isAdmin
+                                ? 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-900/40'
+                                : 'bg-slate-800 hover:bg-slate-700 text-slate-350 border border-slate-700'
+                            }`}
+                          >
+                            {u.isAdmin ? '👑 Admin (Remover)' : 'Promover a Admin'}
+                          </button>
+                          
+                          {u.id !== currentUser?.id && (
+                            <button
+                              type="button"
+                              onClick={() => onDeleteUser(u.id)}
+                              className="bg-red-950/40 hover:bg-red-900/50 text-red-400 border border-red-900/50 p-1.5 rounded-lg transition duration-150 cursor-pointer flex items-center justify-center"
+                              title="Excluir Usuário"
+                            >
+                              <Trash2 size={11} />
+                            </button>
+                          )}
+                        </>
                       )}
                     </div>
                   </div>

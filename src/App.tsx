@@ -180,6 +180,42 @@ export default function App() {
     }
   };
 
+  // Delete user profile
+  const handleDeleteUser = async (userId: string) => {
+    if (!currentUser?.isAdmin) return;
+    if (userId === 'user-diego') {
+      alert('Não é possível excluir o Presidente (Dono) do Bolão.');
+      return;
+    }
+    if (userId === currentUser.id) {
+      alert('Você não pode excluir o seu próprio perfil.');
+      return;
+    }
+
+    if (!confirm('Tem certeza de que deseja excluir permanentemente o perfil deste usuário, juntamente com todos os seus palpites, pontuações e conquistas? Esta ação não pode ser desfeita!')) {
+      return;
+    }
+
+    setErrorMsg(null);
+    try {
+      const res = await fetch('/api/user/delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: userId, requester_id: currentUser.id })
+      });
+
+      if (!res.ok) {
+        const errData = await res.json();
+        throw new Error(errData.error || 'Erro ao excluir usuário.');
+      }
+
+      await fetchState(true);
+    } catch (err: any) {
+      console.error(err);
+      alert('Falha ao excluir usuário: ' + err.message);
+    }
+  };
+
   // Put bulk games in database
   const handleImportMatches = async (importedList: any[]) => {
     setErrorMsg(null);
@@ -393,6 +429,7 @@ export default function App() {
                     isLoading={isLoading}
                     users={users}
                     onToggleAdmin={handleToggleAdmin}
+                    onDeleteUser={handleDeleteUser}
                     onRefreshState={async () => {
                       await fetchState(true);
                     }}

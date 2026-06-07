@@ -517,6 +517,66 @@ app.post('/api/user/toggle-admin', async (req, res) => {
   }
 });
 
+// Delete user profile (Admin Only)
+app.post('/api/user/delete', async (req, res) => {
+  try {
+    const { user_id, requester_id } = req.body;
+    if (!user_id) {
+      return res.status(400).json({ error: 'ID do usuário é obrigatório.' });
+    }
+
+    const state = await getDBState();
+
+    // Check if requester is admin
+    const requester = state.users.find((u) => u.id === requester_id);
+    if (!requester || !requester.isAdmin) {
+      return res.status(403).json({ error: 'Apenas administradores podem excluir perfis de usuários.' });
+    }
+
+    if (user_id === 'user-diego') {
+      return res.status(400).json({ error: 'Não é possível excluir o Presidente (Dono) do Bolão.' });
+    }
+
+    if (user_id === requester_id) {
+      return res.status(400).json({ error: 'Você não pode excluir o seu próprio perfil.' });
+    }
+
+    const userIndex = state.users.findIndex((u) => u.id === user_id);
+    if (userIndex === -1) {
+      return res.status(404).json({ error: 'Usuário não encontrado.' });
+    }
+
+    // 1. Delete predictions and user from Supabase explicitly
+    const { error: predError } = await supabase.from('predictions').delete().eq('user_id', user_id);
+    if (predError) throw predError;
+
+    const { error: userError } = await supabase.from('users').delete().eq('id', user_id);
+    if (userError) throw userError;
+
+    // 2. Remove user and predictions from the current state object in memory
+    state.users.splice(userIndex, 1);
+    state.predictions = state.predictions.filter((p) => p.user_id !== user_id);
+
+    // 3. Recompute all scores, badges, and rankings based on the new active participants
+    const { roundScores, userBadges } = computeAllStats(
+      state.users,
+      state.matches,
+      state.predictions
+    );
+
+    state.user_badges = userBadges;
+    state.round_scores = roundScores;
+
+    // 4. Save the new state
+    await saveDBState(state);
+
+    res.json({ success: true, state });
+  } catch (error: any) {
+    console.error('Erro ao excluir usuário:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Import matches from an external list (Admin Manual Override)
 app.post('/api/match/import', async (req, res) => {
   try {
