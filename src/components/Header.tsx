@@ -7,7 +7,7 @@ interface HeaderProps {
   users: User[];
   rankings: Ranking[];
   onSelectUser: (user: User | null) => void;
-  onRegisterUser: (nome: string, email: string) => Promise<void>;
+  onRegisterUser: (nome: string, email: string, isPaid: boolean) => Promise<void>;
   onResetDB: () => Promise<void>;
   isLoading: boolean;
   logoImage?: string;
@@ -34,6 +34,7 @@ export function Header({
   const [showRegister, setShowRegister] = useState(false);
   const [newNome, setNewNome] = useState('');
   const [newEmail, setNewEmail] = useState('');
+  const [isPaid, setIsPaid] = useState(false);
   const [showResetWarning, setShowResetWarning] = useState(false);
 
   const getInitials = (name: string) => {
@@ -73,9 +74,10 @@ export function Header({
   const handleSubmitRegister = (e: React.FormEvent) => {
     e.preventDefault();
     if (!newNome.trim() || !newEmail.trim()) return;
-    onRegisterUser(newNome, newEmail);
+    onRegisterUser(newNome, newEmail, isPaid);
     setNewNome('');
     setNewEmail('');
+    setIsPaid(false);
     setShowRegister(false);
   };
 
@@ -300,6 +302,13 @@ export function Header({
                   {currentUser.isAdmin ? 'Simulando competidor: ' : 'Logado como: '}
                 </span>
                 <span className="font-extrabold text-amber-300 uppercase tracking-wide text-xs">{currentUser.nome}</span>
+                <span className={`px-1.5 py-0.2 rounded font-display text-[9px] uppercase font-black flex items-center gap-0.5 ${
+                  currentUser.isPaid 
+                    ? 'bg-emerald-600 text-white border border-emerald-500 shadow-sm' 
+                    : 'bg-slate-700 text-slate-200 border border-slate-600'
+                }`}>
+                  {currentUser.isPaid ? '💰 Premiado' : '🍿 Grátis'}
+                </span>
                 {currentUser.isAdmin && (
                   <span className="px-1.5 py-0.2 bg-amber-400 text-green-950 rounded font-display text-[9px] uppercase font-black">
                     Admin / Presidente
@@ -368,6 +377,39 @@ export function Header({
                   placeholder="Ex: joao@campeao.com"
                   className="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-lg px-3 py-2 text-slate-100 text-xs outline-none"
                 />
+              </div>
+              <div className="space-y-2">
+                <label className="block text-xs font-medium text-slate-400">Modalidade de Participação</label>
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setIsPaid(false)}
+                    className={`p-3 rounded-xl border text-left flex flex-col justify-between transition cursor-pointer ${
+                      !isPaid 
+                        ? 'bg-slate-800 border-slate-600 text-white shadow-inner ring-1 ring-slate-500' 
+                        : 'bg-slate-950 border-slate-800 text-slate-400 hover:bg-slate-900/50'
+                    }`}
+                  >
+                    <span className="text-[10px] font-black uppercase tracking-wider text-slate-350">🍿 Apenas Palpitar</span>
+                    <span className="text-[9px] mt-1 leading-tight text-slate-400 font-medium">
+                      Brincar por diversão, cornetar e disputar selos (Grátis).
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setIsPaid(true)}
+                    className={`p-3 rounded-xl border text-left flex flex-col justify-between transition cursor-pointer ${
+                      isPaid 
+                        ? 'bg-emerald-950/40 border-emerald-700 text-white shadow-inner ring-1 ring-emerald-600' 
+                        : 'bg-slate-950 border-slate-800 text-slate-400 hover:bg-slate-900/50'
+                    }`}
+                  >
+                    <span className="text-[10px] font-black uppercase tracking-wider text-emerald-400">💰 Bolão Premiado</span>
+                    <span className="text-[9px] mt-1 leading-tight text-slate-400 font-medium">
+                      Entrar no rateio do dinheiro e disputar prêmios (Pago).
+                    </span>
+                  </button>
+                </div>
               </div>
               <div className="flex justify-end gap-2 pt-2">
                 <button

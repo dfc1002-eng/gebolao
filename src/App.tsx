@@ -158,13 +158,13 @@ export default function App() {
   };
 
   // Create customized contestant (mock or real)
-  const handleRegisterUser = async (nome: string, email: string) => {
+  const handleRegisterUser = async (nome: string, email: string, isPaid: boolean = false) => {
     setErrorMsg(null);
     try {
       const res = await fetch('/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, email })
+        body: JSON.stringify({ nome, email, is_paid: isPaid })
       });
 
       if (!res.ok) {
@@ -203,6 +203,28 @@ export default function App() {
     } catch (err: any) {
       console.error(err);
       alert('Falha ao alterar permissão de admin: ' + err.message);
+    }
+  };
+
+  // Toggle user paid status
+  const handleTogglePaid = async (userId: string) => {
+    setErrorMsg(null);
+    try {
+      const res = await fetch('/api/user/toggle-paid', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: userId })
+      });
+
+      if (!res.ok) {
+        const errData = await res.json();
+        throw new Error(errData.error || 'Erro ao alterar status de pagamento.');
+      }
+
+      await fetchState(true);
+    } catch (err: any) {
+      console.error(err);
+      alert('Falha ao alterar status de pagamento: ' + err.message);
     }
   };
 
@@ -461,6 +483,7 @@ export default function App() {
                     isLoading={isLoading}
                     users={users}
                     onToggleAdmin={handleToggleAdmin}
+                    onTogglePaid={handleTogglePaid}
                     onDeleteUser={handleDeleteUser}
                     onRefreshState={async () => {
                       await fetchState(true);

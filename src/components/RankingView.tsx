@@ -93,7 +93,15 @@ export function RankingView({
               <h3 className="font-extrabold text-slate-900 text-sm group-hover:text-green-700 transition-colors uppercase italic tracking-wide">
                 {getUser(rankings[1].user_id)?.nome}
               </h3>
-              <p className="text-[10px] text-slate-400 font-mono mt-0.5">{getUser(rankings[1].user_id)?.email}</p>
+              <div className="mt-1">
+                <span className={`px-1.5 py-0.2 rounded font-display text-[9px] uppercase font-black ${
+                  getUser(rankings[1].user_id)?.isPaid 
+                    ? 'bg-emerald-600 text-white shadow-xs' 
+                    : 'bg-slate-500 text-slate-100'
+                }`}>
+                  {getUser(rankings[1].user_id)?.isPaid ? '💰 Premiado' : '🍿 Grátis'}
+                </span>
+              </div>
             </div>
             <div className="w-full bg-slate-50 rounded-xl p-2.5 border border-slate-100">
               <span className="block text-[11px] text-slate-500 font-medium">Pontuação Total</span>
@@ -134,7 +142,16 @@ export function RankingView({
               <h3 className="font-black text-slate-900 text-base tracking-tight group-hover:text-green-700 transition-colors uppercase italic">
                 {getUser(rankings[0].user_id)?.nome}
               </h3>
-              <p className="text-[10px] text-amber-600 font-bold uppercase mt-0.5 tracking-wider">🚀 GOAT do Grupo</p>
+              <div className="flex items-center justify-center gap-1.5 mt-1">
+                <span className="text-[10px] text-amber-600 font-bold uppercase tracking-wider">🚀 GOAT</span>
+                <span className={`px-1.5 py-0.2 rounded font-display text-[9px] uppercase font-black ${
+                  getUser(rankings[0].user_id)?.isPaid 
+                    ? 'bg-emerald-600 text-white shadow-xs' 
+                    : 'bg-slate-500 text-slate-100'
+                }`}>
+                  {getUser(rankings[0].user_id)?.isPaid ? '💰 Premiado' : '🍿 Grátis'}
+                </span>
+              </div>
             </div>
             <div className="w-full bg-green-500/10 rounded-xl p-3 border border-green-500/10">
               <span className="block text-[11px] text-green-800 font-extrabold uppercase tracking-wider">Pontos Totais</span>
@@ -178,7 +195,15 @@ export function RankingView({
               <h3 className="font-extrabold text-slate-900 text-sm group-hover:text-green-700 transition-colors uppercase italic tracking-wide">
                 {getUser(rankings[2].user_id)?.nome}
               </h3>
-              <p className="text-[10px] text-slate-400 font-mono mt-0.5">{getUser(rankings[2].user_id)?.email}</p>
+              <div className="mt-1">
+                <span className={`px-1.5 py-0.2 rounded font-display text-[9px] uppercase font-black ${
+                  getUser(rankings[2].user_id)?.isPaid 
+                    ? 'bg-emerald-600 text-white shadow-xs' 
+                    : 'bg-slate-500 text-slate-100'
+                }`}>
+                  {getUser(rankings[2].user_id)?.isPaid ? '💰 Premiado' : '🍿 Grátis'}
+                </span>
+              </div>
             </div>
             <div className="w-full bg-slate-50 rounded-xl p-2.5 border border-slate-100">
               <span className="block text-[11px] text-slate-500 font-medium">Pontuação Total</span>
@@ -269,11 +294,17 @@ export function RankingView({
                       <div className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-sm uppercase text-[10px] select-none shrink-0">
                         {getInitials(user.nome)}
                       </div>
-                      <div className="flex flex-col">
+                      <div className="flex flex-col items-start gap-0.5">
                           <span className="font-extrabold text-slate-900 group-hover:text-green-700 transition-colors uppercase italic tracking-wide text-xs">
                             {user.nome}
                           </span>
-                          <span className="text-[9px] text-slate-400 font-mono hidden md:inline">{user.email}</span>
+                          <span className={`px-1 py-0.2 rounded font-display text-[8px] uppercase font-black ${
+                            user.isPaid 
+                              ? 'bg-emerald-600 text-white shadow-xs' 
+                              : 'bg-slate-500 text-slate-100'
+                          }`}>
+                            {user.isPaid ? '💰 Premiado' : '🍿 Grátis'}
+                          </span>
                         </div>
                       </div>
                     </td>
@@ -329,9 +360,15 @@ export function RankingView({
                 <div className="w-12 h-12 rounded-full border-2 border-green-700 flex items-center justify-center font-display font-black text-green-700 bg-green-50 shadow-sm uppercase text-base select-none shrink-0">
                   {getInitials(focusedUser.nome)}
                 </div>
-                <div>
+                <div className="flex flex-col items-start gap-1">
                   <h3 className="font-extrabold text-slate-950 text-sm uppercase italic tracking-wide">{focusedUser.nome}</h3>
-                  <p className="text-[10px] text-slate-500 font-mono">{focusedUser.email}</p>
+                  <span className={`px-1.5 py-0.2 rounded font-display text-[9px] uppercase font-black ${
+                    focusedUser.isPaid 
+                      ? 'bg-emerald-600 text-white shadow-xs' 
+                      : 'bg-slate-500 text-slate-100'
+                  }`}>
+                    {focusedUser.isPaid ? '💰 Premiado' : '🍿 Grátis'}
+                  </span>
                 </div>
               </div>
               <button

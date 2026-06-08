@@ -6,7 +6,8 @@ export const initialUsers: User[] = [
     nome: 'Diogo Camargo (Admin/GOAT)',
     email: 'diocamargo1002@gmail.com',
     avatar_url: 'https://github.com/dfc1002-eng.png',
-    isAdmin: true
+    isAdmin: true,
+    isPaid: true
   }
 ];
 

@@ -4,6 +4,7 @@ export interface User {
   email: string;
   avatar_url: string;
   isAdmin?: boolean;
+  isPaid?: boolean;
 }
 
 export type MatchStatus = 'unplayed' | 'completed';

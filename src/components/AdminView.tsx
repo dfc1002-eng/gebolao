@@ -13,6 +13,7 @@ interface AdminViewProps {
   isLoading: boolean;
   users: User[];
   onToggleAdmin: (userId: string) => Promise<void>;
+  onTogglePaid: (userId: string) => Promise<void>;
   onDeleteUser: (userId: string) => Promise<void>;
   onRefreshState?: () => Promise<void>;
 }
@@ -28,6 +29,7 @@ export function AdminView({
   isLoading,
   users,
   onToggleAdmin,
+  onTogglePaid,
   onDeleteUser,
   onRefreshState
 }: AdminViewProps) {
@@ -412,6 +414,20 @@ export function AdminView({
                       </div>
                     </div>
                     <div className="flex items-center gap-1.5">
+                      {/* Toggle Paid */}
+                      <button
+                        type="button"
+                        onClick={() => onTogglePaid(u.id)}
+                        className={`px-2.5 py-1 rounded-lg text-[9px] font-black uppercase tracking-wider transition duration-150 cursor-pointer ${
+                          u.isPaid
+                            ? 'bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-450 border border-emerald-900/40'
+                            : 'bg-slate-800 hover:bg-slate-700 text-slate-400 border border-slate-700'
+                        }`}
+                        title="Alternar modalidade de participação"
+                      >
+                        {u.isPaid ? '💰 Premiado' : '🍿 Grátis'}
+                      </button>
+
                       {u.id === 'user-diego' ? (
                         <span className="bg-emerald-500/10 text-emerald-450 border border-emerald-900/40 text-[9px] font-black uppercase tracking-wider px-2.5 py-1 rounded">Presidente (Dono)</span>
                       ) : (

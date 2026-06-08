@@ -89,7 +89,8 @@ async function getDBState(): Promise<GameState> {
       nome: u.nome,
       email: u.email,
       avatar_url: u.avatar_url || '',
-      isAdmin: u.is_admin
+      isAdmin: u.is_admin,
+      isPaid: u.is_paid
     }));
 
     const mappedMatches: Match[] = matchesData.map(m => ({
@@ -184,7 +185,8 @@ async function saveDBState(state: GameState): Promise<void> {
       nome: u.nome,
       email: u.email,
       avatar_url: u.avatar_url,
-      is_admin: u.isAdmin || false
+      is_admin: u.isAdmin || false,
+      is_paid: u.isPaid || false
     }));
     const { error: usersError } = await supabase.from('users').upsert(usersToUpsert);
     if (usersError) throw usersError;
@@ -437,7 +439,7 @@ app.post('/api/match/update', async (req, res) => {
 // Register new user / sign-in (mock-friendly durable registration)
 app.post('/api/register', async (req, res) => {
   try {
-    const { nome, email, avatar_url } = req.body;
+    const { nome, email, avatar_url, is_paid } = req.body;
 
     if (!nome || !email) {
       return res.status(400).json({ error: 'Nome e email são obrigatórios.' });
@@ -463,7 +465,8 @@ app.post('/api/register', async (req, res) => {
         nome,
         email: email.toLowerCase(),
         avatar_url: avatar_url || randomAvatar,
-        isAdmin: false
+        isAdmin: false,
+        isPaid: is_paid || false
       };
 
       state.users.push(newUser);
@@ -472,6 +475,7 @@ app.post('/api/register', async (req, res) => {
       // Update avatar if provided
       if (avatar_url) user.avatar_url = avatar_url;
       if (nome) user.nome = nome;
+      if (is_paid !== undefined) user.isPaid = is_paid;
     }
 
     // Recompute stats for registration
@@ -509,6 +513,31 @@ app.post('/api/user/toggle-admin', async (req, res) => {
 
     // Toggle isAdmin flag
     state.users[userIndex].isAdmin = !state.users[userIndex].isAdmin;
+
+    await saveDBState(state);
+    res.json({ success: true, user: state.users[userIndex], state });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Toggle paid status of a user
+app.post('/api/user/toggle-paid', async (req, res) => {
+  try {
+    const { user_id } = req.body;
+    if (!user_id) {
+      return res.status(400).json({ error: 'ID do usuário é obrigatório.' });
+    }
+
+    const state = await getDBState();
+    const userIndex = state.users.findIndex((u) => u.id === user_id);
+
+    if (userIndex === -1) {
+      return res.status(404).json({ error: 'Usuário não encontrado.' });
+    }
+
+    // Toggle isPaid flag
+    state.users[userIndex].isPaid = !state.users[userIndex].isPaid;
 
     await saveDBState(state);
     res.json({ success: true, user: state.users[userIndex], state });
