@@ -93,15 +93,7 @@ export function RankingView({
               <h3 className="font-extrabold text-slate-900 text-sm group-hover:text-green-700 transition-colors uppercase italic tracking-wide">
                 {getUser(rankings[1].user_id)?.nome}
               </h3>
-              <div className="mt-1">
-                <span className={`px-1.5 py-0.2 rounded font-display text-[9px] uppercase font-black ${
-                  getUser(rankings[1].user_id)?.isPaid 
-                    ? 'bg-emerald-600 text-white shadow-xs' 
-                    : 'bg-slate-500 text-slate-100'
-                }`}>
-                  {getUser(rankings[1].user_id)?.isPaid ? '💰 Premiado' : '🍿 Grátis'}
-                </span>
-              </div>
+
             </div>
             <div className="w-full bg-slate-50 rounded-xl p-2.5 border border-slate-100">
               <span className="block text-[11px] text-slate-500 font-medium">Pontuação Total</span>
@@ -144,13 +136,6 @@ export function RankingView({
               </h3>
               <div className="flex items-center justify-center gap-1.5 mt-1">
                 <span className="text-[10px] text-amber-600 font-bold uppercase tracking-wider">🚀 GOAT</span>
-                <span className={`px-1.5 py-0.2 rounded font-display text-[9px] uppercase font-black ${
-                  getUser(rankings[0].user_id)?.isPaid 
-                    ? 'bg-emerald-600 text-white shadow-xs' 
-                    : 'bg-slate-500 text-slate-100'
-                }`}>
-                  {getUser(rankings[0].user_id)?.isPaid ? '💰 Premiado' : '🍿 Grátis'}
-                </span>
               </div>
             </div>
             <div className="w-full bg-green-500/10 rounded-xl p-3 border border-green-500/10">
@@ -195,15 +180,7 @@ export function RankingView({
               <h3 className="font-extrabold text-slate-900 text-sm group-hover:text-green-700 transition-colors uppercase italic tracking-wide">
                 {getUser(rankings[2].user_id)?.nome}
               </h3>
-              <div className="mt-1">
-                <span className={`px-1.5 py-0.2 rounded font-display text-[9px] uppercase font-black ${
-                  getUser(rankings[2].user_id)?.isPaid 
-                    ? 'bg-emerald-600 text-white shadow-xs' 
-                    : 'bg-slate-500 text-slate-100'
-                }`}>
-                  {getUser(rankings[2].user_id)?.isPaid ? '💰 Premiado' : '🍿 Grátis'}
-                </span>
-              </div>
+
             </div>
             <div className="w-full bg-slate-50 rounded-xl p-2.5 border border-slate-100">
               <span className="block text-[11px] text-slate-500 font-medium">Pontuação Total</span>
@@ -298,13 +275,6 @@ export function RankingView({
                           <span className="font-extrabold text-slate-900 group-hover:text-green-700 transition-colors uppercase italic tracking-wide text-xs">
                             {user.nome}
                           </span>
-                          <span className={`px-1 py-0.2 rounded font-display text-[8px] uppercase font-black ${
-                            user.isPaid 
-                              ? 'bg-emerald-600 text-white shadow-xs' 
-                              : 'bg-slate-500 text-slate-100'
-                          }`}>
-                            {user.isPaid ? '💰 Premiado' : '🍿 Grátis'}
-                          </span>
                         </div>
                       </div>
                     </td>
@@ -362,13 +332,6 @@ export function RankingView({
                 </div>
                 <div className="flex flex-col items-start gap-1">
                   <h3 className="font-extrabold text-slate-950 text-sm uppercase italic tracking-wide">{focusedUser.nome}</h3>
-                  <span className={`px-1.5 py-0.2 rounded font-display text-[9px] uppercase font-black ${
-                    focusedUser.isPaid 
-                      ? 'bg-emerald-600 text-white shadow-xs' 
-                      : 'bg-slate-500 text-slate-100'
-                  }`}>
-                    {focusedUser.isPaid ? '💰 Premiado' : '🍿 Grátis'}
-                  </span>
                 </div>
               </div>
               <button
