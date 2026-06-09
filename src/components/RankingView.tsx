@@ -82,9 +82,6 @@ export function RankingView({
           <h2 className="text-2xl md:text-3xl font-black tracking-tight mt-2 italic">
             {((users.length) * 50).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
           </h2>
-          <p className="text-[11px] text-emerald-200 font-medium">
-            Calculado dinamicamente: <span className="font-extrabold text-white">{users.length} participantes</span> × <span className="font-extrabold text-white">R$ 50,00</span> por pessoa.
-          </p>
         </div>
 
         <div className="grid grid-cols-3 gap-3 md:min-w-[320px] bg-emerald-950/45 p-4 rounded-xl border border-emerald-900/50">
