@@ -212,6 +212,12 @@ export function Header({
               <span className="text-[10px] md:text-[11px] bg-red-600 text-white font-extrabold uppercase italic px-1.5 py-0.2 rounded-lg border border-red-500 tracking-tight animate-pulse shrink-0 shadow-xs">
                 {isSplat ? "PASTELÃO! 🍅" : "O PÉ FRIO! 🤡"}
               </span>
+              <span className="text-[10px] md:text-[11px] bg-emerald-650 border border-emerald-550 text-white font-extrabold uppercase italic px-2.5 py-0.5 rounded-lg shrink-0 shadow-sm flex items-center gap-1">
+                <span>🏆 Pote:</span>
+                <span className="font-black text-yellow-300">
+                  {((users.length) * 50).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 })}
+                </span>
+              </span>
             </div>
             <div className="hidden sm:block pl-1.5 border-l-2 border-green-500/50 mt-1">
               <h1 className="text-[10px] uppercase font-bold tracking-widest text-white leading-none">Copa do Mundo 2026</h1>

@@ -426,6 +426,42 @@ export default function App() {
           </nav>
         </div>
 
+        {/* Mobile-Only Prize Pool Widget */}
+        <div className="lg:hidden bg-slate-900 border border-emerald-900 rounded-2xl p-4 shadow-md text-white font-sans animate-in fade-in duration-300">
+          <div className="flex items-center justify-between border-b border-emerald-950 pb-2 mb-2">
+            <div>
+              <span className="text-[9px] text-emerald-400 font-black uppercase tracking-widest block italic">🏆 Pote de Prêmios Acumulado</span>
+              <span className="text-xl font-black text-white italic">
+                {((users.length) * 50).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 })}
+              </span>
+            </div>
+            <span className="text-[10px] bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 font-bold px-2 py-0.5 rounded-md">
+              {users.length} {users.length === 1 ? 'participante' : 'participantes'}
+            </span>
+          </div>
+          
+          <div className="grid grid-cols-3 gap-2 text-xs">
+            <div className="bg-slate-950/45 px-2 py-1.5 rounded-lg border border-emerald-950/20 text-center">
+              <span className="text-amber-400 font-black text-[9px] uppercase italic block">🥇 1º (60%)</span>
+              <span className="font-extrabold text-white text-[11px]">
+                {(((users.length) * 50) * 0.6).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 })}
+              </span>
+            </div>
+            <div className="bg-slate-950/45 px-2 py-1.5 rounded-lg border border-emerald-950/20 text-center">
+              <span className="text-slate-350 font-black text-[9px] uppercase italic block">🥈 2º (30%)</span>
+              <span className="font-extrabold text-white text-[11px]">
+                {(((users.length) * 50) * 0.3).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 })}
+              </span>
+            </div>
+            <div className="bg-slate-950/45 px-2 py-1.5 rounded-lg border border-emerald-950/20 text-center">
+              <span className="text-amber-500 font-black text-[9px] uppercase italic block">🥉 3º (10%)</span>
+              <span className="font-extrabold text-white text-[11px]">
+                {(((users.length) * 50) * 0.1).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 })}
+              </span>
+            </div>
+          </div>
+        </div>
+
         {/* Dynamic Bento Box Structure: Column Layout split into main body and sidebar widgets */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
           

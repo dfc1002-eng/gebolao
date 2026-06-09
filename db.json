@@ -2,100 +2,94 @@
   "users": [
     {
       "id": "user-diego",
-      "nome": "Diogo Camargo (Admin/GOAT)",
+      "nome": "Diogo Camargo",
       "email": "diocamargo1002@gmail.com",
       "avatar_url": "https://github.com/dfc1002-eng.png",
-      "isAdmin": true
+      "isAdmin": true,
+      "isPaid": false
     },
     {
       "id": "user-1780868826114",
-      "nome": "John ",
+      "nome": "John",
       "email": "lucena56@hotmail.com",
       "avatar_url": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=150&h=150&q=80",
-      "isAdmin": false
+      "isAdmin": true,
+      "isPaid": false
     },
     {
-      "id": "user-1780875531545",
-      "nome": "tt",
-      "email": "tt@123.com",
-      "avatar_url": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&h=150&q=80",
-      "isAdmin": false
-    },
-    {
-      "id": "user-1780919153895",
-      "nome": "Testador Gratis",
-      "email": "gratis@teste.com",
+      "id": "user-1780956449173",
+      "nome": "FÁBIO ",
+      "email": "ffberto.fb@gmail.com",
       "avatar_url": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&h=150&q=80",
-      "isAdmin": false
+      "isAdmin": false,
+      "isPaid": true
     },
     {
-      "id": "user-1780919259216",
-      "nome": "Testador Pago",
-      "email": "pago@teste.com",
-      "avatar_url": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&h=150&q=80",
-      "isAdmin": false
+      "id": "user-1780962434760",
+      "nome": "Renato do 7",
+      "email": "rstolear@gmail.com",
+      "avatar_url": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false,
+      "isPaid": true
     },
     {
-      "id": "user-1780919328905",
-      "nome": "Testador Real Pago",
-      "email": "realpago@teste.com",
+      "id": "user-1780962502571",
+      "nome": "Marcelo Loce",
+      "email": "marcelo.cer17@gmail.com",
       "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
-      "isAdmin": false
+      "isAdmin": false,
+      "isPaid": false
+    },
+    {
+      "id": "user-1781005544161",
+      "nome": "Marcos Paulista ",
+      "email": "marcosalexandre.aquino@gmail.com",
+      "avatar_url": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false,
+      "isPaid": true
+    },
+    {
+      "id": "user-1780962805030",
+      "nome": "Tiago Haddad",
+      "email": "tiagohaddad2000@yahoo.com.br",
+      "avatar_url": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false,
+      "isPaid": false
+    },
+    {
+      "id": "user-1780966991143",
+      "nome": "Baleia",
+      "email": "gustavo@gol.com",
+      "avatar_url": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false,
+      "isPaid": false
+    },
+    {
+      "id": "user-1780972192868",
+      "nome": "RP Carvão",
+      "email": "rodrigo.pelagio@gmail.com",
+      "avatar_url": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false,
+      "isPaid": true
+    },
+    {
+      "id": "user-1781004737829",
+      "nome": "Anjo ",
+      "email": "bmagal1@yahoo.com",
+      "avatar_url": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false,
+      "isPaid": true
+    },
+    {
+      "id": "user-1781011547867",
+      "nome": "Test User",
+      "email": "testuser@example.com",
+      "avatar_url": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80",
+      "isAdmin": false,
+      "isPaid": true
     }
   ],
   "matches": [
-    {
-      "id": "wc2026-m1",
-      "fase": "Grupo A",
-      "time_casa": "México",
-      "time_fora": "África do Sul",
-      "bandeira_casa": "🇲🇽",
-      "bandeira_fora": "🇿🇦",
-      "data_hora": "2026-06-02T18:00:00+00:00",
-      "estadio": "Estádio Azteca, Cidade do México",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
-    },
-    {
-      "id": "wc2026-m2",
-      "fase": "Grupo B",
-      "time_casa": "Canadá",
-      "time_fora": "França",
-      "bandeira_casa": "🇨🇦",
-      "bandeira_fora": "🇫🇷",
-      "data_hora": "2026-06-03T20:00:00+00:00",
-      "estadio": "BC Place, Vancouver",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
-    },
-    {
-      "id": "wc2026-m3",
-      "fase": "Grupo C",
-      "time_casa": "Estados Unidos",
-      "time_fora": "Espanha",
-      "bandeira_casa": "🇺🇸",
-      "bandeira_fora": "🇪🇸",
-      "data_hora": "2026-06-04T15:00:00+00:00",
-      "estadio": "MetLife Stadium, East Rutherford",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
-    },
-    {
-      "id": "wc2026-m4",
-      "fase": "Grupo D",
-      "time_casa": "Brasil",
-      "time_fora": "Alemanha",
-      "bandeira_casa": "🇧🇷",
-      "bandeira_fora": "🇩🇪",
-      "data_hora": "2026-06-05T21:00:00+00:00",
-      "estadio": "SoFi Stadium, Los Angeles",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
-    },
     {
       "id": "m-imported-1",
       "fase": "Grupo A",
@@ -110,19 +104,6 @@
       "status": "unplayed"
     },
     {
-      "id": "wc2026-m5",
-      "fase": "Grupo E",
-      "time_casa": "Argentina",
-      "time_fora": "Itália",
-      "bandeira_casa": "🇦🇷",
-      "bandeira_fora": "🇮🇹",
-      "data_hora": "2026-06-11T19:00:00+00:00",
-      "estadio": "Hard Rock Stadium, Miami",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
-    },
-    {
       "id": "m-imported-2",
       "fase": "Grupo A",
       "time_casa": "South Korea",
@@ -131,19 +112,6 @@
       "bandeira_fora": "🇨🇿",
       "data_hora": "2026-06-11T23:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
-    },
-    {
-      "id": "wc2026-m6",
-      "fase": "Grupo F",
-      "time_casa": "Portugal",
-      "time_fora": "Japão",
-      "bandeira_casa": "🇵🇹",
-      "bandeira_fora": "🇯🇵",
-      "data_hora": "2026-06-12T15:00:00+00:00",
-      "estadio": "Mercedes-Benz Stadium, Atlanta",
       "gols_casa": null,
       "gols_fora": null,
       "status": "unplayed"
@@ -183,19 +151,6 @@
       "bandeira_fora": "🇨🇭",
       "data_hora": "2026-06-13T15:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
-    },
-    {
-      "id": "wc2026-m7",
-      "fase": "Grupo G",
-      "time_casa": "Bélgica",
-      "time_fora": "Marrocos",
-      "bandeira_casa": "🇧🇪",
-      "bandeira_fora": "🇲🇦",
-      "data_hora": "2026-06-13T18:00:00+00:00",
-      "estadio": "Gillette Stadium, Boston",
       "gols_casa": null,
       "gols_fora": null,
       "status": "unplayed"
@@ -266,19 +221,6 @@
       "status": "unplayed"
     },
     {
-      "id": "wc2026-m8",
-      "fase": "Grupo H",
-      "time_casa": "Holanda",
-      "time_fora": "Uruguai",
-      "bandeira_casa": "🇳🇱",
-      "bandeira_fora": "🇺🇾",
-      "data_hora": "2026-06-14T20:00:00+00:00",
-      "estadio": "NRG Stadium, Houston",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
-    },
-    {
       "id": "m-imported-9",
       "fase": "Grupo E",
       "time_casa": "Ivory Coast",
@@ -305,12 +247,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-15",
-      "fase": "Grupo G",
-      "time_casa": "Belgium",
-      "time_fora": "Egypt",
-      "bandeira_casa": "🇧🇪",
-      "bandeira_fora": "🇪🇬",
+      "id": "m-imported-14",
+      "fase": "Grupo H",
+      "time_casa": "Spain",
+      "time_fora": "Cape Verde",
+      "bandeira_casa": "🇪🇸",
+      "bandeira_fora": "🇨🇻",
       "data_hora": "2026-06-15T15:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -318,12 +260,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-14",
-      "fase": "Grupo H",
-      "time_casa": "Spain",
-      "time_fora": "Cape Verde",
-      "bandeira_casa": "🇪🇸",
-      "bandeira_fora": "🇨🇻",
+      "id": "m-imported-15",
+      "fase": "Grupo G",
+      "time_casa": "Belgium",
+      "time_fora": "Egypt",
+      "bandeira_casa": "🇧🇪",
+      "bandeira_fora": "🇪🇬",
       "data_hora": "2026-06-15T15:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -461,12 +403,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-28",
-      "fase": "Grupo A",
-      "time_casa": "Czech Republic",
-      "time_fora": "South Africa",
-      "bandeira_casa": "🇨🇿",
-      "bandeira_fora": "🇿🇦",
+      "id": "m-imported-26",
+      "fase": "Grupo B",
+      "time_casa": "Switzerland",
+      "time_fora": "Bosnia and Herzegovina",
+      "bandeira_casa": "🇨🇭",
+      "bandeira_fora": "🇧🇦",
       "data_hora": "2026-06-18T15:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -474,12 +416,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-26",
-      "fase": "Grupo B",
-      "time_casa": "Switzerland",
-      "time_fora": "Bosnia and Herzegovina",
-      "bandeira_casa": "🇨🇭",
-      "bandeira_fora": "🇧🇦",
+      "id": "m-imported-28",
+      "fase": "Grupo A",
+      "time_casa": "Czech Republic",
+      "time_fora": "South Africa",
+      "bandeira_casa": "🇨🇿",
+      "bandeira_fora": "🇿🇦",
       "data_hora": "2026-06-18T15:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -643,12 +585,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-38",
-      "fase": "Grupo G",
-      "time_casa": "New Zealand",
-      "time_fora": "Egypt",
-      "bandeira_casa": "🇳🇿",
-      "bandeira_fora": "🇪🇬",
+      "id": "m-imported-40",
+      "fase": "Grupo H",
+      "time_casa": "Uruguay",
+      "time_fora": "Cape Verde",
+      "bandeira_casa": "🇺🇾",
+      "bandeira_fora": "🇨🇻",
       "data_hora": "2026-06-21T21:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -656,12 +598,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-40",
-      "fase": "Grupo H",
-      "time_casa": "Uruguay",
-      "time_fora": "Cape Verde",
-      "bandeira_casa": "🇺🇾",
-      "bandeira_fora": "🇨🇻",
+      "id": "m-imported-38",
+      "fase": "Grupo G",
+      "time_casa": "New Zealand",
+      "time_fora": "Egypt",
+      "bandeira_casa": "🇳🇿",
+      "bandeira_fora": "🇪🇬",
       "data_hora": "2026-06-21T21:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -695,12 +637,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-44",
-      "fase": "Grupo J",
-      "time_casa": "Jordan",
-      "time_fora": "Algeria",
-      "bandeira_casa": "🇯🇴",
-      "bandeira_fora": "🇩🇿",
+      "id": "m-imported-42",
+      "fase": "Grupo I",
+      "time_casa": "Norway",
+      "time_fora": "Senegal",
+      "bandeira_casa": "🇳🇴",
+      "bandeira_fora": "🇸🇳",
       "data_hora": "2026-06-22T23:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -708,12 +650,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-42",
-      "fase": "Grupo I",
-      "time_casa": "Norway",
-      "time_fora": "Senegal",
-      "bandeira_casa": "🇳🇴",
-      "bandeira_fora": "🇸🇳",
+      "id": "m-imported-44",
+      "fase": "Grupo J",
+      "time_casa": "Jordan",
+      "time_fora": "Algeria",
+      "bandeira_casa": "🇯🇴",
+      "bandeira_fora": "🇩🇿",
       "data_hora": "2026-06-22T23:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -773,12 +715,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-53",
+      "id": "m-imported-54",
       "fase": "Grupo B",
-      "time_casa": "Bosnia and Herzegovina",
-      "time_fora": "Qatar",
-      "bandeira_casa": "🇧🇦",
-      "bandeira_fora": "🇶🇦",
+      "time_casa": "Switzerland",
+      "time_fora": "Canada",
+      "bandeira_casa": "🇨🇭",
+      "bandeira_fora": "🇨🇦",
       "data_hora": "2026-06-24T15:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -786,12 +728,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-54",
+      "id": "m-imported-53",
       "fase": "Grupo B",
-      "time_casa": "Switzerland",
-      "time_fora": "Canada",
-      "bandeira_casa": "🇨🇭",
-      "bandeira_fora": "🇨🇦",
+      "time_casa": "Bosnia and Herzegovina",
+      "time_fora": "Qatar",
+      "bandeira_casa": "🇧🇦",
+      "bandeira_fora": "🇶🇦",
       "data_hora": "2026-06-24T15:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -825,19 +767,6 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-52",
-      "fase": "Grupo A",
-      "time_casa": "Czech Republic",
-      "time_fora": "Mexico",
-      "bandeira_casa": "🇨🇿",
-      "bandeira_fora": "🇲🇽",
-      "data_hora": "2026-06-24T22:00:00+00:00",
-      "estadio": "Estádio da Copa 2026",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
-    },
-    {
       "id": "m-imported-51",
       "fase": "Grupo A",
       "time_casa": "South Africa",
@@ -851,13 +780,13 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-55",
-      "fase": "Grupo E",
-      "time_casa": "Curaçao",
-      "time_fora": "Ivory Coast",
-      "bandeira_casa": "🇨🇼",
-      "bandeira_fora": "🇨🇮",
-      "data_hora": "2026-06-25T19:00:00+00:00",
+      "id": "m-imported-52",
+      "fase": "Grupo A",
+      "time_casa": "Czech Republic",
+      "time_fora": "Mexico",
+      "bandeira_casa": "🇨🇿",
+      "bandeira_fora": "🇲🇽",
+      "data_hora": "2026-06-24T22:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
       "gols_fora": null,
@@ -870,6 +799,19 @@
       "time_fora": "Germany",
       "bandeira_casa": "🇪🇨",
       "bandeira_fora": "🇩🇪",
+      "data_hora": "2026-06-25T19:00:00+00:00",
+      "estadio": "Estádio da Copa 2026",
+      "gols_casa": null,
+      "gols_fora": null,
+      "status": "unplayed"
+    },
+    {
+      "id": "m-imported-55",
+      "fase": "Grupo E",
+      "time_casa": "Curaçao",
+      "time_fora": "Ivory Coast",
+      "bandeira_casa": "🇨🇼",
+      "bandeira_fora": "🇨🇮",
       "data_hora": "2026-06-25T19:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -981,12 +923,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-63",
+      "id": "m-imported-64",
       "fase": "Grupo G",
-      "time_casa": "Egypt",
-      "time_fora": "Iran",
-      "bandeira_casa": "🇪🇬",
-      "bandeira_fora": "🇮🇷",
+      "time_casa": "New Zealand",
+      "time_fora": "Belgium",
+      "bandeira_casa": "🇳🇿",
+      "bandeira_fora": "🇧🇪",
       "data_hora": "2026-06-26T23:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -994,12 +936,12 @@
       "status": "unplayed"
     },
     {
-      "id": "m-imported-64",
+      "id": "m-imported-63",
       "fase": "Grupo G",
-      "time_casa": "New Zealand",
-      "time_fora": "Belgium",
-      "bandeira_casa": "🇳🇿",
-      "bandeira_fora": "🇧🇪",
+      "time_casa": "Egypt",
+      "time_fora": "Iran",
+      "bandeira_casa": "🇪🇬",
+      "bandeira_fora": "🇮🇷",
       "data_hora": "2026-06-26T23:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": null,
@@ -1535,68 +1477,996 @@
       "created_at": "2026-06-07T02:47:34.467+00:00"
     },
     {
-      "id": "p-d-r1-1",
+      "id": "pred-user-diego-m-imported-3",
       "user_id": "user-diego",
-      "match_id": "wc2026-m1",
-      "gols_casa": 1,
+      "match_id": "m-imported-3",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T22:52:43.041+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-4",
+      "user_id": "user-diego",
+      "match_id": "m-imported-4",
+      "gols_casa": 2,
       "gols_fora": 0,
-      "created_at": "2026-06-10T14:00:00+00:00"
+      "created_at": "2026-06-08T22:52:50.975+00:00"
     },
     {
-      "id": "p-d-r1-2",
-      "user_id": "user-diego",
-      "match_id": "wc2026-m2",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T14:05:00+00:00"
-    },
-    {
-      "id": "p-d-r1-3",
-      "user_id": "user-diego",
-      "match_id": "wc2026-m3",
+      "id": "pred-user-1780962434760-m-imported-1",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-1",
       "gols_casa": 2,
       "gols_fora": 1,
-      "created_at": "2026-06-10T14:10:00+00:00"
+      "created_at": "2026-06-08T23:47:43.676+00:00"
     },
     {
-      "id": "p-d-r1-4",
+      "id": "pred-user-1780962434760-m-imported-3",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-3",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:48:08.631+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-15",
       "user_id": "user-diego",
-      "match_id": "wc2026-m4",
+      "match_id": "m-imported-15",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:20:45.871+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-17",
+      "user_id": "user-diego",
+      "match_id": "m-imported-17",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:23:17.208+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-38",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-38",
       "gols_casa": 1,
       "gols_fora": 1,
-      "created_at": "2026-06-10T14:15:00+00:00"
+      "created_at": "2026-06-08T23:53:51.934+00:00"
     },
     {
-      "id": "p-d-r2-1",
-      "user_id": "user-diego",
-      "match_id": "wc2026-m5",
-      "gols_casa": 2,
+      "id": "pred-user-1780962434760-m-imported-58",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-58",
+      "gols_casa": 1,
       "gols_fora": 1,
-      "created_at": "2026-06-15T14:20:00+00:00"
+      "created_at": "2026-06-08T23:58:08.829+00:00"
     },
     {
-      "id": "p-d-r2-2",
-      "user_id": "user-diego",
-      "match_id": "wc2026-m6",
+      "id": "pred-user-1780962434760-m-imported-49",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-49",
       "gols_casa": 1,
       "gols_fora": 2,
-      "created_at": "2026-06-15T14:21:00+00:00"
+      "created_at": "2026-06-08T23:56:22.813+00:00"
     },
     {
-      "id": "p-d-r2-3",
-      "user_id": "user-diego",
-      "match_id": "wc2026-m7",
+      "id": "pred-user-1780962434760-m-imported-22",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-22",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:51:20.993+00:00"
+    },
+    {
+      "id": "pred-user-1780962502571-m-imported-1",
+      "user_id": "user-1780962502571",
+      "match_id": "m-imported-1",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T04:21:15.964+00:00"
+    },
+    {
+      "id": "pred-user-1780962502571-m-imported-2",
+      "user_id": "user-1780962502571",
+      "match_id": "m-imported-2",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-09T04:21:37.739+00:00"
+    },
+    {
+      "id": "pred-user-1781004737829-m-imported-1",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-1",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T11:36:31.72+00:00"
+    },
+    {
+      "id": "pred-user-1781004737829-m-imported-2",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-2",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T11:39:26.204+00:00"
+    },
+    {
+      "id": "pred-user-1780868826114-m-imported-1",
+      "user_id": "user-1780868826114",
+      "match_id": "m-imported-1",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T11:51:43.99+00:00"
+    },
+    {
+      "id": "pred-user-1780868826114-m-imported-2",
+      "user_id": "user-1780868826114",
+      "match_id": "m-imported-2",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T11:51:38.07+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-44",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-44",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:54:33.74+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-28",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-28",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:51:51.759+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-25",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-25",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:52:07.25+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-40",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-40",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:53:58.944+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-41",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-41",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:54:20.994+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-50",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-50",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:56:36.04+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-52",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-52",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:57:01.102+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-56",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-56",
       "gols_casa": 1,
       "gols_fora": 3,
-      "created_at": "2026-06-15T14:22:00+00:00"
+      "created_at": "2026-06-08T23:57:26.292+00:00"
     },
     {
-      "id": "p-d-r2-4",
+      "id": "pred-user-1780962434760-m-imported-16",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-16",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:50:16.363+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-17",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-17",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:50:42.915+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-9",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-9",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:59:45.165+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-68",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-68",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:59:55.113+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-16",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-16",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-09T00:01:42.357+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-19",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-19",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T00:02:30.275+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-22",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-22",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:03:41.589+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-20",
       "user_id": "user-diego",
-      "match_id": "wc2026-m8",
+      "match_id": "m-imported-20",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:24:56.557+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-18",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-18",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-09T00:02:19.739+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-21",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-21",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:03:11.967+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-24",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-24",
+      "gols_casa": 3,
+      "gols_fora": 2,
+      "created_at": "2026-06-09T00:04:20.139+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-6",
+      "user_id": "user-diego",
+      "match_id": "m-imported-6",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:18:30.265+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-10",
+      "user_id": "user-diego",
+      "match_id": "m-imported-10",
+      "gols_casa": 5,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:19:17.115+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-67",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-67",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-09T00:00:15.029+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-14",
+      "user_id": "user-diego",
+      "match_id": "m-imported-14",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T00:21:11.447+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-22",
+      "user_id": "user-diego",
+      "match_id": "m-imported-22",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-09T00:26:01.626+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-5",
+      "user_id": "user-diego",
+      "match_id": "m-imported-5",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:18:57.639+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-11",
+      "user_id": "user-diego",
+      "match_id": "m-imported-11",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:19:37.671+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-13",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-13",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:01:20.876+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-32",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-32",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:52:32.467+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-35",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-35",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:52:46.125+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-15",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-15",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:01:07.141+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-16",
+      "user_id": "user-diego",
+      "match_id": "m-imported-16",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:21:36.61+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-8",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-8",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:48:25.764+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-6",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-6",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:48:44.879+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-10",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-10",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:48:58.935+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-9",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-9",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:49:18.428+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-53",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-53",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:56:08.384+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-14",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-14",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:49:33.522+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-46",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-46",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:55:30.8+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-47",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-47",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:55:43.443+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-54",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-54",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:55:56.021+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-11",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-11",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:58:23.83+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-57",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-57",
       "gols_casa": 0,
       "gols_fora": 0,
-      "created_at": "2026-06-15T14:23:00+00:00"
+      "created_at": "2026-06-08T23:58:25.959+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-10",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-10",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:58:29.452+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-11",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-11",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:49:11.203+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-55",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-55",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:57:11.887+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-39",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-39",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:53:29.552+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-37",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-37",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:53:46.219+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-7",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-7",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:48:34.959+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-1",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-1",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:59:10.86+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-64",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-64",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:59:24.804+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-60",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-60",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:57:38.41+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-7",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-7",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:58:37.483+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-61",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-61",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:58:37.427+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-65",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-65",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:59:12.63+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-63",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-63",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:59:43.303+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-12",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-12",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-09T00:00:01.463+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-23",
+      "user_id": "user-diego",
+      "match_id": "m-imported-23",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:26:36.616+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-6",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-6",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:58:34.347+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-2",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-2",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:59:02.086+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-13",
+      "user_id": "user-diego",
+      "match_id": "m-imported-13",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T00:22:08.278+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-18",
+      "user_id": "user-diego",
+      "match_id": "m-imported-18",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-09T00:23:01.94+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-19",
+      "user_id": "user-diego",
+      "match_id": "m-imported-19",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:24:25.071+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-21",
+      "user_id": "user-diego",
+      "match_id": "m-imported-21",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T00:25:42.194+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-24",
+      "user_id": "user-diego",
+      "match_id": "m-imported-24",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T00:28:54.422+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-69",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-69",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T00:00:55.418+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-51",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-51",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:56:50.022+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-71",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-71",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-09T00:00:30.31+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-66",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-66",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-08T23:59:01.165+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-30",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-30",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:52:20.8+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-29",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-29",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:52:38.937+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-13",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-13",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:50:36.153+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-45",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-45",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:55:04.518+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-33",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-33",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:52:51.839+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-34",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-34",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:52:59.489+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-36",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-36",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:53:14.449+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-12",
+      "user_id": "user-diego",
+      "match_id": "m-imported-12",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T00:20:08.325+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-48",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-48",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:55:19.001+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-26",
+      "user_id": "user-diego",
+      "match_id": "m-imported-26",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:26:49.579+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-20",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-20",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-09T00:02:47.222+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-9",
+      "user_id": "user-diego",
+      "match_id": "m-imported-9",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T00:19:53.128+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-70",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-70",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-09T00:01:07.887+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-14",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-14",
+      "gols_casa": 4,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:01:08.993+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-4",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-4",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:48:15.031+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-72",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-72",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:00:42.483+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-19",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-19",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:50:58.957+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-18",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-18",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-08T23:50:50.246+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-31",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-31",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:52:15.051+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-8",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-8",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-08T23:58:39.248+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-4",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-4",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:58:41.88+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-3",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-3",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:58:52.697+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-62",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-62",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-08T23:58:50.37+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-5",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-5",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:48:52.8+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-24",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-24",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:51:28.853+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-23",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-23",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:51:35.404+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-42",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-42",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:54:49.946+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-5",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-5",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:58:32.175+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-59",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-59",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:57:54.626+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-12",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-12",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:49:26.063+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-15",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-15",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:49:53.611+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-43",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-43",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:54:10.783+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-20",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-20",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:51:08.411+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-21",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-21",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:51:15.094+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-8",
+      "user_id": "user-diego",
+      "match_id": "m-imported-8",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:39:59.365+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-7",
+      "user_id": "user-diego",
+      "match_id": "m-imported-7",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:40:01.658+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-2",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-2",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:47:54.284+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-26",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-26",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:51:44.927+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-27",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-27",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:51:57.039+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-17",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-17",
+      "gols_casa": 5,
+      "gols_fora": 0,
+      "created_at": "2026-06-09T00:01:58.381+00:00"
     }
   ],
   "badges": [
@@ -1673,8 +2543,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-A",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grupo-A",
+      "user_id": "user-1780956449173",
       "rodada": "Grupo A",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1683,8 +2553,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-A",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grupo-A",
+      "user_id": "user-1780962434760",
       "rodada": "Grupo A",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1693,8 +2563,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-A",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grupo-A",
+      "user_id": "user-1780962502571",
       "rodada": "Grupo A",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1703,8 +2573,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grupo-A",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grupo-A",
+      "user_id": "user-1781005544161",
+      "rodada": "Grupo A",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grupo-A",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo A",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grupo-A",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo A",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grupo-A",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo A",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grupo-A",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo A",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grupo-A",
+      "user_id": "user-1781011547867",
       "rodada": "Grupo A",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1733,8 +2653,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-B",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grupo-B",
+      "user_id": "user-1780956449173",
       "rodada": "Grupo B",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1743,8 +2663,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-B",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grupo-B",
+      "user_id": "user-1780962434760",
       "rodada": "Grupo B",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1753,8 +2673,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-B",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grupo-B",
+      "user_id": "user-1780962502571",
       "rodada": "Grupo B",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1763,8 +2683,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grupo-B",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grupo-B",
+      "user_id": "user-1781005544161",
       "rodada": "Grupo B",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1773,9 +2693,9 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-diego-Grupo-C",
-      "user_id": "user-diego",
-      "rodada": "Grupo C",
+      "id": "score-user-1780962805030-Grupo-B",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo B",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -1783,9 +2703,9 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780868826114-Grupo-C",
-      "user_id": "user-1780868826114",
-      "rodada": "Grupo C",
+      "id": "score-user-1780966991143-Grupo-B",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo B",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -1793,9 +2713,9 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-C",
-      "user_id": "user-1780875531545",
-      "rodada": "Grupo C",
+      "id": "score-user-1780972192868-Grupo-B",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo B",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -1803,9 +2723,9 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-C",
-      "user_id": "user-1780919153895",
-      "rodada": "Grupo C",
+      "id": "score-user-1781004737829-Grupo-B",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo B",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -1813,19 +2733,9 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-C",
-      "user_id": "user-1780919259216",
-      "rodada": "Grupo C",
-      "pontos": 0,
-      "exato_qtd": 0,
-      "resultado_qtd": 0,
-      "gols_um_time_qtd": 0,
-      "erros_qtd": 0
-    },
-    {
-      "id": "score-user-1780919328905-Grupo-C",
-      "user_id": "user-1780919328905",
-      "rodada": "Grupo C",
+      "id": "score-user-1781011547867-Grupo-B",
+      "user_id": "user-1781011547867",
+      "rodada": "Grupo B",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -1853,8 +2763,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-D",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grupo-D",
+      "user_id": "user-1780956449173",
       "rodada": "Grupo D",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1863,8 +2773,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-D",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grupo-D",
+      "user_id": "user-1780962434760",
       "rodada": "Grupo D",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1873,8 +2783,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-D",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grupo-D",
+      "user_id": "user-1780962502571",
       "rodada": "Grupo D",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1883,9 +2793,169 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grupo-D",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grupo-D",
+      "user_id": "user-1781005544161",
       "rodada": "Grupo D",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grupo-D",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo D",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grupo-D",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo D",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grupo-D",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo D",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grupo-D",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo D",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grupo-D",
+      "user_id": "user-1781011547867",
+      "rodada": "Grupo D",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-diego-Grupo-C",
+      "user_id": "user-diego",
+      "rodada": "Grupo C",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780868826114-Grupo-C",
+      "user_id": "user-1780868826114",
+      "rodada": "Grupo C",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780956449173-Grupo-C",
+      "user_id": "user-1780956449173",
+      "rodada": "Grupo C",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962434760-Grupo-C",
+      "user_id": "user-1780962434760",
+      "rodada": "Grupo C",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962502571-Grupo-C",
+      "user_id": "user-1780962502571",
+      "rodada": "Grupo C",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781005544161-Grupo-C",
+      "user_id": "user-1781005544161",
+      "rodada": "Grupo C",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grupo-C",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo C",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grupo-C",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo C",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grupo-C",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo C",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grupo-C",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo C",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grupo-C",
+      "user_id": "user-1781011547867",
+      "rodada": "Grupo C",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -1913,8 +2983,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-E",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grupo-E",
+      "user_id": "user-1780956449173",
       "rodada": "Grupo E",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1923,8 +2993,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-E",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grupo-E",
+      "user_id": "user-1780962434760",
       "rodada": "Grupo E",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1933,8 +3003,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-E",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grupo-E",
+      "user_id": "user-1780962502571",
       "rodada": "Grupo E",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1943,8 +3013,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grupo-E",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grupo-E",
+      "user_id": "user-1781005544161",
+      "rodada": "Grupo E",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grupo-E",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo E",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grupo-E",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo E",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grupo-E",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo E",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grupo-E",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo E",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grupo-E",
+      "user_id": "user-1781011547867",
       "rodada": "Grupo E",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1973,8 +3093,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-F",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grupo-F",
+      "user_id": "user-1780956449173",
       "rodada": "Grupo F",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1983,8 +3103,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-F",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grupo-F",
+      "user_id": "user-1780962434760",
       "rodada": "Grupo F",
       "pontos": 0,
       "exato_qtd": 0,
@@ -1993,8 +3113,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-F",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grupo-F",
+      "user_id": "user-1780962502571",
       "rodada": "Grupo F",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2003,8 +3123,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grupo-F",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grupo-F",
+      "user_id": "user-1781005544161",
       "rodada": "Grupo F",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2013,9 +3133,9 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-diego-Grupo-G",
-      "user_id": "user-diego",
-      "rodada": "Grupo G",
+      "id": "score-user-1780962805030-Grupo-F",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo F",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -2023,9 +3143,9 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780868826114-Grupo-G",
-      "user_id": "user-1780868826114",
-      "rodada": "Grupo G",
+      "id": "score-user-1780966991143-Grupo-F",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo F",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -2033,9 +3153,9 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-G",
-      "user_id": "user-1780875531545",
-      "rodada": "Grupo G",
+      "id": "score-user-1780972192868-Grupo-F",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo F",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -2043,9 +3163,9 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-G",
-      "user_id": "user-1780919153895",
-      "rodada": "Grupo G",
+      "id": "score-user-1781004737829-Grupo-F",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo F",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -2053,19 +3173,9 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-G",
-      "user_id": "user-1780919259216",
-      "rodada": "Grupo G",
-      "pontos": 0,
-      "exato_qtd": 0,
-      "resultado_qtd": 0,
-      "gols_um_time_qtd": 0,
-      "erros_qtd": 0
-    },
-    {
-      "id": "score-user-1780919328905-Grupo-G",
-      "user_id": "user-1780919328905",
-      "rodada": "Grupo G",
+      "id": "score-user-1781011547867-Grupo-F",
+      "user_id": "user-1781011547867",
+      "rodada": "Grupo F",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -2093,8 +3203,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-H",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grupo-H",
+      "user_id": "user-1780956449173",
       "rodada": "Grupo H",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2103,8 +3213,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-H",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grupo-H",
+      "user_id": "user-1780962434760",
       "rodada": "Grupo H",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2113,8 +3223,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-H",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grupo-H",
+      "user_id": "user-1780962502571",
       "rodada": "Grupo H",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2123,9 +3233,169 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grupo-H",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grupo-H",
+      "user_id": "user-1781005544161",
       "rodada": "Grupo H",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grupo-H",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo H",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grupo-H",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo H",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grupo-H",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo H",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grupo-H",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo H",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grupo-H",
+      "user_id": "user-1781011547867",
+      "rodada": "Grupo H",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-diego-Grupo-G",
+      "user_id": "user-diego",
+      "rodada": "Grupo G",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780868826114-Grupo-G",
+      "user_id": "user-1780868826114",
+      "rodada": "Grupo G",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780956449173-Grupo-G",
+      "user_id": "user-1780956449173",
+      "rodada": "Grupo G",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962434760-Grupo-G",
+      "user_id": "user-1780962434760",
+      "rodada": "Grupo G",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962502571-Grupo-G",
+      "user_id": "user-1780962502571",
+      "rodada": "Grupo G",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781005544161-Grupo-G",
+      "user_id": "user-1781005544161",
+      "rodada": "Grupo G",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grupo-G",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo G",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grupo-G",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo G",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grupo-G",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo G",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grupo-G",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo G",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grupo-G",
+      "user_id": "user-1781011547867",
+      "rodada": "Grupo G",
       "pontos": 0,
       "exato_qtd": 0,
       "resultado_qtd": 0,
@@ -2153,8 +3423,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-I",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grupo-I",
+      "user_id": "user-1780956449173",
       "rodada": "Grupo I",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2163,8 +3433,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-I",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grupo-I",
+      "user_id": "user-1780962434760",
       "rodada": "Grupo I",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2173,8 +3443,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-I",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grupo-I",
+      "user_id": "user-1780962502571",
       "rodada": "Grupo I",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2183,8 +3453,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grupo-I",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grupo-I",
+      "user_id": "user-1781005544161",
+      "rodada": "Grupo I",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grupo-I",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo I",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grupo-I",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo I",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grupo-I",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo I",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grupo-I",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo I",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grupo-I",
+      "user_id": "user-1781011547867",
       "rodada": "Grupo I",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2213,8 +3533,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-J",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grupo-J",
+      "user_id": "user-1780956449173",
       "rodada": "Grupo J",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2223,8 +3543,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-J",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grupo-J",
+      "user_id": "user-1780962434760",
       "rodada": "Grupo J",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2233,8 +3553,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-J",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grupo-J",
+      "user_id": "user-1780962502571",
       "rodada": "Grupo J",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2243,8 +3563,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grupo-J",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grupo-J",
+      "user_id": "user-1781005544161",
+      "rodada": "Grupo J",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grupo-J",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo J",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grupo-J",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo J",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grupo-J",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo J",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grupo-J",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo J",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grupo-J",
+      "user_id": "user-1781011547867",
       "rodada": "Grupo J",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2273,8 +3643,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-K",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grupo-K",
+      "user_id": "user-1780956449173",
       "rodada": "Grupo K",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2283,8 +3653,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-K",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grupo-K",
+      "user_id": "user-1780962434760",
       "rodada": "Grupo K",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2293,8 +3663,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-K",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grupo-K",
+      "user_id": "user-1780962502571",
       "rodada": "Grupo K",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2303,8 +3673,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grupo-K",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grupo-K",
+      "user_id": "user-1781005544161",
+      "rodada": "Grupo K",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grupo-K",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo K",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grupo-K",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo K",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grupo-K",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo K",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grupo-K",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo K",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grupo-K",
+      "user_id": "user-1781011547867",
       "rodada": "Grupo K",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2333,8 +3753,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grupo-L",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grupo-L",
+      "user_id": "user-1780956449173",
       "rodada": "Grupo L",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2343,8 +3763,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grupo-L",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grupo-L",
+      "user_id": "user-1780962434760",
       "rodada": "Grupo L",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2353,8 +3773,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grupo-L",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grupo-L",
+      "user_id": "user-1780962502571",
       "rodada": "Grupo L",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2363,8 +3783,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grupo-L",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grupo-L",
+      "user_id": "user-1781005544161",
+      "rodada": "Grupo L",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grupo-L",
+      "user_id": "user-1780962805030",
+      "rodada": "Grupo L",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grupo-L",
+      "user_id": "user-1780966991143",
+      "rodada": "Grupo L",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grupo-L",
+      "user_id": "user-1780972192868",
+      "rodada": "Grupo L",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grupo-L",
+      "user_id": "user-1781004737829",
+      "rodada": "Grupo L",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grupo-L",
+      "user_id": "user-1781011547867",
       "rodada": "Grupo L",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2393,8 +3863,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Dezesseis-avos-(32)",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Dezesseis-avos-(32)",
+      "user_id": "user-1780956449173",
       "rodada": "Dezesseis-avos (32)",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2403,8 +3873,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Dezesseis-avos-(32)",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Dezesseis-avos-(32)",
+      "user_id": "user-1780962434760",
       "rodada": "Dezesseis-avos (32)",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2413,8 +3883,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Dezesseis-avos-(32)",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Dezesseis-avos-(32)",
+      "user_id": "user-1780962502571",
       "rodada": "Dezesseis-avos (32)",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2423,8 +3893,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Dezesseis-avos-(32)",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Dezesseis-avos-(32)",
+      "user_id": "user-1781005544161",
+      "rodada": "Dezesseis-avos (32)",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Dezesseis-avos-(32)",
+      "user_id": "user-1780962805030",
+      "rodada": "Dezesseis-avos (32)",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Dezesseis-avos-(32)",
+      "user_id": "user-1780966991143",
+      "rodada": "Dezesseis-avos (32)",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Dezesseis-avos-(32)",
+      "user_id": "user-1780972192868",
+      "rodada": "Dezesseis-avos (32)",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Dezesseis-avos-(32)",
+      "user_id": "user-1781004737829",
+      "rodada": "Dezesseis-avos (32)",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Dezesseis-avos-(32)",
+      "user_id": "user-1781011547867",
       "rodada": "Dezesseis-avos (32)",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2453,8 +3973,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Oitavas-de-Final",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Oitavas-de-Final",
+      "user_id": "user-1780956449173",
       "rodada": "Oitavas de Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2463,8 +3983,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Oitavas-de-Final",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Oitavas-de-Final",
+      "user_id": "user-1780962434760",
       "rodada": "Oitavas de Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2473,8 +3993,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Oitavas-de-Final",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Oitavas-de-Final",
+      "user_id": "user-1780962502571",
       "rodada": "Oitavas de Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2483,8 +4003,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Oitavas-de-Final",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Oitavas-de-Final",
+      "user_id": "user-1781005544161",
+      "rodada": "Oitavas de Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Oitavas-de-Final",
+      "user_id": "user-1780962805030",
+      "rodada": "Oitavas de Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Oitavas-de-Final",
+      "user_id": "user-1780966991143",
+      "rodada": "Oitavas de Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Oitavas-de-Final",
+      "user_id": "user-1780972192868",
+      "rodada": "Oitavas de Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Oitavas-de-Final",
+      "user_id": "user-1781004737829",
+      "rodada": "Oitavas de Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Oitavas-de-Final",
+      "user_id": "user-1781011547867",
       "rodada": "Oitavas de Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2513,8 +4083,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Quartas-de-Final",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Quartas-de-Final",
+      "user_id": "user-1780956449173",
       "rodada": "Quartas de Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2523,8 +4093,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Quartas-de-Final",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Quartas-de-Final",
+      "user_id": "user-1780962434760",
       "rodada": "Quartas de Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2533,8 +4103,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Quartas-de-Final",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Quartas-de-Final",
+      "user_id": "user-1780962502571",
       "rodada": "Quartas de Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2543,8 +4113,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Quartas-de-Final",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Quartas-de-Final",
+      "user_id": "user-1781005544161",
+      "rodada": "Quartas de Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Quartas-de-Final",
+      "user_id": "user-1780962805030",
+      "rodada": "Quartas de Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Quartas-de-Final",
+      "user_id": "user-1780966991143",
+      "rodada": "Quartas de Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Quartas-de-Final",
+      "user_id": "user-1780972192868",
+      "rodada": "Quartas de Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Quartas-de-Final",
+      "user_id": "user-1781004737829",
+      "rodada": "Quartas de Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Quartas-de-Final",
+      "user_id": "user-1781011547867",
       "rodada": "Quartas de Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2573,8 +4193,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Semifinal",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Semifinal",
+      "user_id": "user-1780956449173",
       "rodada": "Semifinal",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2583,8 +4203,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Semifinal",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Semifinal",
+      "user_id": "user-1780962434760",
       "rodada": "Semifinal",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2593,8 +4213,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Semifinal",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Semifinal",
+      "user_id": "user-1780962502571",
       "rodada": "Semifinal",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2603,8 +4223,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Semifinal",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Semifinal",
+      "user_id": "user-1781005544161",
+      "rodada": "Semifinal",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Semifinal",
+      "user_id": "user-1780962805030",
+      "rodada": "Semifinal",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Semifinal",
+      "user_id": "user-1780966991143",
+      "rodada": "Semifinal",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Semifinal",
+      "user_id": "user-1780972192868",
+      "rodada": "Semifinal",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Semifinal",
+      "user_id": "user-1781004737829",
+      "rodada": "Semifinal",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Semifinal",
+      "user_id": "user-1781011547867",
       "rodada": "Semifinal",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2633,8 +4303,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Decisão-3º-Lugar",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Decisão-3º-Lugar",
+      "user_id": "user-1780956449173",
       "rodada": "Decisão 3º Lugar",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2643,8 +4313,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Decisão-3º-Lugar",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Decisão-3º-Lugar",
+      "user_id": "user-1780962434760",
       "rodada": "Decisão 3º Lugar",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2653,8 +4323,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Decisão-3º-Lugar",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Decisão-3º-Lugar",
+      "user_id": "user-1780962502571",
       "rodada": "Decisão 3º Lugar",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2663,8 +4333,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Decisão-3º-Lugar",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Decisão-3º-Lugar",
+      "user_id": "user-1781005544161",
+      "rodada": "Decisão 3º Lugar",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Decisão-3º-Lugar",
+      "user_id": "user-1780962805030",
+      "rodada": "Decisão 3º Lugar",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Decisão-3º-Lugar",
+      "user_id": "user-1780966991143",
+      "rodada": "Decisão 3º Lugar",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Decisão-3º-Lugar",
+      "user_id": "user-1780972192868",
+      "rodada": "Decisão 3º Lugar",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Decisão-3º-Lugar",
+      "user_id": "user-1781004737829",
+      "rodada": "Decisão 3º Lugar",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Decisão-3º-Lugar",
+      "user_id": "user-1781011547867",
       "rodada": "Decisão 3º Lugar",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2693,8 +4413,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780875531545-Grande-Final",
-      "user_id": "user-1780875531545",
+      "id": "score-user-1780956449173-Grande-Final",
+      "user_id": "user-1780956449173",
       "rodada": "Grande Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2703,8 +4423,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919153895-Grande-Final",
-      "user_id": "user-1780919153895",
+      "id": "score-user-1780962434760-Grande-Final",
+      "user_id": "user-1780962434760",
       "rodada": "Grande Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2713,8 +4433,8 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919259216-Grande-Final",
-      "user_id": "user-1780919259216",
+      "id": "score-user-1780962502571-Grande-Final",
+      "user_id": "user-1780962502571",
       "rodada": "Grande Final",
       "pontos": 0,
       "exato_qtd": 0,
@@ -2723,8 +4443,58 @@
       "erros_qtd": 0
     },
     {
-      "id": "score-user-1780919328905-Grande-Final",
-      "user_id": "user-1780919328905",
+      "id": "score-user-1781005544161-Grande-Final",
+      "user_id": "user-1781005544161",
+      "rodada": "Grande Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780962805030-Grande-Final",
+      "user_id": "user-1780962805030",
+      "rodada": "Grande Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780966991143-Grande-Final",
+      "user_id": "user-1780966991143",
+      "rodada": "Grande Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1780972192868-Grande-Final",
+      "user_id": "user-1780972192868",
+      "rodada": "Grande Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781004737829-Grande-Final",
+      "user_id": "user-1781004737829",
+      "rodada": "Grande Final",
+      "pontos": 0,
+      "exato_qtd": 0,
+      "resultado_qtd": 0,
+      "gols_um_time_qtd": 0,
+      "erros_qtd": 0
+    },
+    {
+      "id": "score-user-1781011547867-Grande-Final",
+      "user_id": "user-1781011547867",
       "rodada": "Grande Final",
       "pontos": 0,
       "exato_qtd": 0,
