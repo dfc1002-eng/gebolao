@@ -73,6 +73,45 @@ export function RankingView({
 
   return (
     <div className="space-y-6">
+      {/* Dynamic Prize Pool Panel Banner */}
+      <div className="bg-gradient-to-r from-emerald-800 to-green-700 rounded-2xl p-6 text-white shadow-md flex flex-col md:flex-row md:items-center justify-between gap-6 border border-emerald-600 animate-in fade-in duration-300">
+        <div className="space-y-1">
+          <span className="text-[10px] bg-emerald-500/30 border border-emerald-400/20 text-emerald-200 font-black px-2.5 py-1 rounded-md uppercase tracking-wider italic">
+            🏆 Premiação Acumulada do Bolão
+          </span>
+          <h2 className="text-2xl md:text-3xl font-black tracking-tight mt-2 italic">
+            {((users.length) * 50).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+          </h2>
+          <p className="text-[11px] text-emerald-200 font-medium">
+            Calculado dinamicamente: <span className="font-extrabold text-white">{users.length} participantes</span> × <span className="font-extrabold text-white">R$ 50,00</span> por pessoa.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-3 gap-3 md:min-w-[320px] bg-emerald-950/45 p-4 rounded-xl border border-emerald-900/50">
+          <div className="text-center">
+            <span className="block text-[10px] text-amber-400 font-black uppercase tracking-wider italic mb-1">🥇 1º Lugar</span>
+            <span className="text-sm font-black text-white">
+              {(((users.length) * 50) * 0.6).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+            </span>
+            <span className="block text-[8px] text-emerald-200 font-bold uppercase mt-0.5">(60%)</span>
+          </div>
+          <div className="text-center border-l border-emerald-900/50 pl-2">
+            <span className="block text-[10px] text-slate-300 font-black uppercase tracking-wider italic mb-1">🥈 2º Lugar</span>
+            <span className="text-sm font-black text-white">
+              {(((users.length) * 50) * 0.3).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+            </span>
+            <span className="block text-[8px] text-emerald-200 font-bold uppercase mt-0.5">(30%)</span>
+          </div>
+          <div className="text-center border-l border-emerald-900/50 pl-2">
+            <span className="block text-[10px] text-amber-500 font-black uppercase tracking-wider italic mb-1">🥉 3º Lugar</span>
+            <span className="text-sm font-black text-white">
+              {(((users.length) * 50) * 0.1).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+            </span>
+            <span className="block text-[8px] text-emerald-200 font-bold uppercase mt-0.5">(10%)</span>
+          </div>
+        </div>
+      </div>
+
       {/* Top 3 Contenders - Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* 2nd Place */}

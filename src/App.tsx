@@ -497,6 +497,49 @@ export default function App() {
           {/* Sidebar Area Widgets (Takes 1/4 widths on desktop - perfect density architecture) */}
           <div className="lg:col-span-1 space-y-6">
             
+            {/* Widget: Premiação do Bolão */}
+            <div className="bg-slate-900 border border-emerald-900 rounded-2xl p-5 shadow-md text-white font-sans animate-in fade-in duration-300">
+              <span className="text-[10px] text-emerald-400 font-black uppercase tracking-widest block mb-2.5 italic">🏆 Pote de Prêmios</span>
+              <div className="space-y-3">
+                <div className="flex justify-between items-end border-b border-emerald-950 pb-2.5">
+                  <div>
+                    <span className="text-[10px] text-slate-400 block font-semibold">Valor Total Acumulado</span>
+                    <span className="text-2xl font-black text-white italic">
+                      {((users.length) * 50).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                    </span>
+                  </div>
+                  <span className="text-[10px] text-emerald-500 font-bold mb-1">
+                    {users.length} {users.length === 1 ? 'participante' : 'participantes'}
+                  </span>
+                </div>
+
+                <div className="space-y-2 pt-1 text-xs">
+                  <div className="flex justify-between items-center bg-slate-950/40 px-2.5 py-1.5 rounded-lg border border-slate-900">
+                    <span className="text-amber-400 font-black text-[10px] uppercase italic">🥇 1º Lugar (60%):</span>
+                    <span className="font-extrabold text-white">
+                      {(((users.length) * 50) * 0.6).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center bg-slate-950/40 px-2.5 py-1.5 rounded-lg border border-slate-900">
+                    <span className="text-slate-350 font-black text-[10px] uppercase italic">🥈 2º Lugar (30%):</span>
+                    <span className="font-extrabold text-white">
+                      {(((users.length) * 50) * 0.3).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center bg-slate-950/40 px-2.5 py-1.5 rounded-lg border border-slate-900">
+                    <span className="text-amber-500 font-black text-[10px] uppercase italic">🥉 3º Lugar (10%):</span>
+                    <span className="font-extrabold text-white">
+                      {(((users.length) * 50) * 0.1).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                    </span>
+                  </div>
+                </div>
+                
+                <p className="text-[9px] text-slate-400 leading-normal pt-1 text-center font-medium">
+                  Taxa de R$ 50,00 por participante. O cálculo é atualizado dinamicamente a cada novo cadastro.
+                </p>
+              </div>
+            </div>
+            
             {/* Widget 1: Personal Performance Tracker Card if logged-in */}
             {currentUser ? (
               <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm font-sans">
