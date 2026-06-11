@@ -220,6 +220,8 @@ export function PredictionsView({
 
   const renderMatchCard = (match: Match) => {
     const isLocked = isMatchLocked(match);
+    const matchPreds = predictions.filter((p) => p.match_id === match.id);
+    const missingCount = Math.max(0, users.length - matchPreds.length);
 
     // Find current user's prediction for this match
     let userPred = currentUser
@@ -260,7 +262,7 @@ export function PredictionsView({
           </div>
         )}
         {isLocked && match.status !== 'completed' && (
-          <div className="absolute top-0 right-0 bg-slate-100 text-slate-650 border-l border-b border-slate-200 font-extrabold px-3 py-1.5 text-[9px] uppercase tracking-wider rounded-bl-xl flex items-center gap-1 italic">
+          <div className="absolute top-0 right-0 bg-slate-100 text-slate-655 border-l border-b border-slate-200 font-extrabold px-3 py-1.5 text-[9px] uppercase tracking-wider rounded-bl-xl flex items-center gap-1 italic">
             <Lock size={10} />
             <span>Em Jogo</span>
           </div>
@@ -268,10 +270,23 @@ export function PredictionsView({
 
         {/* Match Header meta info */}
         <div className="flex flex-col gap-1 mb-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] text-green-700 font-black uppercase tracking-widest italic bg-green-50 px-2.5 py-0.5 rounded border border-green-150">
               {match.fase}
             </span>
+            {currentUser?.isAdmin && match.status === 'unplayed' && (
+              <>
+                {missingCount > 0 ? (
+                  <span className="text-[9px] bg-amber-500/10 text-amber-700 border border-amber-500/20 font-black px-2 py-0.5 rounded uppercase tracking-wider inline-flex items-center gap-1 shadow-xs">
+                    <span>⚠️ Faltam {missingCount} {missingCount === 1 ? 'palpite' : 'palpites'}</span>
+                  </span>
+                ) : (
+                  <span className="text-[9px] bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-black px-2 py-0.5 rounded uppercase tracking-wider inline-flex items-center gap-1 shadow-xs">
+                    <span>✅ 100% palpitado</span>
+                  </span>
+                )}
+              </>
+            )}
           </div>
           <div className="flex items-center gap-1 text-[11px] text-slate-500 font-semibold mt-1">
             <Calendar size={12} className="text-slate-400" />
