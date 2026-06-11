@@ -233,13 +233,13 @@ export function AdminView({
 
       <div className="px-6 pb-6 space-y-6">
         {/* Navigation Selector Tabs inside the panel */}
-        <div className="flex border-b border-slate-900 gap-1 pb-1 text-xs font-display">
+        <div className="flex border-b border-slate-900 gap-1 pb-1 text-xs font-display flex-wrap">
           <button
             onClick={() => setActiveAdminTab('jogos')}
             className={`px-4 py-2 rounded-lg font-bold transition-all cursor-pointer ${
               activeAdminTab === 'jogos'
                 ? 'bg-slate-900 text-emerald-400 border border-slate-800'
-                : 'text-slate-450 hover:text-slate-200'
+                : 'text-slate-300 hover:text-emerald-400'
             }`}
           >
             Atualizar Resultados
@@ -249,7 +249,7 @@ export function AdminView({
             className={`px-4 py-2 rounded-lg font-bold transition-all cursor-pointer ${
               activeAdminTab === 'usuarios'
                 ? 'bg-slate-900 text-emerald-400 border border-slate-800'
-                : 'text-slate-450 hover:text-slate-200'
+                : 'text-slate-300 hover:text-emerald-400'
             }`}
           >
             Cadastrar Concorrentes
@@ -259,7 +259,7 @@ export function AdminView({
             className={`px-4 py-2 rounded-lg font-bold transition-all cursor-pointer ${
               activeAdminTab === 'importar'
                 ? 'bg-slate-900 text-emerald-400 border border-slate-800'
-                : 'text-slate-450 hover:text-slate-200'
+                : 'text-slate-300 hover:text-emerald-400'
             }`}
           >
             Importar Jogos (JSON)
@@ -295,7 +295,7 @@ export function AdminView({
                       {/* Home */}
                       <div className="flex items-center gap-1.5 w-1/3">
                         <span className="text-xl">{m.bandeira_casa}</span>
-                        <span className="font-bold text-xs truncate text-slate-205">{m.time_casa}</span>
+                        <span className="font-extrabold text-xs truncate text-white uppercase italic tracking-wide">{m.time_casa}</span>
                       </div>
 
                       {/* Inputs panel */}
@@ -319,7 +319,7 @@ export function AdminView({
 
                       {/* Away */}
                       <div className="flex items-center justify-end gap-1.5 w-1/3 text-right">
-                        <span className="font-bold text-xs truncate text-slate-205">{m.time_fora}</span>
+                        <span className="font-extrabold text-xs truncate text-white uppercase italic tracking-wide">{m.time_fora}</span>
                         <span className="text-xl">{m.bandeira_fora}</span>
                       </div>
                     </div>
@@ -354,7 +354,7 @@ export function AdminView({
         {/* --- TAB 2: CRIAÇÃO DE USUÁRIOS --- */}
         {activeAdminTab === 'usuarios' && (
           <div className="max-w-md mx-auto py-4 space-y-4 font-display">
-            <h3 className="font-bold text-xs text-slate-350">Adicione novos amigos fictícios ou reais no banco de dados para criar competidores adicionais no ranking:</h3>
+            <h3 className="font-bold text-xs text-slate-300">Adicione novos amigos fictícios ou reais no banco de dados para criar competidores adicionais no ranking:</h3>
 
             {usrSuccess && (
               <div className="bg-emerald-950/30 border border-emerald-900/30 text-emerald-450 text-xs px-3 py-2.5 rounded-lg">
@@ -364,7 +364,7 @@ export function AdminView({
 
             <form onSubmit={handleRegisterFriend} className="space-y-4">
               <div>
-                <label className="block text-xs text-slate-450 mb-1">Nome Completo / Apelido</label>
+                <label className="block text-xs text-slate-400 mb-1">Nome Completo / Apelido</label>
                 <input
                   type="text"
                   required
@@ -376,7 +376,7 @@ export function AdminView({
               </div>
 
               <div>
-                <label className="block text-xs text-slate-450 mb-1">E-mail de Identificação</label>
+                <label className="block text-xs text-slate-400 mb-1">E-mail de Identificação</label>
                 <input
                   type="email"
                   required
@@ -399,8 +399,8 @@ export function AdminView({
 
             {/* List of existing users with Admin toggles */}
             <div className="border-t border-slate-900 pt-6 mt-6 space-y-3">
-              <h4 className="font-bold text-xs text-slate-350 uppercase tracking-wider">Gerenciar Administradores</h4>
-              <p className="text-[10px] text-slate-500">Promova participantes confiáveis para ajudar na atualização dos placares oficiais do bolão.</p>
+              <h4 className="font-bold text-xs text-slate-300 uppercase tracking-wider">Gerenciar Administradores</h4>
+              <p className="text-[10px] text-slate-450">Promova participantes confiáveis para ajudar na atualização dos placares oficiais do bolão.</p>
               <div className="space-y-2 max-h-[300px] overflow-y-auto pr-1">
                 {users.map((u) => (
                   <div key={u.id} className="bg-slate-900/40 border border-slate-850 px-4 py-2.5 rounded-xl flex items-center justify-between gap-3 text-xs">
@@ -424,7 +424,7 @@ export function AdminView({
                             className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-wider transition duration-150 cursor-pointer ${
                               u.isAdmin
                                 ? 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-900/40'
-                                : 'bg-slate-800 hover:bg-slate-700 text-slate-350 border border-slate-700'
+                                : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700'
                             }`}
                           >
                             {u.isAdmin ? '👑 Admin (Remover)' : 'Promover a Admin'}
