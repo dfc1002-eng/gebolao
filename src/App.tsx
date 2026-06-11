@@ -35,6 +35,7 @@ export default function App() {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [forceOpenRegister, setForceOpenRegister] = useState(false);
+  const [showRulesModal, setShowRulesModal] = useState(false);
 
   // Synchronize state from backend APIs
   const fetchState = async (silently = false) => {
@@ -460,6 +461,15 @@ export default function App() {
               </span>
             </div>
           </div>
+
+          <div className="mt-3 pt-2.5 border-t border-emerald-950/40 flex justify-center">
+            <button
+              onClick={() => setShowRulesModal(true)}
+              className="w-full text-center bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 hover:text-emerald-250 text-[10px] font-black uppercase tracking-wider py-2 rounded-lg transition duration-150 cursor-pointer shadow-xs"
+            >
+              📖 Regulamento e Exemplos
+            </button>
+          </div>
         </div>
 
         {/* Dynamic Bento Box Structure: Column Layout split into main body and sidebar widgets */}
@@ -662,10 +672,16 @@ export default function App() {
                   <span>Não acertou nada: <strong className="text-slate-450">0 pontos</strong>.</span>
                 </li>
               </ul>
-              <div className="border-t border-slate-100 pt-3">
+              <div className="border-t border-slate-100 pt-3 flex flex-col gap-2">
                 <p className="text-[10px] text-slate-400 font-medium leading-relaxed">
                   * Os palpites de cada jogo são trancados de forma automática no momento exato do início programado de cada duelo.
                 </p>
+                <button
+                  onClick={() => setShowRulesModal(true)}
+                  className="w-full text-center bg-green-50 hover:bg-green-100/80 border border-green-200 text-green-700 hover:text-green-800 text-[10px] font-black uppercase tracking-wider py-2 rounded-lg transition duration-150 cursor-pointer shadow-xs"
+                >
+                  📖 Ver Exemplos Detalhados
+                </button>
               </div>
             </div>
 
@@ -682,6 +698,112 @@ export default function App() {
           </p>
         </div>
       </footer>
+      {/* Detailed Rules Modal */}
+      {showRulesModal && (
+        <div className="fixed inset-0 bg-black/85 flex items-center justify-center p-4 z-[100] backdrop-blur-xs">
+          <div className="bg-slate-900 border border-emerald-900 p-6 rounded-2xl shadow-xl w-full max-w-2xl max-h-[85vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200 text-slate-100 font-sans">
+            <div className="flex items-start justify-between border-b border-emerald-950 pb-3.5 mb-4">
+              <div className="flex items-center gap-2">
+                <span className="text-xl">🏆</span>
+                <div>
+                  <h3 className="font-display font-black text-white text-md uppercase tracking-tight">Regulamento de Pontuação</h3>
+                  <p className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider italic">GEBolão Copa 2026</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setShowRulesModal(false)}
+                className="text-slate-400 hover:text-slate-200 font-bold p-1 bg-slate-800 hover:bg-slate-700 rounded-md cursor-pointer transition-colors text-xs"
+              >
+                ✕ Fechar
+              </button>
+            </div>
+
+            <div className="space-y-6 text-xs leading-relaxed">
+              {/* Rule 1 */}
+              <div className="bg-slate-950/40 border border-emerald-950 p-4 rounded-xl space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="font-black text-amber-400 text-xs italic">🎯 1. Acerto Exato</span>
+                  <span className="bg-amber-400/20 text-amber-300 border border-amber-400/30 px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider">10 Pontos</span>
+                </div>
+                <p className="text-slate-300 text-[11px]">Você acerta exatamente o placar final de ambos os times.</p>
+                <div className="bg-slate-950/80 p-2.5 rounded-lg border border-slate-900 font-mono text-[10px] space-y-1">
+                  <div><span className="text-slate-500">Palpite:</span> <span className="text-amber-400 font-bold">2 x 1</span> | <span className="text-slate-500">Real:</span> <span className="text-white font-bold">2 x 1</span> <span className="text-emerald-400">→ +10 pts</span></div>
+                  <div><span className="text-slate-500">Palpite:</span> <span className="text-amber-400 font-bold">0 x 0</span> | <span className="text-slate-500">Real:</span> <span className="text-white font-bold">0 x 0</span> <span className="text-emerald-400">→ +10 pts</span></div>
+                </div>
+              </div>
+
+              {/* Rule 2 */}
+              <div className="bg-slate-950/40 border border-emerald-950 p-4 rounded-xl space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="font-black text-slate-200 text-xs italic">⭐ 2. Acerto do Resultado (Vencedor ou Empate)</span>
+                  <span className="bg-slate-100/10 text-slate-300 border border-slate-100/20 px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider">5 Pontos</span>
+                </div>
+                <p className="text-slate-300 text-[11px]">Você acerta quem venceu a partida (ou que deu empate), mas erra os gols exatos.</p>
+                <div className="space-y-2 text-[11px]">
+                  <div className="bg-slate-950/80 p-2.5 rounded-lg border border-slate-900 space-y-1">
+                    <div><span className="text-amber-300 font-extrabold uppercase text-[9px] block mb-1">Caso A: Acertou o Vencedor</span></div>
+                    <div className="font-mono text-[10px]"><span className="text-slate-500">Palpite:</span> <span className="text-amber-400 font-bold">3 x 1 (A vence)</span> | <span className="text-slate-500">Real:</span> <span className="text-white font-bold">2 x 0 (A vence)</span> <span className="text-emerald-400">→ +5 pts</span></div>
+                  </div>
+                  <div className="bg-slate-950/80 p-2.5 rounded-lg border border-slate-900 space-y-1">
+                    <div><span className="text-amber-300 font-extrabold uppercase text-[9px] block mb-1">Caso B: Acertou o Empate</span></div>
+                    <div className="font-mono text-[10px]"><span className="text-slate-500">Palpite:</span> <span className="text-amber-400 font-bold">1 x 1</span> | <span className="text-slate-500">Real:</span> <span className="text-white font-bold">2 x 2</span> <span className="text-emerald-400">→ +5 pts</span></div>
+                  </div>
+                </div>
+                <p className="text-[10px] text-amber-500/80 italic font-medium">
+                  ⚠️ Obs: Você não ganha +2 pontos extras por ter acertado os gols de um dos times (a maior pontuação, de 5 pontos, prevalece).
+                </p>
+              </div>
+
+              {/* Rule 3 */}
+              <div className="bg-slate-950/40 border border-emerald-950 p-4 rounded-xl space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="font-black text-emerald-400 text-xs italic">⚽ 3. Acerto do Placar de Apenas Um Time</span>
+                  <span className="bg-emerald-500/10 text-emerald-450 border border-emerald-500/20 px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider">2 Pontos</span>
+                </div>
+                <p className="text-slate-300 text-[11px]">Você errou o vencedor ou o empate do jogo, mas acertou a quantidade de gols que um dos dois times fez.</p>
+                <div className="space-y-2 text-[11px]">
+                  <div className="bg-slate-950/80 p-2.5 rounded-lg border border-slate-900 space-y-1">
+                    <div><span className="text-emerald-400 font-extrabold uppercase text-[9px] block mb-1">Caso A: Errou o vencedor, mas acertou gols de quem perdeu</span></div>
+                    <div className="font-mono text-[10px]"><span className="text-slate-500">Palpite:</span> <span className="text-amber-400 font-bold">2 x 1 (A vence)</span> | <span className="text-slate-500">Real:</span> <span className="text-white font-bold">2 x 3 (B vence)</span> <span className="text-emerald-400">→ +2 pts (acertou gols do time A)</span></div>
+                  </div>
+                  <div className="bg-slate-950/80 p-2.5 rounded-lg border border-slate-900 space-y-1">
+                    <div><span className="text-emerald-400 font-extrabold uppercase text-[9px] block mb-1">Caso B: Errou o vencedor, mas acertou gols de quem ganhou</span></div>
+                    <div className="font-mono text-[10px]"><span className="text-slate-500">Palpite:</span> <span className="text-amber-400 font-bold">1 x 0 (A vence)</span> | <span className="text-slate-500">Real:</span> <span className="text-white font-bold">2 x 0 (A vence)</span> <span className="text-amber-400">→ Prevalece regra de Vencedor (+5 pts)</span></div>
+                  </div>
+                  <div className="bg-slate-950/80 p-2.5 rounded-lg border border-slate-900 space-y-1">
+                    <div><span className="text-emerald-400 font-extrabold uppercase text-[9px] block mb-1">Caso C: Apostou em empate, mas um time venceu</span></div>
+                    <div className="font-mono text-[10px]"><span className="text-slate-500">Palpite:</span> <span className="text-amber-400 font-bold">1 x 1 (empate)</span> | <span className="text-slate-500">Real:</span> <span className="text-white font-bold">2 x 1 (A vence)</span> <span className="text-emerald-400">→ +2 pts (acertou gols do time B)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Rule 4 */}
+              <div className="bg-slate-950/40 border border-emerald-950 p-4 rounded-xl space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="font-black text-red-400 text-xs italic">💩 4. Erro Total</span>
+                  <span className="bg-red-500/10 text-red-400 border border-red-500/20 px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider">0 Pontos</span>
+                </div>
+                <p className="text-slate-300 text-[11px]">Você errou o vencedor/empate e também os gols de ambos os times.</p>
+                <div className="bg-slate-950/80 p-2.5 rounded-lg border border-slate-900 font-mono text-[10px] space-y-1">
+                  <div><span className="text-slate-500">Palpite:</span> <span className="text-amber-400 font-bold">1 x 0</span> | <span className="text-slate-500">Real:</span> <span className="text-white font-bold">2 x 2</span> <span className="text-red-400">→ 0 pts</span></div>
+                  <div><span className="text-slate-500">Palpite:</span> <span className="text-amber-400 font-bold">1 x 1</span> | <span className="text-slate-500">Real:</span> <span className="text-white font-bold">3 x 0</span> <span className="text-red-400">→ 0 pts</span></div>
+                  <div><span className="text-red-400 font-bold">Geb, o virgem:</span> Esqueceu de palpitar antes do jogo começar <span className="text-red-400">→ 0 pts</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-emerald-950 pt-4 mt-5 flex justify-end">
+              <button
+                onClick={() => setShowRulesModal(false)}
+                className="bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-display font-black text-xs px-5 py-2.5 rounded-xl transition cursor-pointer"
+              >
+                Entendi as Regras!
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Onboarding Wizard Modal */}
       <OnboardingModal
         isOpen={showOnboarding}
