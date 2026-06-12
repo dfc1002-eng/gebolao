@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { User, Ranking, Badge, UserBadge, RoundScore, Match } from '../types';
+import { User, Ranking, Badge, UserBadge, RoundScore, Match, Prediction } from '../types';
 import { Award, Medal, Share2, Flame, Check, Info, TrendingUp, Sparkles, Smile } from 'lucide-react';
+import { calculateGroupStandings } from '../utils/standings';
 
 interface RankingViewProps {
   rankings: Ranking[];
@@ -9,7 +10,9 @@ interface RankingViewProps {
   userBadges: UserBadge[];
   roundScores: RoundScore[];
   matches: Match[];
-  onSelectUser: (user: User) => void;
+  onSelectUser: (user: User | null) => void;
+  predictions: Prediction[];
+  currentUser: User | null;
 }
 
 export function RankingView({
@@ -19,10 +22,17 @@ export function RankingView({
   userBadges,
   roundScores,
   matches,
-  onSelectUser
+  onSelectUser,
+  predictions,
+  currentUser
 }: RankingViewProps) {
   const [copied, setCopied] = useState(false);
   const [focusedUser, setFocusedUser] = useState<User | null>(null);
+
+  // Standings state controls
+  const [rankingSubTab, setRankingSubTab] = useState<'bolao' | 'copa'>('bolao');
+  const [standingsMode, setStandingsMode] = useState<'real' | 'simulated'>('real');
+  const [selectedGroup, setSelectedGroup] = useState<string>('todos');
 
   // Helper: Retrieve user profile
   const getUser = (userId: string) => users.find((u) => u.id === userId);
@@ -71,6 +81,13 @@ export function RankingView({
     setFocusedUser(user);
   };
 
+  const groupStandings = calculateGroupStandings(
+    matches,
+    predictions,
+    currentUser?.id || null,
+    standingsMode
+  );
+
   return (
     <div className="space-y-6">
       {/* Dynamic Prize Pool Panel Banner */}
@@ -109,253 +126,449 @@ export function RankingView({
         </div>
       </div>
 
-      {/* Top 3 Contenders - Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* 2nd Place */}
-        {rankings.length > 1 && (
-          <div className="bg-white border border-slate-200 p-5 rounded-2xl md:order-1 text-center flex flex-col justify-between items-center shadow-sm relative overflow-hidden group hover:border-slate-350 transition-all">
-            <div className="absolute top-0 right-0 bg-slate-100 text-slate-600 font-extrabold px-3.5 py-1.5 rounded-bl-xl text-xs border-l border-b border-slate-200 uppercase tracking-wider italic">
-              2º Lugar
-            </div>
-            <div className="mb-3 flex flex-col items-center">
-              <div className="relative mb-2 mt-2">
-                <div className="w-16 h-16 rounded-full border-2 border-slate-350 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-sm uppercase text-lg select-none">
-                  {getInitials(getUser(rankings[1].user_id)?.nome || '')}
-                </div>
-                <div className="absolute -bottom-1 -right-1 bg-slate-300 text-slate-800 p-1 rounded-full shadow border border-white">
-                  <Medal size={16} />
-                </div>
-              </div>
-              <h3 className="font-extrabold text-slate-900 text-sm group-hover:text-green-700 transition-colors uppercase italic tracking-wide">
-                {getUser(rankings[1].user_id)?.nome}
-              </h3>
-
-            </div>
-            <div className="w-full bg-slate-50 rounded-xl p-2.5 border border-slate-100">
-              <span className="block text-[11px] text-slate-500 font-medium">Pontuação Total</span>
-              <span className="text-xl font-black text-slate-800">{rankings[1].pontos_totais} pts</span>
-              <div className="flex items-center justify-center gap-2 mt-1 text-[10px] text-slate-500 font-medium">
-                <span>🎯 {rankings[1].exatos_totais} exatos</span>
-                <span>•</span>
-                <span>⭐ {rankings[1].vencedores_totais} resultados</span>
-              </div>
-            </div>
-            {/* Badges */}
-            <div className="flex flex-wrap justify-center gap-1 mt-3">
-              {getUserBadgesList(rankings[1].user_id).slice(0, 3).map((b) => (
-                <span key={b.id} className="cursor-help text-xs" title={`${b.nome}: ${b.descricao}`}>
-                  {b.icone}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* 1st Place (GOAT) */}
-        {rankings.length > 0 && (
-          <div className="bg-white border-2 border-amber-400 p-6 rounded-2xl md:order-2 text-center flex flex-col justify-between items-center shadow-md relative overflow-hidden group hover:border-amber-500 transition-all scale-105">
-            <div className="absolute top-0 right-0 bg-amber-400 text-green-950 font-black px-4 py-2 rounded-bl-xl text-[10px] uppercase tracking-wider flex items-center gap-1 italic">
-              <Sparkles size={11} className="animate-pulse" />
-              <span>Líder Supremo</span>
-            </div>
-            <div className="mb-4 flex flex-col items-center">
-              <div className="relative mb-2.5 mt-2">
-                <div className="w-20 h-20 rounded-full border-4 border-amber-400 flex items-center justify-center font-display font-black text-amber-500 bg-amber-50 shadow-md uppercase text-2xl select-none">
-                  {getInitials(getUser(rankings[0].user_id)?.nome || '')}
-                </div>
-                <div className="absolute bottom-0 right-0 bg-amber-400 text-green-950 p-1.5 rounded-full shadow border border-white animate-bounce">
-                  <Award size={18} />
-                </div>
-              </div>
-              <h3 className="font-black text-slate-900 text-base tracking-tight group-hover:text-green-700 transition-colors uppercase italic">
-                {getUser(rankings[0].user_id)?.nome}
-              </h3>
-              <div className="flex items-center justify-center gap-1.5 mt-1">
-                <span className="text-[10px] text-amber-600 font-bold uppercase tracking-wider">🚀 GOAT</span>
-              </div>
-            </div>
-            <div className="w-full bg-green-500/10 rounded-xl p-3 border border-green-500/10">
-              <span className="block text-[11px] text-green-800 font-extrabold uppercase tracking-wider">Pontos Totais</span>
-              <span className="text-2xl font-black text-green-700">{rankings[0].pontos_totais} pts</span>
-              <div className="flex items-center justify-center gap-3 mt-1.5 text-[10.5px] text-green-900 font-bold">
-                <span>🎯 {rankings[0].exatos_totais} exatos</span>
-                <span>•</span>
-                <span>🏆 {getUserBadgesList(rankings[0].user_id).length} selos</span>
-              </div>
-            </div>
-            {/* Badges */}
-            <div className="flex flex-wrap justify-center gap-1.5 mt-3">
-              {getUserBadgesList(rankings[0].user_id).slice(0, 4).map((b) => (
-                <span
-                  key={b.id}
-                  className="px-2 py-0.5 bg-slate-100 border border-slate-200 rounded text-xs cursor-help"
-                  title={`${b.nome}: ${b.descricao}`}
-                >
-                  {b.icone} <span className="text-[9px] text-slate-500 font-medium">{b.nome.split(' ')[0]}</span>
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* 3rd Place */}
-        {rankings.length > 2 && (
-          <div className="bg-white border border-slate-200 p-5 rounded-2xl md:order-3 text-center flex flex-col justify-between items-center shadow-sm relative overflow-hidden group hover:border-slate-350 transition-all">
-            <div className="absolute top-0 right-0 bg-slate-100 text-slate-600 font-extrabold px-3.5 py-1.5 rounded-bl-xl text-xs border-l border-b border-slate-200 uppercase tracking-wider italic">
-              3º Lugar
-            </div>
-            <div className="mb-3 flex flex-col items-center">
-              <div className="relative mb-2 mt-2">
-                <div className="w-16 h-16 rounded-full border-2 border-amber-600 flex items-center justify-center font-display font-black text-amber-800 bg-amber-50 shadow-sm uppercase text-lg select-none">
-                  {getInitials(getUser(rankings[2].user_id)?.nome || '')}
-                </div>
-                <div className="absolute -bottom-1 -right-1 bg-amber-600 text-white p-1 rounded-full shadow border border-white">
-                  <Medal size={16} />
-                </div>
-              </div>
-              <h3 className="font-extrabold text-slate-900 text-sm group-hover:text-green-700 transition-colors uppercase italic tracking-wide">
-                {getUser(rankings[2].user_id)?.nome}
-              </h3>
-
-            </div>
-            <div className="w-full bg-slate-50 rounded-xl p-2.5 border border-slate-100">
-              <span className="block text-[11px] text-slate-500 font-medium">Pontuação Total</span>
-              <span className="text-xl font-black text-slate-800">{rankings[2].pontos_totais} pts</span>
-              <div className="flex items-center justify-center gap-2 mt-1 text-[10px] text-slate-500 font-medium">
-                <span>🎯 {rankings[2].exatos_totais} exatos</span>
-                <span>•</span>
-                <span>⭐ {rankings[2].vencedores_totais} resultados</span>
-              </div>
-            </div>
-            {/* Badges */}
-            <div className="flex flex-wrap justify-center gap-1 mt-3">
-              {getUserBadgesList(rankings[2].user_id).slice(0, 3).map((b) => (
-                <span key={b.id} className="cursor-help text-xs" title={`${b.nome}: ${b.descricao}`}>
-                  {b.icone}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
+      {/* Tab Selector */}
+      <div className="flex bg-slate-200/80 p-1 rounded-xl w-full">
+        <button
+          onClick={() => setRankingSubTab('bolao')}
+          className={`flex-1 py-2 rounded-lg text-xs font-black uppercase italic tracking-wider transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+            rankingSubTab === 'bolao'
+              ? 'bg-white text-green-700 shadow-sm font-extrabold'
+              : 'text-slate-500 hover:text-slate-800'
+          }`}
+        >
+          <Award size={14} />
+          <span>Líderes do Bolão</span>
+        </button>
+        <button
+          onClick={() => setRankingSubTab('copa')}
+          className={`flex-1 py-2 rounded-lg text-xs font-black uppercase italic tracking-wider transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+            rankingSubTab === 'copa'
+              ? 'bg-white text-green-700 shadow-sm font-extrabold'
+              : 'text-slate-500 hover:text-slate-800'
+          }`}
+        >
+          <TrendingUp size={14} />
+          <span>Classificação da Copa</span>
+        </button>
       </div>
 
-      {/* Full Leaderboard Table Container */}
-      <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-        <div className="p-4 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 bg-slate-50">
-          <div>
-            <h2 className="text-sm uppercase font-black tracking-wider text-slate-900 flex items-center gap-1.5 font-display">
-              <Award size={18} className="text-green-700" />
-              <span>Tabela Geral do Bolão</span>
-            </h2>
-            <p className="text-xs text-slate-500 font-medium">Acumulado das todas as rodadas já finalizadas</p>
+      {rankingSubTab === 'bolao' && (
+        <>
+          {/* Top 3 Contenders - Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* 2nd Place */}
+            {rankings.length > 1 && (
+              <div className="bg-white border border-slate-200 p-5 rounded-2xl md:order-1 text-center flex flex-col justify-between items-center shadow-sm relative overflow-hidden group hover:border-slate-350 transition-all">
+                <div className="absolute top-0 right-0 bg-slate-100 text-slate-600 font-extrabold px-3.5 py-1.5 rounded-bl-xl text-xs border-l border-b border-slate-200 uppercase tracking-wider italic">
+                  2º Lugar
+                </div>
+                <div className="mb-3 flex flex-col items-center">
+                  <div className="relative mb-2 mt-2">
+                    <div className="w-16 h-16 rounded-full border-2 border-slate-350 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-sm uppercase text-lg select-none">
+                      {getInitials(getUser(rankings[1].user_id)?.nome || '')}
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 bg-slate-300 text-slate-800 p-1 rounded-full shadow border border-white">
+                      <Medal size={16} />
+                    </div>
+                  </div>
+                  <h3 className="font-extrabold text-slate-900 text-sm group-hover:text-green-700 transition-colors uppercase italic tracking-wide">
+                    {getUser(rankings[1].user_id)?.nome}
+                  </h3>
+                </div>
+                <div className="w-full bg-slate-50 rounded-xl p-2.5 border border-slate-100">
+                  <span className="block text-[11px] text-slate-500 font-medium">Pontuação Total</span>
+                  <span className="text-xl font-black text-slate-800">{rankings[1].pontos_totais} pts</span>
+                  <div className="flex items-center justify-center gap-2 mt-1 text-[10px] text-slate-500 font-medium">
+                    <span>🎯 {rankings[1].exatos_totais} exatos</span>
+                    <span>•</span>
+                    <span>⭐ {rankings[1].vencedores_totais} resultados</span>
+                  </div>
+                </div>
+                {/* Badges */}
+                <div className="flex flex-wrap justify-center gap-1 mt-3">
+                  {getUserBadgesList(rankings[1].user_id).slice(0, 3).map((b) => (
+                    <span key={b.id} className="cursor-help text-xs" title={`${b.nome}: ${b.descricao}`}>
+                      {b.icone}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* 1st Place (GOAT) */}
+            {rankings.length > 0 && (
+              <div className="bg-white border-2 border-amber-400 p-6 rounded-2xl md:order-2 text-center flex flex-col justify-between items-center shadow-md relative overflow-hidden group hover:border-amber-500 transition-all scale-105">
+                <div className="absolute top-0 right-0 bg-amber-400 text-green-950 font-black px-4 py-2 rounded-bl-xl text-[10px] uppercase tracking-wider flex items-center gap-1 italic">
+                  <Sparkles size={11} className="animate-pulse" />
+                  <span>Líder Supremo</span>
+                </div>
+                <div className="mb-4 flex flex-col items-center">
+                  <div className="relative mb-2.5 mt-2">
+                    <div className="w-20 h-20 rounded-full border-4 border-amber-400 flex items-center justify-center font-display font-black text-amber-500 bg-amber-50 shadow-md uppercase text-2xl select-none">
+                      {getInitials(getUser(rankings[0].user_id)?.nome || '')}
+                    </div>
+                    <div className="absolute bottom-0 right-0 bg-amber-400 text-green-950 p-1.5 rounded-full shadow border border-white animate-bounce">
+                      <Award size={18} />
+                    </div>
+                  </div>
+                  <h3 className="font-black text-slate-900 text-base tracking-tight group-hover:text-green-700 transition-colors uppercase italic">
+                    {getUser(rankings[0].user_id)?.nome}
+                  </h3>
+                  <div className="flex items-center justify-center gap-1.5 mt-1">
+                    <span className="text-[10px] text-amber-600 font-bold uppercase tracking-wider">🚀 GOAT</span>
+                  </div>
+                </div>
+                <div className="w-full bg-green-500/10 rounded-xl p-3 border border-green-500/10">
+                  <span className="block text-[11px] text-green-800 font-extrabold uppercase tracking-wider">Pontos Totais</span>
+                  <span className="text-2xl font-black text-green-700">{rankings[0].pontos_totais} pts</span>
+                  <div className="flex items-center justify-center gap-3 mt-1.5 text-[10.5px] text-green-900 font-bold">
+                    <span>🎯 {rankings[0].exatos_totais} exatos</span>
+                    <span>•</span>
+                    <span>🏆 {getUserBadgesList(rankings[0].user_id).length} selos</span>
+                  </div>
+                </div>
+                {/* Badges */}
+                <div className="flex flex-wrap justify-center gap-1.5 mt-3">
+                  {getUserBadgesList(rankings[0].user_id).slice(0, 4).map((b) => (
+                    <span
+                      key={b.id}
+                      className="px-2 py-0.5 bg-slate-100 border border-slate-200 rounded text-xs cursor-help"
+                      title={`${b.nome}: ${b.descricao}`}
+                    >
+                      {b.icone} <span className="text-[9px] text-slate-500 font-medium">{b.nome.split(' ')[0]}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* 3rd Place */}
+            {rankings.length > 2 && (
+              <div className="bg-white border border-slate-200 p-5 rounded-2xl md:order-3 text-center flex flex-col justify-between items-center shadow-sm relative overflow-hidden group hover:border-slate-350 transition-all">
+                <div className="absolute top-0 right-0 bg-slate-100 text-slate-600 font-extrabold px-3.5 py-1.5 rounded-bl-xl text-xs border-l border-b border-slate-200 uppercase tracking-wider italic">
+                  3º Lugar
+                </div>
+                <div className="mb-3 flex flex-col items-center">
+                  <div className="relative mb-2 mt-2">
+                    <div className="w-16 h-16 rounded-full border-2 border-amber-600 flex items-center justify-center font-display font-black text-amber-800 bg-amber-50 shadow-sm uppercase text-lg select-none">
+                      {getInitials(getUser(rankings[2].user_id)?.nome || '')}
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 bg-amber-600 text-white p-1 rounded-full shadow border border-white">
+                      <Medal size={16} />
+                    </div>
+                  </div>
+                  <h3 className="font-extrabold text-slate-900 text-sm group-hover:text-green-700 transition-colors uppercase italic tracking-wide">
+                    {getUser(rankings[2].user_id)?.nome}
+                  </h3>
+                </div>
+                <div className="w-full bg-slate-50 rounded-xl p-2.5 border border-slate-100">
+                  <span className="block text-[11px] text-slate-500 font-medium">Pontuação Total</span>
+                  <span className="text-xl font-black text-slate-800">{rankings[2].pontos_totais} pts</span>
+                  <div className="flex items-center justify-center gap-2 mt-1 text-[10px] text-slate-500 font-medium">
+                    <span>🎯 {rankings[2].exatos_totais} exatos</span>
+                    <span>•</span>
+                    <span>⭐ {rankings[2].vencedores_totais} resultados</span>
+                  </div>
+                </div>
+                {/* Badges */}
+                <div className="flex flex-wrap justify-center gap-1 mt-3">
+                  {getUserBadgesList(rankings[2].user_id).slice(0, 3).map((b) => (
+                    <span key={b.id} className="cursor-help text-xs" title={`${b.nome}: ${b.descricao}`}>
+                      {b.icone}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
-          <button
-            onClick={handleShareRanking}
-            className="w-full sm:w-auto text-xs bg-green-700 hover:bg-green-600 active:scale-95 text-white font-black uppercase tracking-wider px-3.5 py-2.5 rounded-lg flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm"
-            id="btn-compartilhar-ranking"
-          >
-            {copied ? <Check size={14} /> : <Share2 size={14} />}
-            <span>{copied ? 'Copiado para Área' : 'Zuar no WhatsApp (Copiar)'}</span>
-          </button>
-        </div>
 
-        {/* Desktop and Mobile Table */}
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
-            <thead>
-              <tr className="bg-slate-100 text-slate-650 border-b border-slate-200">
-                <th className="py-3.5 px-4 font-bold text-center w-16 select-none">POS</th>
-                <th className="py-3.5 px-3 font-bold select-none">PARTICIPANTE</th>
-                <th className="py-3.5 px-3 font-bold text-center w-24 select-none">PONTOS</th>
-                <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-20 select-none">🎯 EXATOS</th>
-                <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-24 select-none">⭐ VITÓRIAS</th>
-                <th className="py-3.5 px-4 font-bold select-none">CONQUISTAS E SELOS</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100 bg-white">
-              {rankings.map((rank, idx) => {
-                const user = getUser(rank.user_id);
-                if (!user) return null;
+          {/* Full Leaderboard Table Container */}
+          <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+            <div className="p-4 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 bg-slate-50">
+              <div>
+                <h2 className="text-sm uppercase font-black tracking-wider text-slate-900 flex items-center gap-1.5 font-display">
+                  <Award size={18} className="text-green-700" />
+                  <span>Tabela Geral do Bolão</span>
+                </h2>
+                <p className="text-xs text-slate-500 font-medium">Acumulado de todas as rodadas já finalizadas</p>
+              </div>
+              <button
+                onClick={handleShareRanking}
+                className="w-full sm:w-auto text-xs bg-green-700 hover:bg-green-600 active:scale-95 text-white font-black uppercase tracking-wider px-3.5 py-2.5 rounded-lg flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm"
+                id="btn-compartilhar-ranking"
+              >
+                {copied ? <Check size={14} /> : <Share2 size={14} />}
+                <span>{copied ? 'Copiado para Área' : 'Zuar no WhatsApp (Copiar)'}</span>
+              </button>
+            </div>
 
-                const isTop3 = idx < 3;
-                let numColor = 'text-slate-500 font-bold';
-                if (idx === 0) numColor = 'text-amber-500 font-black';
-                else if (idx === 1) numColor = 'text-slate-500 font-black';
-                else if (idx === 2) numColor = 'text-amber-700 font-black';
-
-                const uBadges = getUserBadgesList(user.id);
-
-                return (
-                  <tr
-                    key={user.id}
-                    onClick={() => handleShowStats(user)}
-                    className="hover:bg-slate-50/80 cursor-pointer transition-colors group border-b border-slate-100"
-                  >
-                    {/* Rank Number */}
-                    <td className="py-3.5 px-4 text-center font-bold">
-                      <div className="flex justify-center items-center">
-                        {idx === 0 && <span className="text-sm">🥇</span>}
-                        {idx === 1 && <span className="text-sm">🥈</span>}
-                        {idx === 2 && <span className="text-sm">🥉</span>}
-                        {!isTop3 && <span className={numColor}>{rank.posicao}º</span>}
-                      </div>
-                    </td>
-
-                    {/* Participant Info */}
-                    <td className="py-3.5 px-3">
-                      <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-sm uppercase text-[10px] select-none shrink-0">
-                        {getInitials(user.nome)}
-                      </div>
-                      <div className="flex flex-col items-start gap-0.5">
-                          <span className="font-extrabold text-slate-900 group-hover:text-green-700 transition-colors uppercase italic tracking-wide text-xs">
-                            {user.nome}
-                          </span>
-                        </div>
-                      </div>
-                    </td>
-
-                    {/* Points */}
-                    <td className="py-3.5 px-3 text-center font-black text-slate-800 text-sm">
-                      {rank.pontos_totais} <span className="text-[10px] text-slate-400 font-normal">pts</span>
-                    </td>
-
-                    {/* Exatos */}
-                    <td className="py-3.5 px-3 text-center hidden sm:table-cell font-bold text-slate-600 font-mono">
-                      {rank.exatos_totais}
-                    </td>
-
-                    {/* Resultados */}
-                    <td className="py-3.5 px-3 text-center hidden sm:table-cell font-semibold text-slate-500 font-mono">
-                      {rank.vencedores_totais}
-                    </td>
-
-                    {/* Badges list */}
-                    <td className="py-3.5 px-4">
-                      <div className="flex flex-wrap gap-1.5">
-                        {uBadges.length === 0 ? (
-                          <span className="text-[10px] text-slate-400 italic font-medium">Nenhum selo conquistado</span>
-                        ) : (
-                          uBadges.map((b) => (
-                            <span
-                              key={b.id}
-                              className="px-2 py-0.5 bg-slate-50 border border-slate-200 text-[10px] text-slate-600 font-bold rounded-md flex items-center gap-1 cursor-help shadow-sm"
-                              title={`${b.nome}: ${b.descricao}`}
-                            >
-                              <span>{b.icone}</span>
-                              <span className="hidden md:inline text-[9px] font-extrabold uppercase tracking-tight">{b.nome.split(',')[0].split(' ')[0]}</span>
-                            </span>
-                          ))
-                        )}
-                      </div>
-                    </td>
+            {/* Desktop and Mobile Table */}
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs">
+                <thead>
+                  <tr className="bg-slate-100 text-slate-650 border-b border-slate-200">
+                    <th className="py-3.5 px-4 font-bold text-center w-16 select-none">POS</th>
+                    <th className="py-3.5 px-3 font-bold select-none">PARTICIPANTE</th>
+                    <th className="py-3.5 px-3 font-bold text-center w-24 select-none">PONTOS</th>
+                    <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-20 select-none">🎯 EXATOS</th>
+                    <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-24 select-none">⭐ VITÓRIAS</th>
+                    <th className="py-3.5 px-4 font-bold select-none">CONQUISTAS E SELOS</th>
                   </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 bg-white">
+                  {rankings.map((rank, idx) => {
+                    const user = getUser(rank.user_id);
+                    if (!user) return null;
+
+                    const isTop3 = idx < 3;
+                    let numColor = 'text-slate-500 font-bold';
+                    if (idx === 0) numColor = 'text-amber-500 font-black';
+                    else if (idx === 1) numColor = 'text-slate-500 font-black';
+                    else if (idx === 2) numColor = 'text-amber-700 font-black';
+
+                    const uBadges = getUserBadgesList(user.id);
+
+                    return (
+                      <tr
+                        key={user.id}
+                        onClick={() => handleShowStats(user)}
+                        className="hover:bg-slate-50/80 cursor-pointer transition-colors group border-b border-slate-100"
+                      >
+                        {/* Rank Number */}
+                        <td className="py-3.5 px-4 text-center font-bold">
+                          <div className="flex justify-center items-center">
+                            {idx === 0 && <span className="text-sm">🥇</span>}
+                            {idx === 1 && <span className="text-sm">🥈</span>}
+                            {idx === 2 && <span className="text-sm">🥉</span>}
+                            {!isTop3 && <span className={numColor}>{rank.posicao}º</span>}
+                          </div>
+                        </td>
+
+                        {/* Participant Info */}
+                        <td className="py-3.5 px-3">
+                          <div className="flex items-center gap-2.5">
+                            <div className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center font-display font-black text-slate-700 bg-slate-100 shadow-sm uppercase text-[10px] select-none shrink-0">
+                              {getInitials(user.nome)}
+                            </div>
+                            <div className="flex flex-col items-start gap-0.5">
+                              <span className="font-extrabold text-slate-900 group-hover:text-green-700 transition-colors uppercase italic tracking-wide text-xs">
+                                {user.nome}
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+
+                        {/* Points */}
+                        <td className="py-3.5 px-3 text-center font-black text-slate-800 text-sm">
+                          {rank.pontos_totais} <span className="text-[10px] text-slate-400 font-normal">pts</span>
+                        </td>
+
+                        {/* Exatos */}
+                        <td className="py-3.5 px-3 text-center hidden sm:table-cell font-bold text-slate-600 font-mono">
+                          {rank.exatos_totais}
+                        </td>
+
+                        {/* Resultados */}
+                        <td className="py-3.5 px-3 text-center hidden sm:table-cell font-semibold text-slate-500 font-mono">
+                          {rank.vencedores_totais}
+                        </td>
+
+                        {/* Badges list */}
+                        <td className="py-3.5 px-4">
+                          <div className="flex flex-wrap gap-1.5">
+                            {uBadges.length === 0 ? (
+                              <span className="text-[10px] text-slate-400 italic font-medium">Nenhum selo conquistado</span>
+                            ) : (
+                              uBadges.map((b) => (
+                                <span
+                                  key={b.id}
+                                  className="px-2 py-0.5 bg-slate-50 border border-slate-200 text-[10px] text-slate-600 font-bold rounded-md flex items-center gap-1 cursor-help shadow-sm"
+                                  title={`${b.nome}: ${b.descricao}`}
+                                >
+                                  <span>{b.icone}</span>
+                                  <span className="hidden md:inline text-[9px] font-extrabold uppercase tracking-tight">{b.nome.split(',')[0].split(' ')[0]}</span>
+                                </span>
+                              ))
+                            )}
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </>
+      )}
+
+      {rankingSubTab === 'copa' && (
+        <div className="space-y-6 animate-in fade-in duration-300">
+          {/* Controls Panel */}
+          <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-4 items-center justify-between">
+            {/* Standings Mode Switcher */}
+            <div className="flex bg-slate-100 p-1 rounded-xl w-full md:w-auto">
+              <button
+                onClick={() => setStandingsMode('real')}
+                className={`flex-1 md:flex-initial px-4 py-2 rounded-lg text-xs font-black uppercase italic tracking-wider transition-all cursor-pointer flex items-center gap-1.5 ${
+                  standingsMode === 'real'
+                    ? 'bg-white text-green-700 shadow-sm border border-slate-200/50'
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                <span>📊 Tabela Real</span>
+              </button>
+              <button
+                onClick={() => {
+                  if (!currentUser) {
+                    alert('Selecione um competidor de simulação no topo para usar o simulador de palpites!');
+                    return;
+                  }
+                  setStandingsMode('simulated');
+                }}
+                className={`flex-1 md:flex-initial px-4 py-2 rounded-lg text-xs font-black uppercase italic tracking-wider transition-all cursor-pointer flex items-center gap-1.5 ${
+                  standingsMode === 'simulated'
+                    ? 'bg-white text-green-700 shadow-sm border border-slate-200/50'
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                <span>🔮 Simular Meus Palpites</span>
+              </button>
+            </div>
+
+            {/* Group Filter */}
+            <div className="flex items-center gap-2 w-full md:w-auto justify-end bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-xl text-xs">
+              <span className="text-slate-550 font-bold uppercase tracking-wider text-[10px]">Filtrar Grupo:</span>
+              <select
+                value={selectedGroup}
+                onChange={(e) => setSelectedGroup(e.target.value)}
+                className="bg-transparent text-slate-800 font-black uppercase cursor-pointer outline-none border-none focus:ring-0 text-xs py-0 h-6"
+              >
+                <option value="todos">Todos os Grupos</option>
+                {Array.from({ length: 12 }, (_, i) => {
+                  const letter = String.fromCharCode(65 + i);
+                  return (
+                    <option key={letter} value={`Grupo ${letter}`}>
+                      Grupo {letter}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+          </div>
+
+          {/* Mode Explanatory Notice */}
+          {standingsMode === 'simulated' && currentUser && (
+            <div className="bg-amber-400/10 border border-amber-300 rounded-xl p-3.5 text-xs text-slate-900 shadow-xs animate-in slide-in-from-top-1 duration-200">
+              <span className="font-black text-green-950 uppercase italic tracking-tight block mb-0.5">🔮 Modo Simulador Ativo</span>
+              Mostrando as tabelas dos grupos calculadas com os resultados reais dos jogos finalizados e, para as partidas que ainda não começaram, com os palpites salvos do competidor <strong className="text-slate-900">{currentUser.nome}</strong>.
+            </div>
+          )}
+
+          {/* Standings Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.keys(groupStandings)
+              .filter((g) => selectedGroup === 'todos' || g === selectedGroup)
+              .sort()
+              .map((groupName) => {
+                const teams = groupStandings[groupName];
+                return (
+                  <div
+                    key={groupName}
+                    className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm hover:border-slate-350 hover:shadow-md transition duration-200 flex flex-col justify-between"
+                  >
+                    <div className="border-b border-slate-150 pb-2 mb-3 flex items-center justify-between">
+                      <span className="font-display font-black text-slate-900 uppercase italic tracking-wide text-xs">
+                        {groupName}
+                      </span>
+                      <span className="text-[9px] bg-slate-100 text-slate-550 font-mono font-bold px-1.5 py-0.5 rounded border border-slate-200">
+                        Copa 2026
+                      </span>
+                    </div>
+
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-left text-[11px]">
+                        <thead>
+                          <tr className="text-slate-400 border-b border-slate-100 uppercase text-[9px] font-bold">
+                            <th className="pb-2 w-6 text-center">#</th>
+                            <th className="pb-2">Seleção</th>
+                            <th className="pb-2 w-6 text-center" title="Pontos">P</th>
+                            <th className="pb-2 w-6 text-center" title="Jogos">J</th>
+                            <th className="pb-2 w-6 text-center hidden sm:table-cell" title="Vitórias">V</th>
+                            <th className="pb-2 w-6 text-center hidden sm:table-cell" title="Empates">E</th>
+                            <th className="pb-2 w-6 text-center hidden sm:table-cell" title="Derrotas">D</th>
+                            <th className="pb-2 w-8 text-center" title="Saldo de Gols">SG</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-100">
+                          {teams.map((t, idx) => {
+                            const isZone = idx < 2;
+                            const diffPrefix = t.goalDifference > 0 ? '+' : '';
+                            return (
+                              <tr
+                                key={t.team}
+                                className={`transition-colors hover:bg-slate-50/50 ${
+                                  isZone ? 'bg-emerald-50/20' : ''
+                                }`}
+                              >
+                                <td className="py-2.5 text-center font-extrabold">
+                                  <span
+                                    className={`inline-flex w-4 h-4 rounded-full items-center justify-center text-[9px] font-black ${
+                                      isZone
+                                        ? 'bg-emerald-100 text-emerald-800'
+                                        : 'bg-slate-100 text-slate-550'
+                                    }`}
+                                  >
+                                    {idx + 1}
+                                  </span>
+                                </td>
+                                <td className="py-2.5 font-bold text-slate-800">
+                                  <div className="flex items-center gap-1.5">
+                                    <span className="text-base select-none filter drop-shadow-xs">{t.flag}</span>
+                                    <span className="truncate max-w-[90px] md:max-w-[100px] uppercase tracking-wide text-[10px]">
+                                      {t.team}
+                                    </span>
+                                  </div>
+                                </td>
+                                <td className="py-2.5 text-center font-black text-slate-950 text-xs">
+                                  {t.points}
+                                </td>
+                                <td className="py-2.5 text-center font-semibold text-slate-550">
+                                  {t.played}
+                                </td>
+                                <td className="py-2.5 text-center font-medium text-slate-400 hidden sm:table-cell">
+                                  {t.won}
+                                </td>
+                                <td className="py-2.5 text-center font-medium text-slate-400 hidden sm:table-cell">
+                                  {t.drawn}
+                                </td>
+                                <td className="py-2.5 text-center font-medium text-slate-400 hidden sm:table-cell">
+                                  {t.lost}
+                                </td>
+                                <td
+                                  className={`py-2.5 text-center font-bold font-mono text-[10px] ${
+                                    t.goalDifference > 0
+                                      ? 'text-emerald-600'
+                                      : t.goalDifference < 0
+                                      ? 'text-red-500'
+                                      : 'text-slate-400'
+                                  }`}
+                                >
+                                  {diffPrefix}
+                                  {t.goalDifference}
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 );
               })}
-            </tbody>
-          </table>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* User Deep Stats card popup if clicked */}
       {focusedUser && (
@@ -394,14 +607,14 @@ export function RankingView({
             </div>
 
             <div className="mt-4 space-y-2">
-              <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest italic font-display">Selo Conquistados</h4>
+              <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest italic font-display">Selos Conquistados</h4>
               <div className="grid grid-cols-1 gap-2">
                 {getUserBadgesList(focusedUser.id).map((b) => (
                   <div key={b.id} className="bg-slate-50 border border-slate-150 p-2 rounded-lg flex items-center gap-2.5 shadow-sm">
                     <span className="text-lg">{b.icone}</span>
                     <div>
                       <h5 className="font-extrabold text-xs text-slate-950 uppercase italic">{b.nome}</h5>
-                      <p className="text-[10px] text-slate-500 leading-normal font-medium">{b.descricao}</p>
+                      <p className="text-[10px] text-slate-550 leading-normal font-medium">{b.descricao}</p>
                     </div>
                   </div>
                 ))}
@@ -412,7 +625,7 @@ export function RankingView({
             </div>
 
             <div className="mt-5 text-center">
-              <p className="text-[10px] text-slate-405 text-slate-400 font-semibold italic">Dica: Selecione qualquer jogador na tabela geral para ver suas estatísticas detalhadas.</p>
+              <p className="text-[10px] text-slate-400 font-semibold italic">Dica: Selecione qualquer jogador na tabela geral para ver suas estatísticas detalhadas.</p>
             </div>
           </div>
         </div>

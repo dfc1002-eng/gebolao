@@ -493,6 +493,8 @@ export default function App() {
                     roundScores={roundScores}
                     matches={matches}
                     onSelectUser={handleSelectUser}
+                    predictions={predictions}
+                    currentUser={currentUser}
                   />
                 )}
 
