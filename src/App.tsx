@@ -624,6 +624,13 @@ export default function App() {
                         {rankings.find((r) => r.user_id === currentUser.id)?.vencedores_totais || 0}
                       </span>
                     </div>
+
+                    <div className="flex justify-between items-center text-xs">
+                      <span className="text-slate-550 font-medium">Gols de apenas um time (+2):</span>
+                      <span className="font-bold text-amber-600 bg-amber-50 border border-amber-100 rounded px-1.5 text-[11px]">
+                        {rankings.find((r) => r.user_id === currentUser.id)?.gols_um_time_totais || 0}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Highlights loop */}

@@ -64,6 +64,7 @@ export interface Ranking {
   posicao: number;
   exatos_totais: number;
   vencedores_totais: number;
+  gols_um_time_totais: number;
   badges: string[]; // Badges IDs currently active or count
 }
 
