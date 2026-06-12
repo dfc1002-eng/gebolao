@@ -989,9 +989,28 @@ app.post('/api/match/import-url', async (req, res) => {
       let id = item.id || item.match_number || item.matchNumber || `wc2026-m${index + 1}`;
       id = String(id).startsWith('m-') ? String(id) : `m-imported-${id}`;
 
-      const gols_casa = item.gols_casa !== undefined && item.gols_casa !== null ? parseInt(item.gols_casa, 10) : null;
-      const gols_fora = item.gols_fora !== undefined && item.gols_fora !== null ? parseInt(item.gols_fora, 10) : null;
-      const status = item.status || ((gols_casa !== null && gols_fora !== null) ? 'completed' : 'unplayed');
+      let gols_casa: number | null = null;
+      const rawGolsCasa = item.gols_casa !== undefined ? item.gols_casa : (item.home_score !== undefined ? item.home_score : item.homeScore);
+      if (rawGolsCasa !== undefined && rawGolsCasa !== null && String(rawGolsCasa).trim() !== '') {
+        const val = parseInt(String(rawGolsCasa), 10);
+        if (!isNaN(val)) gols_casa = val;
+      }
+
+      let gols_fora: number | null = null;
+      const rawGolsFora = item.gols_fora !== undefined ? item.gols_fora : (item.away_score !== undefined ? item.away_score : item.awayScore);
+      if (rawGolsFora !== undefined && rawGolsFora !== null && String(rawGolsFora).trim() !== '') {
+        const val = parseInt(String(rawGolsFora), 10);
+        if (!isNaN(val)) gols_fora = val;
+      }
+
+      let status = item.status;
+      if (!status) {
+        if (item.finished === 'TRUE' || item.finished === true || item.time_elapsed === 'finished') {
+          status = 'completed';
+        } else {
+          status = (gols_casa !== null && gols_fora !== null) ? 'completed' : 'unplayed';
+        }
+      }
 
       return {
         id,

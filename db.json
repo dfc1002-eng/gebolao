@@ -177,11 +177,11 @@
       "time_fora": "South Africa",
       "bandeira_casa": "🇲🇽",
       "bandeira_fora": "🇿🇦",
-      "data_hora": "2026-06-11T16:00:00+00:00",
+      "data_hora": "2026-06-11T19:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "status": "completed"
     },
     {
       "id": "m-imported-2",
