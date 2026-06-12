@@ -309,9 +309,9 @@ export function RankingView({
                   <tr className="bg-slate-100 text-slate-650 border-b border-slate-200">
                     <th className="py-3.5 px-4 font-bold text-center w-16 select-none">POS</th>
                     <th className="py-3.5 px-3 font-bold select-none">PARTICIPANTE</th>
-                    <th className="py-3.5 px-3 font-bold text-center w-24 select-none">PONTOS</th>
-                    <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-20 select-none">🎯 EXATOS</th>
-                    <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-24 select-none">⭐ VITÓRIAS</th>
+                    <th className="py-3.5 px-3 font-bold text-center w-24 select-none cursor-help" title="Pontos Totais: Quem tem mais pontos fica no topo.">PONTOS</th>
+                    <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-20 select-none cursor-help" title="Placares Cravados (Exatos): Em caso de empate em pontos, quem acertou mais placares exatos (+10) fica na frente.">🎯 EXATOS</th>
+                    <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-24 select-none cursor-help" title="Vitórias Acertadas (Resultados): Em caso de empate em pontos e em exatos, quem acertou mais vencedores/empates (+5) fica na frente.">⭐ VITÓRIAS</th>
                     <th className="py-3.5 px-4 font-bold select-none">CONQUISTAS E SELOS</th>
                   </tr>
                 </thead>
