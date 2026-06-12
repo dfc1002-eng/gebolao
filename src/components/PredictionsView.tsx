@@ -97,9 +97,8 @@ export function PredictionsView({
       day: '2-digit',
       month: 'long',
       hour: '2-digit',
-      minute: '2-digit',
-      timeZone: 'UTC'
-    }) + ' (UTC)';
+      minute: '2-digit'
+    });
   };
 
   // Check if a match has started relative to the current real time
@@ -581,8 +580,7 @@ export function PredictionsView({
       weekday: 'long',
       day: '2-digit',
       month: 'long',
-      year: 'numeric',
-      timeZone: 'UTC'
+      year: 'numeric'
     });
     // Capitalize first letter
     const capitalizedLabel = dateLabel ? dateLabel.charAt(0).toUpperCase() + dateLabel.slice(1) : '';

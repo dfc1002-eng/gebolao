@@ -724,7 +724,7 @@ function getFallbackWorldCup2026(): Match[] {
       time_fora: "Inglaterra",
       bandeira_casa: "🇲🇽",
       bandeira_fora: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      data_hora: "2026-06-11T18:00:00Z",
+      data_hora: "2026-06-11T19:00:00Z",
       estadio: "Estádio Azteca, Cidade do México",
       gols_casa: null,
       gols_fora: null,
@@ -737,7 +737,7 @@ function getFallbackWorldCup2026(): Match[] {
       time_fora: "França",
       bandeira_casa: "🇨🇦",
       bandeira_fora: "🇫🇷",
-      data_hora: "2026-06-12T15:00:00Z",
+      data_hora: "2026-06-12T22:00:00Z",
       estadio: "BC Place, Vancouver",
       gols_casa: null,
       gols_fora: null,
@@ -750,7 +750,7 @@ function getFallbackWorldCup2026(): Match[] {
       time_fora: "Espanha",
       bandeira_casa: "🇺🇸",
       bandeira_fora: "🇪🇸",
-      data_hora: "2026-06-12T20:00:00Z",
+      data_hora: "2026-06-13T00:00:00Z",
       estadio: "MetLife Stadium, East Rutherford",
       gols_casa: null,
       gols_fora: null,
@@ -763,7 +763,7 @@ function getFallbackWorldCup2026(): Match[] {
       time_fora: "Alemanha",
       bandeira_casa: "🇧🇷",
       bandeira_fora: "🇩🇪",
-      data_hora: "2026-06-13T18:00:00Z",
+      data_hora: "2026-06-14T01:00:00Z",
       estadio: "SoFi Stadium, Los Angeles",
       gols_casa: null,
       gols_fora: null,
@@ -776,7 +776,7 @@ function getFallbackWorldCup2026(): Match[] {
       time_fora: "Itália",
       bandeira_casa: "🇦🇷",
       bandeira_fora: "🇮🇹",
-      data_hora: "2026-06-14T19:00:00Z",
+      data_hora: "2026-06-14T23:00:00Z",
       estadio: "Hard Rock Stadium, Miami",
       gols_casa: null,
       gols_fora: null,
@@ -789,7 +789,7 @@ function getFallbackWorldCup2026(): Match[] {
       time_fora: "Japão",
       bandeira_casa: "🇵🇹",
       bandeira_fora: "🇯🇵",
-      data_hora: "2026-06-15T15:00:00Z",
+      data_hora: "2026-06-15T19:00:00Z",
       estadio: "Mercedes-Benz Stadium, Atlanta",
       gols_casa: null,
       gols_fora: null,
@@ -802,7 +802,7 @@ function getFallbackWorldCup2026(): Match[] {
       time_fora: "Marrocos",
       bandeira_casa: "🇧🇪",
       bandeira_fora: "🇲🇦",
-      data_hora: "2026-06-16T18:00:00Z",
+      data_hora: "2026-06-16T22:00:00Z",
       estadio: "Gillette Stadium, Boston",
       gols_casa: null,
       gols_fora: null,
@@ -815,7 +815,7 @@ function getFallbackWorldCup2026(): Match[] {
       time_fora: "Uruguai",
       bandeira_casa: "🇳🇱",
       bandeira_fora: "🇺🇾",
-      data_hora: "2026-06-17T20:00:00Z",
+      data_hora: "2026-06-18T01:00:00Z",
       estadio: "NRG Stadium, Houston",
       gols_casa: null,
       gols_fora: null,
@@ -976,9 +976,36 @@ app.post('/api/match/import-url', async (req, res) => {
       try {
         const parsedDate = item.data_hora || item.local_date || item.date || item.kickoff || item.time || item.datetime || item.timestamp;
         if (parsedDate) {
-          const d = new Date(parsedDate);
-          if (!isNaN(d.getTime())) {
-            data_hora = d.toISOString();
+          // Determina a diferença de fuso horário de acordo com o estádio (horário de verão de Junho/Julho)
+          const stadiumId = String(item.stadium_id || '');
+          let offsetHours = 0;
+          if (['7', '8', '9', '10', '11', '12'].includes(stadiumId)) {
+            offsetHours = -4; // EDT (Eastern Daylight Time - Miami, Atlanta, Boston, Philadelphia, NY/NJ, Toronto)
+          } else if (['4', '5', '6'].includes(stadiumId)) {
+            offsetHours = -5; // CDT (Central Daylight Time - Houston, Kansas City, Dallas)
+          } else if (['1', '2', '3'].includes(stadiumId)) {
+            offsetHours = -6; // CST (Central Standard Time - Mexico City, Guadalajara, Monterrey)
+          } else if (['13', '14', '15', '16'].includes(stadiumId)) {
+            offsetHours = -7; // PDT (Pacific Daylight Time - Vancouver, Seattle, San Francisco, Los Angeles)
+          }
+
+          // Se tivermos local_date no formato MM/DD/YYYY HH:MM, convertemos aplicando o fuso do estádio
+          const matchLocal = String(item.local_date || '').match(/^(\d{2})\/(\d{2})\/(\d{4})\s+(\d{2}):(\d{2})$/);
+          if (matchLocal) {
+            const [_, month, day, year, hour, minute] = matchLocal;
+            const absOffset = Math.abs(offsetHours);
+            const sign = offsetHours >= 0 ? '+' : '-';
+            const offsetStr = `${sign}${String(absOffset).padStart(2, '0')}:00`;
+            const isoStr = `${year}-${month}-${day}T${hour}:${minute}:00${offsetStr}`;
+            const d = new Date(isoStr);
+            if (!isNaN(d.getTime())) {
+              data_hora = d.toISOString();
+            }
+          } else {
+            const d = new Date(parsedDate);
+            if (!isNaN(d.getTime())) {
+              data_hora = d.toISOString();
+            }
           }
         }
       } catch {
@@ -1004,11 +1031,20 @@ app.post('/api/match/import-url', async (req, res) => {
       }
 
       let status = item.status;
-      if (!status) {
-        if (item.finished === 'TRUE' || item.finished === true || item.time_elapsed === 'finished') {
+      const isFinished = item.finished === 'TRUE' || item.finished === true || item.time_elapsed === 'finished';
+
+      if (status) {
+        if (status !== 'completed') {
+          gols_casa = null;
+          gols_fora = null;
+        }
+      } else {
+        if (isFinished) {
           status = 'completed';
         } else {
-          status = (gols_casa !== null && gols_fora !== null) ? 'completed' : 'unplayed';
+          status = 'unplayed';
+          gols_casa = null;
+          gols_fora = null;
         }
       }
 
