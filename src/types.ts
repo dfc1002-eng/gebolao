@@ -76,6 +76,7 @@ export interface GameState {
   user_badges: UserBadge[];
   round_scores: RoundScore[];
   logo_image?: string;
+  allow_registrations?: boolean;
 }
 
 export interface DashboardData {

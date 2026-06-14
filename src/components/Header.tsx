@@ -15,6 +15,7 @@ interface HeaderProps {
   forceOpenRegister?: boolean;
   onClearForceOpenRegister?: () => void;
   onOpenOnboarding?: () => void;
+  allowRegistrations?: boolean;
 }
 
 export function Header({
@@ -29,7 +30,8 @@ export function Header({
   onUpdateLogo,
   forceOpenRegister,
   onClearForceOpenRegister,
-  onOpenOnboarding
+  onOpenOnboarding,
+  allowRegistrations
 }: HeaderProps) {
   const [showRegister, setShowRegister] = useState(false);
   const [newNome, setNewNome] = useState('');
@@ -354,6 +356,11 @@ export function Header({
             <p className="text-slate-400 text-xs mb-4">
               Informe seu nome de exibição e e-mail para cadastrar sua conta. Você será logado instantaneamente para palpitar!
             </p>
+            {allowRegistrations === false && (
+              <div className="bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[10px] uppercase font-black tracking-wide px-3 py-2 rounded-lg mb-4">
+                ⚠️ Novas inscrições encerradas! Apenas login de competidores já cadastrados é permitido.
+              </div>
+            )}
             <form onSubmit={handleSubmitRegister} className="space-y-4">
               <div>
                 <label className="block text-xs font-medium text-slate-400 mb-1">Seu Nome / Apelido</label>

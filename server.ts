@@ -77,6 +77,20 @@ async function getDBState(): Promise<GameState> {
     const { data: roundScoresData, error: roundScoresError } = await supabase.from('round_scores').select('*');
     if (roundScoresError) throw roundScoresError;
 
+    // 7. Buscar configurações
+    let allowRegistrations = true;
+    try {
+      const { data: settingsData } = await supabase.from('settings').select('*');
+      if (settingsData) {
+        const found = settingsData.find(s => s.key === 'allow_registrations');
+        if (found) {
+          allowRegistrations = found.value !== 'false';
+        }
+      }
+    } catch (e) {
+      // Ignorar se a tabela settings não existir
+    }
+
     // Se o banco estiver vazio, popula com dados iniciais
     if (!usersData || usersData.length === 0 || !matchesData || matchesData.length === 0) {
       console.log('Banco de dados do Supabase vazio. Populando dados iniciais...');
@@ -148,7 +162,8 @@ async function getDBState(): Promise<GameState> {
       predictions: mappedPredictions,
       badges: mappedBadges,
       user_badges: mappedUserBadges,
-      round_scores: mappedRoundScores
+      round_scores: mappedRoundScores,
+      allow_registrations: allowRegistrations
     };
 
   } catch (err: any) {
@@ -261,6 +276,18 @@ async function saveDBState(state: GameState): Promise<void> {
       if (roundScoresError) throw roundScoresError;
     }
 
+    // 7. Salvar configurações
+    try {
+      if (state.allow_registrations !== undefined) {
+        await supabase.from('settings').upsert({
+          key: 'allow_registrations',
+          value: state.allow_registrations ? 'true' : 'false'
+        });
+      }
+    } catch (e) {
+      // Ignorar se a tabela settings não existir
+    }
+
   } catch (err: any) {
     console.error('Erro ao salvar no Supabase:', err.message);
   }
@@ -294,7 +321,8 @@ app.get('/api/state', async (req, res) => {
       user_badges: userBadges,
       round_scores: roundScores,
       rankings,
-      logo_image: state.logo_image || ''
+      logo_image: state.logo_image || '',
+      allow_registrations: state.allow_registrations !== false
     });
   } catch (error: any) {
     res.status(500).json({ error: error.message });
@@ -451,6 +479,9 @@ app.post('/api/register', async (req, res) => {
     let user = state.users.find((u) => u.email.toLowerCase() === email.toLowerCase());
 
     if (!user) {
+      if (state.allow_registrations === false) {
+        return res.status(400).json({ error: 'As inscrições para novos participantes do Bolão estão encerradas!' });
+      }
       const defaultAvatars = [
         'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80',
         'https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&h=150&q=80',
@@ -541,6 +572,27 @@ app.post('/api/user/toggle-paid', async (req, res) => {
 
     await saveDBState(state);
     res.json({ success: true, user: state.users[userIndex], state });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Toggle registration setting (Admin Only)
+app.post('/api/settings/toggle-registration', async (req, res) => {
+  try {
+    const { requester_id } = req.body;
+    const state = await getDBState();
+
+    // Verify requester is admin
+    const requester = state.users.find((u) => u.id === requester_id);
+    if (!requester || !requester.isAdmin) {
+      return res.status(403).json({ error: 'Apenas administradores podem alterar as configurações de inscrições.' });
+    }
+
+    state.allow_registrations = state.allow_registrations === false ? true : false;
+    await saveDBState(state);
+
+    res.json({ success: true, allow_registrations: state.allow_registrations, state });
   } catch (error: any) {
     res.status(500).json({ error: error.message });
   }

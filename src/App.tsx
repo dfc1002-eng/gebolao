@@ -18,6 +18,7 @@ export default function App() {
   const [roundScores, setRoundScores] = useState<RoundScore[]>([]);
   const [rankings, setRankings] = useState<Ranking[]>([]);
   const [logoImage, setLogoImage] = useState<string>('');
+  const [allowRegistrations, setAllowRegistrations] = useState<boolean>(true);
 
   // UI Control states
   const [currentUser, setCurrentUser] = useState<User | null>(null);
@@ -55,6 +56,7 @@ export default function App() {
       setRoundScores(data.round_scores || []);
       setRankings(data.rankings || []);
       setLogoImage(data.logo_image || '');
+      setAllowRegistrations(data.allow_registrations !== false);
 
       // Resolve current user: try localStorage first, otherwise remain logged out
       const storedUserId = localStorage.getItem('gebolao_current_user_id');
@@ -182,6 +184,31 @@ export default function App() {
     } catch (err: any) {
       console.error(err);
       alert('Erro ao registrar usuário: ' + err.message);
+    }
+  };
+
+  // Toggle registration config (Admin Only)
+  const handleToggleRegistration = async () => {
+    if (!currentUser?.isAdmin) return;
+    setErrorMsg(null);
+    try {
+      const res = await fetch('/api/settings/toggle-registration', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ requester_id: currentUser.id })
+      });
+
+      if (!res.ok) {
+        const errData = await res.json();
+        throw new Error(errData.error || 'Erro ao alterar configuração de inscrições.');
+      }
+
+      const data = await res.json();
+      setAllowRegistrations(data.allow_registrations);
+      await fetchState(true);
+    } catch (err: any) {
+      console.error(err);
+      alert('Falha ao alterar configuração de inscrições: ' + err.message);
     }
   };
 
@@ -334,6 +361,7 @@ export default function App() {
         forceOpenRegister={forceOpenRegister}
         onClearForceOpenRegister={() => setForceOpenRegister(false)}
         onOpenOnboarding={() => setShowOnboarding(true)}
+        allowRegistrations={allowRegistrations}
         onUpdateLogo={async (newLogo: string) => {
           try {
             const res = await fetch('/api/logo/update', {
@@ -536,6 +564,8 @@ export default function App() {
                     onRefreshState={async () => {
                       await fetchState(true);
                     }}
+                    allowRegistrations={allowRegistrations}
+                    onToggleRegistration={handleToggleRegistration}
                   />
                 )}
               </div>

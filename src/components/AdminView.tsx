@@ -16,6 +16,8 @@ interface AdminViewProps {
   onTogglePaid: (userId: string) => Promise<void>;
   onDeleteUser: (userId: string) => Promise<void>;
   onRefreshState?: () => Promise<void>;
+  allowRegistrations?: boolean;
+  onToggleRegistration?: () => Promise<void>;
 }
 
 export function AdminView({
@@ -31,7 +33,9 @@ export function AdminView({
   onToggleAdmin,
   onTogglePaid,
   onDeleteUser,
-  onRefreshState
+  onRefreshState,
+  allowRegistrations,
+  onToggleRegistration
 }: AdminViewProps) {
   const [activeAdminTab, setActiveAdminTab] = useState<'jogos' | 'usuarios' | 'importar'>('jogos');
 
@@ -396,6 +400,30 @@ export function AdminView({
                 <span>Salvar Novo Competidor</span>
               </button>
             </form>
+
+            {/* Global Settings */}
+            <div className="border-t border-slate-900 pt-6 mt-6 space-y-3 font-sans">
+              <h4 className="font-bold text-xs text-slate-300 uppercase tracking-wider font-display">Inscrições de Participantes</h4>
+              <div className="bg-slate-900/40 border border-slate-850 px-4 py-3 rounded-xl flex items-center justify-between gap-3 text-xs">
+                <div>
+                  <span className="font-bold text-white block">Status dos Novos Cadastros</span>
+                  <span className="text-[10px] text-slate-450 block mt-0.5">
+                    {allowRegistrations ? 'Inscrições abertas. Novos competidores podem se registrar.' : 'Inscrições fechadas. Ninguém mais pode se cadastrar no bolão.'}
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={onToggleRegistration}
+                  className={`px-4 py-2 rounded-lg text-xs font-black uppercase tracking-wider transition duration-150 cursor-pointer ${
+                    allowRegistrations
+                      ? 'bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-display font-black'
+                      : 'bg-red-950 hover:bg-red-900/80 text-red-400 border border-red-900/40 font-display font-black'
+                  }`}
+                >
+                  {allowRegistrations ? '🟢 Abertas (Bloquear)' : '🔴 Fechadas (Liberar)'}
+                </button>
+              </div>
+            </div>
 
             {/* List of existing users with Admin toggles */}
             <div className="border-t border-slate-900 pt-6 mt-6 space-y-3">

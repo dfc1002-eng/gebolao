@@ -174,7 +174,12 @@ export function PredictionsView({
     if (!currentUser) return;
 
     const matchInput = inputs[matchId];
-    if (!matchInput || matchInput.casa === '' || matchInput.fora === '') {
+    const userPred = predictions.find((p) => p.user_id === currentUser.id && p.match_id === matchId);
+
+    const casaStr = matchInput?.casa !== undefined ? matchInput.casa : (userPred ? String(userPred.gols_casa) : '');
+    const foraStr = matchInput?.fora !== undefined ? matchInput.fora : (userPred ? String(userPred.gols_fora) : '');
+
+    if (casaStr === '' || foraStr === '') {
       setFeedback((prev) => ({
         ...prev,
         [matchId]: { type: 'error', message: 'Preencha ambos os placares!' }
@@ -191,10 +196,17 @@ export function PredictionsView({
 
     setSavingMatches((prev) => ({ ...prev, [matchId]: true }));
     try {
-      const golsCasa = parseInt(matchInput.casa, 10);
-      const golsFora = parseInt(matchInput.fora, 10);
+      const golsCasa = parseInt(casaStr, 10);
+      const golsFora = parseInt(foraStr, 10);
 
       await onSavePrediction(matchId, golsCasa, golsFora);
+
+      // Clear local input override so it falls back to the updated prediction state
+      setInputs((prev) => {
+        const c = { ...prev };
+        delete c[matchId];
+        return c;
+      });
 
       setFeedback((prev) => ({
         ...prev,
