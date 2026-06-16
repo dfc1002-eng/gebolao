@@ -683,9 +683,9 @@ export default function App() {
             ) : (
               <div className="bg-white border border-slate-200 rounded-2xl p-5 text-center shadow-sm">
                 <Users className="text-green-700 mx-auto mb-2" size={24} />
-                <h4 className="font-black text-xs text-slate-900 uppercase italic">Painel de Simulação</h4>
+                <h4 className="font-black text-xs text-slate-900 uppercase italic">Meus Palpites</h4>
                 <p className="text-[10px] text-slate-500 leading-normal mt-1.5 animate-pulse">
-                  Selecione um dos competidores no menu superior para simular seus palpites e ver seu progresso!
+                  Faça login ou cadastre-se no menu superior para ver seu progresso e registrar seus palpites!
                 </p>
               </div>
             )}

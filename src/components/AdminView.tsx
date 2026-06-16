@@ -118,7 +118,7 @@ export function AdminView({
           Somente o administrador do GEBolão tem autorização para acessar esta área, atualizar os placares oficiais dos jogos e simular os novos rankings do grupo de amigos!
         </p>
         <p className="text-[11px] text-slate-500 font-mono mt-4">
-          Dica rápida: Use o menu "Simular Usuário" no topo para alternar para "Diogo Camargo (Admin/GOAT)"!
+          Dica rápida: Faça login usando o e-mail de administrador para acessar!
         </p>
       </div>
     );

@@ -412,7 +412,7 @@ export function PredictionsView({
                 <span className="text-slate-400 text-[9px] italic font-semibold uppercase tracking-wider block">Ainda sem palpite</span>
               )
             ) : (
-              <span className="text-slate-400 text-[9px] italic">Selecione simular ou junte-se</span>
+              <span className="text-slate-400 text-[9px] italic">Faça login para palpitar</span>
             )}
           </div>
 
@@ -613,7 +613,7 @@ export function PredictionsView({
           <AlertCircle className="text-amber-600 shrink-0 mt-0.5" size={18} />
           <div className="text-xs">
             <span className="font-black text-green-950 block mb-0.5 uppercase italic">Visão de Visitante (Desconectado)</span>
-            Você está visualizando a tabela de jogos disponível na Copa. Para registrar palpites, acompanhar seus pontos e obter conquistas customizadas, selecione um competidor de simulação no topo nas opções "Simular Competidor" ou use o botão "Unir-se ao Grupo"!
+            Você está visualizando a tabela de jogos disponível na Copa. Para registrar palpites, acompanhar seus pontos e obter conquistas customizadas, use o botão "Entrar / Cadastrar" no topo para entrar na sua conta!
           </div>
         </div>
       )}

@@ -231,33 +231,6 @@ export function Header({
 
         {/* User Stats & Switcher Area */}
         <div className="flex flex-wrap items-center gap-3 w-full md:w-auto justify-end">
-          {/* Quick Switch Select Dropdown - ADMIN ONLY */}
-          {currentUser?.isAdmin && (
-            <div className="flex items-center gap-2 bg-green-850/80 border border-green-600/40 px-2.5 py-1.5 rounded-lg text-xs w-full sm:w-auto shadow-inner">
-              <label className="text-green-150 whitespace-nowrap flex items-center gap-1 font-bold text-green-100">
-                <UserCheck size={14} className="text-amber-300" />
-                <span>Simular Competidor:</span>
-              </label>
-              <select
-                value={currentUser?.id || ''}
-                onChange={(e) => {
-                  const selected = users.find((u) => u.id === e.target.value);
-                  onSelectUser(selected || null);
-                }}
-                className="bg-green-900 text-white border-none outline-none focus:ring-0 cursor-pointer max-w-[150px] font-black uppercase text-[11px] rounded px-1 h-6 py-0"
-              >
-                <option value="" className="bg-slate-900 text-slate-350">-- Visitante (Deslogado) --</option>
-                {users.map((u) => {
-                  const rank = rankings.find((r) => r.user_id === u.id);
-                  return (
-                    <option key={u.id} value={u.id} className="bg-slate-900 text-white">
-                      {u.nome} {rank ? `(${rank.pontos_totais} pts)` : ''} {u.isAdmin ? '👑' : ''}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
-          )}
 
           {/* Help Button */}
           {onOpenOnboarding && (
@@ -307,7 +280,7 @@ export function Header({
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-200 font-medium">
-                  {currentUser.isAdmin ? 'Simulando competidor: ' : 'Logado como: '}
+                  Logado como: 
                 </span>
                 <span className="font-extrabold text-amber-300 uppercase tracking-wide text-xs">{currentUser.nome}</span>
                 {currentUser.isAdmin && (

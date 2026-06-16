@@ -421,7 +421,7 @@ export function RankingView({
               <button
                 onClick={() => {
                   if (!currentUser) {
-                    alert('Selecione um competidor de simulação no topo para usar o simulador de palpites!');
+                    alert('Faça login no topo para usar o simulador de palpites!');
                     return;
                   }
                   setStandingsMode('simulated');

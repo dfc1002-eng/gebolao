@@ -24,7 +24,7 @@ import {
 import { GameState, Prediction, Match, User, Badge, UserBadge, RoundScore } from './src/types.js';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 const DB_FILE = path.join(process.cwd(), 'db.json');
 
 app.use(express.json());
@@ -61,9 +61,31 @@ async function getDBState(): Promise<GameState> {
     const { data: matchesData, error: matchesError } = await supabase.from('matches').select('*').order('data_hora', { ascending: true });
     if (matchesError) throw matchesError;
 
-    // 3. Buscar palpites
-    const { data: predictionsData, error: predictionsError } = await supabase.from('predictions').select('*');
-    if (predictionsError) throw predictionsError;
+    // 3. Buscar palpites (com paginação para contornar o limite de 1000 registros do Supabase)
+    const predictionsData: any[] = [];
+    let from = 0;
+    let to = 999;
+    let keepFetching = true;
+    while (keepFetching) {
+      const { data: chunk, error: predictionsError } = await supabase
+        .from('predictions')
+        .select('*')
+        .range(from, to);
+      
+      if (predictionsError) throw predictionsError;
+      
+      if (chunk && chunk.length > 0) {
+        predictionsData.push(...chunk);
+        if (chunk.length < 1000) {
+          keepFetching = false;
+        } else {
+          from += 1000;
+          to += 1000;
+        }
+      } else {
+        keepFetching = false;
+      }
+    }
 
     // 4. Buscar medalhas
     const { data: badgesData, error: badgesError } = await supabase.from('badges').select('*');
