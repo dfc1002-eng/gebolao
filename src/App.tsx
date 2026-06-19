@@ -431,17 +431,6 @@ export default function App() {
             </button>
 
             <button
-              onClick={() => setActiveTab('museum')}
-              className={`px-4 py-2.5 rounded-lg font-black uppercase italic tracking-wider flex items-center gap-1.5 transition duration-200 cursor-pointer ${
-                activeTab === 'museum'
-                  ? 'bg-green-700 text-white shadow'
-                  : 'text-slate-500 hover:text-slate-950 hover:bg-slate-200/60'
-              }`}
-            >
-              <span>🤡 Corneta & Museu</span>
-            </button>
-
-            <button
               onClick={() => setActiveTab('admin')}
               className={`px-4 py-2.5 rounded-lg font-black uppercase italic tracking-wider flex items-center gap-1.5 transition duration-200 cursor-pointer ${
                 activeTab === 'admin'
@@ -731,11 +720,26 @@ export default function App() {
 
       {/* Humble Footer */}
       <footer className="bg-white border-t border-slate-200 py-6 text-center text-[11px] text-slate-400 font-sans mt-12 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 space-y-1">
+        <div className="max-w-7xl mx-auto px-4 space-y-2">
           <p className="font-extrabold text-slate-500">© 2026 GEBolão. Desenvolvido para a zoeira e comemorações da Copa do Mundo de 2026.</p>
           <p className="text-[10px] text-slate-400 font-mono">
             Imagens ilustrativas hospedadas em canais públicos • Rodando em ambiente Docker Sandbox do Cloud Run.
           </p>
+          <div className="pt-1">
+            <button
+              onClick={() => {
+                setActiveTab('museum');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className={`text-[9px] font-black uppercase italic tracking-widest px-3 py-1.5 rounded-lg border transition-all cursor-pointer inline-flex items-center gap-1 ${
+                activeTab === 'museum'
+                  ? 'bg-green-700 text-white border-green-750 shadow-xs'
+                  : 'bg-slate-50 hover:bg-slate-100 text-slate-500 border-slate-200 hover:text-slate-800'
+              }`}
+            >
+              <span>🤡 Corneta & Museu</span>
+            </button>
+          </div>
         </div>
       </footer>
       {/* Detailed Rules Modal */}
