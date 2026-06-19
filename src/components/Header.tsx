@@ -84,7 +84,7 @@ export function Header({
   };
 
   return (
-    <header className="bg-green-700 border-b border-green-800 sticky top-0 z-50 shadow-md">
+    <header className="bg-green-700 border-b border-green-800 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Brand / Logo Comédia Pastelão */}
         <div className="flex items-center gap-4 relative">
