@@ -544,6 +544,7 @@ export default function App() {
                     userBadges={userBadges}
                     roundScores={roundScores}
                     matches={matches}
+                    predictions={predictions}
                   />
                 )}
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { User, Badge, UserBadge, RoundScore, Match } from '../types';
+import { User, Badge, UserBadge, RoundScore, Match, Prediction } from '../types';
 import { Trophy, Frown } from 'lucide-react';
+import { calculatePredictionPoints } from '../initialData';
 
 interface MuseumViewProps {
   users: User[];
@@ -8,6 +9,7 @@ interface MuseumViewProps {
   userBadges: UserBadge[];
   roundScores: RoundScore[];
   matches: Match[];
+  predictions: Prediction[];
 }
 
 export function MuseumView({
@@ -15,7 +17,8 @@ export function MuseumView({
   badges,
   userBadges,
   roundScores,
-  matches
+  matches,
+  predictions
 }: MuseumViewProps) {
   const [activeTab, setActiveTab] = useState<'destaques' | 'fama' | 'gebiadas'>('destaques');
   const [selectedRound, setSelectedRound] = useState<string>('Rodada 2'); // default to completed round
@@ -46,16 +49,56 @@ export function MuseumView({
   };
 
   // --- 2. HALL DA FAMA CALCULATIONS ---
-  // A. Count of times receiving Chiquinho Expert badge
-  const getTopChiquinhoCount = () => {
+  // A. Count of times in the lead of general ranking after each completed match
+  const getLeadershipCount = () => {
     const counts: { [uid: string]: number } = {};
     users.forEach((u) => (counts[u.id] = 0));
 
-    userBadges
-      .filter((ub) => ub.badge_id === 'badge-chiquinho')
-      .forEach((ub) => {
-        counts[ub.user_id] = (counts[ub.user_id] || 0) + 1;
+    // Sort completed matches chronologically
+    const completedMatches = [...matches]
+      .filter((m) => m.status === 'completed')
+      .sort((a, b) => new Date(a.data_hora).getTime() - new Date(b.data_hora).getTime());
+
+    // We will simulate cumulative points match-by-match
+    const cumulativePoints: { [uid: string]: number } = {};
+    users.forEach((u) => (cumulativePoints[u.id] = 0));
+
+    completedMatches.forEach((match) => {
+      // Calculate points for this match for each user
+      users.forEach((user) => {
+        const pred = predictions.find((p) => p.user_id === user.id && p.match_id === match.id);
+        if (pred) {
+          const evalResult = calculatePredictionPoints(
+            pred.gols_casa,
+            pred.gols_fora,
+            match.gols_casa!,
+            match.gols_fora!
+          );
+          cumulativePoints[user.id] += evalResult.points;
+        }
       });
+
+      // Find the leader(s) after this match
+      let maxPoints = -1;
+      let leaders: string[] = [];
+
+      users.forEach((user) => {
+        const pts = cumulativePoints[user.id];
+        if (pts > maxPoints) {
+          maxPoints = pts;
+          leaders = [user.id];
+        } else if (pts === maxPoints && maxPoints >= 0) {
+          leaders.push(user.id);
+        }
+      });
+
+      // Increment count for leaders
+      if (maxPoints > 0) {
+        leaders.forEach((leaderId) => {
+          counts[leaderId] = (counts[leaderId] || 0) + 1;
+        });
+      }
+    });
 
     return Object.entries(counts)
       .map(([id, val]) => ({ user: getUser(id), count: val }))
@@ -319,18 +362,18 @@ export function MuseumView({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 font-display">
-            {/* Mais Vezes Chiquinho */}
+            {/* Soberanos do Ranking (Liderança Jogo a Jogo) */}
             <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
               <div className="flex items-center gap-2 mb-4 border-b border-slate-100 pb-3">
-                <span className="text-2xl select-none">🏆</span>
+                <span className="text-2xl select-none">👑</span>
                 <div>
-                  <h3 className="font-extrabold text-slate-900 text-xs uppercase italic tracking-wide">Mais Chiquinho, Fã Supremo</h3>
-                  <p className="text-[10px] text-slate-400 font-semibold">Recordistas de maior pontuação na rodada</p>
+                  <h3 className="font-extrabold text-slate-900 text-xs uppercase italic tracking-wide">Soberanos do Ranking</h3>
+                  <p className="text-[10px] text-slate-400 font-semibold">Líderes do ranking geral após cada partida</p>
                 </div>
               </div>
 
               <div className="space-y-3">
-                {getTopChiquinhoCount().map((item, idx) => (
+                {getLeadershipCount().map((item, idx) => (
                   <div key={item.user?.id} className="flex items-center justify-between bg-slate-50 border border-slate-150 p-2.5 rounded-lg shadow-3xs">
                     <div className="flex items-center gap-2.5">
                       <span className="text-xs text-amber-600 font-black italic">{idx + 1}º</span>
@@ -340,12 +383,12 @@ export function MuseumView({
                       <span className="text-xs font-black text-slate-800 uppercase italic tracking-wide">{item.user?.nome}</span>
                     </div>
                     <span className="bg-amber-400 text-green-950 font-black text-[10px] px-2.5 py-0.5 rounded border border-amber-500 uppercase italic">
-                      {item.count} vezes
+                      {item.count} {item.count === 1 ? 'jogo' : 'jogos'}
                     </span>
                   </div>
                 ))}
-                {getTopChiquinhoCount().length === 0 && (
-                  <p className="text-xs text-slate-400 italic text-center py-4 font-semibold">Nenhum jogador faturou Chiquinho ainda</p>
+                {getLeadershipCount().length === 0 && (
+                  <p className="text-xs text-slate-400 italic text-center py-4 font-semibold">Nenhum jogador liderou ainda</p>
                 )}
               </div>
             </div>
