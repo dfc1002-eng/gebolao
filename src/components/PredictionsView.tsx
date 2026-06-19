@@ -283,7 +283,7 @@ export function PredictionsView({
           onClick={() => {
             setExpandedPassedMatches((prev) => ({ ...prev, [match.id]: true }));
           }}
-          className={`bg-white border border-slate-200 p-3.5 rounded-2xl flex items-center justify-between shadow-sm hover:border-slate-350 hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden ${
+          className={`lg:col-span-2 bg-white border border-slate-200 p-3.5 rounded-2xl flex items-center justify-between shadow-sm hover:border-slate-350 hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden ${
             isCompleted ? 'border-l-4 border-l-green-700' : 'border-l-4 border-l-slate-400'
           }`}
         >
