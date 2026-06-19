@@ -57,11 +57,24 @@ export function PredictionsView({
   const [selectedSubRound, setSelectedSubRound] = useState<string>('Grupo A');
   const [searchQuery, setSearchQuery] = useState('');
   const [showOnlyPending, setShowOnlyPending] = useState(false);
+  const [minimizePassedMatches, setMinimizePassedMatches] = useState(true);
+  const [expandedPassedMatches, setExpandedPassedMatches] = useState<{ [matchId: string]: boolean }>({});
   const [inputs, setInputs] = useState<{ [matchId: string]: { casa: string; fora: string } }>({});
   const [savingMatches, setSavingMatches] = useState<{ [matchId: string]: boolean }>({});
   const [feedback, setFeedback] = useState<{ [matchId: string]: { type: 'success' | 'error'; message: string } }>({});
   const [expandedMatches, setExpandedMatches] = useState<{ [matchId: string]: boolean }>({});
   const [viewMode, setViewMode] = useState<'grupos' | 'cronologico'>('cronologico');
+  const [collapsedDays, setCollapsedDays] = useState<{ [dateLabel: string]: boolean }>({});
+
+  const toggleCollapseDay = (dateLabel: string, defaultCollapsed: boolean) => {
+    setCollapsedDays((prev) => {
+      const isCollapsedNow = prev[dateLabel] !== undefined ? prev[dateLabel] : defaultCollapsed;
+      return {
+        ...prev,
+        [dateLabel]: !isCollapsedNow
+      };
+    });
+  };
 
   const toggleExpandMatch = (matchId: string) => {
     setExpandedMatches((prev) => ({
@@ -259,6 +272,99 @@ export function PredictionsView({
       pointsCategory = evaluation.category;
     }
 
+    const isCompleted = match.status === 'completed';
+    const isPassed = isLocked || isCompleted;
+    const isMinimized = minimizePassedMatches && isPassed && !expandedPassedMatches[match.id];
+
+    if (isMinimized) {
+      return (
+        <div
+          key={match.id}
+          onClick={() => {
+            setExpandedPassedMatches((prev) => ({ ...prev, [match.id]: true }));
+          }}
+          className={`bg-white border border-slate-200 p-3.5 rounded-2xl flex items-center justify-between shadow-sm hover:border-slate-350 hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden ${
+            isCompleted ? 'border-l-4 border-l-green-700' : 'border-l-4 border-l-slate-400'
+          }`}
+        >
+          {/* Left Part: Phase & Teams */}
+          <div className="flex items-center gap-3 min-w-0 flex-1 mr-2">
+            <span className="text-[9px] text-green-700 font-black uppercase tracking-widest italic bg-green-50 px-2 py-0.5 rounded border border-green-150 shrink-0">
+              {match.fase}
+            </span>
+            <div className="flex items-center gap-2 min-w-0">
+              <span className="text-2xl filter drop-shadow-sm select-none shrink-0" role="img" aria-label={match.time_casa}>
+                {match.bandeira_casa}
+              </span>
+              <span className="font-black text-xs text-slate-800 truncate uppercase italic tracking-wide max-w-[80px] sm:max-w-[120px]">
+                {match.time_casa}
+              </span>
+              
+              {isCompleted ? (
+                <span className="bg-slate-100 font-black text-xs text-green-700 px-2 py-0.5 rounded-lg border border-slate-200 min-w-[45px] text-center shrink-0">
+                  {match.gols_casa} x {match.gols_fora}
+                </span>
+              ) : (
+                <span className="font-black text-green-700 text-xs px-1 shrink-0">x</span>
+              )}
+              
+              <span className="font-black text-xs text-slate-800 truncate uppercase italic tracking-wide max-w-[80px] sm:max-w-[120px]">
+                {match.time_fora}
+              </span>
+              <span className="text-2xl filter drop-shadow-sm select-none shrink-0" role="img" aria-label={match.time_fora}>
+                {match.bandeira_fora}
+              </span>
+            </div>
+          </div>
+
+          {/* Right Part: Prediction Summary / Points / Chevron */}
+          <div className="flex items-center gap-3 shrink-0">
+            {/* Prediction Label */}
+            <div className="text-right hidden sm:block">
+              {userPred ? (
+                <span className="text-[10px] text-slate-500 font-semibold">
+                  Seu palpite: <strong className="font-extrabold text-slate-700">{userPred.gols_casa} x {userPred.gols_fora}</strong>
+                </span>
+              ) : (
+                <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider italic">Sem palpite</span>
+              )}
+            </div>
+
+            {/* Points Category */}
+            {isCompleted && userPred && (
+              <div className="shrink-0 scale-90 sm:scale-100">
+                {pointsCategory === 'exato' && (
+                  <span className="bg-amber-400 text-green-950 font-black px-2 py-0.5 rounded-lg text-[9px] uppercase italic tracking-wider shadow-xs">
+                    +10 pts
+                  </span>
+                )}
+                {pointsCategory === 'resultado' && (
+                  <span className="bg-green-700 text-white font-black px-2 py-0.5 rounded-lg text-[9px] uppercase italic tracking-wider shadow-xs">
+                    +5 pts
+                  </span>
+                )}
+                {pointsCategory === 'gols_um_time' && (
+                  <span className="bg-blue-600 text-white font-black px-2 py-0.5 rounded-lg text-[9px] uppercase italic tracking-wider shadow-xs">
+                    +2 pts
+                  </span>
+                )}
+                {pointsCategory === 'erro' && (
+                  <span className="bg-slate-200 text-slate-500 px-2 py-0.5 rounded-lg text-[9px] font-extrabold uppercase italic tracking-wider">
+                    0 pts
+                  </span>
+                )}
+              </div>
+            )}
+
+            {/* Chevron down to indicate expansion is possible */}
+            <div className="text-slate-400 hover:text-green-700 transition flex items-center justify-center p-1 rounded-lg hover:bg-slate-100">
+              <ChevronDown size={14} />
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div
         key={match.id}
@@ -417,7 +523,20 @@ export function PredictionsView({
           </div>
 
           {/* Right Area (Points awarded badge or palpite submit button) */}
-          <div className="shrink-0">
+          <div className="shrink-0 flex items-center gap-2">
+            {isPassed && minimizePassedMatches && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setExpandedPassedMatches((prev) => ({ ...prev, [match.id]: false }));
+                }}
+                className="bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-655 hover:text-slate-800 text-[10px] px-2.5 py-1.5 font-extrabold uppercase italic tracking-wider rounded-lg transition-all flex items-center gap-1 cursor-pointer border border-slate-200"
+              >
+                <ChevronUp size={11} />
+                <span>Minimizar</span>
+              </button>
+            )}
+
             {match.status === 'completed' && userPred ? (
               <div className="flex items-center gap-1.5">
                 {pointsCategory === 'exato' && (
@@ -782,9 +901,24 @@ export function PredictionsView({
           />
         </div>
 
-        {/* Pending filters checkbox */}
-        {currentUser && (
-          <div className="flex items-center gap-3 w-full md:w-auto justify-end">
+        {/* Toggles Container */}
+        <div className="flex flex-wrap items-center gap-4 w-full md:w-auto justify-end">
+          {/* Minimize passed matches toggle */}
+          <label className="relative flex items-center gap-2 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={minimizePassedMatches}
+              onChange={(e) => setMinimizePassedMatches(e.target.checked)}
+              className="sr-only peer"
+            />
+            <div className="w-9 h-5 bg-slate-200 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-green-700"></div>
+            <span className="text-xs font-extrabold text-slate-600 uppercase italic tracking-wide flex items-center gap-1.5">
+              <Filter size={13} className="text-slate-400" />
+              <span>Minimizar Jogos Passados</span>
+            </span>
+          </label>
+
+          {currentUser && (
             <label className="relative flex items-center gap-2 cursor-pointer select-none">
               <input
                 type="checkbox"
@@ -798,29 +932,59 @@ export function PredictionsView({
                 <span>Mostrar Apenas Pendentes</span>
               </span>
             </label>
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       {/* --- MATCHES GRID --- */}
       {viewMode === 'cronologico' ? (
         <div className="space-y-8 animate-in fade-in duration-300">
-          {matchesByDate.map((group) => (
-            <div key={group.dateLabel} className="space-y-4">
-              <div className="flex items-center gap-2 border-b border-slate-200 pb-2">
-                <Calendar className="text-green-700" size={16} />
-                <h3 className="font-extrabold text-sm text-slate-800 uppercase italic tracking-wider">
-                  {group.dateLabel}
-                </h3>
-                <span className="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                  {group.matches.length} {group.matches.length === 1 ? 'jogo' : 'jogos'}
-                </span>
+          {matchesByDate.map((group) => {
+            const allCompleted = group.matches.every((m) => m.status === 'completed');
+            const allLocked = group.matches.every(isMatchLocked);
+            const defaultCollapsed = allCompleted;
+            const isCollapsed = collapsedDays[group.dateLabel] !== undefined
+              ? collapsedDays[group.dateLabel]
+              : defaultCollapsed;
+
+            return (
+              <div key={group.dateLabel} className="space-y-4">
+                <div
+                  onClick={() => toggleCollapseDay(group.dateLabel, defaultCollapsed)}
+                  className="flex items-center justify-between border-b border-slate-200 pb-2 cursor-pointer hover:bg-slate-100/50 transition px-2 rounded-lg group/day select-none"
+                >
+                  <div className="flex items-center gap-2">
+                    <Calendar className={allCompleted ? 'text-slate-400' : 'text-green-700'} size={16} />
+                    <h3 className={`font-extrabold text-sm uppercase italic tracking-wider ${allCompleted ? 'text-slate-500 font-bold' : 'text-slate-800'}`}>
+                      {group.dateLabel}
+                    </h3>
+                    {allCompleted && (
+                      <span className="text-[9px] bg-slate-100 text-slate-500 border border-slate-200 px-2 py-0.5 rounded font-black uppercase tracking-wider flex items-center gap-1 italic">
+                        <Lock size={9} /> Finalizado
+                      </span>
+                    )}
+                    {!allCompleted && allLocked && (
+                      <span className="text-[9px] bg-amber-500/10 text-amber-700 border border-amber-500/20 px-2 py-0.5 rounded font-black uppercase tracking-wider flex items-center gap-1 italic animate-pulse">
+                        <Lock size={9} /> Em Jogo
+                      </span>
+                    )}
+                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${allCompleted ? 'bg-slate-200 text-slate-600' : 'bg-green-100 text-green-800'}`}>
+                      {group.matches.length} {group.matches.length === 1 ? 'jogo' : 'jogos'}
+                    </span>
+                  </div>
+                  <div className="text-slate-400 group-hover/day:text-green-700 transition flex items-center gap-1 text-[10px] font-black uppercase tracking-wider italic">
+                    <span>{isCollapsed ? 'Mostrar jogos' : 'Esconder'}</span>
+                    {isCollapsed ? <ChevronDown size={14} /> : <ChevronUp size={14} />}
+                  </div>
+                </div>
+                {!isCollapsed && (
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-in fade-in slide-in-from-top-1 duration-200">
+                    {group.matches.map((match) => renderMatchCard(match))}
+                  </div>
+                )}
               </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {group.matches.map((match) => renderMatchCard(match))}
-              </div>
-            </div>
-          ))}
+            );
+          })}
           {sortedMatches.length === 0 && (
             <div className="bg-white border border-slate-200 p-12 rounded-2xl text-center flex flex-col items-center justify-center shadow-sm">
               <AlertCircle className="text-slate-400 mb-3" size={32} />
