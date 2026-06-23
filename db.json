@@ -1581,6 +1581,14 @@
   ],
   "predictions": [
     {
+      "id": "pred-user-diego-m-imported-42",
+      "user_id": "user-diego",
+      "match_id": "m-imported-42",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-23T00:07:00.000Z"
+    },
+    {
       "id": "pred-user-1781095373876-m-imported-39",
       "user_id": "user-1781095373876",
       "match_id": "m-imported-39",

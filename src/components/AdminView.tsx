@@ -38,6 +38,22 @@ export function AdminView({
   onToggleRegistration
 }: AdminViewProps) {
   const [activeAdminTab, setActiveAdminTab] = useState<'jogos' | 'usuarios' | 'importar'>('jogos');
+  const [expandedMatches, setExpandedMatches] = useState<{ [matchId: string]: boolean }>({});
+
+  const handleCollapseAllCompleted = () => {
+    setExpandedMatches({});
+  };
+
+  const handleExpandAllCompleted = () => {
+    const updated: { [key: string]: boolean } = {};
+    matches.forEach(m => {
+      if (m.status === 'completed') {
+        updated[m.id] = true;
+      }
+    });
+    setExpandedMatches(updated);
+  };
+
 
   const getInitials = (name: string) => {
     if (!name) return '?';
@@ -273,9 +289,24 @@ export function AdminView({
         {/* --- TAB 1: MODIFICAÇÃO DE JOGOS --- */}
         {activeAdminTab === 'jogos' && (
           <div className="space-y-4">
-            <div className="flex justify-between items-center text-xs">
+            <div className="flex justify-between items-center text-xs flex-wrap gap-2">
               <span className="text-slate-400">Insira os resultados finais abaixo para computar os pontos dos amigos:</span>
-              <span className="text-slate-500 italic">As pontuações dependem de cada encerramento.</span>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={handleCollapseAllCompleted}
+                  className="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white px-2.5 py-1 rounded-lg transition text-[10px] font-bold cursor-pointer"
+                >
+                  Minimizar Encerrados
+                </button>
+                <button
+                  type="button"
+                  onClick={handleExpandAllCompleted}
+                  className="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white px-2.5 py-1 rounded-lg transition text-[10px] font-bold cursor-pointer"
+                >
+                  Expandir Todos
+                </button>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -284,15 +315,66 @@ export function AdminView({
                 const inputCasa = localGoals?.casa !== undefined ? localGoals.casa : (m.gols_casa !== null ? String(m.gols_casa) : '');
                 const inputFora = localGoals?.fora !== undefined ? localGoals.fora : (m.gols_fora !== null ? String(m.gols_fora) : '');
 
+                const isCompleted = m.status === 'completed';
+                const isExpanded = !!expandedMatches[m.id];
+
+                if (isCompleted && !isExpanded) {
+                  return (
+                    <div
+                      key={m.id}
+                      onClick={() => setExpandedMatches(prev => ({ ...prev, [m.id]: true }))}
+                      className="bg-slate-900/40 hover:bg-slate-900/60 border border-slate-850/60 px-4 py-2.5 rounded-xl flex items-center justify-between gap-3 cursor-pointer transition-all duration-150 group"
+                    >
+                      <div className="flex items-center gap-2 overflow-hidden">
+                        <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-900/30 text-[9px] font-bold px-1.5 py-0.5 rounded font-mono shrink-0">
+                          {m.fase}
+                        </span>
+                        <div className="flex items-center gap-1.5 text-xs truncate">
+                          <span className="text-sm shrink-0">{m.bandeira_casa}</span>
+                          <span className="font-bold text-slate-300 truncate max-w-[80px] sm:max-w-none">{m.time_casa}</span>
+                          <span className="bg-slate-950 font-black text-center text-xs px-2 py-0.5 rounded border border-slate-800 text-emerald-400 shrink-0">
+                            {m.gols_casa}
+                          </span>
+                          <span className="text-slate-500 font-bold shrink-0">x</span>
+                          <span className="bg-slate-950 font-black text-center text-xs px-2 py-0.5 rounded border border-slate-800 text-emerald-400 shrink-0">
+                            {m.gols_fora}
+                          </span>
+                          <span className="font-bold text-slate-300 truncate max-w-[80px] sm:max-w-none">{m.time_fora}</span>
+                          <span className="text-sm shrink-0">{m.bandeira_fora}</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span className="text-[10px] text-slate-500 group-hover:text-emerald-400 font-bold transition">
+                          Editar
+                        </span>
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <div key={m.id} className="bg-slate-900/60 border border-slate-850 p-4 rounded-xl flex flex-col justify-between gap-3 relative">
                     <div className="flex justify-between items-center bg-slate-950/40 p-1.5 rounded text-[10px]">
                       <span className="font-bold text-emerald-400">{m.fase}</span>
-                      <span className={`font-mono px-1.5 py-0.2. rounded text-[9px] ${
-                        m.status === 'completed' ? 'bg-emerald-500/10 text-emerald-400' : 'bg-slate-800 text-slate-400'
-                      }`}>
-                        {m.status === 'completed' ? 'Encerrado' : 'Aberto'}
-                      </span>
+                      <div className="flex items-center gap-1.5">
+                        <span className={`font-mono px-1.5 py-0.5 rounded text-[9px] ${
+                          isCompleted ? 'bg-emerald-500/10 text-emerald-400' : 'bg-slate-800 text-slate-400'
+                        }`}>
+                          {isCompleted ? 'Encerrado' : 'Aberto'}
+                        </span>
+                        {isCompleted && (
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setExpandedMatches(prev => ({ ...prev, [m.id]: false }));
+                            }}
+                            className="text-slate-400 hover:text-white px-1.5 py-0.5 rounded bg-slate-800 hover:bg-slate-750 transition text-[9px] font-bold cursor-pointer"
+                          >
+                            Minimizar
+                          </button>
+                        )}
+                      </div>
                     </div>
 
                     <div className="flex items-center justify-between gap-2 py-1">
@@ -330,7 +412,7 @@ export function AdminView({
 
                     {/* Action Panel for match scoring */}
                     <div className="flex gap-2 justify-end pt-2 border-t border-slate-950/20">
-                      {m.status === 'completed' && (
+                      {isCompleted && (
                         <button
                           onClick={() => handleSaveScore(m.id, true)}
                           disabled={savingMatches[m.id]}
@@ -345,7 +427,7 @@ export function AdminView({
                         disabled={savingMatches[m.id]}
                         className="bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-display font-black px-3 py-1.5 text-[10px] items-center rounded-lg cursor-pointer transition"
                       >
-                        {m.status === 'completed' ? 'Salvar Novo Placar' : 'Salvar Resultado'}
+                        {isCompleted ? 'Salvar Novo Placar' : 'Salvar Resultado'}
                       </button>
                     </div>
                   </div>
