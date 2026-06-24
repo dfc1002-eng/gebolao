@@ -398,12 +398,11 @@ export default function App() {
           </div>
         )}
 
-        {/* Global Navigation Selector Sub-Menu */}
         <div className="sticky top-0 z-45 bg-slate-50/95 backdrop-blur-md py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 border-b border-slate-200 shadow-sm transition-all duration-200">
           <nav className="max-w-7xl mx-auto flex flex-wrap gap-1.5 w-full text-xs">
             <button
               onClick={() => setActiveTab('ranking')}
-              className={`px-4 py-2.5 rounded-lg font-black uppercase italic tracking-wider flex items-center gap-1.5 transition duration-200 cursor-pointer ${
+              className={`flex-1 sm:flex-initial text-center justify-center px-4 py-2.5 rounded-lg font-black uppercase italic tracking-wider flex items-center gap-1.5 transition duration-200 cursor-pointer ${
                 activeTab === 'ranking'
                   ? 'bg-green-700 text-white shadow'
                   : 'text-slate-500 hover:text-slate-950 hover:bg-slate-200/60'
@@ -415,7 +414,7 @@ export default function App() {
 
             <button
               onClick={() => setActiveTab('palpites')}
-              className={`px-4 py-2.5 rounded-lg font-black uppercase italic tracking-wider flex items-center gap-1.5 transition-all duration-200 cursor-pointer ${
+              className={`flex-1 sm:flex-initial text-center justify-center px-4 py-2.5 rounded-lg font-black uppercase italic tracking-wider flex items-center gap-1.5 transition-all duration-200 cursor-pointer ${
                 activeTab === 'palpites'
                   ? 'bg-amber-400 text-green-950 shadow-md border border-amber-500 scale-[1.02]'
                   : 'bg-amber-100/95 text-amber-950 border border-amber-350 shadow-xs animate-pulse-gold hover:bg-amber-200/90'
@@ -432,7 +431,7 @@ export default function App() {
 
             <button
               onClick={() => setActiveTab('admin')}
-              className={`px-4 py-2.5 rounded-lg font-black uppercase italic tracking-wider flex items-center gap-1.5 transition duration-200 cursor-pointer ${
+              className={`flex-1 sm:flex-initial text-center justify-center px-4 py-2.5 rounded-lg font-black uppercase italic tracking-wider flex items-center gap-1.5 transition duration-200 cursor-pointer ${
                 activeTab === 'admin'
                   ? 'bg-green-700 text-white shadow'
                   : 'text-slate-500 hover:text-slate-950 hover:bg-slate-200/60'

@@ -158,7 +158,7 @@ export function RankingView({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* 2nd Place */}
             {rankings.length > 1 && (
-              <div className="bg-white border border-slate-200 p-5 rounded-2xl md:order-1 text-center flex flex-col justify-between items-center shadow-sm relative overflow-hidden group hover:border-slate-350 transition-all">
+              <div className="bg-white border border-slate-200 p-5 rounded-2xl order-2 md:order-1 text-center flex flex-col justify-between items-center shadow-sm relative overflow-hidden group hover:border-slate-350 transition-all">
                 <div className="absolute top-0 right-0 bg-slate-100 text-slate-600 font-extrabold px-3.5 py-1.5 rounded-bl-xl text-xs border-l border-b border-slate-200 uppercase tracking-wider italic">
                   2º Lugar
                 </div>
@@ -197,7 +197,7 @@ export function RankingView({
 
             {/* 1st Place (GOAT) */}
             {rankings.length > 0 && (
-              <div className="bg-white border-2 border-amber-400 p-6 rounded-2xl md:order-2 text-center flex flex-col justify-between items-center shadow-md relative overflow-hidden group hover:border-amber-500 transition-all scale-105">
+              <div className="bg-white border-2 border-amber-400 p-6 rounded-2xl order-1 md:order-2 text-center flex flex-col justify-between items-center shadow-md relative overflow-hidden group hover:border-amber-500 transition-all scale-105">
                 <div className="absolute top-0 right-0 bg-amber-400 text-green-950 font-black px-4 py-2 rounded-bl-xl text-[10px] uppercase tracking-wider flex items-center gap-1 italic">
                   <Sparkles size={11} className="animate-pulse" />
                   <span>Líder Supremo</span>
@@ -244,7 +244,7 @@ export function RankingView({
 
             {/* 3rd Place */}
             {rankings.length > 2 && (
-              <div className="bg-white border border-slate-200 p-5 rounded-2xl md:order-3 text-center flex flex-col justify-between items-center shadow-sm relative overflow-hidden group hover:border-slate-350 transition-all">
+              <div className="bg-white border border-slate-200 p-5 rounded-2xl order-3 md:order-3 text-center flex flex-col justify-between items-center shadow-sm relative overflow-hidden group hover:border-slate-350 transition-all">
                 <div className="absolute top-0 right-0 bg-slate-100 text-slate-600 font-extrabold px-3.5 py-1.5 rounded-bl-xl text-xs border-l border-b border-slate-200 uppercase tracking-wider italic">
                   3º Lugar
                 </div>

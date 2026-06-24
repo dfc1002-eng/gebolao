@@ -88,3 +88,19 @@ export interface DashboardData {
   badges: Badge[];
   roundScores: RoundScore[];
 }
+
+export interface Team {
+  id: string;
+  nome: string;
+  bandeira: string;
+}
+
+export interface FinalistPrediction {
+  id: string;
+  user_id: string;
+  campeao_team_id: string;
+  vice_team_id: string;
+  created_at: string;
+  updated_at: string;
+}
+

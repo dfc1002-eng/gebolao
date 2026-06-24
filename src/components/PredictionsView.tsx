@@ -66,6 +66,90 @@ export function PredictionsView({
   const [viewMode, setViewMode] = useState<'grupos' | 'cronologico'>('cronologico');
   const [collapsedDays, setCollapsedDays] = useState<{ [dateLabel: string]: boolean }>({});
 
+  const [finalistPrediction, setFinalistPrediction] = useState<{ campeao_team_id: string; vice_team_id: string } | null>(null);
+  const [selCampeao, setSelCampeao] = useState<string>('');
+  const [selVice, setSelVice] = useState<string>('');
+  const [loadingFinalists, setLoadingFinalists] = useState(false);
+  const [savingFinalists, setSavingFinalists] = useState(false);
+  const [finalistsError, setFinalistsError] = useState<string | null>(null);
+  const [finalistsSuccess, setFinalistsSuccess] = useState(false);
+  const [showFinalistsPopup, setShowFinalistsPopup] = useState(false);
+
+  const teamsList = Array.from(new Set(worldCupMatches.flatMap(m => [m.time_casa, m.time_fora]).filter(Boolean))).sort();
+  const teamFlags: { [teamName: string]: string } = {};
+  worldCupMatches.forEach(m => {
+    if (m.time_casa) teamFlags[m.time_casa] = m.bandeira_casa;
+    if (m.time_fora) teamFlags[m.time_fora] = m.bandeira_fora;
+  });
+
+  const isFinalistsLocked = new Date() >= new Date('2026-06-28T19:00:00Z');
+
+  React.useEffect(() => {
+    if (!currentUser) return;
+    const fetchFinalist = async () => {
+      setLoadingFinalists(true);
+      try {
+        const res = await fetch('/api/finalists');
+        if (res.ok) {
+          const data = await res.json();
+          const userPred = data.find((p: any) => p.user_id === currentUser.id);
+          if (userPred) {
+            setFinalistPrediction({
+              campeao_team_id: userPred.campeao_team_id,
+              vice_team_id: userPred.vice_team_id
+            });
+            setSelCampeao(userPred.campeao_team_id);
+            setSelVice(userPred.vice_team_id);
+          } else {
+            const hasSeen = sessionStorage.getItem('gebolao_finalists_popup_seen');
+            if (!hasSeen && !isFinalistsLocked) {
+              setShowFinalistsPopup(true);
+            }
+          }
+        }
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoadingFinalists(false);
+      }
+    };
+    fetchFinalist();
+  }, [currentUser]);
+
+  const handleSaveFinalists = async () => {
+    if (!currentUser || !selCampeao || !selVice) return;
+    setSavingFinalists(true);
+    setFinalistsError(null);
+    setFinalistsSuccess(false);
+    try {
+      const res = await fetch('/api/finalists', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          user_id: currentUser.id,
+          campeao_team_id: selCampeao,
+          vice_team_id: selVice
+        })
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || 'Erro ao salvar aposta bônus.');
+      }
+
+      setFinalistPrediction({
+        campeao_team_id: selCampeao,
+        vice_team_id: selVice
+      });
+      setFinalistsSuccess(true);
+    } catch (err: any) {
+      setFinalistsError(err.message || 'Falha ao salvar.');
+    } finally {
+      setSavingFinalists(false);
+    }
+  };
+
+
   const toggleCollapseDay = (dateLabel: string, defaultCollapsed: boolean) => {
     setCollapsedDays((prev) => {
       const isCollapsedNow = prev[dateLabel] !== undefined ? prev[dateLabel] : defaultCollapsed;
@@ -737,6 +821,112 @@ export function PredictionsView({
         </div>
       )}
 
+      {/* Aposta Bônus dos Finalistas */}
+      {currentUser && (
+        <div className="bg-gradient-to-r from-slate-900 to-indigo-950 border border-indigo-900/50 rounded-2xl p-5 text-slate-100 shadow-md animate-in fade-in duration-300 space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-indigo-500/10 text-indigo-400 rounded-xl border border-indigo-500/20">
+              <Trophy size={20} />
+            </div>
+            <div>
+              <h3 className="font-display font-black text-sm uppercase tracking-tight text-white flex items-center gap-1.5">
+                Aposta Bônus: Campeão e Vice
+                {isFinalistsLocked && <span className="bg-red-500/10 text-red-400 border border-red-900/40 text-[9px] font-black uppercase px-2 py-0.5 rounded flex items-center gap-1"><Lock size={8}/> Bloqueado</span>}
+              </h3>
+              <p className="text-[11px] text-slate-400">
+                Escolha quem vencerá a grande final! +10 pontos se acertar o Campeão, +5 pontos para o Vice.
+              </p>
+            </div>
+          </div>
+
+          {finalistsError && (
+            <div className="bg-red-950/20 border border-red-900/40 text-red-400 text-xs px-3 py-2 rounded-lg">
+              {finalistsError}
+            </div>
+          )}
+
+          {finalistsSuccess && (
+            <div className="bg-emerald-950/20 border border-emerald-900/40 text-emerald-400 text-xs px-3 py-2 rounded-lg">
+              Palpite de finalistas salvo com sucesso!
+            </div>
+          )}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Campeão Select */}
+            <div className="space-y-1.5">
+              <label className="block text-[11px] text-slate-400 font-bold uppercase tracking-wider">Campeão (+10 pts)</label>
+              <div className="relative">
+                <select
+                  disabled={isFinalistsLocked || savingFinalists}
+                  value={selCampeao}
+                  onChange={(e) => {
+                    setSelCampeao(e.target.value);
+                    if (e.target.value === selVice) setSelVice('');
+                    setFinalistsSuccess(false);
+                    setFinalistsError(null);
+                  }}
+                  className="w-full bg-slate-950 border border-slate-850 rounded-xl pl-3 pr-9 py-2 text-xs text-white outline-none focus:border-indigo-500 disabled:opacity-60 appearance-none"
+                >
+                  <option value="">Selecione o Campeão...</option>
+                  {teamsList.map((t) => (
+                    <option key={t} value={t}>
+                      {teamFlags[t]} {t}
+                    </option>
+                  ))}
+                </select>
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
+                  <ChevronDown size={14} />
+                </div>
+              </div>
+            </div>
+
+            {/* Vice Select */}
+            <div className="space-y-1.5">
+              <label className="block text-[11px] text-slate-400 font-bold uppercase tracking-wider">Vice-Campeão (+5 pts)</label>
+              <div className="relative">
+                <select
+                  disabled={isFinalistsLocked || savingFinalists}
+                  value={selVice}
+                  onChange={(e) => {
+                    setSelVice(e.target.value);
+                    setFinalistsSuccess(false);
+                    setFinalistsError(null);
+                  }}
+                  className="w-full bg-slate-950 border border-slate-850 rounded-xl pl-3 pr-9 py-2 text-xs text-white outline-none focus:border-indigo-500 disabled:opacity-60 appearance-none"
+                >
+                  <option value="">Selecione o Vice-Campeão...</option>
+                  {teamsList.map((t) => (
+                    <option key={t} value={t} disabled={t === selCampeao}>
+                      {teamFlags[t]} {t}
+                    </option>
+                  ))}
+                </select>
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
+                  <ChevronDown size={14} />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {!isFinalistsLocked && (
+            <div className="flex justify-between items-center pt-2 border-t border-slate-800/40 flex-wrap gap-3">
+              <div className="flex items-center gap-1.5 text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1.5 rounded-lg text-[10px] font-bold">
+                <Calendar className="shrink-0" size={12} />
+                <span>Prazo Limite: 28/06/2026 às 16:00 (Brasília) — Antes do Mata-mata</span>
+              </div>
+              <button
+                onClick={handleSaveFinalists}
+                disabled={savingFinalists || !selCampeao || !selVice}
+                className="w-full sm:w-auto justify-center bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white font-bold text-xs px-4 py-2 rounded-xl transition duration-150 cursor-pointer shadow-sm active:scale-[0.98] flex items-center text-center self-end"
+              >
+                {savingFinalists ? 'Salvando...' : 'Salvar Aposta Bônus'}
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+
       {/* --- LEVEL 1 TABS (Main Categories) --- */}
       <div className="bg-white p-2 rounded-2xl border border-slate-200 shadow-sm flex flex-wrap gap-2">
         <button
@@ -1007,6 +1197,61 @@ export function PredictionsView({
               </p>
             </div>
           )}
+        </div>
+      )}
+
+      {showFinalistsPopup && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-[110] backdrop-blur-xs">
+          <div className="bg-slate-900 border border-indigo-900 p-6 rounded-2xl shadow-xl w-full max-w-md animate-in fade-in zoom-in-95 duration-200 text-slate-100 font-sans space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="p-2.5 bg-indigo-500/10 text-indigo-400 rounded-xl border border-indigo-500/20">
+                <Trophy size={24} />
+              </div>
+              <div>
+                <span className="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-[9px] font-black uppercase px-2 py-0.5 rounded inline-block mb-1">Novo Recurso</span>
+                <h3 className="font-display font-black text-sm uppercase tracking-tight text-white">Aposta Bônus dos Finalistas!</h3>
+              </div>
+            </div>
+
+            <p className="text-xs text-slate-350 leading-relaxed">
+              Antes que o mata-mata comece, você deve definir quem será o **Campeão** (+10 pontos) e o **Vice-Campeão** (+5 pontos) da Copa!
+            </p>
+
+            <div className="bg-amber-500/10 border border-amber-500/20 text-amber-400 p-3 rounded-xl flex items-start gap-2.5 text-[11px] leading-relaxed">
+              <AlertCircle className="shrink-0 mt-0.5" size={14} />
+              <div>
+                <span className="font-bold block">Prazo Limite:</span>
+                28/06/2026 às 16:00 (Horário de Brasília) — Início do mata-mata.
+                <span className="block mt-1 font-bold text-amber-500">Depois desse prazo, o palpite não estará mais disponível!</span>
+              </div>
+            </div>
+
+            <p className="text-[10px] text-slate-400 italic leading-relaxed">
+              Dica: Este formulário está localizado no topo da aba **"Palpites"** (Dar Palpite) quando você fechar este aviso.
+            </p>
+
+            <div className="flex gap-2.5 pt-2">
+              <button
+                onClick={() => {
+                  sessionStorage.setItem('gebolao_finalists_popup_seen', 'true');
+                  setShowFinalistsPopup(false);
+                }}
+                className="flex-1 bg-slate-800 hover:bg-slate-750 text-slate-300 font-bold text-xs py-2.5 rounded-xl transition cursor-pointer text-center"
+              >
+                Preencher Depois
+              </button>
+              <button
+                onClick={() => {
+                  sessionStorage.setItem('gebolao_finalists_popup_seen', 'true');
+                  setShowFinalistsPopup(false);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs py-2.5 rounded-xl transition cursor-pointer text-center shadow-md"
+              >
+                Palpitar Agora!
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

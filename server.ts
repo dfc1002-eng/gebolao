@@ -439,6 +439,53 @@ app.post('/api/predict', async (req, res) => {
   }
 });
 
+// Obter palpites de finalistas
+app.get('/api/finalists', async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('finalist_predictions')
+      .select('*');
+      
+    if (error) throw error;
+    res.json(data);
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Salvar ou atualizar palpite de finalista
+app.post('/api/finalists', async (req, res) => {
+  try {
+    const { user_id, campeao_team_id, vice_team_id } = req.body;
+
+    if (!user_id || !campeao_team_id || !vice_team_id) {
+      return res.status(400).json({ error: 'Preencha o campeão e vice-campeão!' });
+    }
+
+    if (campeao_team_id === vice_team_id) {
+      return res.status(400).json({ error: 'O campeão e o vice devem ser seleções diferentes!' });
+    }
+
+    // Upsert na tabela do Supabase
+    const { data, error } = await supabase
+      .from('finalist_predictions')
+      .upsert({
+        user_id,
+        campeao_team_id,
+        vice_team_id,
+        updated_at: new Date().toISOString()
+      }, {
+        onConflict: 'user_id'
+      })
+      .select();
+
+    if (error) throw error;
+    res.json({ success: true, prediction: data[0] });
+  } catch (error: any) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
 // Update match outcome (Admin Only)
 app.post('/api/match/update', async (req, res) => {
   try {
