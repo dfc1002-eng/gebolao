@@ -75,7 +75,13 @@ export function PredictionsView({
   const [finalistsSuccess, setFinalistsSuccess] = useState(false);
   const [showFinalistsPopup, setShowFinalistsPopup] = useState(false);
 
-  const teamsList = Array.from(new Set(worldCupMatches.flatMap(m => [m.time_casa, m.time_fora]).filter(Boolean))).sort();
+  const teamsList = Array.from(
+    new Set(
+      worldCupMatches
+        .flatMap(m => [m.time_casa, m.time_fora])
+        .filter(t => t && !t.startsWith('Time A ') && !t.startsWith('Time B '))
+    )
+  ).sort();
   const teamFlags: { [teamName: string]: string } = {};
   worldCupMatches.forEach(m => {
     if (m.time_casa) teamFlags[m.time_casa] = m.bandeira_casa;
