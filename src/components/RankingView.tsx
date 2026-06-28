@@ -310,9 +310,8 @@ export function RankingView({
                     <th className="py-3.5 px-4 font-bold text-center w-16 select-none">POS</th>
                     <th className="py-3.5 px-3 font-bold select-none">PARTICIPANTE</th>
                     <th className="py-3.5 px-3 font-bold text-center w-24 select-none cursor-help" title="Pontos Totais: Quem tem mais pontos fica no topo.">PONTOS</th>
-                    <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-20 select-none cursor-help" title="Placares Cravados (Exatos): Em caso de empate em pontos, quem acertou mais placares exatos (+10) fica na frente.">🎯 EXATOS</th>
-                    <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-24 select-none cursor-help" title="Vitórias Acertadas (Resultados): Em caso de empate em pontos e em exatos, quem acertou mais vencedores/empates (+5) fica na frente.">⭐ VITÓRIAS</th>
-                    <th className="py-3.5 px-4 font-bold select-none">CONQUISTAS E SELOS</th>
+                    <th className="py-3.5 px-3 font-bold text-center w-24 select-none cursor-help" title="Placares Cravados (Exatos): Em caso de empate em pontos, quem acertou mais placares exatos (+10) fica na frente.">🎯 CRAVADOS</th>
+                    <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-28 select-none cursor-help" title="Vitórias Acertadas (Resultados): Em caso de empate em pontos e em exatos, quem acertou mais vencedores/empates (+5) fica na frente.">⭐ VITÓRIAS</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 bg-white">
@@ -325,8 +324,6 @@ export function RankingView({
                     if (idx === 0) numColor = 'text-amber-500 font-black';
                     else if (idx === 1) numColor = 'text-slate-500 font-black';
                     else if (idx === 2) numColor = 'text-amber-700 font-black';
-
-                    const uBadges = getUserBadgesList(user.id);
 
                     return (
                       <tr
@@ -363,34 +360,14 @@ export function RankingView({
                           {rank.pontos_totais} <span className="text-[10px] text-slate-400 font-normal">pts</span>
                         </td>
 
-                        {/* Exatos */}
-                        <td className="py-3.5 px-3 text-center hidden sm:table-cell font-bold text-slate-600 font-mono">
+                        {/* Cravados (Exatos) */}
+                        <td className="py-3.5 px-3 text-center font-bold text-slate-750 font-mono text-sm">
                           {rank.exatos_totais}
                         </td>
 
                         {/* Resultados */}
                         <td className="py-3.5 px-3 text-center hidden sm:table-cell font-semibold text-slate-500 font-mono">
                           {rank.vencedores_totais}
-                        </td>
-
-                        {/* Badges list */}
-                        <td className="py-3.5 px-4">
-                          <div className="flex flex-wrap gap-1.5">
-                            {uBadges.length === 0 ? (
-                              <span className="text-[10px] text-slate-400 italic font-medium">Nenhum selo conquistado</span>
-                            ) : (
-                              uBadges.map((b) => (
-                                <span
-                                  key={b.id}
-                                  className="px-2 py-0.5 bg-slate-50 border border-slate-200 text-[10px] text-slate-600 font-bold rounded-md flex items-center gap-1 cursor-help shadow-sm"
-                                  title={`${b.nome}: ${b.descricao}`}
-                                >
-                                  <span>{b.icone}</span>
-                                  <span className="hidden md:inline text-[9px] font-extrabold uppercase tracking-tight">{b.nome.split(',')[0].split(' ')[0]}</span>
-                                </span>
-                              ))
-                            )}
-                          </div>
                         </td>
                       </tr>
                     );
