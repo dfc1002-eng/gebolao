@@ -210,7 +210,7 @@ export function PredictionsView({
     return teamId;
   };
 
-  const isFinalistsLocked = new Date() >= new Date('2026-07-06T19:00:00Z');
+  const isFinalistsLocked = new Date() >= new Date('2026-07-04T19:00:00Z');
 
   React.useEffect(() => {
     if (!currentUser) return;
@@ -1066,7 +1066,7 @@ export function PredictionsView({
             <div className="flex justify-between items-center pt-2 border-t border-slate-800/40 flex-wrap gap-3">
               <div className="flex items-center gap-1.5 text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1.5 rounded-lg text-[10px] font-bold">
                 <Calendar className="shrink-0" size={12} />
-                <span>Prazo Limite Estendido: 06/07/2026 às 16:00 (Brasília)</span>
+                <span>Prazo Limite Estendido: 04/07/2026 às 16:00 (Brasília)</span>
               </div>
               <button
                 onClick={handleSaveFinalists}
@@ -1375,7 +1375,7 @@ export function PredictionsView({
               <AlertCircle className="shrink-0 mt-0.5" size={14} />
               <div>
                 <span className="font-bold block">Prazo Limite (Estendido):</span>
-                06/07/2026 às 16:00 (Horário de Brasília)
+                04/07/2026 às 16:00 (Horário de Brasília)
                 <span className="block mt-1 font-bold text-amber-500">Depois desse prazo, o palpite não estará mais disponível!</span>
               </div>
             </div>
