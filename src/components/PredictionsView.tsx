@@ -625,6 +625,11 @@ export function PredictionsView({
             <MapPin size={11} className="text-slate-400" />
             <span className="truncate max-w-[250px]">{match.estadio}</span>
           </div>
+          {!match.fase.startsWith('Grupo ') && (
+            <div className="flex items-center gap-1.5 text-[9px] text-amber-700 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded font-black uppercase tracking-wider mt-1.5 w-fit">
+              <span>⏱️ Apenas tempo regulamentar (90 min)</span>
+            </div>
+          )}
         </div>
 
         {/* Core Match Predictor Layout */}
