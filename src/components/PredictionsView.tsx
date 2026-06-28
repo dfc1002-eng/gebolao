@@ -210,7 +210,7 @@ export function PredictionsView({
     return teamId;
   };
 
-  const isFinalistsLocked = new Date() >= new Date('2026-06-28T19:00:00Z');
+  const isFinalistsLocked = new Date() >= new Date('2026-07-06T19:00:00Z');
 
   React.useEffect(() => {
     if (!currentUser) return;
@@ -996,13 +996,8 @@ export function PredictionsView({
                     const newChamp = e.target.value;
                     setSelCampeao(newChamp);
                     
-                    // Reset vice if it is on the same side as the new champion
-                    if (newChamp) {
-                      const champSide = getTeamSide(newChamp);
-                      const viceSide = getTeamSide(selVice);
-                      if (newChamp === selVice || (champSide && viceSide && champSide === viceSide)) {
-                        setSelVice('');
-                      }
+                    if (newChamp === selVice) {
+                      setSelVice('');
                     }
                     
                     setFinalistsSuccess(false);
@@ -1014,13 +1009,7 @@ export function PredictionsView({
                   {teamsList
                     .filter((t) => {
                       const isReal = t && !t.startsWith('Time ') && !t.startsWith('Vencedor ') && !t.startsWith('2º ') && !t.startsWith('3º ') && !t.startsWith('Perdedor ');
-                      if (!isReal) return false;
-                      if (selVice) {
-                        const viceSide = getTeamSide(selVice);
-                        const currentSide = getTeamSide(t);
-                        if (viceSide && currentSide && viceSide === currentSide) return false;
-                      }
-                      return true;
+                      return !!isReal;
                     })
                     .map((t) => (
                       <option key={t} value={t}>
@@ -1045,13 +1034,8 @@ export function PredictionsView({
                     const newVice = e.target.value;
                     setSelVice(newVice);
                     
-                    // Reset champion if it is on the same side as the new vice
-                    if (newVice) {
-                      const viceSide = getTeamSide(newVice);
-                      const champSide = getTeamSide(selCampeao);
-                      if (newVice === selCampeao || (viceSide && champSide && viceSide === champSide)) {
-                        setSelCampeao('');
-                      }
+                    if (newVice === selCampeao) {
+                      setSelCampeao('');
                     }
                     
                     setFinalistsSuccess(false);
@@ -1063,13 +1047,7 @@ export function PredictionsView({
                   {teamsList
                     .filter((t) => {
                       const isReal = t && !t.startsWith('Time ') && !t.startsWith('Vencedor ') && !t.startsWith('2º ') && !t.startsWith('3º ') && !t.startsWith('Perdedor ');
-                      if (!isReal) return false;
-                      if (selCampeao) {
-                        const champSide = getTeamSide(selCampeao);
-                        const currentSide = getTeamSide(t);
-                        if (champSide && currentSide && champSide === currentSide) return false;
-                      }
-                      return true;
+                      return !!isReal;
                     })
                     .map((t) => (
                       <option key={t} value={t} disabled={t === selCampeao}>
@@ -1088,7 +1066,7 @@ export function PredictionsView({
             <div className="flex justify-between items-center pt-2 border-t border-slate-800/40 flex-wrap gap-3">
               <div className="flex items-center gap-1.5 text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1.5 rounded-lg text-[10px] font-bold">
                 <Calendar className="shrink-0" size={12} />
-                <span>Prazo Limite: 28/06/2026 às 16:00 (Brasília) — Antes do Mata-mata</span>
+                <span>Prazo Limite Estendido: 06/07/2026 às 16:00 (Brasília)</span>
               </div>
               <button
                 onClick={handleSaveFinalists}
@@ -1396,8 +1374,8 @@ export function PredictionsView({
             <div className="bg-amber-500/10 border border-amber-500/20 text-amber-400 p-3 rounded-xl flex items-start gap-2.5 text-[11px] leading-relaxed">
               <AlertCircle className="shrink-0 mt-0.5" size={14} />
               <div>
-                <span className="font-bold block">Prazo Limite:</span>
-                28/06/2026 às 16:00 (Horário de Brasília) — Início do mata-mata.
+                <span className="font-bold block">Prazo Limite (Estendido):</span>
+                06/07/2026 às 16:00 (Horário de Brasília)
                 <span className="block mt-1 font-bold text-amber-500">Depois desse prazo, o palpite não estará mais disponível!</span>
               </div>
             </div>
