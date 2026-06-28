@@ -108,6 +108,108 @@ export function PredictionsView({
     return null;
   };
 
+  const getTeamIdFromPortugueseName = (portugueseName: string): string => {
+    if (!portugueseName) return '';
+    const norm = portugueseName.trim();
+    if (norm === 'Brasil') return 'Brazil';
+    if (norm === 'Japão') return 'Japan';
+    if (norm === 'África do Sul') return 'South Africa';
+    if (norm === 'Canadá') return 'Canada';
+    if (norm === 'Alemanha') return 'Germany';
+    if (norm === 'Paraguai') return 'Paraguay';
+    if (norm === 'Suíça') return 'Switzerland';
+    if (norm === 'Argentina') return 'Argentina';
+    if (norm === 'Cabo Verde') return 'Cape Verde';
+    if (norm === 'Austrália') return 'Australia';
+    if (norm === 'Egito') return 'Egypt';
+    if (norm === 'França') return 'France';
+    if (norm === 'EUA') return 'United States';
+    if (norm === 'Bósnia e Herzegovina') return 'Bosnia and Herzegovina';
+    if (norm === 'Bélgica') return 'Belgium';
+    if (norm === 'Irã') return 'Iran';
+    if (norm === 'Espanha') return 'Spain';
+    if (norm === 'Arábia Saudita') return 'Saudi Arabia';
+    if (norm === 'Uruguai') return 'Uruguay';
+    if (norm === 'Jordânia') return 'Jordan';
+    if (norm === 'Argélia') return 'Algeria';
+    if (norm === 'Áustria') return 'Austria';
+    if (norm === 'Portugal') return 'Portugal';
+    if (norm === 'Uzbequistão') return 'Uzbekistan';
+    if (norm === 'Colômbia') return 'Colombia';
+    if (norm === 'RD do Congo') return 'Democratic Republic of the Congo';
+    if (norm === 'Panamá') return 'Panama';
+    if (norm === 'Croácia') return 'Croatia';
+    if (norm === 'Gana') return 'Ghana';
+    if (norm === 'Nova Zelândia') return 'New Zealand';
+    if (norm === 'Marrocos') return 'Morocco';
+    if (norm === 'Haiti') return 'Haiti';
+    if (norm === 'Escócia') return 'Scotland';
+    if (norm === 'México') return 'Mexico';
+    if (norm === 'Coreia do Sul') return 'South Korea';
+    if (norm === 'República Tcheca') return 'Czech Republic';
+    if (norm === 'Tunísia') return 'Tunisia';
+    if (norm === 'Iraque') return 'Iraq';
+    if (norm === 'Noruega') return 'Norway';
+    if (norm === 'Senegal') return 'Senegal';
+    if (norm === 'Curaçao') return 'Curaçao';
+    if (norm === 'Costa do Marfim') return 'Ivory Coast';
+    if (norm === 'Equador') return 'Ecuador';
+    if (norm === 'Suécia') return 'Sweden';
+    if (norm === 'Turquia') return 'Turkey';
+    return portugueseName;
+  };
+
+  const getPortugueseNameFromTeamId = (teamId: string): string => {
+    if (!teamId) return '';
+    const norm = teamId.trim();
+    if (norm === 'Brazil') return 'Brasil';
+    if (norm === 'Japan') return 'Japão';
+    if (norm === 'South Africa') return 'África do Sul';
+    if (norm === 'Canada') return 'Canadá';
+    if (norm === 'Germany') return 'Alemanha';
+    if (norm === 'Paraguay') return 'Paraguai';
+    if (norm === 'Switzerland') return 'Suíça';
+    if (norm === 'Argentina') return 'Argentina';
+    if (norm === 'Cape Verde') return 'Cabo Verde';
+    if (norm === 'Australia') return 'Austrália';
+    if (norm === 'Egypt') return 'Egito';
+    if (norm === 'France') return 'França';
+    if (norm === 'United States') return 'EUA';
+    if (norm === 'Bosnia and Herzegovina') return 'Bósnia e Herzegovina';
+    if (norm === 'Belgium') return 'Bélgica';
+    if (norm === 'Iran') return 'Irã';
+    if (norm === 'Spain') return 'Espanha';
+    if (norm === 'Saudi Arabia') return 'Arábia Saudita';
+    if (norm === 'Uruguay') return 'Uruguai';
+    if (norm === 'Jordan') return 'Jordânia';
+    if (norm === 'Algeria') return 'Argélia';
+    if (norm === 'Austria') return 'Áustria';
+    if (norm === 'Portugal') return 'Portugal';
+    if (norm === 'Uzbekistan') return 'Uzbequistão';
+    if (norm === 'Colombia') return 'Colômbia';
+    if (norm === 'Democratic Republic of the Congo') return 'RD do Congo';
+    if (norm === 'Panama') return 'Panamá';
+    if (norm === 'Croatia') return 'Croácia';
+    if (norm === 'Ghana') return 'Gana';
+    if (norm === 'New Zealand') return 'Nova Zelândia';
+    if (norm === 'Morocco') return 'Marrocos';
+    if (norm === 'Haiti') return 'Haiti';
+    if (norm === 'Scotland') return 'Escócia';
+    if (norm === 'Mexico') return 'México';
+    if (norm === 'South Korea') return 'Coreia do Sul';
+    if (norm === 'Czech Republic') return 'República Tcheca';
+    if (norm === 'Tunisia') return 'Tunísia';
+    if (norm === 'Iraq') return 'Iraque';
+    if (norm === 'Norway') return 'Noruega';
+    if (norm === 'Senegal') return 'Senegal';
+    if (norm === 'Curaçao') return 'Curaçao';
+    if (norm === 'Ivory Coast') return 'Costa do Marfim';
+    if (norm === 'Ecuador') return 'Equador';
+    if (norm === 'Sweden') return 'Suécia';
+    if (norm === 'Turkey') return 'Turquia';
+    return teamId;
+  };
+
   const isFinalistsLocked = new Date() >= new Date('2026-06-28T19:00:00Z');
 
   React.useEffect(() => {
@@ -124,8 +226,8 @@ export function PredictionsView({
               campeao_team_id: userPred.campeao_team_id,
               vice_team_id: userPred.vice_team_id
             });
-            setSelCampeao(userPred.campeao_team_id);
-            setSelVice(userPred.vice_team_id);
+            setSelCampeao(getPortugueseNameFromTeamId(userPred.campeao_team_id));
+            setSelVice(getPortugueseNameFromTeamId(userPred.vice_team_id));
           } else {
             const hasSeen = sessionStorage.getItem('gebolao_finalists_popup_seen');
             if (!hasSeen && !isFinalistsLocked) {
@@ -153,8 +255,8 @@ export function PredictionsView({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           user_id: currentUser.id,
-          campeao_team_id: selCampeao,
-          vice_team_id: selVice
+          campeao_team_id: getTeamIdFromPortugueseName(selCampeao),
+          vice_team_id: getTeamIdFromPortugueseName(selVice)
         })
       });
 
@@ -164,8 +266,8 @@ export function PredictionsView({
       }
 
       setFinalistPrediction({
-        campeao_team_id: selCampeao,
-        vice_team_id: selVice
+        campeao_team_id: getTeamIdFromPortugueseName(selCampeao),
+        vice_team_id: getTeamIdFromPortugueseName(selVice)
       });
       setFinalistsSuccess(true);
     } catch (err: any) {
