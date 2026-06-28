@@ -88,6 +88,26 @@ export function PredictionsView({
     if (m.time_fora) teamFlags[m.time_fora] = m.bandeira_fora;
   });
 
+  const LEFT_SIDE_TEAMS = [
+    'África do Sul', 'Canadá', 'Alemanha', 'Paraguai', 'Holanda', 'Marrocos',
+    'França', 'Suécia', 'Portugal', 'Croácia', 'Espanha', 'EUA',
+    'Bósnia e Herzegovina', 'Bélgica', 'Senegal'
+  ];
+
+  const RIGHT_SIDE_TEAMS = [
+    'Brasil', 'Japão', 'Costa do Marfim', 'Noruega', 'México', 'Equador',
+    'Inglaterra', 'RD do Congo', 'Argentina', 'Cabo Verde', 'Austrália',
+    'Egito', 'Suíça', 'Colômbia', 'Gana'
+  ];
+
+  const getTeamSide = (teamName: string): 'left' | 'right' | null => {
+    if (!teamName) return null;
+    const name = teamName.trim();
+    if (LEFT_SIDE_TEAMS.includes(name)) return 'left';
+    if (RIGHT_SIDE_TEAMS.includes(name)) return 'right';
+    return null;
+  };
+
   const isFinalistsLocked = new Date() >= new Date('2026-06-28T19:00:00Z');
 
   React.useEffect(() => {
@@ -866,19 +886,40 @@ export function PredictionsView({
                   disabled={isFinalistsLocked || savingFinalists}
                   value={selCampeao}
                   onChange={(e) => {
-                    setSelCampeao(e.target.value);
-                    if (e.target.value === selVice) setSelVice('');
+                    const newChamp = e.target.value;
+                    setSelCampeao(newChamp);
+                    
+                    // Reset vice if it is on the same side as the new champion
+                    if (newChamp) {
+                      const champSide = getTeamSide(newChamp);
+                      const viceSide = getTeamSide(selVice);
+                      if (newChamp === selVice || (champSide && viceSide && champSide === viceSide)) {
+                        setSelVice('');
+                      }
+                    }
+                    
                     setFinalistsSuccess(false);
                     setFinalistsError(null);
                   }}
                   className="w-full bg-slate-950 border border-slate-850 rounded-xl pl-3 pr-9 py-2 text-xs text-white outline-none focus:border-indigo-500 disabled:opacity-60 appearance-none"
                 >
                   <option value="">Selecione o Campeão...</option>
-                  {teamsList.map((t) => (
-                    <option key={t} value={t}>
-                      {teamFlags[t]} {t}
-                    </option>
-                  ))}
+                  {teamsList
+                    .filter((t) => {
+                      const isReal = t && !t.startsWith('Time ') && !t.startsWith('Vencedor ') && !t.startsWith('2º ') && !t.startsWith('3º ') && !t.startsWith('Perdedor ');
+                      if (!isReal) return false;
+                      if (selVice) {
+                        const viceSide = getTeamSide(selVice);
+                        const currentSide = getTeamSide(t);
+                        if (viceSide && currentSide && viceSide === currentSide) return false;
+                      }
+                      return true;
+                    })
+                    .map((t) => (
+                      <option key={t} value={t}>
+                        {teamFlags[t]} {t}
+                      </option>
+                    ))}
                 </select>
                 <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
                   <ChevronDown size={14} />
@@ -894,18 +935,40 @@ export function PredictionsView({
                   disabled={isFinalistsLocked || savingFinalists}
                   value={selVice}
                   onChange={(e) => {
-                    setSelVice(e.target.value);
+                    const newVice = e.target.value;
+                    setSelVice(newVice);
+                    
+                    // Reset champion if it is on the same side as the new vice
+                    if (newVice) {
+                      const viceSide = getTeamSide(newVice);
+                      const champSide = getTeamSide(selCampeao);
+                      if (newVice === selCampeao || (viceSide && champSide && viceSide === champSide)) {
+                        setSelCampeao('');
+                      }
+                    }
+                    
                     setFinalistsSuccess(false);
                     setFinalistsError(null);
                   }}
                   className="w-full bg-slate-950 border border-slate-850 rounded-xl pl-3 pr-9 py-2 text-xs text-white outline-none focus:border-indigo-500 disabled:opacity-60 appearance-none"
                 >
                   <option value="">Selecione o Vice-Campeão...</option>
-                  {teamsList.map((t) => (
-                    <option key={t} value={t} disabled={t === selCampeao}>
-                      {teamFlags[t]} {t}
-                    </option>
-                  ))}
+                  {teamsList
+                    .filter((t) => {
+                      const isReal = t && !t.startsWith('Time ') && !t.startsWith('Vencedor ') && !t.startsWith('2º ') && !t.startsWith('3º ') && !t.startsWith('Perdedor ');
+                      if (!isReal) return false;
+                      if (selCampeao) {
+                        const champSide = getTeamSide(selCampeao);
+                        const currentSide = getTeamSide(t);
+                        if (champSide && currentSide && champSide === currentSide) return false;
+                      }
+                      return true;
+                    })
+                    .map((t) => (
+                      <option key={t} value={t} disabled={t === selCampeao}>
+                        {teamFlags[t]} {t}
+                      </option>
+                    ))}
                 </select>
                 <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
                   <ChevronDown size={14} />
