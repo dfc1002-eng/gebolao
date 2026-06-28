@@ -548,65 +548,116 @@ export function RankingView({
       )}
 
       {/* User Deep Stats card popup if clicked */}
-      {focusedUser && (
-        <div className="fixed inset-0 bg-slate-900/60 flex items-center justify-center p-4 z-50 backdrop-blur-xs">
-          <div className="bg-white border border-slate-300 p-6 rounded-2xl shadow-xl w-full max-w-md animate-in fade-in duration-200 text-slate-900">
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full border-2 border-green-700 flex items-center justify-center font-display font-black text-green-700 bg-green-50 shadow-sm uppercase text-base select-none shrink-0">
-                  {getInitials(focusedUser.nome)}
-                </div>
-                <div className="flex flex-col items-start gap-1">
-                  <h3 className="font-extrabold text-slate-950 text-sm uppercase italic tracking-wide">{focusedUser.nome}</h3>
-                </div>
-              </div>
-              <button
-                onClick={() => setFocusedUser(null)}
-                className="text-slate-400 hover:text-slate-700 font-bold p-1 bg-slate-100 rounded-md cursor-pointer transition-colors"
-              >
-                ✕
-              </button>
-            </div>
+      {focusedUser && (() => {
+        const userRank = rankings.find((r) => r.user_id === focusedUser.id);
+        const userRoundScores = roundScores.filter((s) => s.user_id === focusedUser.id);
+        const totalGebiadas = userRoundScores.reduce((acc, score) => acc + score.erros_qtd, 0);
 
-            <div className="border-t border-slate-100 py-3 mt-2 grid grid-cols-2 gap-3 text-center">
-              <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
-                <span className="text-[9px] text-slate-550 font-black uppercase tracking-wider block">Classificação</span>
-                <span className="text-base font-black text-green-700 uppercase italic">
-                  {rankings.find((r) => r.user_id === focusedUser.id)?.posicao}º Lugar
-                </span>
-              </div>
-              <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
-                <span className="text-[9px] text-slate-550 font-black uppercase tracking-wider block">Total de Pontos</span>
-                <span className="text-base font-black text-green-700 uppercase italic">
-                  {rankings.find((r) => r.user_id === focusedUser.id)?.pontos_totais} pts
-                </span>
-              </div>
-            </div>
-
-            <div className="mt-4 space-y-2">
-              <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest italic font-display">Selos Conquistados</h4>
-              <div className="grid grid-cols-1 gap-2">
-                {getUserBadgesList(focusedUser.id).map((b) => (
-                  <div key={b.id} className="bg-slate-50 border border-slate-150 p-2 rounded-lg flex items-center gap-2.5 shadow-sm">
-                    <span className="text-lg">{b.icone}</span>
-                    <div>
-                      <h5 className="font-extrabold text-xs text-slate-950 uppercase italic">{b.nome}</h5>
-                      <p className="text-[10px] text-slate-550 leading-normal font-medium">{b.descricao}</p>
-                    </div>
+        return (
+          <div className="fixed inset-0 bg-slate-900/60 flex items-center justify-center p-4 z-50 backdrop-blur-xs">
+            <div className="bg-white border border-slate-300 p-6 rounded-2xl shadow-xl w-full max-w-md animate-in fade-in duration-200 text-slate-900">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full border-2 border-green-700 flex items-center justify-center font-display font-black text-green-700 bg-green-50 shadow-sm uppercase text-base select-none shrink-0">
+                    {getInitials(focusedUser.nome)}
                   </div>
-                ))}
-                {getUserBadgesList(focusedUser.id).length === 0 && (
-                  <p className="text-xs text-slate-400 italic text-center py-2.5 bg-slate-50 border border-slate-150 rounded-lg">Este competidor ainda não acumulou conquistas.</p>
-                )}
+                  <div className="flex flex-col items-start gap-1">
+                    <h3 className="font-extrabold text-slate-950 text-sm uppercase italic tracking-wide">{focusedUser.nome}</h3>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setFocusedUser(null)}
+                  className="text-slate-400 hover:text-slate-700 font-bold p-1 bg-slate-100 rounded-md cursor-pointer transition-colors"
+                >
+                  ✕
+                </button>
               </div>
-            </div>
 
-            <div className="mt-5 text-center">
-              <p className="text-[10px] text-slate-400 font-semibold italic">Dica: Selecione qualquer jogador na tabela geral para ver suas estatísticas detalhadas.</p>
+              <div className="border-t border-slate-100 py-3 mt-2 grid grid-cols-2 gap-3 text-center">
+                <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                  <span className="text-[9px] text-slate-550 font-black uppercase tracking-wider block">Classificação</span>
+                  <span className="text-base font-black text-green-700 uppercase italic">
+                    {userRank?.posicao}º Lugar
+                  </span>
+                </div>
+                <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                  <span className="text-[9px] text-slate-550 font-black uppercase tracking-wider block">Total de Pontos</span>
+                  <span className="text-base font-black text-green-700 uppercase italic">
+                    {userRank?.pontos_totais} pts
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-5 space-y-3">
+                <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest italic font-display">
+                  Detalhamento dos Palpites
+                </h4>
+                <div className="grid grid-cols-1 gap-2.5">
+                  {/* Cravados */}
+                  <div className="bg-slate-55/60 bg-slate-50 border border-slate-150 px-3.5 py-2.5 rounded-xl flex items-center justify-between shadow-xs">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">🎯</span>
+                      <div>
+                        <h5 className="font-extrabold text-xs text-slate-950 uppercase italic">Placares Cravados</h5>
+                        <p className="text-[10px] text-slate-550 leading-normal font-medium">+10 pontos por acerto exato</p>
+                      </div>
+                    </div>
+                    <span className="bg-amber-100 text-amber-800 border border-amber-200 font-mono font-black text-sm px-3 py-1 rounded-lg">
+                      {userRank?.exatos_totais || 0}
+                    </span>
+                  </div>
+
+                  {/* Vitórias */}
+                  <div className="bg-slate-55/60 bg-slate-50 border border-slate-150 px-3.5 py-2.5 rounded-xl flex items-center justify-between shadow-xs">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">⭐</span>
+                      <div>
+                        <h5 className="font-extrabold text-xs text-slate-950 uppercase italic">Vitórias / Empates</h5>
+                        <p className="text-[10px] text-slate-550 leading-normal font-medium">+5 pontos (resultado)</p>
+                      </div>
+                    </div>
+                    <span className="bg-blue-100 text-blue-800 border border-blue-200 font-mono font-black text-sm px-3 py-1 rounded-lg">
+                      {userRank?.vencedores_totais || 0}
+                    </span>
+                  </div>
+
+                  {/* Gols de apenas um time */}
+                  <div className="bg-slate-55/60 bg-slate-50 border border-slate-150 px-3.5 py-2.5 rounded-xl flex items-center justify-between shadow-xs">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">⚽</span>
+                      <div>
+                        <h5 className="font-extrabold text-xs text-slate-950 uppercase italic">Gols de Um Time</h5>
+                        <p className="text-[10px] text-slate-550 leading-normal font-medium">+2 pontos (parcial)</p>
+                      </div>
+                    </div>
+                    <span className="bg-emerald-100 text-emerald-800 border border-emerald-200 font-mono font-black text-sm px-3 py-1 rounded-lg">
+                      {userRank?.gols_um_time_totais || 0}
+                    </span>
+                  </div>
+
+                  {/* Gebiadas (Erros) */}
+                  <div className="bg-slate-55/60 bg-slate-50 border border-slate-150 px-3.5 py-2.5 rounded-xl flex items-center justify-between shadow-xs">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">🤡</span>
+                      <div>
+                        <h5 className="font-extrabold text-xs text-slate-950 uppercase italic">Gebiadas / Erros</h5>
+                        <p className="text-[10px] text-slate-550 leading-normal font-medium">Placares errados ou não palpitados (0 pts)</p>
+                      </div>
+                    </div>
+                    <span className="bg-red-100 text-red-800 border border-red-200 font-mono font-black text-sm px-3 py-1 rounded-lg">
+                      {totalGebiadas}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-5 text-center">
+                <p className="text-[10px] text-slate-400 font-semibold italic">Dica: Selecione qualquer jogador na tabela geral para ver suas estatísticas detalhadas.</p>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        );
+      })()}
     </div>
   );
 }
