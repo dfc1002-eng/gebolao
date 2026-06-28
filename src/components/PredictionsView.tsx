@@ -53,7 +53,7 @@ export function PredictionsView({
   const worldCupMatches = matches.filter((m) => !m.fase.toLowerCase().includes('amistoso'));
 
   // 2. State controls
-  const [mainTab, setMainTab] = useState<'grupos' | 'eliminatorias' | 'todos'>('grupos');
+  const [mainTab, setMainTab] = useState<'grupos' | 'eliminatorias' | 'todos'>('eliminatorias');
   const [selectedSubRound, setSelectedSubRound] = useState<string>('Grupo A');
   const [searchQuery, setSearchQuery] = useState('');
   const [showOnlyPending, setShowOnlyPending] = useState(false);
