@@ -781,6 +781,58 @@ app.post('/api/match/import', async (req, res) => {
   }
 });
 
+// Helper for translating team names to Portuguese
+function translateTeamName(name: string): string {
+  if (!name) return name;
+  const norm = name.trim().toLowerCase();
+  if (norm === 'brazil') return 'Brasil';
+  if (norm === 'japan') return 'Japão';
+  if (norm === 'south africa') return 'África do Sul';
+  if (norm === 'canada') return 'Canadá';
+  if (norm === 'germany') return 'Alemanha';
+  if (norm === 'paraguay') return 'Paraguai';
+  if (norm === 'switzerland') return 'Suíça';
+  if (norm === 'argentina') return 'Argentina';
+  if (norm === 'cape verde') return 'Cabo Verde';
+  if (norm === 'australia') return 'Austrália';
+  if (norm === 'egypt') return 'Egito';
+  if (norm === 'france') return 'França';
+  if (norm === 'united states' || norm === 'usa') return 'EUA';
+  if (norm === 'bosnia and herzegovina' || norm === 'bosnia') return 'Bósnia e Herzegovina';
+  if (norm === 'belgium') return 'Bélgica';
+  if (norm === 'iran') return 'Irã';
+  if (norm === 'spain') return 'Espanha';
+  if (norm === 'saudi arabia') return 'Arábia Saudita';
+  if (norm === 'uruguay') return 'Uruguai';
+  if (norm === 'jordan') return 'Jordânia';
+  if (norm === 'algeria') return 'Argélia';
+  if (norm === 'austria') return 'Áustria';
+  if (norm === 'portugal') return 'Portugal';
+  if (norm === 'uzbekistan') return 'Uzbequistão';
+  if (norm === 'colombia') return 'Colômbia';
+  if (norm === 'democratic republic of the congo' || norm === 'congo dr') return 'RD do Congo';
+  if (norm === 'panama') return 'Panamá';
+  if (norm === 'croatia') return 'Croácia';
+  if (norm === 'ghana') return 'Gana';
+  if (norm === 'new zealand') return 'Nova Zelândia';
+  if (norm === 'morocco') return 'Marrocos';
+  if (norm === 'haiti') return 'Haiti';
+  if (norm === 'scotland') return 'Escócia';
+  if (norm === 'mexico') return 'México';
+  if (norm === 'south korea') return 'Coreia do Sul';
+  if (norm === 'czech republic') return 'República Tcheca';
+  if (norm === 'tunisia') return 'Tunísia';
+  if (norm === 'iraq') return 'Iraque';
+  if (norm === 'norway') return 'Noruega';
+  if (norm === 'senegal') return 'Senegal';
+  if (norm === 'curaçao' || norm === 'curacao') return 'Curaçao';
+  if (norm === 'ivory coast') return 'Costa do Marfim';
+  if (norm === 'ecuador') return 'Equador';
+  if (norm === 'sweden') return 'Suécia';
+  if (norm === 'turkey') return 'Turquia';
+  return name;
+}
+
 // Helper for mapping flag emoji from team name
 function getCountryFlag(name: string): string {
   const norm = name?.trim().toLowerCase() || '';
@@ -1022,7 +1074,7 @@ app.post('/api/match/import-url', async (req, res) => {
 
     // Normalize
     const normalizedMatches = rawList.map((item: any, index: number) => {
-      const homeTeam = String(
+      const homeTeamRaw = String(
         item.time_casa ||
         item.home_team ||
         item.home_team_name_en ||
@@ -1034,7 +1086,7 @@ app.post('/api/match/import-url', async (req, res) => {
         `Time A ${index + 1}`
       ).trim();
 
-      const awayTeam = String(
+      const awayTeamRaw = String(
         item.time_fora ||
         item.away_team ||
         item.away_team_name_en ||
@@ -1045,6 +1097,9 @@ app.post('/api/match/import-url', async (req, res) => {
         item.teamB ||
         `Time B ${index + 1}`
       ).trim();
+
+      const homeTeam = translateTeamName(homeTeamRaw);
+      const awayTeam = translateTeamName(awayTeamRaw);
       
       // Mapeamento de fase para suportar a API da Copa 2026
       let rawStage = '';
