@@ -887,6 +887,13 @@ function getCountryFlag(name: string): string {
   return '⚽';
 }
 
+// Helper to check if a team name is a placeholder or invalid
+function isPlaceholderOrInvalid(name: string): boolean {
+  if (!name) return true;
+  const n = name.trim().toLowerCase();
+  return n === 'undefined' || n === 'null' || n === '' || n.startsWith('time a') || n.startsWith('time b') || n.startsWith('vencedor jogo') || n.startsWith('perdedor jogo');
+}
+
 // Simulated real match schedule generator for World Cup 2026 fallback
 function getFallbackWorldCup2026(): Match[] {
   return [
@@ -1244,7 +1251,23 @@ app.post('/api/match/import-url', async (req, res) => {
     normalizedMatches.forEach((imported: Match) => {
       const matchIndex = state.matches.findIndex((m) => m.id === imported.id || (m.time_casa === imported.time_casa && m.time_fora === imported.time_fora && m.fase === imported.fase));
       if (matchIndex >= 0) {
-        state.matches[matchIndex] = imported;
+        const existing = state.matches[matchIndex];
+        
+        const finalTimeCasa = isPlaceholderOrInvalid(imported.time_casa)
+          ? existing.time_casa
+          : imported.time_casa;
+          
+        const finalTimeFora = isPlaceholderOrInvalid(imported.time_fora)
+          ? existing.time_fora
+          : imported.time_fora;
+
+        state.matches[matchIndex] = {
+          ...imported,
+          time_casa: finalTimeCasa,
+          time_fora: finalTimeFora,
+          bandeira_casa: isPlaceholderOrInvalid(imported.time_casa) ? existing.bandeira_casa : imported.bandeira_casa,
+          bandeira_fora: isPlaceholderOrInvalid(imported.time_fora) ? existing.bandeira_fora : imported.bandeira_fora
+        };
       } else {
         state.matches.push(imported);
       }
