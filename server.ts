@@ -830,6 +830,9 @@ function translateTeamName(name: string): string {
   if (norm === 'ecuador') return 'Equador';
   if (norm === 'sweden') return 'Suécia';
   if (norm === 'turkey') return 'Turquia';
+  if (norm === 'england') return 'Inglaterra';
+  if (norm === 'netherlands') return 'Holanda';
+  if (norm === 'qatar') return 'Catar';
   return name;
 }
 
