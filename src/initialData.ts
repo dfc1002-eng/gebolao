@@ -434,9 +434,9 @@ export function computeAllStats(
   });
 
   // Calculate cumulative ranking
-  const totalScoresByUser: { [userId: string]: { total: number; exatos: number; vencedores: number; gols_um_time: number } } = {};
+  const totalScoresByUser: { [userId: string]: { total: number; exatos: number; vencedores: number; gols_um_time: number; erros: number } } = {};
   users.forEach((user) => {
-    totalScoresByUser[user.id] = { total: 0, exatos: 0, vencedores: 0, gols_um_time: 0 };
+    totalScoresByUser[user.id] = { total: 0, exatos: 0, vencedores: 0, gols_um_time: 0, erros: 0 };
   });
 
   roundScores.forEach((score) => {
@@ -445,6 +445,7 @@ export function computeAllStats(
       totalScoresByUser[score.user_id].exatos += score.exato_qtd;
       totalScoresByUser[score.user_id].vencedores += score.resultado_qtd;
       totalScoresByUser[score.user_id].gols_um_time += score.gols_um_time_qtd;
+      totalScoresByUser[score.user_id].erros += score.erros_qtd;
     }
   });
 
@@ -455,6 +456,7 @@ export function computeAllStats(
       exatos_totais: totalScoresByUser[usrId].exatos,
       vencedores_totais: totalScoresByUser[usrId].vencedores,
       gols_um_time_totais: totalScoresByUser[usrId].gols_um_time,
+      erros_totais: totalScoresByUser[usrId].erros,
       posicao: 1, // calculated below
       badges: [] as string[]
     }))

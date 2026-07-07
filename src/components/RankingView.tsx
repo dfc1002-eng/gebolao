@@ -312,6 +312,7 @@ export function RankingView({
                     <th className="py-3.5 px-3 font-bold text-center w-24 select-none cursor-help" title="Pontos Totais: Quem tem mais pontos fica no topo.">PONTOS</th>
                     <th className="py-3.5 px-3 font-bold text-center w-24 select-none cursor-help" title="Placares Cravados (Exatos): Em caso de empate em pontos, quem acertou mais placares exatos (+10) fica na frente.">🎯 CRAVADOS</th>
                     <th className="py-3.5 px-3 font-bold text-center hidden sm:table-cell w-28 select-none cursor-help" title="Vitórias Acertadas (Resultados): Em caso de empate em pontos e em exatos, quem acertou mais vencedores/empates (+5) fica na frente.">⭐ VITÓRIAS</th>
+                    <th className="py-3.5 px-3 font-bold text-center w-24 select-none cursor-help" title="Gebiadas (Erros Totais): Quantidade de palpites onde o participante errou completamente e não pontuou.">🤡 GEBIADAS</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 bg-white">
@@ -368,6 +369,11 @@ export function RankingView({
                         {/* Resultados */}
                         <td className="py-3.5 px-3 text-center hidden sm:table-cell font-semibold text-slate-500 font-mono">
                           {rank.vencedores_totais}
+                        </td>
+
+                        {/* Gebiadas (Erros) */}
+                        <td className="py-3.5 px-3 text-center font-bold text-rose-600 font-mono text-sm">
+                          {rank.erros_totais ?? 0}
                         </td>
                       </tr>
                     );
