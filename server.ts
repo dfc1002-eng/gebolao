@@ -327,6 +327,7 @@ async function saveDBState(state: GameState): Promise<void> {
 // Get current state
 app.get('/api/state', async (req, res) => {
   try {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
     const state = await getDBState();
     // Compute stats on the fly to guarantee accuracy
     const { roundScores, rankings, userBadges } = computeAllStats(
@@ -442,6 +443,7 @@ app.post('/api/predict', async (req, res) => {
 // Obter palpites de finalistas
 app.get('/api/finalists', async (req, res) => {
   try {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
     const { data, error } = await supabase
       .from('finalist_predictions')
       .select('*');
