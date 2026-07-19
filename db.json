@@ -877,19 +877,6 @@
       "status": "completed"
     },
     {
-      "id": "m-imported-49",
-      "fase": "Grupo C",
-      "time_casa": "Escócia",
-      "time_fora": "Brasil",
-      "bandeira_casa": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-      "bandeira_fora": "🇧🇷",
-      "data_hora": "2026-06-24T22:00:00+00:00",
-      "estadio": "Estádio da Copa 2026",
-      "gols_casa": 0,
-      "gols_fora": 3,
-      "status": "completed"
-    },
-    {
       "id": "m-imported-50",
       "fase": "Grupo C",
       "time_casa": "Marrocos",
@@ -900,6 +887,19 @@
       "estadio": "Estádio da Copa 2026",
       "gols_casa": 4,
       "gols_fora": 2,
+      "status": "completed"
+    },
+    {
+      "id": "m-imported-49",
+      "fase": "Grupo C",
+      "time_casa": "Escócia",
+      "time_fora": "Brasil",
+      "bandeira_casa": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "bandeira_fora": "🇧🇷",
+      "data_hora": "2026-06-24T22:00:00+00:00",
+      "estadio": "Estádio da Copa 2026",
+      "gols_casa": 0,
+      "gols_fora": 3,
       "status": "completed"
     },
     {
@@ -929,19 +929,6 @@
       "status": "completed"
     },
     {
-      "id": "m-imported-55",
-      "fase": "Grupo E",
-      "time_casa": "Curaçao",
-      "time_fora": "Costa do Marfim",
-      "bandeira_casa": "🇨🇼",
-      "bandeira_fora": "🇨🇮",
-      "data_hora": "2026-06-25T20:00:00+00:00",
-      "estadio": "Estádio da Copa 2026",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "status": "completed"
-    },
-    {
       "id": "m-imported-56",
       "fase": "Grupo E",
       "time_casa": "Equador",
@@ -952,6 +939,19 @@
       "estadio": "Estádio da Copa 2026",
       "gols_casa": 2,
       "gols_fora": 1,
+      "status": "completed"
+    },
+    {
+      "id": "m-imported-55",
+      "fase": "Grupo E",
+      "time_casa": "Curaçao",
+      "time_fora": "Costa do Marfim",
+      "bandeira_casa": "🇨🇼",
+      "bandeira_fora": "🇨🇮",
+      "data_hora": "2026-06-25T20:00:00+00:00",
+      "estadio": "Estádio da Copa 2026",
+      "gols_casa": 0,
+      "gols_fora": 2,
       "status": "completed"
     },
     {
@@ -981,19 +981,6 @@
       "status": "completed"
     },
     {
-      "id": "m-imported-57",
-      "fase": "Grupo D",
-      "time_casa": "Paraguai",
-      "time_fora": "Austrália",
-      "bandeira_casa": "🇵🇾",
-      "bandeira_fora": "🇦🇺",
-      "data_hora": "2026-06-26T02:00:00+00:00",
-      "estadio": "Estádio da Copa 2026",
-      "gols_casa": 0,
-      "gols_fora": 0,
-      "status": "completed"
-    },
-    {
       "id": "m-imported-58",
       "fase": "Grupo D",
       "time_casa": "Turquia",
@@ -1004,6 +991,19 @@
       "estadio": "Estádio da Copa 2026",
       "gols_casa": 3,
       "gols_fora": 2,
+      "status": "completed"
+    },
+    {
+      "id": "m-imported-57",
+      "fase": "Grupo D",
+      "time_casa": "Paraguai",
+      "time_fora": "Austrália",
+      "bandeira_casa": "🇵🇾",
+      "bandeira_fora": "🇦🇺",
+      "data_hora": "2026-06-26T02:00:00+00:00",
+      "estadio": "Estádio da Copa 2026",
+      "gols_casa": 0,
+      "gols_fora": 0,
       "status": "completed"
     },
     {
@@ -1085,19 +1085,6 @@
       "status": "completed"
     },
     {
-      "id": "m-imported-67",
-      "fase": "Grupo L",
-      "time_casa": "Panamá",
-      "time_fora": "England",
-      "bandeira_casa": "🇵🇦",
-      "bandeira_fora": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "data_hora": "2026-06-27T21:00:00+00:00",
-      "estadio": "Estádio da Copa 2026",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "status": "completed"
-    },
-    {
       "id": "m-imported-68",
       "fase": "Grupo L",
       "time_casa": "Croácia",
@@ -1108,6 +1095,19 @@
       "estadio": "Estádio da Copa 2026",
       "gols_casa": 2,
       "gols_fora": 1,
+      "status": "completed"
+    },
+    {
+      "id": "m-imported-67",
+      "fase": "Grupo L",
+      "time_casa": "Panamá",
+      "time_fora": "England",
+      "bandeira_casa": "🇵🇦",
+      "bandeira_fora": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "data_hora": "2026-06-27T21:00:00+00:00",
+      "estadio": "Estádio da Copa 2026",
+      "gols_casa": 0,
+      "gols_fora": 2,
       "status": "completed"
     },
     {
@@ -1137,19 +1137,6 @@
       "status": "completed"
     },
     {
-      "id": "m-imported-70",
-      "fase": "Grupo J",
-      "time_casa": "Jordânia",
-      "time_fora": "Argentina",
-      "bandeira_casa": "🇯🇴",
-      "bandeira_fora": "🇦🇷",
-      "data_hora": "2026-06-28T02:00:00+00:00",
-      "estadio": "Estádio da Copa 2026",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "status": "completed"
-    },
-    {
       "id": "m-imported-69",
       "fase": "Grupo J",
       "time_casa": "Argélia",
@@ -1159,6 +1146,19 @@
       "data_hora": "2026-06-28T02:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
       "gols_casa": 3,
+      "gols_fora": 3,
+      "status": "completed"
+    },
+    {
+      "id": "m-imported-70",
+      "fase": "Grupo J",
+      "time_casa": "Jordânia",
+      "time_fora": "Argentina",
+      "bandeira_casa": "🇯🇴",
+      "bandeira_fora": "🇦🇷",
+      "data_hora": "2026-06-28T02:00:00+00:00",
+      "estadio": "Estádio da Copa 2026",
+      "gols_casa": 1,
       "gols_fora": 3,
       "status": "completed"
     },
@@ -1574,9 +1574,9 @@
       "bandeira_fora": "🇦🇷",
       "data_hora": "2026-07-19T19:00:00+00:00",
       "estadio": "Estádio da Copa 2026",
-      "gols_casa": null,
-      "gols_fora": null,
-      "status": "unplayed"
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "status": "completed"
     }
   ],
   "predictions": [
@@ -2133,6 +2133,30 @@
       "created_at": "2026-06-26T16:42:09.312+00:00"
     },
     {
+      "id": "pred-user-1781125678721-m-imported-51",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-51",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-23T22:18:08.763+00:00"
+    },
+    {
+      "id": "pred-user-1781192283318-m-imported-97",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-97",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-07-07T18:10:12.354+00:00"
+    },
+    {
+      "id": "pred-user-1780956449173-m-imported-104",
+      "user_id": "user-1780956449173",
+      "match_id": "m-imported-104",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-07-19T00:33:51.929+00:00"
+    },
+    {
       "id": "pred-user-1781200240943-m-imported-41",
       "user_id": "user-1781200240943",
       "match_id": "m-imported-41",
@@ -2389,6 +2413,14 @@
       "created_at": "2026-06-08T23:58:32.175+00:00"
     },
     {
+      "id": "pred-user-1781015783888-m-imported-96",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-96",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-07-04T12:51:32.208+00:00"
+    },
+    {
       "id": "pred-user-1781200005128-m-imported-88",
       "user_id": "user-1781200005128",
       "match_id": "m-imported-88",
@@ -2397,12 +2429,28 @@
       "created_at": "2026-06-29T00:41:58.953+00:00"
     },
     {
+      "id": "pred-user-1781199818607-m-imported-9",
+      "user_id": "user-1781199818607",
+      "match_id": "m-imported-9",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-13T15:19:21.136+00:00"
+    },
+    {
       "id": "pred-user-1781095373876-m-imported-82",
       "user_id": "user-1781095373876",
       "match_id": "m-imported-82",
       "gols_casa": 1,
       "gols_fora": 1,
       "created_at": "2026-06-28T23:09:48.289+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-37",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-37",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-18T00:24:28.992+00:00"
     },
     {
       "id": "pred-user-1781125678721-m-imported-29",
@@ -2637,6 +2685,30 @@
       "created_at": "2026-07-01T19:18:31.21+00:00"
     },
     {
+      "id": "pred-user-1781126770341-m-imported-41",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-41",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-17T23:43:59.91+00:00"
+    },
+    {
+      "id": "pred-user-1781201106289-m-imported-71",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-71",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-26T03:37:55.072+00:00"
+    },
+    {
+      "id": "pred-user-1781072168812-m-imported-37",
+      "user_id": "user-1781072168812",
+      "match_id": "m-imported-37",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-19T14:46:00.023+00:00"
+    },
+    {
       "id": "pred-user-1781201106289-m-imported-63",
       "user_id": "user-1781201106289",
       "match_id": "m-imported-63",
@@ -2653,6 +2725,30 @@
       "created_at": "2026-06-10T14:17:09.898+00:00"
     },
     {
+      "id": "pred-user-1781190858904-m-imported-82",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-82",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-07-01T17:12:55.489+00:00"
+    },
+    {
+      "id": "pred-user-1781282241568-m-imported-77",
+      "user_id": "user-1781282241568",
+      "match_id": "m-imported-77",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-30T13:59:29.455+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-15",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-15",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-14T18:45:03.995+00:00"
+    },
+    {
       "id": "pred-user-1781125678721-m-imported-25",
       "user_id": "user-1781125678721",
       "match_id": "m-imported-25",
@@ -2667,6 +2763,30 @@
       "gols_casa": 1,
       "gols_fora": 0,
       "created_at": "2026-07-04T17:59:06.971+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-23",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-23",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T14:06:33.946+00:00"
+    },
+    {
+      "id": "pred-user-1781004737829-m-imported-12",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-12",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-12T07:19:00.124+00:00"
+    },
+    {
+      "id": "pred-user-1781094951149-m-imported-61",
+      "user_id": "user-1781094951149",
+      "match_id": "m-imported-61",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-25T09:23:47.439+00:00"
     },
     {
       "id": "pred-user-1780868826114-m-imported-15",
@@ -2861,6 +2981,14 @@
       "created_at": "2026-06-11T18:18:49.882+00:00"
     },
     {
+      "id": "pred-user-1781005544161-m-imported-84",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-84",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-30T20:28:44.794+00:00"
+    },
+    {
       "id": "pred-user-1781200005128-m-imported-17",
       "user_id": "user-1781200005128",
       "match_id": "m-imported-17",
@@ -2901,6 +3029,14 @@
       "created_at": "2026-06-29T07:58:19.615+00:00"
     },
     {
+      "id": "pred-user-diego-m-imported-96",
+      "user_id": "user-diego",
+      "match_id": "m-imported-96",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-07-07T10:35:15.59+00:00"
+    },
+    {
       "id": "pred-user-1781200005128-m-imported-82",
       "user_id": "user-1781200005128",
       "match_id": "m-imported-82",
@@ -2939,14 +3075,6 @@
       "gols_casa": 1,
       "gols_fora": 3,
       "created_at": "2026-06-15T06:59:58.572+00:00"
-    },
-    {
-      "id": "pred-user-diego-m-imported-96",
-      "user_id": "user-diego",
-      "match_id": "m-imported-96",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-07-07T10:35:15.59+00:00"
     },
     {
       "id": "pred-user-1780962502571-m-imported-66",
@@ -3133,6 +3261,22 @@
       "created_at": "2026-06-28T19:26:48.556+00:00"
     },
     {
+      "id": "pred-user-1781130184341-m-imported-48",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-48",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-20T20:47:11.116+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-44",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-44",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-19T14:53:51.93+00:00"
+    },
+    {
       "id": "pred-user-1781096449138-m-imported-50",
       "user_id": "user-1781096449138",
       "match_id": "m-imported-50",
@@ -3179,6 +3323,14 @@
       "gols_casa": 1,
       "gols_fora": 1,
       "created_at": "2026-06-26T20:20:50.736+00:00"
+    },
+    {
+      "id": "pred-user-1781188456193-m-imported-92",
+      "user_id": "user-1781188456193",
+      "match_id": "m-imported-92",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-07-05T14:39:17.71+00:00"
     },
     {
       "id": "pred-user-diego-m-imported-70",
@@ -3389,6 +3541,30 @@
       "created_at": "2026-06-28T22:07:01.214+00:00"
     },
     {
+      "id": "pred-user-1781005544161-m-imported-6",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-6",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T14:00:09.729+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-104",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-104",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-07-19T17:47:21.787+00:00"
+    },
+    {
+      "id": "pred-user-1781072168812-m-imported-51",
+      "user_id": "user-1781072168812",
+      "match_id": "m-imported-51",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-24T20:11:47.09+00:00"
+    },
+    {
       "id": "pred-user-1781200240943-m-imported-46",
       "user_id": "user-1781200240943",
       "match_id": "m-imported-46",
@@ -3445,6 +3621,30 @@
       "created_at": "2026-06-10T23:52:52.926+00:00"
     },
     {
+      "id": "pred-user-1781095373876-m-imported-65",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-65",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T13:08:34.28+00:00"
+    },
+    {
+      "id": "pred-user-1780962502571-m-imported-64",
+      "user_id": "user-1780962502571",
+      "match_id": "m-imported-64",
+      "gols_casa": 0,
+      "gols_fora": 4,
+      "created_at": "2026-06-26T23:45:59.208+00:00"
+    },
+    {
+      "id": "pred-user-1781194558512-m-imported-70",
+      "user_id": "user-1781194558512",
+      "match_id": "m-imported-70",
+      "gols_casa": 0,
+      "gols_fora": 4,
+      "created_at": "2026-06-27T17:32:48.593+00:00"
+    },
+    {
       "id": "pred-user-1781192283318-m-imported-63",
       "user_id": "user-1781192283318",
       "match_id": "m-imported-63",
@@ -3491,6 +3691,30 @@
       "gols_casa": 0,
       "gols_fora": 2,
       "created_at": "2026-07-03T01:12:43.861+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-16",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-16",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T14:04:05.479+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-35",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-35",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T14:17:45.849+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-79",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-79",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-28T21:28:26.16+00:00"
     },
     {
       "id": "pred-user-1781188456193-m-imported-4",
@@ -3605,6 +3829,30 @@
       "created_at": "2026-06-19T14:47:43.559+00:00"
     },
     {
+      "id": "pred-user-diego-m-imported-41",
+      "user_id": "user-diego",
+      "match_id": "m-imported-41",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-22T19:31:45.679+00:00"
+    },
+    {
+      "id": "pred-user-1781094951149-m-imported-56",
+      "user_id": "user-1781094951149",
+      "match_id": "m-imported-56",
+      "gols_casa": 1,
+      "gols_fora": 4,
+      "created_at": "2026-06-25T09:22:55.049+00:00"
+    },
+    {
+      "id": "pred-user-1781192283318-m-imported-5",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-5",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-11T16:00:55.835+00:00"
+    },
+    {
       "id": "pred-user-1781188456193-m-imported-6",
       "user_id": "user-1781188456193",
       "match_id": "m-imported-6",
@@ -3669,14 +3917,6 @@
       "created_at": "2026-07-03T19:54:56.709+00:00"
     },
     {
-      "id": "pred-user-diego-m-imported-41",
-      "user_id": "user-diego",
-      "match_id": "m-imported-41",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-22T19:31:45.679+00:00"
-    },
-    {
       "id": "pred-user-1781072168812-m-imported-31",
       "user_id": "user-1781072168812",
       "match_id": "m-imported-31",
@@ -3691,6 +3931,22 @@
       "gols_casa": 2,
       "gols_fora": 0,
       "created_at": "2026-06-10T23:53:51.062+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-38",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-38",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-22T00:57:16.717+00:00"
+    },
+    {
+      "id": "pred-user-1781095373876-m-imported-60",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-60",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T13:06:57.648+00:00"
     },
     {
       "id": "pred-user-1781072168812-m-imported-38",
@@ -3763,6 +4019,14 @@
       "gols_casa": 1,
       "gols_fora": 2,
       "created_at": "2026-06-11T18:07:22.971+00:00"
+    },
+    {
+      "id": "pred-user-1781095373876-m-imported-53",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-53",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T13:06:05.542+00:00"
     },
     {
       "id": "pred-user-1781072168812-m-imported-94",
@@ -3861,6 +4125,14 @@
       "created_at": "2026-06-08T23:54:49.946+00:00"
     },
     {
+      "id": "pred-user-1781200240943-m-imported-80",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-80",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-30T16:13:13.546+00:00"
+    },
+    {
       "id": "pred-user-1781201106289-m-imported-73",
       "user_id": "user-1781201106289",
       "match_id": "m-imported-73",
@@ -3957,6 +4229,14 @@
       "created_at": "2026-06-14T10:45:41.09+00:00"
     },
     {
+      "id": "pred-user-1781096449138-m-imported-59",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-59",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-17T21:32:09.285+00:00"
+    },
+    {
       "id": "pred-user-1780962434760-m-imported-46",
       "user_id": "user-1780962434760",
       "match_id": "m-imported-46",
@@ -4037,6 +4317,14 @@
       "created_at": "2026-06-26T03:33:37.752+00:00"
     },
     {
+      "id": "pred-user-1781200240943-m-imported-92",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-92",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-07-05T13:40:30.178+00:00"
+    },
+    {
       "id": "pred-user-1781096449138-m-imported-51",
       "user_id": "user-1781096449138",
       "match_id": "m-imported-51",
@@ -4115,6 +4403,14 @@
       "gols_casa": 2,
       "gols_fora": 1,
       "created_at": "2026-06-17T09:31:37.075+00:00"
+    },
+    {
+      "id": "pred-user-1781095373876-m-imported-78",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-78",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-28T23:09:16.291+00:00"
     },
     {
       "id": "pred-user-1781005544161-m-imported-86",
@@ -4221,6 +4517,14 @@
       "created_at": "2026-06-19T12:07:55.157+00:00"
     },
     {
+      "id": "pred-user-1781190858904-m-imported-2",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-2",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-11T21:10:43.337+00:00"
+    },
+    {
       "id": "pred-user-1781095373876-m-imported-24",
       "user_id": "user-1781095373876",
       "match_id": "m-imported-24",
@@ -4309,6 +4613,14 @@
       "created_at": "2026-06-28T12:47:12.442+00:00"
     },
     {
+      "id": "pred-user-1780956449173-m-imported-1",
+      "user_id": "user-1780956449173",
+      "match_id": "m-imported-1",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T00:42:33.798+00:00"
+    },
+    {
       "id": "pred-user-1781200005128-m-imported-26",
       "user_id": "user-1781200005128",
       "match_id": "m-imported-26",
@@ -4363,6 +4675,30 @@
       "gols_casa": 1,
       "gols_fora": 2,
       "created_at": "2026-07-04T14:41:26.594+00:00"
+    },
+    {
+      "id": "pred-user-1781135488087-m-imported-72",
+      "user_id": "user-1781135488087",
+      "match_id": "m-imported-72",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-11T00:07:36.531+00:00"
+    },
+    {
+      "id": "pred-user-1781194558512-m-imported-44",
+      "user_id": "user-1781194558512",
+      "match_id": "m-imported-44",
+      "gols_casa": 2,
+      "gols_fora": 3,
+      "created_at": "2026-06-22T16:49:48.277+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-103",
+      "user_id": "user-diego",
+      "match_id": "m-imported-103",
+      "gols_casa": 3,
+      "gols_fora": 2,
+      "created_at": "2026-07-16T12:25:37.865+00:00"
     },
     {
       "id": "pred-user-1781004737829-m-imported-27",
@@ -4477,6 +4813,30 @@
       "created_at": "2026-06-14T01:13:50.032+00:00"
     },
     {
+      "id": "pred-user-1780956449173-m-imported-42",
+      "user_id": "user-1780956449173",
+      "match_id": "m-imported-42",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-22T00:44:04.081+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-49",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-49",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-24T04:02:59.156+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-34",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-34",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-20T13:40:54.238+00:00"
+    },
+    {
       "id": "pred-user-1781130184341-m-imported-18",
       "user_id": "user-1781130184341",
       "match_id": "m-imported-18",
@@ -4573,6 +4933,30 @@
       "created_at": "2026-06-26T22:27:30.347+00:00"
     },
     {
+      "id": "pred-user-1781095373876-m-imported-46",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-46",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-10T13:05:13.025+00:00"
+    },
+    {
+      "id": "pred-user-1781188456193-m-imported-103",
+      "user_id": "user-1781188456193",
+      "match_id": "m-imported-103",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-07-16T20:48:45.258+00:00"
+    },
+    {
+      "id": "pred-user-1781188456193-m-imported-104",
+      "user_id": "user-1781188456193",
+      "match_id": "m-imported-104",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-07-16T20:48:56.931+00:00"
+    },
+    {
       "id": "pred-user-diego-m-imported-12",
       "user_id": "user-diego",
       "match_id": "m-imported-12",
@@ -4587,6 +4971,14 @@
       "gols_casa": 3,
       "gols_fora": 0,
       "created_at": "2026-06-13T05:00:36.427+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-37",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-37",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-19T01:17:30.301+00:00"
     },
     {
       "id": "pred-user-1780972192868-m-imported-18",
@@ -4725,6 +5117,14 @@
       "created_at": "2026-06-19T13:08:13.655+00:00"
     },
     {
+      "id": "pred-user-1781200005128-m-imported-48",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-48",
+      "gols_casa": 3,
+      "gols_fora": 2,
+      "created_at": "2026-06-21T23:31:38.568+00:00"
+    },
+    {
       "id": "pred-user-1781199818607-m-imported-32",
       "user_id": "user-1781199818607",
       "match_id": "m-imported-32",
@@ -4843,6 +5243,14 @@
       "gols_casa": 3,
       "gols_fora": 1,
       "created_at": "2026-06-23T11:39:09.462+00:00"
+    },
+    {
+      "id": "pred-user-1780956449173-m-imported-10",
+      "user_id": "user-1780956449173",
+      "match_id": "m-imported-10",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-14T10:42:59.774+00:00"
     },
     {
       "id": "pred-user-1781199818607-m-imported-37",
@@ -5101,12 +5509,36 @@
       "created_at": "2026-06-20T15:31:16.504+00:00"
     },
     {
-      "id": "pred-user-1781072168812-m-imported-47",
+      "id": "pred-user-1781200240943-m-imported-75",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-75",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-29T19:54:54.27+00:00"
+    },
+    {
+      "id": "pred-user-1781072168812-m-imported-102",
       "user_id": "user-1781072168812",
-      "match_id": "m-imported-47",
-      "gols_casa": 2,
+      "match_id": "m-imported-102",
+      "gols_casa": 1,
       "gols_fora": 1,
-      "created_at": "2026-06-23T18:58:25.361+00:00"
+      "created_at": "2026-07-14T07:03:31.944+00:00"
+    },
+    {
+      "id": "pred-user-1781095373876-m-imported-47",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-47",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T13:05:47.571+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-101",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-101",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-07-14T13:32:02.626+00:00"
     },
     {
       "id": "pred-user-1781095373876-m-imported-41",
@@ -5253,6 +5685,30 @@
       "created_at": "2026-06-14T22:07:43.344+00:00"
     },
     {
+      "id": "pred-user-1781192283318-m-imported-74",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-74",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-28T13:50:37.661+00:00"
+    },
+    {
+      "id": "pred-user-1781094951149-m-imported-6",
+      "user_id": "user-1781094951149",
+      "match_id": "m-imported-6",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-13T16:08:35.319+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-58",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-58",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-26T00:47:48.19+00:00"
+    },
+    {
       "id": "pred-user-1781015783888-m-imported-40",
       "user_id": "user-1781015783888",
       "match_id": "m-imported-40",
@@ -5333,6 +5789,62 @@
       "created_at": "2026-06-15T00:56:33.073+00:00"
     },
     {
+      "id": "pred-user-1781005544161-m-imported-2",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-2",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T13:57:16.453+00:00"
+    },
+    {
+      "id": "pred-user-1781095373876-m-imported-33",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-33",
+      "gols_casa": 4,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T13:03:20.889+00:00"
+    },
+    {
+      "id": "pred-user-1780972192868-m-imported-25",
+      "user_id": "user-1780972192868",
+      "match_id": "m-imported-25",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-19T00:50:18.043+00:00"
+    },
+    {
+      "id": "pred-user-1781282241568-m-imported-72",
+      "user_id": "user-1781282241568",
+      "match_id": "m-imported-72",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-19T15:22:47.155+00:00"
+    },
+    {
+      "id": "pred-user-1781126770341-m-imported-72",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-72",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-27T23:12:13.396+00:00"
+    },
+    {
+      "id": "pred-user-1781194558512-m-imported-24",
+      "user_id": "user-1781194558512",
+      "match_id": "m-imported-24",
+      "gols_casa": 3,
+      "gols_fora": 2,
+      "created_at": "2026-06-17T20:22:16.848+00:00"
+    },
+    {
+      "id": "pred-user-1781188456193-m-imported-32",
+      "user_id": "user-1781188456193",
+      "match_id": "m-imported-32",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-19T23:44:39.662+00:00"
+    },
+    {
       "id": "pred-user-1781096449138-m-imported-57",
       "user_id": "user-1781096449138",
       "match_id": "m-imported-57",
@@ -5379,6 +5891,30 @@
       "gols_casa": 1,
       "gols_fora": 2,
       "created_at": "2026-06-26T12:58:07.301+00:00"
+    },
+    {
+      "id": "pred-user-1781130184341-m-imported-6",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-6",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-11T11:50:30.31+00:00"
+    },
+    {
+      "id": "pred-user-1781130184341-m-imported-69",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-69",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-14T15:42:14.408+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-96",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-96",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-07-07T10:34:08.093+00:00"
     },
     {
       "id": "pred-user-1781125678721-m-imported-31",
@@ -5477,6 +6013,62 @@
       "created_at": "2026-06-21T23:49:48.425+00:00"
     },
     {
+      "id": "pred-user-1781190858904-m-imported-49",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-49",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-24T21:20:09.096+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-98",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-98",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-07-09T13:45:11.056+00:00"
+    },
+    {
+      "id": "pred-user-1781130184341-m-imported-83",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-83",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-07-02T01:22:53.619+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-52",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-52",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-20T20:34:45.529+00:00"
+    },
+    {
+      "id": "pred-user-1780956449173-m-imported-47",
+      "user_id": "user-1780956449173",
+      "match_id": "m-imported-47",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-23T00:58:45.164+00:00"
+    },
+    {
+      "id": "pred-user-1781188456193-m-imported-28",
+      "user_id": "user-1781188456193",
+      "match_id": "m-imported-28",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-18T10:24:56.698+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-75",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-75",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-29T02:21:32.183+00:00"
+    },
+    {
       "id": "pred-user-1781110023643-m-imported-99",
       "user_id": "user-1781110023643",
       "match_id": "m-imported-99",
@@ -5499,6 +6091,62 @@
       "gols_casa": 2,
       "gols_fora": 1,
       "created_at": "2026-06-28T04:39:49.361+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-83",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-83",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-07-01T23:00:12.891+00:00"
+    },
+    {
+      "id": "pred-user-1781192283318-m-imported-1",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-1",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-11T15:54:54.845+00:00"
+    },
+    {
+      "id": "pred-user-1781199818607-m-imported-14",
+      "user_id": "user-1781199818607",
+      "match_id": "m-imported-14",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-16T02:43:28.828+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-65",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-65",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-23T22:25:54.721+00:00"
+    },
+    {
+      "id": "pred-user-1781194558512-m-imported-37",
+      "user_id": "user-1781194558512",
+      "match_id": "m-imported-37",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-21T15:29:21.238+00:00"
+    },
+    {
+      "id": "pred-user-1781199818607-m-imported-59",
+      "user_id": "user-1781199818607",
+      "match_id": "m-imported-59",
+      "gols_casa": 4,
+      "gols_fora": 1,
+      "created_at": "2026-06-25T19:26:08.511+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-50",
+      "user_id": "user-diego",
+      "match_id": "m-imported-50",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-23T00:11:24.532+00:00"
     },
     {
       "id": "pred-user-1781194558512-m-imported-2",
@@ -5637,6 +6285,54 @@
       "created_at": "2026-06-26T16:51:13.283+00:00"
     },
     {
+      "id": "pred-user-1781095373876-m-imported-102",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-102",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-07-14T00:14:32.404+00:00"
+    },
+    {
+      "id": "pred-user-1780868826114-m-imported-65",
+      "user_id": "user-1780868826114",
+      "match_id": "m-imported-65",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-26T00:17:20.669+00:00"
+    },
+    {
+      "id": "pred-user-1781192283318-m-imported-4",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-4",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-11T15:55:26.802+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-48",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-48",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-23T17:28:34.435+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-58",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-58",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-25T19:05:58.783+00:00"
+    },
+    {
+      "id": "pred-user-1781126770341-m-imported-25",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-25",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-18T18:20:06.58+00:00"
+    },
+    {
       "id": "pred-user-1781004737829-m-imported-18",
       "user_id": "user-1781004737829",
       "match_id": "m-imported-18",
@@ -5683,6 +6379,62 @@
       "gols_casa": 2,
       "gols_fora": 1,
       "created_at": "2026-06-28T12:24:45.803+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-38",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-38",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-21T16:15:17.789+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-49",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-49",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T14:22:19.003+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-67",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-67",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-27T09:39:01.437+00:00"
+    },
+    {
+      "id": "pred-user-1780962502571-m-imported-28",
+      "user_id": "user-1780962502571",
+      "match_id": "m-imported-28",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-18T04:16:02.638+00:00"
+    },
+    {
+      "id": "pred-user-1781201106289-m-imported-79",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-79",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-28T12:50:50.851+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-35",
+      "user_id": "user-diego",
+      "match_id": "m-imported-35",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-20T14:49:32.802+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-56",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-56",
+      "gols_casa": 2,
+      "gols_fora": 3,
+      "created_at": "2026-06-25T19:22:56.982+00:00"
     },
     {
       "id": "pred-user-1781201106289-m-imported-39",
@@ -5877,20 +6629,52 @@
       "created_at": "2026-06-26T16:45:22.142+00:00"
     },
     {
-      "id": "pred-user-diego-m-imported-35",
-      "user_id": "user-diego",
-      "match_id": "m-imported-35",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-06-20T14:49:32.802+00:00"
-    },
-    {
       "id": "pred-user-1781199818607-m-imported-56",
       "user_id": "user-1781199818607",
       "match_id": "m-imported-56",
       "gols_casa": 1,
       "gols_fora": 3,
       "created_at": "2026-06-25T19:23:28.049+00:00"
+    },
+    {
+      "id": "pred-user-1781201106289-m-imported-29",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-29",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-20T00:17:21.492+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-55",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-55",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-25T00:36:30.263+00:00"
+    },
+    {
+      "id": "pred-user-1781188456193-m-imported-83",
+      "user_id": "user-1781188456193",
+      "match_id": "m-imported-83",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-07-02T22:36:31.675+00:00"
+    },
+    {
+      "id": "pred-user-1781126770341-m-imported-7",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-7",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-13T21:23:16.212+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-75",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-75",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-28T18:34:32.071+00:00"
     },
     {
       "id": "pred-user-1781126770341-m-imported-26",
@@ -5915,6 +6699,22 @@
       "gols_casa": 2,
       "gols_fora": 0,
       "created_at": "2026-06-19T00:43:44.449+00:00"
+    },
+    {
+      "id": "pred-user-1781004737829-m-imported-32",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-32",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-19T18:29:29.589+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-75",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-75",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-29T00:39:22.37+00:00"
     },
     {
       "id": "pred-user-1780956449173-m-imported-64",
@@ -6165,6 +6965,14 @@
       "created_at": "2026-07-06T16:59:06.14+00:00"
     },
     {
+      "id": "pred-user-1781004737829-m-imported-6",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-6",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-12T07:16:01.889+00:00"
+    },
+    {
       "id": "pred-user-1781282241568-m-imported-61",
       "user_id": "user-1781282241568",
       "match_id": "m-imported-61",
@@ -6173,12 +6981,340 @@
       "created_at": "2026-06-19T15:21:29.857+00:00"
     },
     {
+      "id": "pred-user-1781005544161-m-imported-97",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-97",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-07-09T12:07:05.011+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-64",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-64",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-23T22:27:43.751+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-45",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-45",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-20T21:47:13.273+00:00"
+    },
+    {
+      "id": "pred-user-1780972192868-m-imported-59",
+      "user_id": "user-1780972192868",
+      "match_id": "m-imported-59",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-23T11:43:24.553+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-66",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-66",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-24T15:24:18.101+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-100",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-100",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-07-09T13:46:00.834+00:00"
+    },
+    {
+      "id": "pred-user-1781199818607-m-imported-98",
+      "user_id": "user-1781199818607",
+      "match_id": "m-imported-98",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-07-09T17:10:37.225+00:00"
+    },
+    {
+      "id": "pred-user-1781135488087-m-imported-70",
+      "user_id": "user-1781135488087",
+      "match_id": "m-imported-70",
+      "gols_casa": 0,
+      "gols_fora": 5,
+      "created_at": "2026-06-11T00:07:17.536+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-20",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-20",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-09T00:02:47.222+00:00"
+    },
+    {
+      "id": "pred-user-1780868826114-m-imported-31",
+      "user_id": "user-1780868826114",
+      "match_id": "m-imported-31",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-17T15:22:14.74+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-91",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-91",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-07-04T14:41:03.031+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-57",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-57",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-26T01:04:48.903+00:00"
+    },
+    {
+      "id": "pred-user-1781126770341-m-imported-96",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-96",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-07-07T14:10:59.993+00:00"
+    },
+    {
+      "id": "pred-user-1781201106289-m-imported-98",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-98",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-07-09T16:27:12.223+00:00"
+    },
+    {
+      "id": "pred-user-1781201106289-m-imported-11",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-11",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-13T15:46:40.626+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-47",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-47",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-23T01:35:33.162+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-85",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-85",
+      "gols_casa": 3,
+      "gols_fora": 2,
+      "created_at": "2026-07-03T02:13:46.779+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-96",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-96",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-07-05T09:39:31.123+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-14",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-14",
+      "gols_casa": 5,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T12:22:42.444+00:00"
+    },
+    {
+      "id": "pred-user-1780962502571-m-imported-30",
+      "user_id": "user-1780962502571",
+      "match_id": "m-imported-30",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-19T04:05:43.114+00:00"
+    },
+    {
+      "id": "pred-user-1781201106289-m-imported-87",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-87",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-07-03T19:59:30.9+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-47",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-47",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-18T00:20:46.242+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-23",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-23",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:51:35.404+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-9",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-9",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T14:01:27.808+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-94",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-94",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-07-06T18:32:36.666+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-62",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-62",
+      "gols_casa": 2,
+      "gols_fora": 4,
+      "created_at": "2026-06-26T12:03:55.398+00:00"
+    },
+    {
+      "id": "pred-user-1781192283318-m-imported-95",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-95",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-07-07T00:38:43.365+00:00"
+    },
+    {
+      "id": "pred-user-1781282241568-m-imported-18",
+      "user_id": "user-1781282241568",
+      "match_id": "m-imported-18",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-12T18:38:42.456+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-62",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-62",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-26T18:50:42.559+00:00"
+    },
+    {
+      "id": "pred-user-1780972192868-m-imported-38",
+      "user_id": "user-1780972192868",
+      "match_id": "m-imported-38",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-18T02:18:28.87+00:00"
+    },
+    {
+      "id": "pred-user-1781199818607-m-imported-60",
+      "user_id": "user-1781199818607",
+      "match_id": "m-imported-60",
+      "gols_casa": 2,
+      "gols_fora": 3,
+      "created_at": "2026-06-25T19:25:17.799+00:00"
+    },
+    {
+      "id": "pred-user-1781188456193-m-imported-26",
+      "user_id": "user-1781188456193",
+      "match_id": "m-imported-26",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-18T10:25:18.408+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-19",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-19",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-11T17:53:05.444+00:00"
+    },
+    {
+      "id": "pred-user-1781004737829-m-imported-90",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-90",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-07-04T00:09:02.152+00:00"
+    },
+    {
+      "id": "pred-user-1780868826114-m-imported-90",
+      "user_id": "user-1780868826114",
+      "match_id": "m-imported-90",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-07-04T14:09:27.997+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-93",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-93",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-07-04T12:50:42.824+00:00"
+    },
+    {
+      "id": "pred-user-1781004737829-m-imported-51",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-51",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-21T17:37:55.562+00:00"
+    },
+    {
+      "id": "pred-user-1781126770341-m-imported-56",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-56",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-25T03:05:23.021+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-64",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-64",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-27T02:04:43.439+00:00"
+    },
+    {
+      "id": "pred-user-1781126770341-m-imported-70",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-70",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-27T23:37:20.25+00:00"
+    },
+    {
       "id": "pred-user-1781282241568-m-imported-7",
       "user_id": "user-1781282241568",
       "match_id": "m-imported-7",
       "gols_casa": 2,
       "gols_fora": 1,
       "created_at": "2026-06-12T16:40:27.73+00:00"
+    },
+    {
+      "id": "pred-user-1781192283318-m-imported-60",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-60",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-14T16:09:36.67+00:00"
     },
     {
       "id": "pred-user-1781072168812-m-imported-15",
@@ -6381,46 +7517,6 @@
       "created_at": "2026-06-29T23:38:26.566+00:00"
     },
     {
-      "id": "pred-user-1781015783888-m-imported-96",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-96",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-07-04T12:51:32.208+00:00"
-    },
-    {
-      "id": "pred-user-1781126770341-m-imported-41",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-41",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-17T23:43:59.91+00:00"
-    },
-    {
-      "id": "pred-user-1781201106289-m-imported-71",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-71",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-26T03:37:55.072+00:00"
-    },
-    {
-      "id": "pred-user-1781072168812-m-imported-37",
-      "user_id": "user-1781072168812",
-      "match_id": "m-imported-37",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-19T14:46:00.023+00:00"
-    },
-    {
-      "id": "pred-user-1781005544161-m-imported-84",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-84",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-30T20:28:44.794+00:00"
-    },
-    {
       "id": "pred-user-1781199818607-m-imported-10",
       "user_id": "user-1781199818607",
       "match_id": "m-imported-10",
@@ -6443,6 +7539,14 @@
       "gols_casa": 1,
       "gols_fora": 2,
       "created_at": "2026-07-04T12:49:27.162+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-33",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-33",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-20T19:21:39.366+00:00"
     },
     {
       "id": "pred-user-1781095373876-m-imported-93",
@@ -6675,38 +7779,6 @@
       "gols_casa": 1,
       "gols_fora": 0,
       "created_at": "2026-07-11T19:08:00.747+00:00"
-    },
-    {
-      "id": "pred-user-1781130184341-m-imported-48",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-48",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-20T20:47:11.116+00:00"
-    },
-    {
-      "id": "pred-user-1780962805030-m-imported-33",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-33",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-20T10:19:57.342+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-70",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-70",
-      "gols_casa": 0,
-      "gols_fora": 4,
-      "created_at": "2026-06-26T23:25:32.618+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-44",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-44",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-19T14:53:51.93+00:00"
     },
     {
       "id": "pred-user-1781004737829-m-imported-73",
@@ -6965,28 +8037,532 @@
       "created_at": "2026-06-21T15:44:40.672+00:00"
     },
     {
-      "id": "pred-user-1781192283318-m-imported-97",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-97",
+      "id": "pred-user-1781201106289-m-imported-104",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-104",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-07-19T17:11:34.147+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-101",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-101",
       "gols_casa": 1,
       "gols_fora": 1,
-      "created_at": "2026-07-07T18:10:12.354+00:00"
+      "created_at": "2026-07-14T15:40:59.969+00:00"
     },
     {
-      "id": "pred-user-1781125678721-m-imported-37",
+      "id": "pred-user-1781125678721-m-imported-19",
       "user_id": "user-1781125678721",
-      "match_id": "m-imported-37",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-18T00:24:28.992+00:00"
+      "match_id": "m-imported-19",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T21:16:48.031+00:00"
     },
     {
-      "id": "pred-user-1781005544161-m-imported-23",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-23",
+      "id": "pred-user-1781130184341-m-imported-56",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-56",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-13T02:58:26.798+00:00"
+    },
+    {
+      "id": "pred-user-1781199818607-m-imported-104",
+      "user_id": "user-1781199818607",
+      "match_id": "m-imported-104",
+      "gols_casa": 2,
+      "gols_fora": 3,
+      "created_at": "2026-07-16T03:34:22.799+00:00"
+    },
+    {
+      "id": "pred-user-1780972192868-m-imported-5",
+      "user_id": "user-1780972192868",
+      "match_id": "m-imported-5",
       "gols_casa": 0,
       "gols_fora": 2,
-      "created_at": "2026-06-10T14:06:33.946+00:00"
+      "created_at": "2026-06-10T23:35:54.169+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-4",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-4",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-08T23:58:41.88+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-19",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-19",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T06:58:16.625+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-5",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-5",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T13:02:48.31+00:00"
+    },
+    {
+      "id": "pred-user-1781201106289-m-imported-93",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-93",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-07-03T20:02:41.293+00:00"
+    },
+    {
+      "id": "pred-user-1781188456193-m-imported-14",
+      "user_id": "user-1781188456193",
+      "match_id": "m-imported-14",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T04:08:05.507+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-1",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-1",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-11T17:47:45.876+00:00"
+    },
+    {
+      "id": "pred-user-1781130184341-m-imported-44",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-44",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-11T12:00:18.946+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-35",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-35",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-08T23:52:46.125+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-60",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-60",
+      "gols_casa": 0,
+      "gols_fora": 4,
+      "created_at": "2026-06-25T01:02:46.434+00:00"
+    },
+    {
+      "id": "pred-user-1780972192868-m-imported-50",
+      "user_id": "user-1780972192868",
+      "match_id": "m-imported-50",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-23T11:40:40.861+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-100",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-100",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-07-11T16:18:08.156+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-54",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-54",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-24T16:40:36.167+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-97",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-97",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-07-09T12:16:40.454+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-21",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-21",
+      "gols_casa": 5,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T21:17:05.513+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-92",
+      "user_id": "user-diego",
+      "match_id": "m-imported-92",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-07-05T19:36:28.834+00:00"
+    },
+    {
+      "id": "pred-user-1780972192868-m-imported-26",
+      "user_id": "user-1780972192868",
+      "match_id": "m-imported-26",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T11:02:55.224+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-32",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-32",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-16T23:55:05.025+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-88",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-88",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-28T21:33:57.638+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-18",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-18",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T14:04:42.826+00:00"
+    },
+    {
+      "id": "pred-user-1780972192868-m-imported-85",
+      "user_id": "user-1780972192868",
+      "match_id": "m-imported-85",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-30T09:17:23.717+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-62",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-62",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-23T14:34:28.511+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-39",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-39",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-20T01:35:22.855+00:00"
+    },
+    {
+      "id": "pred-user-1781135488087-m-imported-24",
+      "user_id": "user-1781135488087",
+      "match_id": "m-imported-24",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T23:58:31.867+00:00"
+    },
+    {
+      "id": "pred-user-1781095373876-m-imported-63",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-63",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T13:08:52.319+00:00"
+    },
+    {
+      "id": "pred-user-1780972192868-m-imported-64",
+      "user_id": "user-1780972192868",
+      "match_id": "m-imported-64",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-25T09:21:43.985+00:00"
+    },
+    {
+      "id": "pred-user-1781201106289-m-imported-13",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-13",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T00:57:16.753+00:00"
+    },
+    {
+      "id": "pred-user-1780868826114-m-imported-9",
+      "user_id": "user-1780868826114",
+      "match_id": "m-imported-9",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-13T21:04:49.728+00:00"
+    },
+    {
+      "id": "pred-user-1780962434760-m-imported-17",
+      "user_id": "user-1780962434760",
+      "match_id": "m-imported-17",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-08T23:50:42.915+00:00"
+    },
+    {
+      "id": "pred-user-1781004737829-m-imported-82",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-82",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-28T10:31:57.593+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-74",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-74",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-29T19:28:33.201+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-89",
+      "user_id": "user-diego",
+      "match_id": "m-imported-89",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-07-04T15:14:06.852+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-1",
+      "user_id": "user-diego",
+      "match_id": "m-imported-1",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-07T02:46:46.003+00:00"
+    },
+    {
+      "id": "pred-user-1781126770341-m-imported-65",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-65",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-26T21:57:54.329+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-104",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-104",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-07-19T18:13:28.962+00:00"
+    },
+    {
+      "id": "pred-user-1781192283318-m-imported-11",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-11",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-11T16:02:15.868+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-14",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-14",
+      "gols_casa": 5,
+      "gols_fora": 0,
+      "created_at": "2026-06-14T21:28:27.272+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-76",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-76",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-29T02:21:26.633+00:00"
+    },
+    {
+      "id": "pred-user-1781095373876-m-imported-70",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-70",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T13:09:43.16+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-60",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-60",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-24T15:23:33.769+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-14",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-14",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-11T14:41:05.275+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-97",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-97",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-07-09T16:19:54.734+00:00"
+    },
+    {
+      "id": "pred-user-1780868826114-m-imported-77",
+      "user_id": "user-1780868826114",
+      "match_id": "m-imported-77",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-28T18:26:30.541+00:00"
+    },
+    {
+      "id": "pred-user-1781201106289-m-imported-17",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-17",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-16T01:17:34.089+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-20",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-20",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-16T18:01:04.156+00:00"
+    },
+    {
+      "id": "pred-user-1781194558512-m-imported-67",
+      "user_id": "user-1781194558512",
+      "match_id": "m-imported-67",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-27T17:31:24.933+00:00"
+    },
+    {
+      "id": "pred-user-1781199818607-m-imported-100",
+      "user_id": "user-1781199818607",
+      "match_id": "m-imported-100",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-07-09T17:13:07.613+00:00"
+    },
+    {
+      "id": "pred-user-1781201106289-m-imported-78",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-78",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-28T12:49:30.82+00:00"
+    },
+    {
+      "id": "pred-user-1781072168812-m-imported-68",
+      "user_id": "user-1781072168812",
+      "match_id": "m-imported-68",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-26T23:17:41.435+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-29",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-29",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-19T14:26:14.624+00:00"
+    },
+    {
+      "id": "pred-user-1781072168812-m-imported-36",
+      "user_id": "user-1781072168812",
+      "match_id": "m-imported-36",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-18T17:54:21.816+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-61",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-61",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-23T22:24:43.722+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-36",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-36",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-11T17:56:55.723+00:00"
+    },
+    {
+      "id": "pred-user-1781194558512-m-imported-17",
+      "user_id": "user-1781194558512",
+      "match_id": "m-imported-17",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-16T17:43:53.571+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-21",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-21",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-11T14:13:45.792+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-74",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-74",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-29T02:21:37.391+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-80",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-80",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-30T21:20:47.356+00:00"
+    },
+    {
+      "id": "pred-user-1781130184341-m-imported-74",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-74",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-28T12:24:05.707+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-3",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-3",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T16:59:33.692+00:00"
+    },
+    {
+      "id": "pred-user-1780972192868-m-imported-27",
+      "user_id": "user-1780972192868",
+      "match_id": "m-imported-27",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-15T11:03:06.575+00:00"
+    },
+    {
+      "id": "pred-user-1781199818607-m-imported-89",
+      "user_id": "user-1781199818607",
+      "match_id": "m-imported-89",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-07-04T02:14:31.008+00:00"
     },
     {
       "id": "pred-user-1781194558512-m-imported-35",
@@ -6995,78 +8571,6 @@
       "gols_casa": 3,
       "gols_fora": 0,
       "created_at": "2026-06-20T03:49:05.782+00:00"
-    },
-    {
-      "id": "pred-user-1781282241568-m-imported-77",
-      "user_id": "user-1781282241568",
-      "match_id": "m-imported-77",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-30T13:59:29.455+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-15",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-15",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-14T18:45:03.995+00:00"
-    },
-    {
-      "id": "pred-user-1781188456193-m-imported-92",
-      "user_id": "user-1781188456193",
-      "match_id": "m-imported-92",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-07-05T14:39:17.71+00:00"
-    },
-    {
-      "id": "pred-user-1781192283318-m-imported-5",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-5",
-      "gols_casa": 0,
-      "gols_fora": 3,
-      "created_at": "2026-06-11T16:00:55.835+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-80",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-80",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-30T16:13:13.546+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-78",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-78",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-28T23:09:16.291+00:00"
-    },
-    {
-      "id": "pred-user-1781135488087-m-imported-72",
-      "user_id": "user-1781135488087",
-      "match_id": "m-imported-72",
-      "gols_casa": 0,
-      "gols_fora": 0,
-      "created_at": "2026-06-11T00:07:36.531+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-61",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-61",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-26T16:42:39.894+00:00"
-    },
-    {
-      "id": "pred-user-1781194558512-m-imported-44",
-      "user_id": "user-1781194558512",
-      "match_id": "m-imported-44",
-      "gols_casa": 2,
-      "gols_fora": 3,
-      "created_at": "2026-06-22T16:49:48.277+00:00"
     },
     {
       "id": "pred-user-1781188456193-m-imported-82",
@@ -7253,84 +8757,12 @@
       "created_at": "2026-07-02T01:23:18.137+00:00"
     },
     {
-      "id": "pred-user-1781004737829-m-imported-12",
-      "user_id": "user-1781004737829",
-      "match_id": "m-imported-12",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-12T07:19:00.124+00:00"
-    },
-    {
-      "id": "pred-user-1781094951149-m-imported-61",
-      "user_id": "user-1781094951149",
-      "match_id": "m-imported-61",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-25T09:23:47.439+00:00"
-    },
-    {
-      "id": "pred-user-1781005544161-m-imported-16",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-16",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T14:04:05.479+00:00"
-    },
-    {
       "id": "pred-user-1781096449138-m-imported-86",
       "user_id": "user-1781096449138",
       "match_id": "m-imported-86",
       "gols_casa": 2,
       "gols_fora": 0,
       "created_at": "2026-06-28T10:18:36.682+00:00"
-    },
-    {
-      "id": "pred-user-1781282241568-m-imported-49",
-      "user_id": "user-1781282241568",
-      "match_id": "m-imported-49",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-19T15:20:07.643+00:00"
-    },
-    {
-      "id": "pred-user-1781126770341-m-imported-9",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-9",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T21:31:12.232+00:00"
-    },
-    {
-      "id": "pred-user-1781004737829-m-imported-52",
-      "user_id": "user-1781004737829",
-      "match_id": "m-imported-52",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-21T17:38:09.356+00:00"
-    },
-    {
-      "id": "pred-user-1780962502571-m-imported-5",
-      "user_id": "user-1780962502571",
-      "match_id": "m-imported-5",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-06-13T04:15:44.966+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-65",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-65",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T13:08:34.28+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-89",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-89",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-07-04T12:51:52.03+00:00"
     },
     {
       "id": "pred-user-1781199818607-m-imported-83",
@@ -7355,30 +8787,6 @@
       "gols_casa": 0,
       "gols_fora": 0,
       "created_at": "2026-06-11T00:04:36.319+00:00"
-    },
-    {
-      "id": "pred-user-1781188456193-m-imported-53",
-      "user_id": "user-1781188456193",
-      "match_id": "m-imported-53",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-24T02:25:48.356+00:00"
-    },
-    {
-      "id": "pred-user-1781199818607-m-imported-27",
-      "user_id": "user-1781199818607",
-      "match_id": "m-imported-27",
-      "gols_casa": 3,
-      "gols_fora": 2,
-      "created_at": "2026-06-17T12:21:34.524+00:00"
-    },
-    {
-      "id": "pred-user-1781135488087-m-imported-6",
-      "user_id": "user-1781135488087",
-      "match_id": "m-imported-6",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T23:54:53.787+00:00"
     },
     {
       "id": "pred-user-1781135488087-m-imported-81",
@@ -7419,46 +8827,6 @@
       "gols_casa": 1,
       "gols_fora": 1,
       "created_at": "2026-07-17T23:53:30.95+00:00"
-    },
-    {
-      "id": "pred-user-diego-m-imported-103",
-      "user_id": "user-diego",
-      "match_id": "m-imported-103",
-      "gols_casa": 3,
-      "gols_fora": 2,
-      "created_at": "2026-07-16T12:25:37.865+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-37",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-37",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-19T01:17:30.301+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-75",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-75",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-29T19:54:54.27+00:00"
-    },
-    {
-      "id": "pred-user-1781072168812-m-imported-102",
-      "user_id": "user-1781072168812",
-      "match_id": "m-imported-102",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-07-14T07:03:31.944+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-47",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-47",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-10T13:05:47.571+00:00"
     },
     {
       "id": "pred-user-1781130184341-m-imported-25",
@@ -7549,14 +8917,6 @@
       "created_at": "2026-06-11T11:51:51.462+00:00"
     },
     {
-      "id": "pred-user-1780962805030-m-imported-35",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-35",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-10T14:17:45.849+00:00"
-    },
-    {
       "id": "pred-user-1780972192868-m-imported-33",
       "user_id": "user-1780972192868",
       "match_id": "m-imported-33",
@@ -7597,30 +8957,6 @@
       "created_at": "2026-06-09T00:20:45.871+00:00"
     },
     {
-      "id": "pred-user-1780962502571-m-imported-64",
-      "user_id": "user-1780962502571",
-      "match_id": "m-imported-64",
-      "gols_casa": 0,
-      "gols_fora": 4,
-      "created_at": "2026-06-26T23:45:59.208+00:00"
-    },
-    {
-      "id": "pred-user-1781194558512-m-imported-70",
-      "user_id": "user-1781194558512",
-      "match_id": "m-imported-70",
-      "gols_casa": 0,
-      "gols_fora": 4,
-      "created_at": "2026-06-27T17:32:48.593+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-38",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-38",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-22T00:57:16.717+00:00"
-    },
-    {
       "id": "pred-user-diego-m-imported-11",
       "user_id": "user-diego",
       "match_id": "m-imported-11",
@@ -7643,86 +8979,6 @@
       "gols_casa": 1,
       "gols_fora": 1,
       "created_at": "2026-07-04T17:58:57.722+00:00"
-    },
-    {
-      "id": "pred-user-1781125678721-m-imported-77",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-77",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-28T21:28:02.268+00:00"
-    },
-    {
-      "id": "pred-user-1781130184341-m-imported-52",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-52",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-06-11T12:03:26.664+00:00"
-    },
-    {
-      "id": "pred-user-1781192283318-m-imported-96",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-96",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-07-07T00:38:11.089+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-45",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-45",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-23T13:00:45.008+00:00"
-    },
-    {
-      "id": "pred-user-1781126770341-m-imported-23",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-23",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-17T09:44:13.128+00:00"
-    },
-    {
-      "id": "pred-user-1780962805030-m-imported-21",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-21",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-16T01:39:46.68+00:00"
-    },
-    {
-      "id": "pred-user-1781072168812-m-imported-1",
-      "user_id": "user-1781072168812",
-      "match_id": "m-imported-1",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T16:53:03.434+00:00"
-    },
-    {
-      "id": "pred-user-1781192283318-m-imported-7",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-7",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-11T15:56:47.76+00:00"
-    },
-    {
-      "id": "pred-user-1781126770341-m-imported-78",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-78",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-06-30T16:46:04.104+00:00"
-    },
-    {
-      "id": "pred-user-1781096449138-m-imported-61",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-61",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-17T06:04:28.103+00:00"
     },
     {
       "id": "pred-user-1781194558512-m-imported-9",
@@ -7821,30 +9077,6 @@
       "created_at": "2026-06-10T21:14:51.35+00:00"
     },
     {
-      "id": "pred-user-1781125678721-m-imported-79",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-79",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-28T21:28:26.16+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-53",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-53",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T13:06:05.542+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-92",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-92",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-07-05T13:40:30.178+00:00"
-    },
-    {
       "id": "pred-user-1781194558512-m-imported-54",
       "user_id": "user-1781194558512",
       "match_id": "m-imported-54",
@@ -7853,92 +9085,12 @@
       "created_at": "2026-06-24T15:47:09.15+00:00"
     },
     {
-      "id": "pred-user-1781005544161-m-imported-101",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-101",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-07-14T13:32:02.626+00:00"
-    },
-    {
-      "id": "pred-user-1781005544161-m-imported-2",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-2",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T13:57:16.453+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-33",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-33",
-      "gols_casa": 4,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T13:03:20.889+00:00"
-    },
-    {
-      "id": "pred-user-1780972192868-m-imported-25",
-      "user_id": "user-1780972192868",
-      "match_id": "m-imported-25",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-19T00:50:18.043+00:00"
-    },
-    {
-      "id": "pred-user-1781282241568-m-imported-72",
-      "user_id": "user-1781282241568",
-      "match_id": "m-imported-72",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-19T15:22:47.155+00:00"
-    },
-    {
       "id": "pred-user-1781188456193-m-imported-96",
       "user_id": "user-1781188456193",
       "match_id": "m-imported-96",
       "gols_casa": 1,
       "gols_fora": 3,
       "created_at": "2026-07-07T19:23:37.474+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-60",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-60",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T13:06:57.648+00:00"
-    },
-    {
-      "id": "pred-user-1781096449138-m-imported-59",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-59",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-17T21:32:09.285+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-2",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-2",
-      "gols_casa": 0,
-      "gols_fora": 0,
-      "created_at": "2026-06-11T21:10:43.337+00:00"
-    },
-    {
-      "id": "pred-user-1780956449173-m-imported-42",
-      "user_id": "user-1780956449173",
-      "match_id": "m-imported-42",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-22T00:44:04.081+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-49",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-49",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-24T04:02:59.156+00:00"
     },
     {
       "id": "pred-user-1780972192868-m-imported-104",
@@ -8029,38 +9181,6 @@
       "created_at": "2026-06-15T17:49:58.333+00:00"
     },
     {
-      "id": "pred-user-1781072168812-m-imported-39",
-      "user_id": "user-1781072168812",
-      "match_id": "m-imported-39",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-20T18:52:45.515+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-61",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-61",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-10T13:07:55.256+00:00"
-    },
-    {
-      "id": "pred-user-1780962805030-m-imported-16",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-16",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-09T00:01:42.357+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-58",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-58",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-25T00:41:14.506+00:00"
-    },
-    {
       "id": "pred-user-1781130184341-m-imported-88",
       "user_id": "user-1781130184341",
       "match_id": "m-imported-88",
@@ -8075,86 +9195,6 @@
       "gols_casa": 3,
       "gols_fora": 0,
       "created_at": "2026-06-21T00:48:23.317+00:00"
-    },
-    {
-      "id": "pred-user-1781282241568-m-imported-13",
-      "user_id": "user-1781282241568",
-      "match_id": "m-imported-13",
-      "gols_casa": 3,
-      "gols_fora": 3,
-      "created_at": "2026-06-12T18:38:26.269+00:00"
-    },
-    {
-      "id": "pred-user-diego-m-imported-77",
-      "user_id": "user-diego",
-      "match_id": "m-imported-77",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-30T00:30:44.125+00:00"
-    },
-    {
-      "id": "pred-user-diego-m-imported-86",
-      "user_id": "user-diego",
-      "match_id": "m-imported-86",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-07-01T19:19:45.872+00:00"
-    },
-    {
-      "id": "pred-user-1780956449173-m-imported-1",
-      "user_id": "user-1780956449173",
-      "match_id": "m-imported-1",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T00:42:33.798+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-46",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-46",
-      "gols_casa": 0,
-      "gols_fora": 3,
-      "created_at": "2026-06-10T13:05:13.025+00:00"
-    },
-    {
-      "id": "pred-user-1781188456193-m-imported-103",
-      "user_id": "user-1781188456193",
-      "match_id": "m-imported-103",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-07-16T20:48:45.258+00:00"
-    },
-    {
-      "id": "pred-user-1781188456193-m-imported-104",
-      "user_id": "user-1781188456193",
-      "match_id": "m-imported-104",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-07-16T20:48:56.931+00:00"
-    },
-    {
-      "id": "pred-user-1780956449173-m-imported-10",
-      "user_id": "user-1780956449173",
-      "match_id": "m-imported-10",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-14T10:42:59.774+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-1",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-1",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-11T17:57:59.384+00:00"
-    },
-    {
-      "id": "pred-user-1781135488087-m-imported-88",
-      "user_id": "user-1781135488087",
-      "match_id": "m-imported-88",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-28T19:33:09.437+00:00"
     },
     {
       "id": "pred-user-1781096449138-m-imported-72",
@@ -8245,30 +9285,6 @@
       "created_at": "2026-06-28T18:53:16.872+00:00"
     },
     {
-      "id": "pred-user-1781005544161-m-imported-34",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-34",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-20T13:40:54.238+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-48",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-48",
-      "gols_casa": 3,
-      "gols_fora": 2,
-      "created_at": "2026-06-21T23:31:38.568+00:00"
-    },
-    {
-      "id": "pred-user-1781192283318-m-imported-74",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-74",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-28T13:50:37.661+00:00"
-    },
-    {
       "id": "pred-user-1781135488087-m-imported-63",
       "user_id": "user-1781135488087",
       "match_id": "m-imported-63",
@@ -8333,30 +9349,6 @@
       "created_at": "2026-06-10T21:15:46.894+00:00"
     },
     {
-      "id": "pred-user-1781126770341-m-imported-72",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-72",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-27T23:12:13.396+00:00"
-    },
-    {
-      "id": "pred-user-1781194558512-m-imported-24",
-      "user_id": "user-1781194558512",
-      "match_id": "m-imported-24",
-      "gols_casa": 3,
-      "gols_fora": 2,
-      "created_at": "2026-06-17T20:22:16.848+00:00"
-    },
-    {
-      "id": "pred-user-1781188456193-m-imported-32",
-      "user_id": "user-1781188456193",
-      "match_id": "m-imported-32",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-19T23:44:39.662+00:00"
-    },
-    {
       "id": "pred-user-1781110023643-m-imported-18",
       "user_id": "user-1781110023643",
       "match_id": "m-imported-18",
@@ -8379,62 +9371,6 @@
       "gols_casa": 1,
       "gols_fora": 1,
       "created_at": "2026-07-04T02:13:14.741+00:00"
-    },
-    {
-      "id": "pred-user-1780956449173-m-imported-103",
-      "user_id": "user-1780956449173",
-      "match_id": "m-imported-103",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-07-17T22:13:29.562+00:00"
-    },
-    {
-      "id": "pred-user-1781094951149-m-imported-33",
-      "user_id": "user-1781094951149",
-      "match_id": "m-imported-33",
-      "gols_casa": 4,
-      "gols_fora": 1,
-      "created_at": "2026-06-19T16:05:05.426+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-66",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-66",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-24T15:24:18.101+00:00"
-    },
-    {
-      "id": "pred-user-1781130184341-m-imported-6",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-6",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-11T11:50:30.31+00:00"
-    },
-    {
-      "id": "pred-user-1781130184341-m-imported-69",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-69",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-14T15:42:14.408+00:00"
-    },
-    {
-      "id": "pred-user-1780962805030-m-imported-76",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-76",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-28T18:33:45.302+00:00"
-    },
-    {
-      "id": "pred-user-1780972192868-m-imported-69",
-      "user_id": "user-1780972192868",
-      "match_id": "m-imported-69",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-25T09:36:32.72+00:00"
     },
     {
       "id": "pred-user-1781192283318-m-imported-88",
@@ -8501,22 +9437,6 @@
       "created_at": "2026-06-24T00:35:18.052+00:00"
     },
     {
-      "id": "pred-user-1781130184341-m-imported-81",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-81",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-30T10:41:58.496+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-4",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-4",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-11T17:48:33.464+00:00"
-    },
-    {
       "id": "pred-user-1781192283318-m-imported-103",
       "user_id": "user-1781192283318",
       "match_id": "m-imported-103",
@@ -8539,38 +9459,6 @@
       "gols_casa": 1,
       "gols_fora": 2,
       "created_at": "2026-07-09T12:21:26.823+00:00"
-    },
-    {
-      "id": "pred-user-1781094951149-m-imported-6",
-      "user_id": "user-1781094951149",
-      "match_id": "m-imported-6",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-13T16:08:35.319+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-58",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-58",
-      "gols_casa": 0,
-      "gols_fora": 3,
-      "created_at": "2026-06-26T00:47:48.19+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-49",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-49",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-24T21:20:09.096+00:00"
-    },
-    {
-      "id": "pred-user-1781096449138-m-imported-98",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-98",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-07-09T13:45:11.056+00:00"
     },
     {
       "id": "pred-user-1780868826114-m-imported-24",
@@ -8616,9 +9504,9 @@
       "id": "pred-user-1781004737829-m-imported-104",
       "user_id": "user-1781004737829",
       "match_id": "m-imported-104",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-07-16T07:40:15.007+00:00"
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-07-19T13:27:45.212+00:00"
     },
     {
       "id": "pred-user-1781200005128-m-imported-103",
@@ -8685,30 +9573,6 @@
       "created_at": "2026-06-23T20:18:53.08+00:00"
     },
     {
-      "id": "pred-user-1780962805030-m-imported-96",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-96",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-07-07T10:34:08.093+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-102",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-102",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-07-14T00:14:32.404+00:00"
-    },
-    {
-      "id": "pred-user-1780868826114-m-imported-65",
-      "user_id": "user-1780868826114",
-      "match_id": "m-imported-65",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-26T00:17:20.669+00:00"
-    },
-    {
       "id": "pred-user-1781072168812-m-imported-2",
       "user_id": "user-1781072168812",
       "match_id": "m-imported-2",
@@ -8747,38 +9611,6 @@
       "gols_casa": 2,
       "gols_fora": 0,
       "created_at": "2026-06-22T00:43:00.961+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-83",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-83",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-07-01T23:00:12.891+00:00"
-    },
-    {
-      "id": "pred-user-1781192283318-m-imported-1",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-1",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-11T15:54:54.845+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-99",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-99",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-07-08T23:56:19.272+00:00"
-    },
-    {
-      "id": "pred-user-1781199818607-m-imported-14",
-      "user_id": "user-1781199818607",
-      "match_id": "m-imported-14",
-      "gols_casa": 0,
-      "gols_fora": 0,
-      "created_at": "2026-06-16T02:43:28.828+00:00"
     },
     {
       "id": "pred-user-1781005544161-m-imported-41",
@@ -8843,38 +9675,6 @@
       "gols_casa": 2,
       "gols_fora": 0,
       "created_at": "2026-06-20T21:45:39.494+00:00"
-    },
-    {
-      "id": "pred-user-1781130184341-m-imported-50",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-50",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-15T21:06:16.437+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-45",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-45",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-23T11:06:18.648+00:00"
-    },
-    {
-      "id": "pred-user-1780868826114-m-imported-53",
-      "user_id": "user-1780868826114",
-      "match_id": "m-imported-53",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-22T13:11:05.354+00:00"
-    },
-    {
-      "id": "pred-user-1781130184341-m-imported-83",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-83",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-07-02T01:22:53.619+00:00"
     },
     {
       "id": "pred-user-1780962805030-m-imported-18",
@@ -8981,14 +9781,6 @@
       "created_at": "2026-06-11T17:55:38.859+00:00"
     },
     {
-      "id": "pred-user-1781192283318-m-imported-4",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-4",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-06-11T15:55:26.802+00:00"
-    },
-    {
       "id": "pred-user-1780956449173-m-imported-57",
       "user_id": "user-1780956449173",
       "match_id": "m-imported-57",
@@ -9053,30 +9845,6 @@
       "created_at": "2026-07-04T16:28:20.828+00:00"
     },
     {
-      "id": "pred-user-1781004737829-m-imported-13",
-      "user_id": "user-1781004737829",
-      "match_id": "m-imported-13",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-15T23:13:54.812+00:00"
-    },
-    {
-      "id": "pred-user-1781199818607-m-imported-90",
-      "user_id": "user-1781199818607",
-      "match_id": "m-imported-90",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-07-04T02:14:08.473+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-76",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-76",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-28T23:08:35.344+00:00"
-    },
-    {
       "id": "pred-user-1781110023643-m-imported-46",
       "user_id": "user-1781110023643",
       "match_id": "m-imported-46",
@@ -9101,76 +9869,12 @@
       "created_at": "2026-06-10T16:55:42.643+00:00"
     },
     {
-      "id": "pred-user-1781125678721-m-imported-65",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-65",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-23T22:25:54.721+00:00"
-    },
-    {
-      "id": "pred-user-1781194558512-m-imported-37",
-      "user_id": "user-1781194558512",
-      "match_id": "m-imported-37",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-21T15:29:21.238+00:00"
-    },
-    {
-      "id": "pred-user-1781199818607-m-imported-59",
-      "user_id": "user-1781199818607",
-      "match_id": "m-imported-59",
-      "gols_casa": 4,
-      "gols_fora": 1,
-      "created_at": "2026-06-25T19:26:08.511+00:00"
-    },
-    {
-      "id": "pred-user-diego-m-imported-50",
-      "user_id": "user-diego",
-      "match_id": "m-imported-50",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-23T00:11:24.532+00:00"
-    },
-    {
-      "id": "pred-user-1781004737829-m-imported-32",
-      "user_id": "user-1781004737829",
-      "match_id": "m-imported-32",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-19T18:29:29.589+00:00"
-    },
-    {
       "id": "pred-user-1780972192868-m-imported-80",
       "user_id": "user-1780972192868",
       "match_id": "m-imported-80",
       "gols_casa": 4,
       "gols_fora": 0,
       "created_at": "2026-06-28T03:28:57.544+00:00"
-    },
-    {
-      "id": "pred-user-1781096449138-m-imported-52",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-52",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-20T20:34:45.529+00:00"
-    },
-    {
-      "id": "pred-user-1780956449173-m-imported-47",
-      "user_id": "user-1780956449173",
-      "match_id": "m-imported-47",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-23T00:58:45.164+00:00"
-    },
-    {
-      "id": "pred-user-1781188456193-m-imported-28",
-      "user_id": "user-1781188456193",
-      "match_id": "m-imported-28",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-18T10:24:56.698+00:00"
     },
     {
       "id": "pred-user-1781110023643-m-imported-60",
@@ -9187,46 +9891,6 @@
       "gols_casa": 1,
       "gols_fora": 3,
       "created_at": "2026-06-15T00:49:17.367+00:00"
-    },
-    {
-      "id": "pred-user-1781005544161-m-imported-94",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-94",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-07-04T02:50:13.671+00:00"
-    },
-    {
-      "id": "pred-user-1781125678721-m-imported-7",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-7",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T21:14:34.657+00:00"
-    },
-    {
-      "id": "pred-user-1780962502571-m-imported-52",
-      "user_id": "user-1780962502571",
-      "match_id": "m-imported-52",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-24T15:13:48.794+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-78",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-78",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-30T00:43:50.73+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-3",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-3",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T12:44:26.953+00:00"
     },
     {
       "id": "pred-user-1780962805030-m-imported-56",
@@ -9251,30 +9915,6 @@
       "gols_casa": 2,
       "gols_fora": 1,
       "created_at": "2026-07-09T08:49:12.056+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-48",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-48",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-23T17:28:34.435+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-58",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-58",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-25T19:05:58.783+00:00"
-    },
-    {
-      "id": "pred-user-1781126770341-m-imported-25",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-25",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-06-18T18:20:06.58+00:00"
     },
     {
       "id": "pred-user-1781015783888-m-imported-55",
@@ -9381,46 +10021,6 @@
       "created_at": "2026-06-29T02:47:35.859+00:00"
     },
     {
-      "id": "pred-user-1780962805030-m-imported-54",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-54",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T14:21:35.989+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-97",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-97",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-07-09T17:19:54.973+00:00"
-    },
-    {
-      "id": "pred-user-1781125678721-m-imported-20",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-20",
-      "gols_casa": 0,
-      "gols_fora": 0,
-      "created_at": "2026-06-10T21:16:56.605+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-95",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-95",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-07-07T15:18:44.686+00:00"
-    },
-    {
-      "id": "pred-user-1781135488087-m-imported-10",
-      "user_id": "user-1781135488087",
-      "match_id": "m-imported-10",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T23:55:05.433+00:00"
-    },
-    {
       "id": "pred-user-1781125678721-m-imported-102",
       "user_id": "user-1781125678721",
       "match_id": "m-imported-102",
@@ -9451,38 +10051,6 @@
       "gols_casa": 2,
       "gols_fora": 0,
       "created_at": "2026-06-09T11:36:31.72+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-75",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-75",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-29T02:21:32.183+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-38",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-38",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-21T16:15:17.789+00:00"
-    },
-    {
-      "id": "pred-user-1780962805030-m-imported-49",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-49",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T14:22:19.003+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-67",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-67",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-27T09:39:01.437+00:00"
     },
     {
       "id": "pred-user-1780956449173-m-imported-50",
@@ -9533,38 +10101,6 @@
       "created_at": "2026-06-24T13:06:14.297+00:00"
     },
     {
-      "id": "pred-user-1781201106289-m-imported-29",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-29",
-      "gols_casa": 4,
-      "gols_fora": 0,
-      "created_at": "2026-06-20T00:17:21.492+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-55",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-55",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-25T00:36:30.263+00:00"
-    },
-    {
-      "id": "pred-user-1781188456193-m-imported-83",
-      "user_id": "user-1781188456193",
-      "match_id": "m-imported-83",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-07-02T22:36:31.675+00:00"
-    },
-    {
-      "id": "pred-user-1781126770341-m-imported-7",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-7",
-      "gols_casa": 0,
-      "gols_fora": 0,
-      "created_at": "2026-06-13T21:23:16.212+00:00"
-    },
-    {
       "id": "pred-user-1781072168812-m-imported-4",
       "user_id": "user-1781072168812",
       "match_id": "m-imported-4",
@@ -9589,14 +10125,6 @@
       "created_at": "2026-06-19T14:48:02.431+00:00"
     },
     {
-      "id": "pred-user-1781005544161-m-imported-97",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-97",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-07-09T12:07:05.011+00:00"
-    },
-    {
       "id": "pred-user-1781192283318-m-imported-98",
       "user_id": "user-1781192283318",
       "match_id": "m-imported-98",
@@ -9613,36 +10141,12 @@
       "created_at": "2026-07-10T10:39:50.217+00:00"
     },
     {
-      "id": "pred-user-1781096449138-m-imported-104",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-104",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-07-18T23:43:28.919+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-67",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-67",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-26T23:26:07.333+00:00"
-    },
-    {
-      "id": "pred-user-1781125678721-m-imported-64",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-64",
+      "id": "pred-user-1781126770341-m-imported-5",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-5",
       "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-23T22:27:43.751+00:00"
-    },
-    {
-      "id": "pred-user-1780962805030-m-imported-45",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-45",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-20T21:47:13.273+00:00"
+      "gols_fora": 3,
+      "created_at": "2026-06-14T00:47:30.033+00:00"
     },
     {
       "id": "pred-user-1781005544161-m-imported-38",
@@ -9741,116 +10245,12 @@
       "created_at": "2026-06-20T21:55:57.105+00:00"
     },
     {
-      "id": "pred-user-1781072168812-m-imported-55",
-      "user_id": "user-1781072168812",
-      "match_id": "m-imported-55",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-24T20:13:29.913+00:00"
-    },
-    {
-      "id": "pred-user-1780962805030-m-imported-8",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-8",
-      "gols_casa": 0,
-      "gols_fora": 3,
-      "created_at": "2026-06-08T23:58:39.248+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-95",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-95",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-07-06T16:31:39.226+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-14",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-14",
-      "gols_casa": 6,
-      "gols_fora": 0,
-      "created_at": "2026-06-14T19:31:44.154+00:00"
-    },
-    {
-      "id": "pred-user-1780962502571-m-imported-28",
-      "user_id": "user-1780962502571",
-      "match_id": "m-imported-28",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-18T04:16:02.638+00:00"
-    },
-    {
-      "id": "pred-user-1781201106289-m-imported-79",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-79",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-28T12:50:50.851+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-56",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-56",
-      "gols_casa": 2,
-      "gols_fora": 3,
-      "created_at": "2026-06-25T19:22:56.982+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-75",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-75",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-29T00:39:22.37+00:00"
-    },
-    {
-      "id": "pred-user-1781192283318-m-imported-60",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-60",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-14T16:09:36.67+00:00"
-    },
-    {
       "id": "pred-user-1781005544161-m-imported-54",
       "user_id": "user-1781005544161",
       "match_id": "m-imported-54",
       "gols_casa": 1,
       "gols_fora": 2,
       "created_at": "2026-06-24T00:34:39.294+00:00"
-    },
-    {
-      "id": "pred-user-1780962805030-m-imported-75",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-75",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-28T18:34:32.071+00:00"
-    },
-    {
-      "id": "pred-user-1781004737829-m-imported-6",
-      "user_id": "user-1781004737829",
-      "match_id": "m-imported-6",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-12T07:16:01.889+00:00"
-    },
-    {
-      "id": "pred-user-1781130184341-m-imported-65",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-65",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-26T18:28:04.134+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-91",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-91",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-07-04T15:24:38.08+00:00"
     },
     {
       "id": "pred-user-1781200240943-m-imported-63",
@@ -10021,12 +10421,12 @@
       "created_at": "2026-06-24T21:57:13.345+00:00"
     },
     {
-      "id": "pred-user-1780972192868-m-imported-59",
-      "user_id": "user-1780972192868",
-      "match_id": "m-imported-59",
-      "gols_casa": 2,
+      "id": "pred-user-1781190858904-m-imported-35",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-35",
+      "gols_casa": 3,
       "gols_fora": 1,
-      "created_at": "2026-06-23T11:43:24.553+00:00"
+      "created_at": "2026-06-20T16:59:24.181+00:00"
     },
     {
       "id": "pred-user-1781199818607-m-imported-24",
@@ -10117,12 +10517,36 @@
       "created_at": "2026-06-11T00:02:18.59+00:00"
     },
     {
-      "id": "pred-user-1781190858904-m-imported-33",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-33",
-      "gols_casa": 4,
+      "id": "pred-user-1781130184341-m-imported-65",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-65",
+      "gols_casa": 1,
       "gols_fora": 0,
-      "created_at": "2026-06-20T19:21:39.366+00:00"
+      "created_at": "2026-06-26T18:28:04.134+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-33",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-33",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-20T10:19:57.342+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-70",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-70",
+      "gols_casa": 0,
+      "gols_fora": 4,
+      "created_at": "2026-06-26T23:25:32.618+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-91",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-91",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-07-04T15:24:38.08+00:00"
     },
     {
       "id": "pred-user-1780956449173-m-imported-89",
@@ -10131,6 +10555,286 @@
       "gols_casa": 0,
       "gols_fora": 2,
       "created_at": "2026-07-04T15:00:41.438+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-30",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-30",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-18T23:51:46.538+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-20",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-20",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-11T17:53:16.614+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-23",
+      "user_id": "user-diego",
+      "match_id": "m-imported-23",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-09T00:26:36.616+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-61",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-61",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-26T16:42:39.894+00:00"
+    },
+    {
+      "id": "pred-user-1781188456193-m-imported-53",
+      "user_id": "user-1781188456193",
+      "match_id": "m-imported-53",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-24T02:25:48.356+00:00"
+    },
+    {
+      "id": "pred-user-1781199818607-m-imported-27",
+      "user_id": "user-1781199818607",
+      "match_id": "m-imported-27",
+      "gols_casa": 3,
+      "gols_fora": 2,
+      "created_at": "2026-06-17T12:21:34.524+00:00"
+    },
+    {
+      "id": "pred-user-1781135488087-m-imported-6",
+      "user_id": "user-1781135488087",
+      "match_id": "m-imported-6",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T23:54:53.787+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-45",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-45",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-23T13:00:45.008+00:00"
+    },
+    {
+      "id": "pred-user-1781126770341-m-imported-23",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-23",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-17T09:44:13.128+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-21",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-21",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-16T01:39:46.68+00:00"
+    },
+    {
+      "id": "pred-user-1781072168812-m-imported-1",
+      "user_id": "user-1781072168812",
+      "match_id": "m-imported-1",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T16:53:03.434+00:00"
+    },
+    {
+      "id": "pred-user-1781192283318-m-imported-7",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-7",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-11T15:56:47.76+00:00"
+    },
+    {
+      "id": "pred-user-1781072168812-m-imported-39",
+      "user_id": "user-1781072168812",
+      "match_id": "m-imported-39",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-20T18:52:45.515+00:00"
+    },
+    {
+      "id": "pred-user-1781095373876-m-imported-61",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-61",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T13:07:55.256+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-16",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-16",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-09T00:01:42.357+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-58",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-58",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-25T00:41:14.506+00:00"
+    },
+    {
+      "id": "pred-user-1780956449173-m-imported-103",
+      "user_id": "user-1780956449173",
+      "match_id": "m-imported-103",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-07-17T22:13:29.562+00:00"
+    },
+    {
+      "id": "pred-user-1781094951149-m-imported-33",
+      "user_id": "user-1781094951149",
+      "match_id": "m-imported-33",
+      "gols_casa": 4,
+      "gols_fora": 1,
+      "created_at": "2026-06-19T16:05:05.426+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-69",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-69",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-24T15:46:42.227+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-76",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-76",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-28T18:33:45.302+00:00"
+    },
+    {
+      "id": "pred-user-1780972192868-m-imported-69",
+      "user_id": "user-1780972192868",
+      "match_id": "m-imported-69",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-25T09:36:32.72+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-99",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-99",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-07-08T23:56:19.272+00:00"
+    },
+    {
+      "id": "pred-user-1781004737829-m-imported-13",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-13",
+      "gols_casa": 1,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T23:13:54.812+00:00"
+    },
+    {
+      "id": "pred-user-1781199818607-m-imported-90",
+      "user_id": "user-1781199818607",
+      "match_id": "m-imported-90",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-07-04T02:14:08.473+00:00"
+    },
+    {
+      "id": "pred-user-1781095373876-m-imported-76",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-76",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-28T23:08:35.344+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-54",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-54",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T14:21:35.989+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-97",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-97",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-07-09T17:19:54.973+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-20",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-20",
+      "gols_casa": 0,
+      "gols_fora": 0,
+      "created_at": "2026-06-10T21:16:56.605+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-95",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-95",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-07-07T15:18:44.686+00:00"
+    },
+    {
+      "id": "pred-user-1781135488087-m-imported-10",
+      "user_id": "user-1781135488087",
+      "match_id": "m-imported-10",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T23:55:05.433+00:00"
+    },
+    {
+      "id": "pred-user-1781072168812-m-imported-55",
+      "user_id": "user-1781072168812",
+      "match_id": "m-imported-55",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-24T20:13:29.913+00:00"
+    },
+    {
+      "id": "pred-user-1780962805030-m-imported-8",
+      "user_id": "user-1780962805030",
+      "match_id": "m-imported-8",
+      "gols_casa": 0,
+      "gols_fora": 3,
+      "created_at": "2026-06-08T23:58:39.248+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-95",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-95",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-07-06T16:31:39.226+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-14",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-14",
+      "gols_casa": 6,
+      "gols_fora": 0,
+      "created_at": "2026-06-14T19:31:44.154+00:00"
+    },
+    {
+      "id": "pred-user-1780956449173-m-imported-75",
+      "user_id": "user-1780956449173",
+      "match_id": "m-imported-75",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-29T12:14:29.201+00:00"
     },
     {
       "id": "pred-user-1781190858904-m-imported-77",
@@ -10277,12 +10981,12 @@
       "created_at": "2026-06-26T23:44:51.521+00:00"
     },
     {
-      "id": "pred-user-diego-m-imported-83",
-      "user_id": "user-diego",
-      "match_id": "m-imported-83",
+      "id": "pred-user-1780956449173-m-imported-28",
+      "user_id": "user-1780956449173",
+      "match_id": "m-imported-28",
       "gols_casa": 2,
       "gols_fora": 1,
-      "created_at": "2026-07-01T19:19:24.691+00:00"
+      "created_at": "2026-06-17T23:04:56.42+00:00"
     },
     {
       "id": "pred-user-1781200005128-m-imported-76",
@@ -10357,14 +11061,6 @@
       "created_at": "2026-06-21T13:00:16.033+00:00"
     },
     {
-      "id": "pred-user-1781096449138-m-imported-101",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-101",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-07-14T15:40:59.969+00:00"
-    },
-    {
       "id": "pred-user-1781200240943-m-imported-58",
       "user_id": "user-1781200240943",
       "match_id": "m-imported-58",
@@ -10405,12 +11101,20 @@
       "created_at": "2026-06-10T23:57:46.918+00:00"
     },
     {
-      "id": "pred-user-1781199818607-m-imported-9",
-      "user_id": "user-1781199818607",
-      "match_id": "m-imported-9",
-      "gols_casa": 1,
+      "id": "pred-user-1781200240943-m-imported-104",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-104",
+      "gols_casa": 2,
+      "gols_fora": 3,
+      "created_at": "2026-07-19T14:04:02.462+00:00"
+    },
+    {
+      "id": "pred-user-1781130184341-m-imported-104",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-104",
+      "gols_casa": 3,
       "gols_fora": 2,
-      "created_at": "2026-06-13T15:19:21.136+00:00"
+      "created_at": "2026-07-19T12:40:54.872+00:00"
     },
     {
       "id": "pred-user-1781015783888-m-imported-48",
@@ -10419,14 +11123,6 @@
       "gols_casa": 3,
       "gols_fora": 0,
       "created_at": "2026-06-23T15:40:16.399+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-82",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-82",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-07-01T17:12:55.489+00:00"
     },
     {
       "id": "pred-user-1781200005128-m-imported-6",
@@ -10517,6 +11213,14 @@
       "created_at": "2026-06-17T12:21:10.96+00:00"
     },
     {
+      "id": "pred-user-diego-m-imported-62",
+      "user_id": "user-diego",
+      "match_id": "m-imported-62",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-25T01:13:31.321+00:00"
+    },
+    {
       "id": "pred-user-1781004737829-m-imported-2",
       "user_id": "user-1781004737829",
       "match_id": "m-imported-2",
@@ -10555,14 +11259,6 @@
       "gols_casa": 1,
       "gols_fora": 2,
       "created_at": "2026-06-30T15:30:57.934+00:00"
-    },
-    {
-      "id": "pred-user-diego-m-imported-62",
-      "user_id": "user-diego",
-      "match_id": "m-imported-62",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-25T01:13:31.321+00:00"
     },
     {
       "id": "pred-user-1781130184341-m-imported-2",
@@ -10637,14 +11333,6 @@
       "created_at": "2026-06-10T21:14:59.602+00:00"
     },
     {
-      "id": "pred-user-1781005544161-m-imported-6",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-6",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T14:00:09.729+00:00"
-    },
-    {
       "id": "pred-user-1781135488087-m-imported-84",
       "user_id": "user-1781135488087",
       "match_id": "m-imported-84",
@@ -10685,28 +11373,12 @@
       "created_at": "2026-06-19T23:48:37.764+00:00"
     },
     {
-      "id": "pred-user-1780956449173-m-imported-75",
-      "user_id": "user-1780956449173",
-      "match_id": "m-imported-75",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-29T12:14:29.201+00:00"
-    },
-    {
       "id": "pred-user-1781095373876-m-imported-64",
       "user_id": "user-1781095373876",
       "match_id": "m-imported-64",
       "gols_casa": 1,
       "gols_fora": 2,
       "created_at": "2026-06-10T13:08:45.614+00:00"
-    },
-    {
-      "id": "pred-user-1781005544161-m-imported-30",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-30",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-18T23:51:46.538+00:00"
     },
     {
       "id": "pred-user-1781188456193-m-imported-90",
@@ -10861,12 +11533,12 @@
       "created_at": "2026-06-27T20:14:03.02+00:00"
     },
     {
-      "id": "pred-user-1781282241568-m-imported-34",
-      "user_id": "user-1781282241568",
-      "match_id": "m-imported-34",
+      "id": "pred-user-1781072168812-m-imported-33",
+      "user_id": "user-1781072168812",
+      "match_id": "m-imported-33",
       "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-12T18:41:20.382+00:00"
+      "gols_fora": 1,
+      "created_at": "2026-06-19T14:48:12.678+00:00"
     },
     {
       "id": "pred-user-1781200005128-m-imported-2",
@@ -10933,14 +11605,6 @@
       "created_at": "2026-07-06T13:11:10.612+00:00"
     },
     {
-      "id": "pred-user-1781125678721-m-imported-19",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-19",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-10T21:16:48.031+00:00"
-    },
-    {
       "id": "pred-user-1781125678721-m-imported-90",
       "user_id": "user-1781125678721",
       "match_id": "m-imported-90",
@@ -10971,30 +11635,6 @@
       "gols_casa": 1,
       "gols_fora": 0,
       "created_at": "2026-06-11T14:41:50.779+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-20",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-20",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-11T17:53:16.614+00:00"
-    },
-    {
-      "id": "pred-user-diego-m-imported-23",
-      "user_id": "user-diego",
-      "match_id": "m-imported-23",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-06-09T00:26:36.616+00:00"
-    },
-    {
-      "id": "pred-user-1781192283318-m-imported-11",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-11",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-11T16:02:15.868+00:00"
     },
     {
       "id": "pred-user-1780956449173-m-imported-55",
@@ -11157,38 +11797,6 @@
       "created_at": "2026-06-15T07:01:43.888+00:00"
     },
     {
-      "id": "pred-user-1781188456193-m-imported-52",
-      "user_id": "user-1781188456193",
-      "match_id": "m-imported-52",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-25T00:55:38.935+00:00"
-    },
-    {
-      "id": "pred-user-1781192283318-m-imported-39",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-39",
-      "gols_casa": 4,
-      "gols_fora": 0,
-      "created_at": "2026-06-21T00:22:15.209+00:00"
-    },
-    {
-      "id": "pred-user-1781004737829-m-imported-72",
-      "user_id": "user-1781004737829",
-      "match_id": "m-imported-72",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-25T08:19:31.79+00:00"
-    },
-    {
-      "id": "pred-user-1781125678721-m-imported-27",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-27",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-18T00:29:06.481+00:00"
-    },
-    {
       "id": "pred-user-diego-m-imported-8",
       "user_id": "user-diego",
       "match_id": "m-imported-8",
@@ -11229,30 +11837,6 @@
       "created_at": "2026-06-08T23:49:26.063+00:00"
     },
     {
-      "id": "pred-user-1781130184341-m-imported-56",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-56",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-13T02:58:26.798+00:00"
-    },
-    {
-      "id": "pred-user-1781199818607-m-imported-104",
-      "user_id": "user-1781199818607",
-      "match_id": "m-imported-104",
-      "gols_casa": 2,
-      "gols_fora": 3,
-      "created_at": "2026-07-16T03:34:22.799+00:00"
-    },
-    {
-      "id": "pred-user-1780972192868-m-imported-5",
-      "user_id": "user-1780972192868",
-      "match_id": "m-imported-5",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T23:35:54.169+00:00"
-    },
-    {
       "id": "pred-user-1781199818607-m-imported-18",
       "user_id": "user-1781199818607",
       "match_id": "m-imported-18",
@@ -11267,14 +11851,6 @@
       "gols_casa": 2,
       "gols_fora": 1,
       "created_at": "2026-06-28T12:23:30.729+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-14",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-14",
-      "gols_casa": 5,
-      "gols_fora": 0,
-      "created_at": "2026-06-14T21:28:27.272+00:00"
     },
     {
       "id": "pred-user-1781125678721-m-imported-32",
@@ -11477,30 +12053,6 @@
       "created_at": "2026-07-09T12:17:04.955+00:00"
     },
     {
-      "id": "pred-user-1781200005128-m-imported-51",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-51",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-24T00:27:51.811+00:00"
-    },
-    {
-      "id": "pred-user-1781282241568-m-imported-17",
-      "user_id": "user-1781282241568",
-      "match_id": "m-imported-17",
-      "gols_casa": 4,
-      "gols_fora": 0,
-      "created_at": "2026-06-12T18:38:36.815+00:00"
-    },
-    {
-      "id": "pred-user-1781282241568-m-imported-82",
-      "user_id": "user-1781282241568",
-      "match_id": "m-imported-82",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-30T13:55:23.748+00:00"
-    },
-    {
       "id": "pred-user-1781199818607-m-imported-84",
       "user_id": "user-1781199818607",
       "match_id": "m-imported-84",
@@ -11515,70 +12067,6 @@
       "gols_casa": 2,
       "gols_fora": 1,
       "created_at": "2026-06-27T11:52:52.083+00:00"
-    },
-    {
-      "id": "pred-user-1780962805030-m-imported-4",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-4",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-08T23:58:41.88+00:00"
-    },
-    {
-      "id": "pred-user-1781096449138-m-imported-19",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-19",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-15T06:58:16.625+00:00"
-    },
-    {
-      "id": "pred-user-1781096449138-m-imported-5",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-5",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T13:02:48.31+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-76",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-76",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-29T02:21:26.633+00:00"
-    },
-    {
-      "id": "pred-user-1781095373876-m-imported-70",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-70",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T13:09:43.16+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-60",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-60",
-      "gols_casa": 0,
-      "gols_fora": 3,
-      "created_at": "2026-06-24T15:23:33.769+00:00"
-    },
-    {
-      "id": "pred-user-1781201106289-m-imported-93",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-93",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-07-03T20:02:41.293+00:00"
-    },
-    {
-      "id": "pred-user-1781188456193-m-imported-14",
-      "user_id": "user-1781188456193",
-      "match_id": "m-imported-14",
-      "gols_casa": 4,
-      "gols_fora": 0,
-      "created_at": "2026-06-15T04:08:05.507+00:00"
     },
     {
       "id": "pred-user-1781130184341-m-imported-11",
@@ -11821,46 +12309,6 @@
       "created_at": "2026-06-19T14:48:23.489+00:00"
     },
     {
-      "id": "pred-user-1781015783888-m-imported-14",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-14",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-11T14:41:05.275+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-97",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-97",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-07-09T16:19:54.734+00:00"
-    },
-    {
-      "id": "pred-user-1780868826114-m-imported-77",
-      "user_id": "user-1780868826114",
-      "match_id": "m-imported-77",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-28T18:26:30.541+00:00"
-    },
-    {
-      "id": "pred-user-1781201106289-m-imported-17",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-17",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-16T01:17:34.089+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-20",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-20",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-16T18:01:04.156+00:00"
-    },
-    {
       "id": "pred-user-1781192283318-m-imported-102",
       "user_id": "user-1781192283318",
       "match_id": "m-imported-102",
@@ -11877,44 +12325,332 @@
       "created_at": "2026-06-10T13:09:10.107+00:00"
     },
     {
-      "id": "pred-user-1781200005128-m-imported-1",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-1",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-11T17:47:45.876+00:00"
-    },
-    {
-      "id": "pred-user-1781130184341-m-imported-44",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-44",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-11T12:00:18.946+00:00"
-    },
-    {
-      "id": "pred-user-1780962434760-m-imported-35",
-      "user_id": "user-1780962434760",
-      "match_id": "m-imported-35",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-06-08T23:52:46.125+00:00"
-    },
-    {
-      "id": "pred-user-1781005544161-m-imported-60",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-60",
-      "gols_casa": 0,
-      "gols_fora": 4,
-      "created_at": "2026-06-25T01:02:46.434+00:00"
-    },
-    {
-      "id": "pred-user-1780972192868-m-imported-50",
-      "user_id": "user-1780972192868",
-      "match_id": "m-imported-50",
+      "id": "pred-user-1781201106289-m-imported-10",
+      "user_id": "user-1781201106289",
+      "match_id": "m-imported-10",
       "gols_casa": 4,
       "gols_fora": 0,
-      "created_at": "2026-06-23T11:40:40.861+00:00"
+      "created_at": "2026-06-11T18:07:32.91+00:00"
+    },
+    {
+      "id": "pred-user-1781130184341-m-imported-3",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-3",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-11T19:31:47.81+00:00"
+    },
+    {
+      "id": "pred-user-1781094951149-m-imported-22",
+      "user_id": "user-1781094951149",
+      "match_id": "m-imported-22",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-17T00:38:59.896+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-78",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-78",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-29T00:39:46.168+00:00"
+    },
+    {
+      "id": "pred-user-1781282241568-m-imported-49",
+      "user_id": "user-1781282241568",
+      "match_id": "m-imported-49",
+      "gols_casa": 1,
+      "gols_fora": 3,
+      "created_at": "2026-06-19T15:20:07.643+00:00"
+    },
+    {
+      "id": "pred-user-1781126770341-m-imported-9",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-9",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-10T21:31:12.232+00:00"
+    },
+    {
+      "id": "pred-user-1781004737829-m-imported-52",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-52",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-21T17:38:09.356+00:00"
+    },
+    {
+      "id": "pred-user-1780962502571-m-imported-5",
+      "user_id": "user-1780962502571",
+      "match_id": "m-imported-5",
+      "gols_casa": 2,
+      "gols_fora": 2,
+      "created_at": "2026-06-13T04:15:44.966+00:00"
+    },
+    {
+      "id": "pred-user-1781015783888-m-imported-89",
+      "user_id": "user-1781015783888",
+      "match_id": "m-imported-89",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-07-04T12:51:52.03+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-77",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-77",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-28T21:28:02.268+00:00"
+    },
+    {
+      "id": "pred-user-1781130184341-m-imported-52",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-52",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-11T12:03:26.664+00:00"
+    },
+    {
+      "id": "pred-user-1781192283318-m-imported-96",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-96",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-07-07T00:38:11.089+00:00"
+    },
+    {
+      "id": "pred-user-1781126770341-m-imported-78",
+      "user_id": "user-1781126770341",
+      "match_id": "m-imported-78",
+      "gols_casa": 0,
+      "gols_fora": 1,
+      "created_at": "2026-06-30T16:46:04.104+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-61",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-61",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-17T06:04:28.103+00:00"
+    },
+    {
+      "id": "pred-user-1781282241568-m-imported-13",
+      "user_id": "user-1781282241568",
+      "match_id": "m-imported-13",
+      "gols_casa": 3,
+      "gols_fora": 3,
+      "created_at": "2026-06-12T18:38:26.269+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-77",
+      "user_id": "user-diego",
+      "match_id": "m-imported-77",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-30T00:30:44.125+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-86",
+      "user_id": "user-diego",
+      "match_id": "m-imported-86",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-07-01T19:19:45.872+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-1",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-1",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-11T17:57:59.384+00:00"
+    },
+    {
+      "id": "pred-user-1781135488087-m-imported-88",
+      "user_id": "user-1781135488087",
+      "match_id": "m-imported-88",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-28T19:33:09.437+00:00"
+    },
+    {
+      "id": "pred-user-1781072168812-m-imported-47",
+      "user_id": "user-1781072168812",
+      "match_id": "m-imported-47",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-23T18:58:25.361+00:00"
+    },
+    {
+      "id": "pred-user-1781130184341-m-imported-81",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-81",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-30T10:41:58.496+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-4",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-4",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-11T17:48:33.464+00:00"
+    },
+    {
+      "id": "pred-user-1781130184341-m-imported-50",
+      "user_id": "user-1781130184341",
+      "match_id": "m-imported-50",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-15T21:06:16.437+00:00"
+    },
+    {
+      "id": "pred-user-1781190858904-m-imported-45",
+      "user_id": "user-1781190858904",
+      "match_id": "m-imported-45",
+      "gols_casa": 2,
+      "gols_fora": 0,
+      "created_at": "2026-06-23T11:06:18.648+00:00"
+    },
+    {
+      "id": "pred-user-1780868826114-m-imported-53",
+      "user_id": "user-1780868826114",
+      "match_id": "m-imported-53",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-22T13:11:05.354+00:00"
+    },
+    {
+      "id": "pred-user-1781005544161-m-imported-94",
+      "user_id": "user-1781005544161",
+      "match_id": "m-imported-94",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-07-04T02:50:13.671+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-7",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-7",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T21:14:34.657+00:00"
+    },
+    {
+      "id": "pred-user-1780962502571-m-imported-52",
+      "user_id": "user-1780962502571",
+      "match_id": "m-imported-52",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-24T15:13:48.794+00:00"
+    },
+    {
+      "id": "pred-user-1781110023643-m-imported-78",
+      "user_id": "user-1781110023643",
+      "match_id": "m-imported-78",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-30T00:43:50.73+00:00"
+    },
+    {
+      "id": "pred-user-1781095373876-m-imported-3",
+      "user_id": "user-1781095373876",
+      "match_id": "m-imported-3",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-10T12:44:26.953+00:00"
+    },
+    {
+      "id": "pred-user-1781096449138-m-imported-104",
+      "user_id": "user-1781096449138",
+      "match_id": "m-imported-104",
+      "gols_casa": 3,
+      "gols_fora": 1,
+      "created_at": "2026-07-18T23:43:28.919+00:00"
+    },
+    {
+      "id": "pred-user-1781200240943-m-imported-67",
+      "user_id": "user-1781200240943",
+      "match_id": "m-imported-67",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-26T23:26:07.333+00:00"
+    },
+    {
+      "id": "pred-user-diego-m-imported-83",
+      "user_id": "user-diego",
+      "match_id": "m-imported-83",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-07-01T19:19:24.691+00:00"
+    },
+    {
+      "id": "pred-user-1781282241568-m-imported-34",
+      "user_id": "user-1781282241568",
+      "match_id": "m-imported-34",
+      "gols_casa": 3,
+      "gols_fora": 0,
+      "created_at": "2026-06-12T18:41:20.382+00:00"
+    },
+    {
+      "id": "pred-user-1781188456193-m-imported-52",
+      "user_id": "user-1781188456193",
+      "match_id": "m-imported-52",
+      "gols_casa": 1,
+      "gols_fora": 2,
+      "created_at": "2026-06-25T00:55:38.935+00:00"
+    },
+    {
+      "id": "pred-user-1781192283318-m-imported-39",
+      "user_id": "user-1781192283318",
+      "match_id": "m-imported-39",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-21T00:22:15.209+00:00"
+    },
+    {
+      "id": "pred-user-1781004737829-m-imported-72",
+      "user_id": "user-1781004737829",
+      "match_id": "m-imported-72",
+      "gols_casa": 1,
+      "gols_fora": 1,
+      "created_at": "2026-06-25T08:19:31.79+00:00"
+    },
+    {
+      "id": "pred-user-1781125678721-m-imported-27",
+      "user_id": "user-1781125678721",
+      "match_id": "m-imported-27",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-18T00:29:06.481+00:00"
+    },
+    {
+      "id": "pred-user-1781200005128-m-imported-51",
+      "user_id": "user-1781200005128",
+      "match_id": "m-imported-51",
+      "gols_casa": 0,
+      "gols_fora": 2,
+      "created_at": "2026-06-24T00:27:51.811+00:00"
+    },
+    {
+      "id": "pred-user-1781282241568-m-imported-17",
+      "user_id": "user-1781282241568",
+      "match_id": "m-imported-17",
+      "gols_casa": 4,
+      "gols_fora": 0,
+      "created_at": "2026-06-12T18:38:36.815+00:00"
+    },
+    {
+      "id": "pred-user-1781282241568-m-imported-82",
+      "user_id": "user-1781282241568",
+      "match_id": "m-imported-82",
+      "gols_casa": 2,
+      "gols_fora": 1,
+      "created_at": "2026-06-30T13:55:23.748+00:00"
     },
     {
       "id": "pred-user-1781125678721-m-imported-2",
@@ -12117,62 +12853,6 @@
       "created_at": "2026-06-11T09:00:31.568+00:00"
     },
     {
-      "id": "pred-user-1781194558512-m-imported-67",
-      "user_id": "user-1781194558512",
-      "match_id": "m-imported-67",
-      "gols_casa": 0,
-      "gols_fora": 3,
-      "created_at": "2026-06-27T17:31:24.933+00:00"
-    },
-    {
-      "id": "pred-user-1781199818607-m-imported-100",
-      "user_id": "user-1781199818607",
-      "match_id": "m-imported-100",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-07-09T17:13:07.613+00:00"
-    },
-    {
-      "id": "pred-user-1781201106289-m-imported-78",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-78",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-28T12:49:30.82+00:00"
-    },
-    {
-      "id": "pred-user-1781072168812-m-imported-68",
-      "user_id": "user-1781072168812",
-      "match_id": "m-imported-68",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-26T23:17:41.435+00:00"
-    },
-    {
-      "id": "pred-user-1781096449138-m-imported-100",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-100",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-07-09T13:46:00.834+00:00"
-    },
-    {
-      "id": "pred-user-1781199818607-m-imported-98",
-      "user_id": "user-1781199818607",
-      "match_id": "m-imported-98",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-07-09T17:10:37.225+00:00"
-    },
-    {
-      "id": "pred-user-1781135488087-m-imported-70",
-      "user_id": "user-1781135488087",
-      "match_id": "m-imported-70",
-      "gols_casa": 0,
-      "gols_fora": 5,
-      "created_at": "2026-06-11T00:07:17.536+00:00"
-    },
-    {
       "id": "pred-user-1781135488087-m-imported-55",
       "user_id": "user-1781135488087",
       "match_id": "m-imported-55",
@@ -12203,38 +12883,6 @@
       "gols_casa": 2,
       "gols_fora": 0,
       "created_at": "2026-06-28T21:28:50.003+00:00"
-    },
-    {
-      "id": "pred-user-1781005544161-m-imported-100",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-100",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-07-11T16:18:08.156+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-54",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-54",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-24T16:40:36.167+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-97",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-97",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-07-09T12:16:40.454+00:00"
-    },
-    {
-      "id": "pred-user-1781125678721-m-imported-21",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-21",
-      "gols_casa": 5,
-      "gols_fora": 0,
-      "created_at": "2026-06-10T21:17:05.513+00:00"
     },
     {
       "id": "pred-user-1780868826114-m-imported-102",
@@ -12325,14 +12973,6 @@
       "created_at": "2026-07-17T12:24:19.8+00:00"
     },
     {
-      "id": "pred-user-diego-m-imported-92",
-      "user_id": "user-diego",
-      "match_id": "m-imported-92",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-07-05T19:36:28.834+00:00"
-    },
-    {
       "id": "pred-user-1781282241568-m-imported-32",
       "user_id": "user-1781282241568",
       "match_id": "m-imported-32",
@@ -12405,38 +13045,6 @@
       "created_at": "2026-06-23T22:26:39.259+00:00"
     },
     {
-      "id": "pred-user-1781015783888-m-imported-29",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-29",
-      "gols_casa": 4,
-      "gols_fora": 0,
-      "created_at": "2026-06-19T14:26:14.624+00:00"
-    },
-    {
-      "id": "pred-user-1781072168812-m-imported-36",
-      "user_id": "user-1781072168812",
-      "match_id": "m-imported-36",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-18T17:54:21.816+00:00"
-    },
-    {
-      "id": "pred-user-1781125678721-m-imported-61",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-61",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-23T22:24:43.722+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-36",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-36",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-11T17:56:55.723+00:00"
-    },
-    {
       "id": "pred-user-1781190858904-m-imported-96",
       "user_id": "user-1781190858904",
       "match_id": "m-imported-96",
@@ -12499,62 +13107,6 @@
       "gols_casa": 1,
       "gols_fora": 2,
       "created_at": "2026-06-08T23:52:51.839+00:00"
-    },
-    {
-      "id": "pred-user-1780962805030-m-imported-20",
-      "user_id": "user-1780962805030",
-      "match_id": "m-imported-20",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-06-09T00:02:47.222+00:00"
-    },
-    {
-      "id": "pred-user-1780868826114-m-imported-31",
-      "user_id": "user-1780868826114",
-      "match_id": "m-imported-31",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-17T15:22:14.74+00:00"
-    },
-    {
-      "id": "pred-user-1781096449138-m-imported-91",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-91",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-07-04T14:41:03.031+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-57",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-57",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-26T01:04:48.903+00:00"
-    },
-    {
-      "id": "pred-user-1781126770341-m-imported-96",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-96",
-      "gols_casa": 0,
-      "gols_fora": 1,
-      "created_at": "2026-07-07T14:10:59.993+00:00"
-    },
-    {
-      "id": "pred-user-1780972192868-m-imported-26",
-      "user_id": "user-1780972192868",
-      "match_id": "m-imported-26",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-15T11:02:55.224+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-32",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-32",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-16T23:55:05.025+00:00"
     },
     {
       "id": "pred-user-1781194558512-m-imported-39",
@@ -12709,14 +13261,6 @@
       "created_at": "2026-06-24T13:08:07.465+00:00"
     },
     {
-      "id": "pred-user-1781194558512-m-imported-17",
-      "user_id": "user-1781194558512",
-      "match_id": "m-imported-17",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-16T17:43:53.571+00:00"
-    },
-    {
       "id": "pred-user-1781126770341-m-imported-29",
       "user_id": "user-1781126770341",
       "match_id": "m-imported-29",
@@ -12821,92 +13365,12 @@
       "created_at": "2026-07-06T10:44:03.779+00:00"
     },
     {
-      "id": "pred-user-1781125678721-m-imported-88",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-88",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-28T21:33:57.638+00:00"
-    },
-    {
-      "id": "pred-user-1781005544161-m-imported-18",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-18",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T14:04:42.826+00:00"
-    },
-    {
-      "id": "pred-user-1780972192868-m-imported-85",
-      "user_id": "user-1780972192868",
-      "match_id": "m-imported-85",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-30T09:17:23.717+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-62",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-62",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-23T14:34:28.511+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-39",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-39",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-20T01:35:22.855+00:00"
-    },
-    {
-      "id": "pred-user-1781135488087-m-imported-24",
-      "user_id": "user-1781135488087",
-      "match_id": "m-imported-24",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T23:58:31.867+00:00"
-    },
-    {
       "id": "pred-user-1781096449138-m-imported-12",
       "user_id": "user-1781096449138",
       "match_id": "m-imported-12",
       "gols_casa": 2,
       "gols_fora": 0,
       "created_at": "2026-06-13T17:37:13.301+00:00"
-    },
-    {
-      "id": "pred-user-1781201106289-m-imported-98",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-98",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-07-09T16:27:12.223+00:00"
-    },
-    {
-      "id": "pred-user-1781201106289-m-imported-11",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-11",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-13T15:46:40.626+00:00"
-    },
-    {
-      "id": "pred-user-1781005544161-m-imported-47",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-47",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-23T01:35:33.162+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-85",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-85",
-      "gols_casa": 3,
-      "gols_fora": 2,
-      "created_at": "2026-07-03T02:13:46.779+00:00"
     },
     {
       "id": "pred-user-1781126770341-m-imported-100",
@@ -12971,46 +13435,6 @@
       "gols_casa": 1,
       "gols_fora": 0,
       "created_at": "2026-06-30T19:17:17.45+00:00"
-    },
-    {
-      "id": "pred-user-1781096449138-m-imported-21",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-21",
-      "gols_casa": 3,
-      "gols_fora": 0,
-      "created_at": "2026-06-11T14:13:45.792+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-74",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-74",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-29T02:21:37.391+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-80",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-80",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-30T21:20:47.356+00:00"
-    },
-    {
-      "id": "pred-user-1781130184341-m-imported-74",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-74",
-      "gols_casa": 1,
-      "gols_fora": 0,
-      "created_at": "2026-06-28T12:24:05.707+00:00"
-    },
-    {
-      "id": "pred-user-1781110023643-m-imported-3",
-      "user_id": "user-1781110023643",
-      "match_id": "m-imported-3",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-10T16:59:33.692+00:00"
     },
     {
       "id": "pred-user-1781200005128-m-imported-14",
@@ -13165,38 +13589,6 @@
       "created_at": "2026-06-15T07:03:48.183+00:00"
     },
     {
-      "id": "pred-user-1781095373876-m-imported-63",
-      "user_id": "user-1781095373876",
-      "match_id": "m-imported-63",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-10T13:08:52.319+00:00"
-    },
-    {
-      "id": "pred-user-1780972192868-m-imported-64",
-      "user_id": "user-1780972192868",
-      "match_id": "m-imported-64",
-      "gols_casa": 0,
-      "gols_fora": 3,
-      "created_at": "2026-06-25T09:21:43.985+00:00"
-    },
-    {
-      "id": "pred-user-1781201106289-m-imported-13",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-13",
-      "gols_casa": 0,
-      "gols_fora": 0,
-      "created_at": "2026-06-15T00:57:16.753+00:00"
-    },
-    {
-      "id": "pred-user-1780868826114-m-imported-9",
-      "user_id": "user-1780868826114",
-      "match_id": "m-imported-9",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-13T21:04:49.728+00:00"
-    },
-    {
       "id": "pred-user-1780962434760-m-imported-71",
       "user_id": "user-1780962434760",
       "match_id": "m-imported-71",
@@ -13245,68 +13637,12 @@
       "created_at": "2026-06-16T09:10:43.064+00:00"
     },
     {
-      "id": "pred-user-1781096449138-m-imported-96",
-      "user_id": "user-1781096449138",
-      "match_id": "m-imported-96",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-07-05T09:39:31.123+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-14",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-14",
-      "gols_casa": 5,
-      "gols_fora": 0,
-      "created_at": "2026-06-15T12:22:42.444+00:00"
-    },
-    {
       "id": "pred-user-1781199818607-m-imported-39",
       "user_id": "user-1781199818607",
       "match_id": "m-imported-39",
       "gols_casa": 3,
       "gols_fora": 0,
       "created_at": "2026-06-20T18:45:00.641+00:00"
-    },
-    {
-      "id": "pred-user-1781130184341-m-imported-3",
-      "user_id": "user-1781130184341",
-      "match_id": "m-imported-3",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-11T19:31:47.81+00:00"
-    },
-    {
-      "id": "pred-user-1781094951149-m-imported-22",
-      "user_id": "user-1781094951149",
-      "match_id": "m-imported-22",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-06-17T00:38:59.896+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-78",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-78",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-29T00:39:46.168+00:00"
-    },
-    {
-      "id": "pred-user-1780972192868-m-imported-27",
-      "user_id": "user-1780972192868",
-      "match_id": "m-imported-27",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-15T11:03:06.575+00:00"
-    },
-    {
-      "id": "pred-user-1781199818607-m-imported-89",
-      "user_id": "user-1781199818607",
-      "match_id": "m-imported-89",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-07-04T02:14:31.008+00:00"
     },
     {
       "id": "pred-user-1781135488087-m-imported-85",
@@ -13509,14 +13845,6 @@
       "created_at": "2026-06-21T20:31:01.635+00:00"
     },
     {
-      "id": "pred-user-1780962434760-m-imported-17",
-      "user_id": "user-1780962434760",
-      "match_id": "m-imported-17",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-08T23:50:42.915+00:00"
-    },
-    {
       "id": "pred-user-1780962434760-m-imported-72",
       "user_id": "user-1780962434760",
       "match_id": "m-imported-72",
@@ -13571,30 +13899,6 @@
       "gols_casa": 3,
       "gols_fora": 1,
       "created_at": "2026-06-23T02:14:26.569+00:00"
-    },
-    {
-      "id": "pred-user-1780962502571-m-imported-30",
-      "user_id": "user-1780962502571",
-      "match_id": "m-imported-30",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-19T04:05:43.114+00:00"
-    },
-    {
-      "id": "pred-user-1781201106289-m-imported-87",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-87",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-07-03T19:59:30.9+00:00"
-    },
-    {
-      "id": "pred-user-1781125678721-m-imported-47",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-47",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-18T00:20:46.242+00:00"
     },
     {
       "id": "pred-user-1781192283318-m-imported-76",
@@ -13781,22 +14085,6 @@
       "created_at": "2026-07-18T00:02:09.336+00:00"
     },
     {
-      "id": "pred-user-1781201106289-m-imported-10",
-      "user_id": "user-1781201106289",
-      "match_id": "m-imported-10",
-      "gols_casa": 4,
-      "gols_fora": 0,
-      "created_at": "2026-06-11T18:07:32.91+00:00"
-    },
-    {
-      "id": "pred-user-1781004737829-m-imported-82",
-      "user_id": "user-1781004737829",
-      "match_id": "m-imported-82",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-28T10:31:57.593+00:00"
-    },
-    {
       "id": "pred-user-1780962502571-m-imported-2",
       "user_id": "user-1780962502571",
       "match_id": "m-imported-2",
@@ -13875,30 +14163,6 @@
       "gols_casa": 3,
       "gols_fora": 0,
       "created_at": "2026-06-14T13:12:39.837+00:00"
-    },
-    {
-      "id": "pred-user-1780962434760-m-imported-23",
-      "user_id": "user-1780962434760",
-      "match_id": "m-imported-23",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-08T23:51:35.404+00:00"
-    },
-    {
-      "id": "pred-user-1781005544161-m-imported-9",
-      "user_id": "user-1781005544161",
-      "match_id": "m-imported-9",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-10T14:01:27.808+00:00"
-    },
-    {
-      "id": "pred-user-1781200240943-m-imported-94",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-94",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-07-06T18:32:36.666+00:00"
     },
     {
       "id": "pred-user-1781199818607-m-imported-103",
@@ -14061,30 +14325,6 @@
       "created_at": "2026-06-19T13:14:25.555+00:00"
     },
     {
-      "id": "pred-user-1781190858904-m-imported-104",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-104",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-07-07T21:44:21.926+00:00"
-    },
-    {
-      "id": "pred-user-1781072168812-m-imported-51",
-      "user_id": "user-1781072168812",
-      "match_id": "m-imported-51",
-      "gols_casa": 1,
-      "gols_fora": 1,
-      "created_at": "2026-06-24T20:11:47.09+00:00"
-    },
-    {
-      "id": "pred-user-1781094951149-m-imported-56",
-      "user_id": "user-1781094951149",
-      "match_id": "m-imported-56",
-      "gols_casa": 1,
-      "gols_fora": 4,
-      "created_at": "2026-06-25T09:22:55.049+00:00"
-    },
-    {
       "id": "pred-user-1781282241568-m-imported-64",
       "user_id": "user-1781282241568",
       "match_id": "m-imported-64",
@@ -14187,30 +14427,6 @@
       "gols_casa": 1,
       "gols_fora": 0,
       "created_at": "2026-06-20T01:39:08.636+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-62",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-62",
-      "gols_casa": 2,
-      "gols_fora": 4,
-      "created_at": "2026-06-26T12:03:55.398+00:00"
-    },
-    {
-      "id": "pred-user-1781192283318-m-imported-95",
-      "user_id": "user-1781192283318",
-      "match_id": "m-imported-95",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-07-07T00:38:43.365+00:00"
-    },
-    {
-      "id": "pred-user-1781282241568-m-imported-18",
-      "user_id": "user-1781282241568",
-      "match_id": "m-imported-18",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-06-12T18:38:42.456+00:00"
     },
     {
       "id": "pred-user-1781200005128-m-imported-80",
@@ -14349,30 +14565,6 @@
       "created_at": "2026-06-28T10:32:10.855+00:00"
     },
     {
-      "id": "pred-user-1781200005128-m-imported-74",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-74",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-29T19:28:33.201+00:00"
-    },
-    {
-      "id": "pred-user-diego-m-imported-89",
-      "user_id": "user-diego",
-      "match_id": "m-imported-89",
-      "gols_casa": 1,
-      "gols_fora": 3,
-      "created_at": "2026-07-04T15:14:06.852+00:00"
-    },
-    {
-      "id": "pred-user-diego-m-imported-1",
-      "user_id": "user-diego",
-      "match_id": "m-imported-1",
-      "gols_casa": 2,
-      "gols_fora": 0,
-      "created_at": "2026-06-07T02:46:46.003+00:00"
-    },
-    {
       "id": "pred-user-1781110023643-m-imported-31",
       "user_id": "user-1781110023643",
       "match_id": "m-imported-31",
@@ -14509,14 +14701,6 @@
       "created_at": "2026-06-20T00:05:47.952+00:00"
     },
     {
-      "id": "pred-user-1781200240943-m-imported-62",
-      "user_id": "user-1781200240943",
-      "match_id": "m-imported-62",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-26T18:50:42.559+00:00"
-    },
-    {
       "id": "pred-user-1781200240943-m-imported-74",
       "user_id": "user-1781200240943",
       "match_id": "m-imported-74",
@@ -14643,14 +14827,6 @@
       "gols_casa": 5,
       "gols_fora": 0,
       "created_at": "2026-06-10T23:57:20.305+00:00"
-    },
-    {
-      "id": "pred-user-1781126770341-m-imported-65",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-65",
-      "gols_casa": 0,
-      "gols_fora": 0,
-      "created_at": "2026-06-26T21:57:54.329+00:00"
     },
     {
       "id": "pred-user-1781005544161-m-imported-61",
@@ -14795,14 +14971,6 @@
       "gols_casa": 1,
       "gols_fora": 1,
       "created_at": "2026-06-11T11:48:40.953+00:00"
-    },
-    {
-      "id": "pred-user-1780972192868-m-imported-38",
-      "user_id": "user-1780972192868",
-      "match_id": "m-imported-38",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-18T02:18:28.87+00:00"
     },
     {
       "id": "pred-user-1781004737829-m-imported-91",
@@ -15077,14 +15245,6 @@
       "created_at": "2026-06-27T18:25:20.603+00:00"
     },
     {
-      "id": "pred-user-1781199818607-m-imported-60",
-      "user_id": "user-1781199818607",
-      "match_id": "m-imported-60",
-      "gols_casa": 2,
-      "gols_fora": 3,
-      "created_at": "2026-06-25T19:25:17.799+00:00"
-    },
-    {
       "id": "pred-user-1781190858904-m-imported-103",
       "user_id": "user-1781190858904",
       "match_id": "m-imported-103",
@@ -15339,38 +15499,6 @@
       "gols_casa": 0,
       "gols_fora": 0,
       "created_at": "2026-06-10T12:46:19.213+00:00"
-    },
-    {
-      "id": "pred-user-1781188456193-m-imported-26",
-      "user_id": "user-1781188456193",
-      "match_id": "m-imported-26",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-18T10:25:18.408+00:00"
-    },
-    {
-      "id": "pred-user-1781200005128-m-imported-19",
-      "user_id": "user-1781200005128",
-      "match_id": "m-imported-19",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-11T17:53:05.444+00:00"
-    },
-    {
-      "id": "pred-user-1781004737829-m-imported-90",
-      "user_id": "user-1781004737829",
-      "match_id": "m-imported-90",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-07-04T00:09:02.152+00:00"
-    },
-    {
-      "id": "pred-user-1780868826114-m-imported-90",
-      "user_id": "user-1780868826114",
-      "match_id": "m-imported-90",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-07-04T14:09:27.997+00:00"
     },
     {
       "id": "pred-user-1781201106289-m-imported-32",
@@ -15645,14 +15773,6 @@
       "created_at": "2026-06-08T23:59:01.165+00:00"
     },
     {
-      "id": "pred-user-1781125678721-m-imported-51",
-      "user_id": "user-1781125678721",
-      "match_id": "m-imported-51",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-23T22:18:08.763+00:00"
-    },
-    {
       "id": "pred-user-1780868826114-m-imported-97",
       "user_id": "user-1780868826114",
       "match_id": "m-imported-97",
@@ -15923,14 +16043,6 @@
       "gols_casa": 0,
       "gols_fora": 2,
       "created_at": "2026-06-18T00:25:12.683+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-93",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-93",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-07-04T12:50:42.824+00:00"
     },
     {
       "id": "pred-user-1781095373876-m-imported-8",
@@ -16205,14 +16317,6 @@
       "created_at": "2026-07-09T16:20:03.774+00:00"
     },
     {
-      "id": "pred-user-1781004737829-m-imported-51",
-      "user_id": "user-1781004737829",
-      "match_id": "m-imported-51",
-      "gols_casa": 0,
-      "gols_fora": 2,
-      "created_at": "2026-06-21T17:37:55.562+00:00"
-    },
-    {
       "id": "pred-user-1781190858904-m-imported-68",
       "user_id": "user-1781190858904",
       "match_id": "m-imported-68",
@@ -16483,14 +16587,6 @@
       "gols_casa": 2,
       "gols_fora": 1,
       "created_at": "2026-06-30T21:22:02.678+00:00"
-    },
-    {
-      "id": "pred-user-1781126770341-m-imported-56",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-56",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-25T03:05:23.021+00:00"
     },
     {
       "id": "pred-user-1781200005128-m-imported-71",
@@ -17045,14 +17141,6 @@
       "created_at": "2026-06-10T13:59:39.515+00:00"
     },
     {
-      "id": "pred-user-1781190858904-m-imported-64",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-64",
-      "gols_casa": 1,
-      "gols_fora": 2,
-      "created_at": "2026-06-27T02:04:43.439+00:00"
-    },
-    {
       "id": "pred-user-1781282241568-m-imported-35",
       "user_id": "user-1781282241568",
       "match_id": "m-imported-35",
@@ -17325,14 +17413,6 @@
       "created_at": "2026-06-11T11:58:58.099+00:00"
     },
     {
-      "id": "pred-user-1781126770341-m-imported-70",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-70",
-      "gols_casa": 0,
-      "gols_fora": 3,
-      "created_at": "2026-06-27T23:37:20.25+00:00"
-    },
-    {
       "id": "pred-user-1781126770341-m-imported-35",
       "user_id": "user-1781126770341",
       "match_id": "m-imported-35",
@@ -17491,46 +17571,6 @@
       "gols_casa": 2,
       "gols_fora": 1,
       "created_at": "2026-06-13T15:14:46.415+00:00"
-    },
-    {
-      "id": "pred-user-1781126770341-m-imported-5",
-      "user_id": "user-1781126770341",
-      "match_id": "m-imported-5",
-      "gols_casa": 0,
-      "gols_fora": 3,
-      "created_at": "2026-06-14T00:47:30.033+00:00"
-    },
-    {
-      "id": "pred-user-1781190858904-m-imported-35",
-      "user_id": "user-1781190858904",
-      "match_id": "m-imported-35",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-20T16:59:24.181+00:00"
-    },
-    {
-      "id": "pred-user-1781015783888-m-imported-69",
-      "user_id": "user-1781015783888",
-      "match_id": "m-imported-69",
-      "gols_casa": 2,
-      "gols_fora": 2,
-      "created_at": "2026-06-24T15:46:42.227+00:00"
-    },
-    {
-      "id": "pred-user-1780956449173-m-imported-28",
-      "user_id": "user-1780956449173",
-      "match_id": "m-imported-28",
-      "gols_casa": 2,
-      "gols_fora": 1,
-      "created_at": "2026-06-17T23:04:56.42+00:00"
-    },
-    {
-      "id": "pred-user-1781072168812-m-imported-33",
-      "user_id": "user-1781072168812",
-      "match_id": "m-imported-33",
-      "gols_casa": 3,
-      "gols_fora": 1,
-      "created_at": "2026-06-19T14:48:12.678+00:00"
     },
     {
       "id": "pred-user-1781188456193-m-imported-62",
@@ -23736,8 +23776,182 @@
       "rodada": "Decisão 3º Lugar"
     },
     {
-      "id": "ub-user-1780956449173-goat-overall",
+      "id": "ub-user-1781125678721-virgem-Grande-Final",
+      "user_id": "user-1781125678721",
+      "badge_id": "badge-virgem",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1780962805030-virgem-Grande-Final",
+      "user_id": "user-1780962805030",
+      "badge_id": "badge-virgem",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1780962434760-virgem-Grande-Final",
+      "user_id": "user-1780962434760",
+      "badge_id": "badge-virgem",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1780962502571-virgem-Grande-Final",
+      "user_id": "user-1780962502571",
+      "badge_id": "badge-virgem",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781282241568-virgem-Grande-Final",
+      "user_id": "user-1781282241568",
+      "badge_id": "badge-virgem",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781194558512-virgem-Grande-Final",
+      "user_id": "user-1781194558512",
+      "badge_id": "badge-virgem",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781135488087-virgem-Grande-Final",
+      "user_id": "user-1781135488087",
+      "badge_id": "badge-virgem",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781200005128-virgem-Grande-Final",
+      "user_id": "user-1781200005128",
+      "badge_id": "badge-virgem",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781094951149-virgem-Grande-Final",
+      "user_id": "user-1781094951149",
+      "badge_id": "badge-virgem",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781126770341-chiquinho-Grande-Final",
+      "user_id": "user-1781126770341",
+      "badge_id": "badge-chiquinho",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781126770341-aguia-Grande-Final",
+      "user_id": "user-1781126770341",
+      "badge_id": "badge-aguia",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781072168812-fabio-Grande-Final",
+      "user_id": "user-1781072168812",
+      "badge_id": "badge-fabio",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781005544161-fabio-Grande-Final",
+      "user_id": "user-1781005544161",
+      "badge_id": "badge-fabio",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1780868826114-fabio-Grande-Final",
+      "user_id": "user-1780868826114",
+      "badge_id": "badge-fabio",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1780972192868-fabio-Grande-Final",
+      "user_id": "user-1780972192868",
+      "badge_id": "badge-fabio",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781110023643-fabio-Grande-Final",
+      "user_id": "user-1781110023643",
+      "badge_id": "badge-fabio",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781188456193-fabio-Grande-Final",
+      "user_id": "user-1781188456193",
+      "badge_id": "badge-fabio",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781015783888-fabio-Grande-Final",
+      "user_id": "user-1781015783888",
+      "badge_id": "badge-fabio",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781200240943-gebiada-Grande-Final",
+      "user_id": "user-1781200240943",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781199818607-gebiada-Grande-Final",
+      "user_id": "user-1781199818607",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781004737829-gebiada-Grande-Final",
+      "user_id": "user-1781004737829",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-diego-gebiada-Grande-Final",
+      "user_id": "user-diego",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1780956449173-gebiada-Grande-Final",
       "user_id": "user-1780956449173",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781096449138-gebiada-Grande-Final",
+      "user_id": "user-1781096449138",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781130184341-gebiada-Grande-Final",
+      "user_id": "user-1781130184341",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781192283318-gebiada-Grande-Final",
+      "user_id": "user-1781192283318",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781201106289-gebiada-Grande-Final",
+      "user_id": "user-1781201106289",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781095373876-gebiada-Grande-Final",
+      "user_id": "user-1781095373876",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781190858904-gebiada-Grande-Final",
+      "user_id": "user-1781190858904",
+      "badge_id": "badge-gebiada",
+      "rodada": "Grande Final"
+    },
+    {
+      "id": "ub-user-1781110023643-goat-overall",
+      "user_id": "user-1781110023643",
       "badge_id": "badge-goat",
       "rodada": "Geral"
     }
@@ -28511,16 +28725,16 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781072168812-Grande-Final",
       "user_id": "user-1781072168812",
       "rodada": "Grande Final",
-      "pontos": 0,
+      "pontos": 2,
       "exato_qtd": 0,
       "resultado_qtd": 0,
-      "gols_um_time_qtd": 0,
+      "gols_um_time_qtd": 1,
       "erros_qtd": 0
     },
     {
@@ -28531,16 +28745,16 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781005544161-Grande-Final",
       "user_id": "user-1781005544161",
       "rodada": "Grande Final",
-      "pontos": 0,
+      "pontos": 2,
       "exato_qtd": 0,
       "resultado_qtd": 0,
-      "gols_um_time_qtd": 0,
+      "gols_um_time_qtd": 1,
       "erros_qtd": 0
     },
     {
@@ -28551,7 +28765,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781004737829-Grande-Final",
@@ -28561,7 +28775,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-diego-Grande-Final",
@@ -28571,16 +28785,16 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1780868826114-Grande-Final",
       "user_id": "user-1780868826114",
       "rodada": "Grande Final",
-      "pontos": 0,
+      "pontos": 2,
       "exato_qtd": 0,
       "resultado_qtd": 0,
-      "gols_um_time_qtd": 0,
+      "gols_um_time_qtd": 1,
       "erros_qtd": 0
     },
     {
@@ -28591,14 +28805,14 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781126770341-Grande-Final",
       "user_id": "user-1781126770341",
       "rodada": "Grande Final",
-      "pontos": 0,
-      "exato_qtd": 0,
+      "pontos": 10,
+      "exato_qtd": 1,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
       "erros_qtd": 0
@@ -28607,9 +28821,9 @@
       "id": "score-user-1780972192868-Grande-Final",
       "user_id": "user-1780972192868",
       "rodada": "Grande Final",
-      "pontos": 0,
+      "pontos": 5,
       "exato_qtd": 0,
-      "resultado_qtd": 0,
+      "resultado_qtd": 1,
       "gols_um_time_qtd": 0,
       "erros_qtd": 0
     },
@@ -28621,7 +28835,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1780962434760-Grande-Final",
@@ -28631,7 +28845,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1780962502571-Grande-Final",
@@ -28641,7 +28855,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781096449138-Grande-Final",
@@ -28651,7 +28865,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781282241568-Grande-Final",
@@ -28661,7 +28875,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781130184341-Grande-Final",
@@ -28671,7 +28885,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781192283318-Grande-Final",
@@ -28681,7 +28895,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781201106289-Grande-Final",
@@ -28691,15 +28905,15 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781110023643-Grande-Final",
       "user_id": "user-1781110023643",
       "rodada": "Grande Final",
-      "pontos": 0,
+      "pontos": 5,
       "exato_qtd": 0,
-      "resultado_qtd": 0,
+      "resultado_qtd": 1,
       "gols_um_time_qtd": 0,
       "erros_qtd": 0
     },
@@ -28711,7 +28925,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781194558512-Grande-Final",
@@ -28721,7 +28935,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781190858904-Grande-Final",
@@ -28731,16 +28945,16 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781188456193-Grande-Final",
       "user_id": "user-1781188456193",
       "rodada": "Grande Final",
-      "pontos": 0,
+      "pontos": 2,
       "exato_qtd": 0,
       "resultado_qtd": 0,
-      "gols_um_time_qtd": 0,
+      "gols_um_time_qtd": 1,
       "erros_qtd": 0
     },
     {
@@ -28751,7 +28965,7 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781200005128-Grande-Final",
@@ -28761,15 +28975,15 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     },
     {
       "id": "score-user-1781015783888-Grande-Final",
       "user_id": "user-1781015783888",
       "rodada": "Grande Final",
-      "pontos": 0,
+      "pontos": 5,
       "exato_qtd": 0,
-      "resultado_qtd": 0,
+      "resultado_qtd": 1,
       "gols_um_time_qtd": 0,
       "erros_qtd": 0
     },
@@ -28781,8 +28995,194 @@
       "exato_qtd": 0,
       "resultado_qtd": 0,
       "gols_um_time_qtd": 0,
-      "erros_qtd": 0
+      "erros_qtd": 1
     }
   ],
-  "allow_registrations": false
+  "allow_registrations": false,
+  "finalist_predictions": [
+    {
+      "id": "6f252b4c-f0f9-4e0d-8cd8-3baa0938c8e1",
+      "user_id": "user-1781190858904",
+      "campeao_team_id": "Brazil",
+      "vice_team_id": "France",
+      "created_at": "2026-06-24T21:49:46.899912+00:00",
+      "updated_at": "2026-06-24T21:49:46.675+00:00"
+    },
+    {
+      "id": "08d5f5c5-0024-4579-9cbb-6aa8ba672236",
+      "user_id": "user-1781200240943",
+      "campeao_team_id": "Argentina",
+      "vice_team_id": "France",
+      "created_at": "2026-06-25T01:03:43.046786+00:00",
+      "updated_at": "2026-06-25T01:03:53.616+00:00"
+    },
+    {
+      "id": "8362c375-8ef4-4b81-99d7-4b118fd86a48",
+      "user_id": "user-1781188456193",
+      "campeao_team_id": "Brazil",
+      "vice_team_id": "Germany",
+      "created_at": "2026-06-25T18:45:31.847054+00:00",
+      "updated_at": "2026-06-25T18:45:40.218+00:00"
+    },
+    {
+      "id": "cf8c4b5f-dc98-4726-b3f7-998e4d51d45a",
+      "user_id": "user-1781199818607",
+      "campeao_team_id": "Brazil",
+      "vice_team_id": "Argentina",
+      "created_at": "2026-06-25T19:22:23.564397+00:00",
+      "updated_at": "2026-06-25T19:22:39.952+00:00"
+    },
+    {
+      "id": "a1e1ffe2-c6e0-460c-9037-9bfc27ce525d",
+      "user_id": "user-1780962502571",
+      "campeao_team_id": "Argentina",
+      "vice_team_id": "Germany",
+      "created_at": "2026-06-25T20:00:19.347892+00:00",
+      "updated_at": "2026-06-25T20:00:18.796+00:00"
+    },
+    {
+      "id": "89119fd6-0441-4658-9f3a-68f3ab1715a2",
+      "user_id": "user-1781004737829",
+      "campeao_team_id": "France",
+      "vice_team_id": "Portugal",
+      "created_at": "2026-06-25T08:15:12.602359+00:00",
+      "updated_at": "2026-06-25T22:05:47.573+00:00"
+    },
+    {
+      "id": "296eeb1a-34b2-4c03-bf9c-c8df63c06cf8",
+      "user_id": "user-1781125678721",
+      "campeao_team_id": "France",
+      "vice_team_id": "Argentina",
+      "created_at": "2026-06-25T23:12:01.238316+00:00",
+      "updated_at": "2026-06-25T23:12:09.654+00:00"
+    },
+    {
+      "id": "7776e987-55ef-4c74-91d5-22adcdea9a61",
+      "user_id": "user-1781110023643",
+      "campeao_team_id": "France",
+      "vice_team_id": "Argentina",
+      "created_at": "2026-06-27T17:47:53.651095+00:00",
+      "updated_at": "2026-06-27T17:47:53.458+00:00"
+    },
+    {
+      "id": "92b981f5-41d6-44fc-a113-8c3757ba05e3",
+      "user_id": "user-1781200005128",
+      "campeao_team_id": "Brazil",
+      "vice_team_id": "France",
+      "created_at": "2026-06-27T19:44:21.857677+00:00",
+      "updated_at": "2026-06-27T19:44:21.231+00:00"
+    },
+    {
+      "id": "77dac9f6-51a4-4a22-ada5-086c57fa0f5c",
+      "user_id": "user-1780972192868",
+      "campeao_team_id": "Brazil",
+      "vice_team_id": "France",
+      "created_at": "2026-06-26T02:21:14.063257+00:00",
+      "updated_at": "2026-06-27T21:46:10.292+00:00"
+    },
+    {
+      "id": "4ab8cc18-78dd-402b-ae0a-f5cb4ff2de1c",
+      "user_id": "user-diego",
+      "campeao_team_id": "France",
+      "vice_team_id": "Argentina",
+      "created_at": "2026-06-24T02:19:57.376772+00:00",
+      "updated_at": "2026-06-27T22:56:51.311+00:00"
+    },
+    {
+      "id": "e224f95c-0355-4861-b9a6-d25f40843263",
+      "user_id": "user-1780962805030",
+      "campeao_team_id": "France",
+      "vice_team_id": "Brazil",
+      "created_at": "2026-06-27T22:57:26.232741+00:00",
+      "updated_at": "2026-06-27T22:57:26.065+00:00"
+    },
+    {
+      "id": "f201dc51-f24a-432d-a9c7-068a6f4b93f4",
+      "user_id": "user-1781130184341",
+      "campeao_team_id": "Brazil",
+      "vice_team_id": "France",
+      "created_at": "2026-06-28T12:16:50.102022+00:00",
+      "updated_at": "2026-06-28T12:16:49.614+00:00"
+    },
+    {
+      "id": "23ffa1a8-18a5-4e17-944c-ab9885b3db71",
+      "user_id": "user-1781201106289",
+      "campeao_team_id": "Brazil",
+      "vice_team_id": "France",
+      "created_at": "2026-06-26T03:33:05.064899+00:00",
+      "updated_at": "2026-06-28T12:45:57.942+00:00"
+    },
+    {
+      "id": "f8d4c118-8242-4da1-84f2-8bc99c0d52ef",
+      "user_id": "user-1781192283318",
+      "campeao_team_id": "Brazil",
+      "vice_team_id": "France",
+      "created_at": "2026-06-28T13:56:56.191152+00:00",
+      "updated_at": "2026-06-28T13:56:56.052+00:00"
+    },
+    {
+      "id": "a0be8b76-b228-4f61-b1c0-c7d320d7592c",
+      "user_id": "user-1781194558512",
+      "campeao_team_id": "Brazil",
+      "vice_team_id": "France",
+      "created_at": "2026-06-28T17:43:30.952496+00:00",
+      "updated_at": "2026-06-28T17:43:35.753+00:00"
+    },
+    {
+      "id": "0de00038-1a4b-45a8-9dee-6aba64e845af",
+      "user_id": "user-1781005544161",
+      "campeao_team_id": "France",
+      "vice_team_id": "Argentina",
+      "created_at": "2026-06-28T12:41:31.822978+00:00",
+      "updated_at": "2026-07-01T15:17:32.262+00:00"
+    },
+    {
+      "id": "403aea54-2a2f-43d3-83cb-a6abdc388896",
+      "user_id": "user-1781095373876",
+      "campeao_team_id": "France",
+      "vice_team_id": "Argentina",
+      "created_at": "2026-06-27T21:49:10.481927+00:00",
+      "updated_at": "2026-07-01T16:08:04.648+00:00"
+    },
+    {
+      "id": "ef497feb-d0aa-46bd-bba6-9938b3c97674",
+      "user_id": "user-1781126770341",
+      "campeao_team_id": "France",
+      "vice_team_id": "Argentina",
+      "created_at": "2026-06-28T04:38:40.261451+00:00",
+      "updated_at": "2026-07-02T02:10:28.393+00:00"
+    },
+    {
+      "id": "a2a3f043-8aa0-4948-95bd-70639e19b519",
+      "user_id": "user-1780868826114",
+      "campeao_team_id": "France",
+      "vice_team_id": "Brazil",
+      "created_at": "2026-06-26T13:53:44.323153+00:00",
+      "updated_at": "2026-07-03T18:30:31.621+00:00"
+    },
+    {
+      "id": "48ea1e9b-5151-4c36-bed0-5c898500c196",
+      "user_id": "user-1780956449173",
+      "campeao_team_id": "France",
+      "vice_team_id": "Argentina",
+      "created_at": "2026-06-24T22:46:35.252015+00:00",
+      "updated_at": "2026-07-04T10:20:10.689+00:00"
+    },
+    {
+      "id": "802ae63c-8d99-44a4-a17a-0f9ec2599acb",
+      "user_id": "user-1781015783888",
+      "campeao_team_id": "France",
+      "vice_team_id": "Brazil",
+      "created_at": "2026-07-04T12:49:01.531373+00:00",
+      "updated_at": "2026-07-04T12:49:01.343+00:00"
+    },
+    {
+      "id": "bed69a68-7172-4a60-b7ed-d196a312a7a8",
+      "user_id": "user-1781072168812",
+      "campeao_team_id": "Brazil",
+      "vice_team_id": "France",
+      "created_at": "2026-06-26T13:39:41.145361+00:00",
+      "updated_at": "2026-07-04T16:27:36.701+00:00"
+    }
+  ]
 }
