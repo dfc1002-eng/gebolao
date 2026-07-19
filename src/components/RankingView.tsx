@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { User, Ranking, Badge, UserBadge, RoundScore, Match, Prediction } from '../types';
-import { Award, Medal, Share2, Flame, Check, Info, TrendingUp, Sparkles, Smile } from 'lucide-react';
+import { Award, Medal, Share2, Flame, Check, Info, TrendingUp, Sparkles, Smile, Play, BarChart2 } from 'lucide-react';
 import { calculateGroupStandings } from '../utils/standings';
+import { BarChartRace } from './BarChartRace';
 
 interface RankingViewProps {
   rankings: Ranking[];
@@ -28,6 +29,7 @@ export function RankingView({
 }: RankingViewProps) {
   const [copied, setCopied] = useState(false);
   const [focusedUser, setFocusedUser] = useState<User | null>(null);
+  const [isRaceOpen, setIsRaceOpen] = useState(false);
 
   // Standings state controls
   const [rankingSubTab, setRankingSubTab] = useState<'bolao' | 'copa'>('bolao');
@@ -125,6 +127,26 @@ export function RankingView({
           </div>
         </div>
       </div>
+
+    {/* Bar Chart Race Promo Banner */}
+    <div className="bg-white border border-slate-200 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm animate-in fade-in duration-300">
+      <div className="flex items-center gap-3">
+        <div className="p-3 bg-amber-50 rounded-xl text-amber-500 border border-amber-100 shrink-0">
+          <BarChart2 size={24} className="animate-pulse" />
+        </div>
+        <div>
+          <h4 className="font-extrabold text-sm text-slate-900 uppercase italic tracking-wide">Evolução em Tempo Real</h4>
+          <p className="text-xs text-slate-550">Veja a corrida dramática dos pontos se desenrolar jogo a jogo no Gebolão!</p>
+        </div>
+      </div>
+      <button
+        onClick={() => setIsRaceOpen(true)}
+        className="w-full sm:w-auto bg-amber-400 hover:bg-amber-500 text-green-950 font-black uppercase italic tracking-wider px-5 py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition-all shadow cursor-pointer text-xs"
+      >
+        <Play size={14} fill="currentColor" />
+        <span>Assistir Corrida</span>
+      </button>
+    </div>
 
       {/* Tab Selector */}
       <div className="flex bg-slate-200/80 p-1 rounded-xl w-full">
@@ -664,6 +686,14 @@ export function RankingView({
           </div>
         );
       })()}
+      <BarChartRace
+        isOpen={isRaceOpen}
+        onClose={() => setIsRaceOpen(false)}
+        users={users}
+        matches={matches}
+        predictions={predictions}
+        currentUser={currentUser}
+      />
     </div>
   );
 }

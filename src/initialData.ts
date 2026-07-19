@@ -227,7 +227,8 @@ export function calculatePredictionPoints(
 export function computeAllStats(
   users: User[],
   matches: Match[],
-  predictions: Prediction[]
+  predictions: Prediction[],
+  finalistPredictions?: any[]
 ): { roundScores: RoundScore[]; rankings: Ranking[]; userBadges: UserBadge[] } {
   const roundScores: RoundScore[] = [];
   const userBadges: UserBadge[] = [];
@@ -448,6 +449,22 @@ export function computeAllStats(
       totalScoresByUser[score.user_id].erros += score.erros_qtd;
     }
   });
+
+  // Adicionar pontos bônus dos palpites de finalistas (Espanha Campeã = +10, Argentina Vice = +5)
+  if (finalistPredictions && finalistPredictions.length > 0) {
+    finalistPredictions.forEach((fp) => {
+      if (totalScoresByUser[fp.user_id]) {
+        let bonus = 0;
+        if (fp.campeao_team_id === 'Spain' || fp.campeao_team_id === 'Espanha') {
+          bonus += 10;
+        }
+        if (fp.vice_team_id === 'Argentina') {
+          bonus += 5;
+        }
+        totalScoresByUser[fp.user_id].total += bonus;
+      }
+    });
+  }
 
   const sortedRankings = Object.keys(totalScoresByUser)
     .map((usrId) => ({

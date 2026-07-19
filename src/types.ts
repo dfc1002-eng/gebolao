@@ -78,6 +78,7 @@ export interface GameState {
   round_scores: RoundScore[];
   logo_image?: string;
   allow_registrations?: boolean;
+  finalist_predictions?: any[];
 }
 
 export interface DashboardData {

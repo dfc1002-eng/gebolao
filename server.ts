@@ -113,6 +113,17 @@ async function getDBState(): Promise<GameState> {
       // Ignorar se a tabela settings não existir
     }
 
+    // 8. Buscar palpites de finalistas
+    let finalistPredictionsData: any[] = [];
+    try {
+      const { data: fData, error: fError } = await supabase.from('finalist_predictions').select('*');
+      if (!fError && fData) {
+        finalistPredictionsData = fData;
+      }
+    } catch (e) {
+      // Ignorar se falhar
+    }
+
     // Se o banco estiver vazio, popula com dados iniciais
     if (!usersData || usersData.length === 0 || !matchesData || matchesData.length === 0) {
       console.log('Banco de dados do Supabase vazio. Populando dados iniciais...');
@@ -185,7 +196,8 @@ async function getDBState(): Promise<GameState> {
       badges: mappedBadges,
       user_badges: mappedUserBadges,
       round_scores: mappedRoundScores,
-      allow_registrations: allowRegistrations
+      allow_registrations: allowRegistrations,
+      finalist_predictions: finalistPredictionsData
     };
 
   } catch (err: any) {
@@ -333,7 +345,8 @@ app.get('/api/state', async (req, res) => {
     const { roundScores, rankings, userBadges } = computeAllStats(
       state.users,
       state.matches,
-      state.predictions
+      state.predictions,
+      state.finalist_predictions
     );
 
     res.json({
@@ -426,7 +439,8 @@ app.post('/api/predict', async (req, res) => {
     const { roundScores, rankings, userBadges } = computeAllStats(
       state.users,
       state.matches,
-      state.predictions
+      state.predictions,
+      state.finalist_predictions
     );
 
     state.user_badges = userBadges;
@@ -521,7 +535,8 @@ app.post('/api/match/update', async (req, res) => {
     const { roundScores, rankings, userBadges } = computeAllStats(
       state.users,
       state.matches,
-      state.predictions
+      state.predictions,
+      state.finalist_predictions
     );
 
     state.user_badges = userBadges;
@@ -584,7 +599,8 @@ app.post('/api/register', async (req, res) => {
     const { roundScores, rankings, userBadges } = computeAllStats(
       state.users,
       state.matches,
-      state.predictions
+      state.predictions,
+      state.finalist_predictions
     );
 
     state.user_badges = userBadges;
@@ -713,7 +729,8 @@ app.post('/api/user/delete', async (req, res) => {
     const { roundScores, userBadges } = computeAllStats(
       state.users,
       state.matches,
-      state.predictions
+      state.predictions,
+      state.finalist_predictions
     );
 
     state.user_badges = userBadges;
@@ -769,7 +786,8 @@ app.post('/api/match/import', async (req, res) => {
     const { roundScores, rankings, userBadges } = computeAllStats(
       state.users,
       state.matches,
-      state.predictions
+      state.predictions,
+      state.finalist_predictions
     );
 
     state.user_badges = userBadges;
@@ -1281,7 +1299,8 @@ app.post('/api/match/import-url', async (req, res) => {
     const { roundScores, rankings, userBadges } = computeAllStats(
       state.users,
       state.matches,
-      state.predictions
+      state.predictions,
+      state.finalist_predictions
     );
 
     state.user_badges = userBadges;
