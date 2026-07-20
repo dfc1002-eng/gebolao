@@ -72,6 +72,19 @@ export function BarChartRace({
   const animationDuration = isPlaying ? speed : 100;
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const [finalistPredictions, setFinalistPredictions] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (isOpen) {
+      fetch('/api/finalists')
+        .then((res) => {
+          if (!res.ok) throw new Error('Erro ao carregar finalistas');
+          return res.json();
+        })
+        .then((data) => setFinalistPredictions(data || []))
+        .catch((err) => console.error('Erro ao buscar palpites de finalistas:', err));
+    }
+  }, [isOpen]);
 
   // 1. Get all completed matches sorted chronologically
   const completedMatches = useMemo(() => {
@@ -146,6 +159,24 @@ export function BarChartRace({
         }
       });
 
+      // Adicionar bônus de finalistas na Grande Final
+      const isGrandFinal = match.fase === 'Grande Final';
+      if (isGrandFinal && finalistPredictions.length > 0) {
+        finalistPredictions.forEach((fp) => {
+          if (userStats[fp.user_id]) {
+            let bonus = 0;
+            if (fp.campeao_team_id === 'Spain' || fp.campeao_team_id === 'Espanha') {
+              bonus += 10;
+            }
+            if (fp.vice_team_id === 'Argentina') {
+              bonus += 5;
+            }
+            userStats[fp.user_id].points += bonus;
+            userStats[fp.user_id].change += bonus;
+          }
+        });
+      }
+
       const standings = users.map((user) => ({
         userId: user.id,
         userName: user.nome,
@@ -189,7 +220,7 @@ export function BarChartRace({
     });
 
     return list;
-  }, [users, completedMatches, predictions]);
+  }, [users, completedMatches, predictions, finalistPredictions]);
 
   // Max points scale: fixed at 600 points (or fallback to leader's points if it exceeds 600 in the future)
   const maxPoints = useMemo(() => {
